@@ -1,4 +1,4 @@
-package co.kr.cobosys.baroder
+package co.kr.cobosys.baroder.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
