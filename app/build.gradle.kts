@@ -54,7 +54,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = "1.8"
     }
     lintOptions {
         isAbortOnError = false
@@ -66,6 +66,9 @@ android {
                 "META-INF/proguard/androidx-annotations.pro"
             )
         }
+    }
+    buildFeatures {
+        viewBinding = true
     }
     //testOptions.unitTests.returnDefaultValues = true
 }
@@ -85,6 +88,13 @@ dependencies {
 
     //dependency injection
     implementation(Depends.Libraries.hilt_android)
+    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
     kapt(Depends.Libraries.hilt_android_compiler)
     kapt(Depends.Libraries.hilt_compiler)
     implementation(Depends.Libraries.java_inject)
