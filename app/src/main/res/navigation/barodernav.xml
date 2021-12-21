@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/barodernav"
+    app:startDestination="@id/rootViewFragment">
+
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="co.kr.cobosys.baroder.app.BottomNavFragment"
+        android:label="fragment_bottom_nav"
+        tools:layout="@layout/fragment_bottom_nav" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="co.kr.cobosys.baroder.app.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="co.kr.cobosys.baroder.app.StoreFragment"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" />
+    <fragment
+        android:id="@+id/couponFragment"
+        android:name="co.kr.cobosys.baroder.app.CouponFragment"
+        android:label="fragment_coupon"
+        tools:layout="@layout/fragment_coupon" />
+    <fragment
+        android:id="@+id/pointFragment"
+        android:name="co.kr.cobosys.baroder.app.PointFragment"
+        android:label="fragment_point"
+        tools:layout="@layout/fragment_point" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="co.kr.cobosys.baroder.app.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/rootViewFragment"
+        android:name="co.kr.cobosys.baroder.app.RootViewFragment"
+        android:label="fragment_root_view"
+        tools:layout="@layout/fragment_root_view" />
+</navigation>
