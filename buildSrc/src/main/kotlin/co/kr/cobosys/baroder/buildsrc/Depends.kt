@@ -24,6 +24,7 @@ object Depends {
         const val gsonVersion = "2.9.0"
         // 제트팩 세팅
         const val lifecycleVersion = "2.4.0"
+        const val coordinatorLayoutVersion = "1.1.0"
         const val constraintLayoutVersion = "2.1.1"
         const val supportVersion = "1.4.0-rc01"
         const val materialVersion = "1.4.0"
@@ -53,10 +54,11 @@ object Depends {
         const val checkDependencyVersionsVersion = "0.39.0"
         const val leakCanaryVersion = "2.7"
         // 외부라이브러리
+        const val shimmer = "0.5.0"
+        const val shimmer_recyclerview = "0.4.0"
         const val timberVersion = "5.0.1"
         const val lottieVersion = "4.2.1"
         const val glideVersion = "4.12.0"
-        const val autoDispose = "2.1.1"
         const val dataStorePreferenceVersion = "1.0.0"
         const val indicatorVersion = "4.2"
     }
@@ -99,6 +101,8 @@ object Depends {
         const val appcompat = "androidx.appcompat:appcompat:${Versions.supportVersion}"
         const val lifecycle_livedata =
             "androidx.lifecycle:lifecycle-livedata:${Versions.lifecycleVersion}"
+        const val coordinatorlayout =
+            "androidx.coordinatorlayout:coordinatorlayout:${Versions.coordinatorLayoutVersion}"
         const val constraintlayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
         const val navigation_fragment_ktx =
@@ -149,6 +153,8 @@ object Depends {
         const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
         const val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
         const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
+        const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
+        const val shimmer_recyclerview = "com.todkars:shimmer-recyclerview:${Versions.shimmer_recyclerview}"
         const val indicator = "com.tbuonomo:dotsindicator:${Versions.indicatorVersion}"
     }
 

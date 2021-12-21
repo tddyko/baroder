@@ -102,6 +102,7 @@ dependencies {
     implementation(Depends.Libraries.timber)
     //android
     implementation(Depends.Libraries.appcompat)
+    implementation(Depends.Libraries.coordinatorlayout)
     implementation(Depends.Libraries.constraintlayout)
     implementation(Depends.Libraries.material)
     implementation(Depends.Libraries.navigation_fragment_ktx)
@@ -124,6 +125,8 @@ dependencies {
     kapt(Depends.Libraries.glide_compiler)
     implementation(Depends.Libraries.lottie)
     implementation(Depends.Libraries.indicator)
+    implementation(Depends.Libraries.shimmer)
+    implementation(Depends.Libraries.shimmer_recyclerview)
     //network
     implementation(Depends.Libraries.retrofit)
     implementation(Depends.Libraries.logging_interceptor)
