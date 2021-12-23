@@ -11,4 +11,5 @@
     <string name="nav_coupon">쿠폰</string>
     <string name="nav_point">포인트</string>
     <string name="nav_shop">상점</string>
+    <string name="qr">출입QR</string>
 </resources>

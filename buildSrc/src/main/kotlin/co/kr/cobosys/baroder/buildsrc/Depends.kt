@@ -26,6 +26,7 @@ object Depends {
         const val lifecycleVersion = "2.4.0"
         const val coordinatorLayoutVersion = "1.1.0"
         const val constraintLayoutVersion = "2.1.1"
+        const val flexboxLayoutVersion = "3.0.0"
         const val supportVersion = "1.4.0-rc01"
         const val materialVersion = "1.4.0"
         const val coreKtxVersion = "1.7.0"
@@ -54,6 +55,7 @@ object Depends {
         const val checkDependencyVersionsVersion = "0.39.0"
         const val leakCanaryVersion = "2.7"
         // 외부라이브러리
+        const val progress = "1.1.3"
         const val shimmer = "0.5.0"
         const val shimmer_recyclerview = "0.4.0"
         const val timberVersion = "5.0.1"
@@ -61,6 +63,7 @@ object Depends {
         const val glideVersion = "4.12.0"
         const val dataStorePreferenceVersion = "1.0.0"
         const val indicatorVersion = "4.2"
+        const val expandableVersion = "1.0.7"
     }
 
     object ClassPaths {
@@ -105,6 +108,8 @@ object Depends {
             "androidx.coordinatorlayout:coordinatorlayout:${Versions.coordinatorLayoutVersion}"
         const val constraintlayout =
             "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+        const val flexboxLayout =
+            "com.google.android.flexbox:flexbox:${Versions.flexboxLayoutVersion}"
         const val navigation_fragment_ktx =
             "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
         const val navigation_ui_ktx =
@@ -156,6 +161,8 @@ object Depends {
         const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
         const val shimmer_recyclerview = "com.todkars:shimmer-recyclerview:${Versions.shimmer_recyclerview}"
         const val indicator = "com.tbuonomo:dotsindicator:${Versions.indicatorVersion}"
+        const val progress = "com.github.skydoves:progressview:${Versions.progress}"
+        const val expandable = "com.github.skydoves:expandablelayout:${Versions.expandableVersion}"
     }
 
     object Environments {

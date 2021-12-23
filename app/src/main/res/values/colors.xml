@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="textcolor">#333333</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="btnGrey">#f0f0f0</color>
+    <color name="stroke">#e0e0e0</color>
+    <color name="disabled_text">#a8a8a8</color>
+    <color name="goldgreen">#dea83a</color>
     <color name="bgGrey">#f4f4f6</color>
     <color name="mainGreen">#22bf50</color>
     <color name="warmBlue">#5245db</color>

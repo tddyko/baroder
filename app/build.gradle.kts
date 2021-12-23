@@ -106,6 +106,7 @@ dependencies {
     implementation(Depends.Libraries.appcompat)
     implementation(Depends.Libraries.coordinatorlayout)
     implementation(Depends.Libraries.constraintlayout)
+    implementation(Depends.Libraries.flexboxLayout)
     implementation(Depends.Libraries.material)
     implementation(Depends.Libraries.navigation_fragment_ktx)
     implementation(Depends.Libraries.navigation_ui_ktx)
@@ -129,6 +130,8 @@ dependencies {
     implementation(Depends.Libraries.indicator)
     implementation(Depends.Libraries.shimmer)
     implementation(Depends.Libraries.shimmer_recyclerview)
+    implementation(Depends.Libraries.progress)
+    implementation(Depends.Libraries.expandable)
     //network
     implementation(Depends.Libraries.retrofit)
     implementation(Depends.Libraries.logging_interceptor)
