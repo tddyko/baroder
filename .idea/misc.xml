@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../.gradle/caches/transforms-3/e25ab3e20e534315126985bea41303bf/transformed/expandablelayout-1.0.7/res/drawable/ic_arrow_down.xml" value="0.2895" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/activity_main.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_bottom_nav.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_coupon.xml" value="0.49230072463768115" />
@@ -11,13 +12,21 @@
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_root_view.xml" value="0.490036231884058" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_shop.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_store.xml" value="0.49230072463768115" />
+        <entry key="app/src/main/res/drawable-mdpi/coupon_icon.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2675" />
         <entry key="app/src/main/res/drawable/btn_shape.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/ic_baroder_logo.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/ic_coupon_icon.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_fold_icon_b.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_menu_coupon_disabled.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_menu_icon.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_menu_store_disabled.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_preview_img.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_shop_img.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/item_expand.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/test.xml" value="0.2895" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_bottom_nav.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.25" />
@@ -29,6 +38,7 @@
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/item_expand.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_home_card_expand.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_main_card.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.37604166666666666" />
       </map>
