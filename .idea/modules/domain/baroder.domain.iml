@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 11" allPlatforms="JVM [11]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files -XXLanguage:+InlineClasses" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../domain/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-runtime/1.6.0/31b1611e3c25067f960658f69ddf16d6eb726d5b/kotlin-parcelize-runtime-1.6.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/29a920e57cea759a957b544d7b1ad269/transformed/paging-runtime-ktx-3.1.0-rc01-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/3120ec141d3efd89c1ecd2db7a813a5b/transformed/paging-runtime-3.1.0-rc01-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-common-ktx/3.1.0-rc01/5b8f86fea035328fc9e8c660773037a3401ce25f/paging-common-ktx-3.1.0-rc01.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-common/3.1.0-rc01/9fb18b7e6bad80a45749e12c6e5754899b76cf03/paging-common-3.1.0-rc01.jar;C:/Users/KMH/.gradle/caches/transforms-3/4d1305983541b966ae1fcb7a8819b303/transformed/lifecycle-livedata-ktx-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/8adb701de7ba0ac28e8beed41bd43bb7/transformed/lifecycle-runtime-ktx-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/a56e646fac26e6d9dcf601a38b7c23f7/transformed/lifecycle-viewmodel-ktx-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.5.2/d246a704a55b7bddb79407cce4348890eaa341d9/kotlinx-coroutines-android-1.5.2.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.5.2/f4cc07a50437659e0043e7da762809a46932b6a0/kotlinx-coroutines-core-jvm-1.5.2.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.6.0/baf82c475e9372c25407f3d132439e4aa803b8b8/kotlin-stdlib-jdk8-1.6.0.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions-runtime/1.6.0/fce6d22d4151652de3f79b2a4cf937bb52393fbc/kotlin-android-extensions-runtime-1.6.0.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.6.0/da6bdc87391322974a43ccc00a25536ae74dad51/kotlin-stdlib-jdk7-1.6.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/d86746aaf1e51234d4605989027ed0a3/transformed/lifecycle-livedata-core-ktx-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.0/a40b8b22529b733892edf4b73468ce598bb17f04/kotlin-stdlib-1.6.0.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.0/7857e365f925cfa060f941c1357cda1f8790502c/kotlin-stdlib-common-1.6.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/0569f1bb8baacdfe089a31ffdde3e842/transformed/lifecycle-livedata-2.4.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/1899b39551aaaae447658b9d2823c9e2/transformed/core-runtime-2.1.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/def474bff9cfb03b1d038dd25c351f1e/transformed/recyclerview-1.2.0-rc01-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/a68e7dd0494416b3e7673a7306b396fb/transformed/customview-1.0.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/84c9c00c59a8774b838317e759816ef2/transformed/core-1.3.2-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/f5e5b70e9f76eaef19700e3172cf87b6/transformed/lifecycle-runtime-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/b56bd5a8f4914a7b3155f1a60606c644/transformed/lifecycle-livedata-core-2.4.0-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.4.0/1fdb7349701e9cf2f0a69fc10642b6fef6bb3e12/lifecycle-common-2.4.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/66bae3d50a006a3a8b9e50a1df291650/transformed/lifecycle-viewmodel-2.2.0-api.jar;C:/Users/KMH/.gradle/caches/transforms-3/a0959bba3c29d03abb2d4278f72b5d12/transformed/versionedparcelable-1.1.0-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar;C:/Users/KMH/.gradle/caches/transforms-3/0db287aaf6424a4a64775a56e110e7d2/transformed/multidex-2.0.1-api.jar;C:/Users/KMH/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar;C:/Users/KMH/AppData/Local/Android/Sdk/platforms/android-31/android.jar;C:/Users/KMH/AppData/Local/Android/Sdk/build-tools/30.0.2/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="moduleName" value="domain_debug" />
+          <option name="jvmTarget" value="11" />
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.6" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-compiler/1.6.0/38393459d6a0d20d5546dd03fd74c694da308a5a/kotlin-parcelize-compiler-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.6.0/aa8da3bedc53c89219b84a0b40c7419431a13e76/kotlin-compiler-embeddable-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.0/a215a7f914d5916dc5fd2d45cea16524e0220203/kotlin-reflect-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.0/a40b8b22529b733892edf4b73468ce598bb17f04/kotlin-stdlib-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.6.0/55f72526ddcff6fc77d72cdf949c7e3d9bd95620/kotlin-script-runtime-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.6.0/d6242b37f4ce6b637d10847c7558446272ec8432/kotlin-daemon-embeddable-1.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.0/7857e365f925cfa060f941c1357cda1f8790502c/kotlin-stdlib-common-1.6.0.jar" />
+            </array>
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+</module>

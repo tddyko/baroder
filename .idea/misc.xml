@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../.gradle/caches/transforms-3/e25ab3e20e534315126985bea41303bf/transformed/expandablelayout-1.0.7/res/drawable/ic_arrow_down.xml" value="0.2895" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/drawable/ic_baroder_logo.xml" value="0.5611111111111111" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/drawable/ic_coupon_icon.xml" value="0.5611111111111111" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/drawable/ic_menu_shop_disabled.xml" value="0.5611111111111111" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout-v31/item_home_card_expand.xml" value="0.4846014492753623" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/activity_main.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_bottom_nav.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_coupon.xml" value="0.49230072463768115" />
@@ -12,6 +16,9 @@
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_root_view.xml" value="0.490036231884058" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_shop.xml" value="0.49230072463768115" />
         <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/fragment_store.xml" value="0.49230072463768115" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/item_expand.xml" value="0.4846014492753623" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/item_home_card.xml" value="0.5" />
+        <entry key="..\:/Users/KMH/Documents/Project/baroder/app/src/main/res/layout/item_home_card_expand.xml" value="0.33" />
         <entry key="app/src/main/res/drawable-mdpi/coupon_icon.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2675" />
         <entry key="app/src/main/res/drawable/btn_shape.xml" value="0.231" />

@@ -62,10 +62,18 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main_card_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hello_baroder"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_card_viewpager" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
