@@ -20,7 +20,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/shop_img" />
+            android:src="@drawable/ic_shop_img" />
 
     </com.google.android.flexbox.FlexboxLayout>
 

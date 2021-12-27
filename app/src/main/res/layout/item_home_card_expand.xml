@@ -103,7 +103,7 @@
                 style="@style/cardview_negative_btn"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
-                app:icon="@drawable/coupon_icon"
+                app:icon="@drawable/ic_coupon_icon"
                 app:iconTint="@android:color/transparent"
                 app:iconTintMode="add"
                 app:iconGravity="textStart"
