@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/drawable/ic_coupon_img_500_b.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_favoraite_icon_disable_grey.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_fold_icon_b.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3035" />
         <entry key="app/src/main/res/drawable/ic_icon_mypage_menual.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_img_onboarding_1.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_img_onboarding_2.xml" value="0.2895" />
@@ -34,11 +35,14 @@
         <entry key="app/src/main/res/drawable/ic_menu_icon.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_menu_store_disabled.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/ic_preview_img.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_regular_store_mark_m_1.xml" value="0.328" />
         <entry key="app/src/main/res/drawable/ic_shop_img.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/item_expand.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/regular_store_mark_m_1.xml" value="0.328" />
         <entry key="app/src/main/res/drawable/test.xml" value="0.2895" />
         <entry key="app/src/main/res/layout-v31/item_home_card_expand.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_bottom_nav.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.19610507246376813" />

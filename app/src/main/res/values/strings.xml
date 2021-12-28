@@ -12,4 +12,5 @@
     <string name="nav_point">포인트</string>
     <string name="nav_shop">상점</string>
     <string name="qr">출입QR</string>
+    <string name="title_activity_main2">MainActivity2</string>
 </resources>

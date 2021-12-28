@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         multiDexEnabled = true
-        applicationId = "app.web.drjackycv.mvvmtemplate"
+        applicationId = "co.kr.cobosys.baroder"
         minSdk = Depends.Versions.minSdkVersion
         targetSdk = Depends.Versions.targetSdkVersion
         versionCode = Depends.Versions.appVersionCode

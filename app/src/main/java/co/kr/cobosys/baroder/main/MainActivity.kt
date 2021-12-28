@@ -1,28 +1,36 @@
 package co.kr.cobosys.baroder.main
 
 import android.os.Bundle
+import android.view.View
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ActivityMainBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
+import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
 
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)
-    private val navController: NavController by lazy { findNavController(R.id.nav_host_fragment) }
+    private val toolBar: MaterialToolbar by lazy { binding.rootToolbar }
+    private val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+    private val navController by lazy { navHostFragment.navController }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         setTheme(R.style.Theme_Baroder)
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
     }
 
 
-    override fun onSupportNavigateUp() = navController.navigateUp()
+    override fun onSupportNavigateUp() = navController.navigateUp() || super.onSupportNavigateUp()
 
     override fun onBackPressed() {
         if (isTaskRoot
@@ -40,22 +48,6 @@ class MainActivity : AppCompatActivity() {
             finishAfterTransition()
         }
         super.onDestroy()
-    }
-
-    private fun setUpNav() {
-
-
-
-        val appBarConfiguration: AppBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.home_fragment,
-                R.id.store_fragment,
-                R.id.coupon_fragment,
-                R.id.point_fragment,
-                R.id.shop_fragment
-            )
-        )
-
     }
 
 }

@@ -9,7 +9,7 @@
         style="@style/home_card_expand"
         android:id="@+id/point_card"
         android:layout_width="match_parent"
-        android:layout_height="266dp"
+        android:layout_height="267dp"
         app:contentPadding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
