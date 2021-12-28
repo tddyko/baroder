@@ -14,7 +14,7 @@
     <item
         android:id="@+id/nav_coupon"
         android:title="@string/nav_coupon"
-        android:icon="@drawable/ic_menu_store_disabled" />
+        android:icon="@drawable/ic_menu_coupon_disabled" />
 
     <item
         android:id="@+id/nav_point"
