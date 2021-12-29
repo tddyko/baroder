@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <!--스플래시 이미지-->
     <style name="splash_screen" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_img</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
-    <style name="btn_qr" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textSize">14sp</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="cornerRadius">40dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
-        <item name="android:minWidth">0dp</item>
-        <item name="android:insetLeft">0dp</item>
-        <item name="android:insetRight">0dp</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-    </style>
-
+    <!--텍스트-->
     <style name="title_text">
         <item name="android:textSize">31sp</item>
-        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="sub_text">
+    <style name="title_sub_text">
         <item name="android:textSize">21sp</item>
-        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
@@ -55,9 +41,33 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="coupon_store_name">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="main_text">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/textcolor</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="main_sub_text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="coupon_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
@@ -66,6 +76,49 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/disabled_text</item>
+    </style>
+
+    <style name="qr_text">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/noto_sans</item>
+    </style>
+
+    <style name="qr_count_text">
+        <item name="android:textSize">31sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/noto_sans</item>
+    </style>
+
+    <style name="qr_info_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--버튼-->
+    <style name="btn_qr" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="cornerRadius">40dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
     </style>
 
     <style name="cardview_positive_btn" parent="Widget.MaterialComponents.Button">
@@ -93,7 +146,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/mainGreen</item>
-        <item name="cornerRadius">12dp</item>
+        <item name="cornerRadius">10dp</item>
         <item name="strokeColor">@color/mainGreen</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:paddingEnd">10dp</item>
@@ -104,32 +157,21 @@
         <item name="android:insetBottom">0dp</item>
     </style>
 
+    <!--카드-->
     <style name="expand">
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:layout_marginEnd">20dp</item>
     </style>
 
-    <style name="expand_card" parent="Widget.MaterialComponents.CardView">
-        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.MyCardCut
-        </item>
-        <item name="cardElevation">5dp</item>
-        <item name="cardBackgroundColor">@color/mainGreen</item>
-    </style>
-
-
-    <style name="Widget.MaterialComponents.CardView.MyCardCut">
+    <style name="Widget.MaterialComponents.CardView.RadiusTop20">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">0dp</item>
-        <item name="cornerSizeTopLeft">0dp</item>
-        <item name="cornerSizeBottomRight">30dp</item>
-        <item name="cornerSizeBottomLeft">30dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
     </style>
 
-    <style name="qr_card" parent="Widget.MaterialComponents.CardView.QRCardCut">
-        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.MyCardCut</item>
-    </style>
-
-    <style name="Widget.MaterialComponents.CardView.QRCardCut">
+    <style name="Widget.MaterialComponents.CardView.RadiusBottom20">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopRight">0dp</item>
         <item name="cornerSizeTopLeft">0dp</item>
@@ -137,44 +179,35 @@
         <item name="cornerSizeBottomLeft">20dp</item>
     </style>
 
+    <style name="main_card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">267dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="contentPadding">20dp</item>
+    </style>
+
+    <style name="expand_card" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.RadiusBottom20
+        </item>
+        <item name="cardElevation">5dp</item>
+        <item name="cardBackgroundColor">@color/mainGreen</item>
+    </style>
+
+
     <style name="home_card_expand" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">
-            @style/Widget.MaterialComponents.CardView.HomeExpandCardCut
+            @style/Widget.MaterialComponents.CardView.RadiusTop20
         </item>
         <item name="cardElevation">5dp</item>
     </style>
 
-    <style name="Widget.MaterialComponents.CardView.HomeExpandCardCut">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSizeTopRight">30dp</item>
-        <item name="cornerSizeTopLeft">30dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
+    <style name="bottom_20dp" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.RadiusBottom20</item>
     </style>
 
-    <style name="qr_text">
-        <item name="android:textSize">21sp</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="fontFamily">@font/noto_sans</item>
-    </style>
-
-    <style name="qr_count_text">
-        <item name="android:textSize">31sp</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="fontFamily">@font/noto_sans</item>
-    </style>
-
-    <style name="qr_info_text">
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/textcolor</item>
-        <item name="android:textStyle">normal</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:gravity">center</item>
+    <style name="top_20dp" parent="Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.RadiusTop20</item>
     </style>
 
 </resources>

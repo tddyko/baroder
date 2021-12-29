@@ -37,6 +37,7 @@ object Depends {
         const val recyclerviewVersion = "1.2.1"
         const val viewpagerVersion = "1.0.0"
         const val roomVersion = "2.3.0"
+        const val cryptoVersion = "1.0.0"
         // DI 세팅
         const val hiltVersion = "2.40.1"
         const val hiltCompilerVersion = "1.0.0"
@@ -131,6 +132,8 @@ object Depends {
             "androidx.viewpager2:viewpager2:${Versions.viewpagerVersion}"
         const val room =
             "androidx.room:room-runtime:${Versions.roomVersion}"
+        const val crypto =
+            "androidx.security:security-crypto:${Versions.cryptoVersion}"
         const val material = "com.google.android.material:material:${Versions.materialVersion}"
         // reactive 세팅
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"

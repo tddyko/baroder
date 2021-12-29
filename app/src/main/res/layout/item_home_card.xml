@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/itemFavoriteStoreVisitor"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemFavoriteStoreVisitor"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -27,12 +26,8 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <com.google.android.material.card.MaterialCardView
+        style="@style/main_card"
         android:id="@+id/point_card"
-        android:layout_width="match_parent"
-        android:layout_height="267dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="10dp"
-        app:contentPadding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shop_img">
@@ -43,7 +38,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/store_name"
-                style="@style/sub_text"
+                style="@style/title_sub_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +59,6 @@
                 style="@style/main_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/point"
                 tools:text="회원가입하고 매장 포인트를 확인하세요!" />

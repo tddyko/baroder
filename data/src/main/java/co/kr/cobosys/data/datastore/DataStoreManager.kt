@@ -21,6 +21,7 @@ class DataStoreManager @Inject constructor(@ApplicationContext appContext: Conte
     private val setDataStoree = appContext.dataStore
     private val secureKey = stringPreferencesKey("secure_key")
 
+    // 키값 가져오기
     val getSecureKey: Flow<String> = setDataStoree.data
         .catch { exception ->
             if(exception is IOException) {
@@ -32,7 +33,7 @@ class DataStoreManager @Inject constructor(@ApplicationContext appContext: Conte
         .map { prefs ->
             prefs[secureKey] ?: ""
         }
-
+    // 키값 입력하기
     suspend fun setSecureKey(secureVal: String) {
         setDataStoree.edit { prefs ->
             prefs[secureKey] = secureVal

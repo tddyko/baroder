@@ -12,55 +12,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8d1b639-6655-4030-b468-8f59ba20f0a7" name="Default Changelist" comment="홈 프래그먼트 작업중[#4]">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/base/utils/GlideModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/HomeViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/adapters/FavoriteStoreListAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/adapters/StoreListAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/Model.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/favoritestore/FavoriteStoreCell.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/favoritestore/FavoriteStoreMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/favoritestore/FavoriteStoreViewHolder.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_up.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_cancel_icon.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favoraite_icon_disable_white.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_move_icon_left.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_move_icon_right.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_no_shop_result_img.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_withdrawal_img.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font-v26/font.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/font.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/noto_sans.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/itme_qr_code.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/api/Request.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/api/Response.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/datastore/DataStoreManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/model/FavoriteStoreMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/model/StoreMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/network/ApiService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/network/ErrorBody.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/network/HttpClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/network/Retrofit.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/co/kr/cobosys/domain/model/Model.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+    <list default="true" id="a8d1b639-6655-4030-b468-8f59ba20f0a7" name="Default Changelist" comment="클린아키텍처 세팅완료">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_coupon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_coupon_barcode.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/di/ApiModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/app/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/app/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/FavoriteStoreUI.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/model/StoreUI.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fold_icon_b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_down.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card_expand.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card_expand.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/itme_qr_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/itme_qr_code.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/style.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/co/kr/cobosys/baroder/buildsrc/Depends.kt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/co/kr/cobosys/baroder/buildsrc/Depends.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/data/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/co/kr/cobosys/domain/model/FavoriteStore.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/co/kr/cobosys/domain/model/Store.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/co/kr/cobosys/domain/repo/BaroderLIstRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/co/kr/cobosys/domain/repo/BaroderLIstRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/datastore/DataStoreManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/co/kr/cobosys/data/datastore/DataStoreManager.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +44,11 @@
         <option value="Kotlin Data Class" />
         <option value="navigationResourceFile" />
         <option value="Kotlin Object" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -235,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640679872296</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="클린아키텍처 세팅완료">
+      <created>1640764851708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640764851708</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +226,7 @@
     <MESSAGE value="홈 프래그먼트 작업중[#2]" />
     <MESSAGE value="홈 프래그먼트 작업중[#3]" />
     <MESSAGE value="홈 프래그먼트 작업중[#4]" />
-    <option name="LAST_COMMIT_MESSAGE" value="홈 프래그먼트 작업중[#4]" />
+    <MESSAGE value="클린아키텍처 세팅완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="클린아키텍처 세팅완료" />
   </component>
 </project>

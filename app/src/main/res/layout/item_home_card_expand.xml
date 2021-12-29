@@ -22,7 +22,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/store_name"
-                style="@style/sub_text"
+                style="@style/title_sub_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
