@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/no_store"
+                android:id="@+id/store_name"
                 style="@style/sub_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/no_store"
+                app:layout_constraintTop_toBottomOf="@+id/store_name"
                 tools:text="999,999,999P" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -100,6 +101,7 @@
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/coupon_btn"
                 style="@style/cardview_negative_btn"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
@@ -115,5 +117,20 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+    <com.skydoves.expandablelayout.ExpandableLayout
+        android:id="@+id/expand_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/point_card"
+        app:expandable_isExpanded="false"
+        app:expandable_parentLayout="@layout/item_expand"
+        app:expandable_showSpinner="true"
+        app:expandable_spinner="@drawable/ic_arrow_down"
+        app:expandable_spinner_margin="20dp"
+        app:expandable_spinner_size="20dp"
+        app:expandable_spinner_gravity="end"
 
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

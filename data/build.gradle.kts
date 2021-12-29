@@ -33,7 +33,7 @@ android {
             buildConfigField(
                 "String",
                 "BASE_URL",
-                "\"" + Depends.Environments.debugBaseUrl + "\""
+                "\"" + Depends.Environments.debugUrl + "\""
             )
         }
         named("release") {
@@ -41,7 +41,7 @@ android {
             buildConfigField(
                 "String",
                 "BASE_URL",
-                "\"" + Depends.Environments.releaseBaseUrl + "\""
+                "\"" + Depends.Environments.releaseUrl + "\""
             )
             setProguardFiles(
                 listOf(
@@ -67,6 +67,9 @@ dependencies {
     //network
     implementation(Depends.Libraries.retrofit)
     implementation(Depends.Libraries.logging_interceptor)
+    //localDB
+    implementation(Depends.Libraries.dataStore_preferences)
+    implementation(Depends.Libraries.room)
     //other
     implementation(Depends.Libraries.timber)
     implementation(Depends.Libraries.material)

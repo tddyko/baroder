@@ -36,6 +36,7 @@ object Depends {
         const val fragmentExtVersion = "1.3.3"
         const val recyclerviewVersion = "1.2.1"
         const val viewpagerVersion = "1.0.0"
+        const val roomVersion = "2.3.0"
         // DI 세팅
         const val hiltVersion = "2.40.1"
         const val hiltCompilerVersion = "1.0.0"
@@ -64,6 +65,8 @@ object Depends {
         const val dataStorePreferenceVersion = "1.0.0"
         const val indicatorVersion = "4.2"
         const val expandableVersion = "1.0.7"
+        const val zxingVersion = "4.3.0"
+        const val zxingCoreVersion = "3.3.0"
     }
 
     object ClassPaths {
@@ -126,6 +129,8 @@ object Depends {
             "androidx.recyclerview:recyclerview:${Versions.recyclerviewVersion}"
         const val viewpager =
             "androidx.viewpager2:viewpager2:${Versions.viewpagerVersion}"
+        const val room =
+            "androidx.room:room-runtime:${Versions.roomVersion}"
         const val material = "com.google.android.material:material:${Versions.materialVersion}"
         // reactive 세팅
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesVersion}"
@@ -163,13 +168,15 @@ object Depends {
         const val indicator = "com.tbuonomo:dotsindicator:${Versions.indicatorVersion}"
         const val progress = "com.github.skydoves:progressview:${Versions.progress}"
         const val expandable = "com.github.skydoves:expandablelayout:${Versions.expandableVersion}"
+        const val zxing = "com.journeyapps:zxing-android-embedded:${Versions.zxingVersion}"
+        const val zxingCore = "com.google.zxing:core:${Versions.zxingCoreVersion}"
     }
 
     object Environments {
         // 개발서버
-        const val debugBaseUrl = "https://api.punkapi.com/v2/"
+        const val debugUrl = "https://apidev.baroder.com"
         // 상용서버
-        const val releaseBaseUrl = "https://api.punkapi.com/v2/"
+        const val releaseUrl = "https://api.baroder.com/"
     }
 
     fun generateVersionName(): String {

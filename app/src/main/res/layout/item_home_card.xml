@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/itemFavoriteStoreVisitor"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -40,7 +42,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/no_store"
+                android:id="@+id/store_name"
                 style="@style/sub_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/no_store"
+                app:layout_constraintTop_toBottomOf="@+id/store_name"
                 tools:text="0P" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -146,10 +148,10 @@
                 android:layout_height="54dp"
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/main_card_regular_store_btn"
                 app:layout_constraintTop_toBottomOf="@id/point_text"
                 tools:text="바로더 알아보기" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

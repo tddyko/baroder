@@ -1,16 +1,13 @@
 <resources>
     <string name="app_name">baroder</string>
     <string name="title_activity_bottom_navigation_fragment">BottomNavigationFragment</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">홈</string>
     <string name="store">매장</string>
     <string name="nav_coupon">쿠폰</string>
     <string name="nav_point">포인트</string>
     <string name="nav_shop">상점</string>
     <string name="qr">출입QR</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="hello_baroder">안녕하세요.\n바로더 입니다.</string>
+    <string name="qr_text">출입 QR코드</string>
+    <string name="qr_info_text">QR코드를 외부출입기에\n10~15cm 간격을 두고 스캔해주세요!</string>
 </resources>

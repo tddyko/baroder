@@ -119,7 +119,6 @@ dependencies {
     implementation(Depends.Libraries.android_core_ktx)
     implementation(Depends.Libraries.fragment_ktx)
     implementation(Depends.Libraries.recyclerview)
-    implementation(Depends.Libraries.dataStore_preferences)
     implementation(Depends.Libraries.viewpager)
     //reactive
     implementation(Depends.Libraries.coroutines)
@@ -132,6 +131,8 @@ dependencies {
     implementation(Depends.Libraries.shimmer_recyclerview)
     implementation(Depends.Libraries.progress)
     implementation(Depends.Libraries.expandable)
+    implementation(Depends.Libraries.zxing)
+    implementation(Depends.Libraries.zxingCore)
     //network
     implementation(Depends.Libraries.retrofit)
     implementation(Depends.Libraries.logging_interceptor)

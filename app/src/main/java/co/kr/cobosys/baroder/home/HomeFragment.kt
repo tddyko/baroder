@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private val binding by viewInflateBinding(FragmentHomeBinding::inflate)
