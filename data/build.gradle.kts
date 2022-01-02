@@ -70,8 +70,6 @@ dependencies {
     //localDB
     implementation(Depends.Libraries.dataStore_preferences)
     implementation(Depends.Libraries.room)
-    //secure
-    implementation(Depends.Libraries.crypto)
     //other
     implementation(Depends.Libraries.timber)
     implementation(Depends.Libraries.material)

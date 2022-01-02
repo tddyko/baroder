@@ -25,26 +25,46 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="item_title_text">
+    <style name="item_title_text_white">
         <item name="android:textSize">19sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
-    <style name="item_text">
-        <item name="android:textSize">16sp</item>
+    <style name="item_title_text_black">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+
+    <style name="coupon_text">
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="coupon_store_name">
-        <item name="android:textSize">17sp</item>
-        <item name="android:textColor">@color/primary_color_text</item>
+    <style name="point_text">
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/disabled_text</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="sub_main_text_14sp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/primary_color_text</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
@@ -64,43 +84,44 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="coupon_text">
-        <item name="android:textSize">14sp</item>
+    <style name="item_text">
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="point_text">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/disabled_text</item>
-    </style>
-
-    <style name="qr_text">
-        <item name="android:textSize">21sp</item>
-        <item name="android:textColor">@color/primary_color_text</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="fontFamily">@font/noto_sans</item>
-    </style>
-
-    <style name="qr_count_text">
-        <item name="android:textSize">31sp</item>
-        <item name="android:textColor">@color/primary_color_text</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="fontFamily">@font/noto_sans</item>
-    </style>
-
-    <style name="qr_info_text">
+    <style name="coupon_info_text">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:gravity">center</item>
+    </style>
+
+    <style name="coupon_store_name">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="qr_text">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="title_bold_31sp">
+        <item name="android:textSize">31sp</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
     </style>
 
     <!--버튼-->
@@ -208,6 +229,10 @@
 
     <style name="top_20dp" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.RadiusTop20</item>
+    </style>
+
+    <style name="recently_store_card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">15dp</item>
     </style>
 
 </resources>

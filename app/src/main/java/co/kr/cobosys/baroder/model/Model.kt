@@ -15,7 +15,7 @@ data class StoreUI(
 ): RecyclerItem, Parcelable
 
 @Parcelize
-data class FavoriteStoreUI(
+data class favoriteStoreUI(
     override val id: Int?,
     val storeName: String?,
     val point: Int?,

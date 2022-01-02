@@ -61,7 +61,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/qr_count_text"
-                style="@style/qr_count_text"
+                style="@style/title_bold_31sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -71,7 +71,7 @@
                 tools:text="60" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/qr_info_text"
+                style="@style/coupon_info_text"
                 android:id="@+id/qr_info_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

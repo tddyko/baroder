@@ -9,7 +9,7 @@ data class Store(
     val favorite: Boolean
 )
 
-data class FavoriteStore(
+data class favoriteStore(
     val id: Int,
     val storeName: String?,
     val point: Int?,

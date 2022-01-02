@@ -10,4 +10,5 @@
     <string name="hello_baroder">안녕하세요.\n바로더 입니다.</string>
     <string name="qr_text">출입 QR코드</string>
     <string name="qr_info_text">QR코드를 외부출입기에\n10~15cm 간격을 두고 스캔해주세요!</string>
+    <string name="barcode_info">쿠폰을 바코드 리더기에 스캔해주세요!\n스캔이 안된다면 바코드 번호를 직접 입력해주세요.</string>
 </resources>

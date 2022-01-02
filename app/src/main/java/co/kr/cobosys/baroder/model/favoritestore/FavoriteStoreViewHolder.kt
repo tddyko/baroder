@@ -2,11 +2,11 @@ package co.kr.cobosys.baroder.model.favoritestore
 
 import androidx.recyclerview.widget.RecyclerView
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
-import co.kr.cobosys.baroder.model.FavoriteStoreUI
+import co.kr.cobosys.baroder.model.favoriteStoreUI
 
-class FavoriteStoreViewHolder(val itemBinding: ItemHomeCardExpandBinding) :
+class favoriteStoreViewHolder(val itemBinding: ItemHomeCardExpandBinding) :
     RecyclerView.ViewHolder(itemBinding.root) {
-    fun bind(favorite: FavoriteStoreUI) = with(itemView) {
+    fun bind(favorite: favoriteStoreUI) = with(itemView) {
         itemBinding.pointCard.transitionName = favorite.id.toString()
         itemBinding.storeName.text = favorite.storeName.toString()
         itemBinding.point.text = favorite.point.toString()

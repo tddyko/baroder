@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="co.kr.cobosys.baroder.data" />
+<manifest package="co.kr.cobosys.baroder.data"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:overrideLibrary="androidx.security" />
+

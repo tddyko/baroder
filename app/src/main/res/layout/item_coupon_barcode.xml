@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
@@ -28,11 +29,58 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/barcode_store_name"
+                style="@style/item_title_text_black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/barcode_ic_cancel" />
+                app:layout_constraintTop_toBottomOf="@id/barcode_ic_cancel"
+                tools:text="집어가 마산역점"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/barcode_coupon_name"
+                style="@style/title_bold_31sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barcode_store_name"
+                tools:text="3,000원 할인쿠폰"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/barcode_img"
+                android:layout_width="299dp"
+                android:layout_height="80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barcode_coupon_name"
+                android:layout_marginTop="18dp"
+                android:background="@color/mainGreen"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/barcode_number"
+                style="@style/item_title_text_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barcode_img"
+                android:layout_marginTop="13dp"
+                tools:text="123456789000" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/coupon_info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barcode_number"
+                android:layout_marginTop="20dp"
+                android:text="@string/barcode_info"/>
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

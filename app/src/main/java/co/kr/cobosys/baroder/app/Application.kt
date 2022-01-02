@@ -2,16 +2,11 @@ package co.kr.cobosys.baroder.app
 
 import android.os.StrictMode
 import androidx.multidex.MultiDexApplication
-import co.kr.cobosys.data.datastore.DataStoreManager
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
-import javax.inject.Inject
 
 @HiltAndroidApp
 class Application : MultiDexApplication() {
-
-    @Inject
-    lateinit var dataStoreManager: DataStoreManager
 
     override fun onCreate() {
 
