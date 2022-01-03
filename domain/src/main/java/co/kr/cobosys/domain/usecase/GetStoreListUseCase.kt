@@ -7,12 +7,12 @@ import co.kr.cobosys.domain.repo.BaroderLIstRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class getStoreListUserCase @Inject constructor(
+class GetStoreListUserCase @Inject constructor(
     private val baroderLIstRepository: BaroderLIstRepository
-) : GeneralUseCase<Flow<PagingData<Store>>, getStoreListParams> {
-    override fun invoke(params: getStoreListParams): Flow<PagingData<Store>> =
+) : GeneralUseCase<Flow<PagingData<Store>>, GetStoreListParams> {
+    override fun invoke(params: GetStoreListParams): Flow<PagingData<Store>> =
         baroderLIstRepository.getStoreList(params.ids)
 }
 
 @JvmInline
-value class getStoreListParams(val ids: String)
+value class GetStoreListParams(val ids: String)

@@ -35,6 +35,14 @@
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
+    <style name="item_title_text_white_no_margin">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="item_title_text_black">
         <item name="android:textSize">19sp</item>
         <item name="android:textColor">@color/primary_color_text</item>
@@ -178,6 +186,23 @@
         <item name="android:insetBottom">0dp</item>
     </style>
 
+    <style name="edit_button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="backgroundTint">@color/btnGrey</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
     <!--카드-->
     <style name="expand">
         <item name="android:layout_marginStart">20dp</item>
@@ -209,9 +234,10 @@
     </style>
 
     <style name="expand_card" parent="Widget.MaterialComponents.CardView">
-        <item name="shapeAppearanceOverlay">@style/Widget.MaterialComponents.CardView.RadiusBottom20
+        <item name="shapeAppearanceOverlay">
+            @style/Widget.MaterialComponents.CardView.RadiusBottom20
         </item>
-        <item name="cardElevation">5dp</item>
+        <item name="cardElevation">10dp</item>
         <item name="cardBackgroundColor">@color/mainGreen</item>
     </style>
 
@@ -220,7 +246,7 @@
         <item name="shapeAppearanceOverlay">
             @style/Widget.MaterialComponents.CardView.RadiusTop20
         </item>
-        <item name="cardElevation">5dp</item>
+        <item name="cardElevation">10dp</item>
     </style>
 
     <style name="bottom_20dp" parent="Widget.MaterialComponents.CardView">

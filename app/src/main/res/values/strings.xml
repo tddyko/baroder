@@ -11,4 +11,9 @@
     <string name="qr_text">출입 QR코드</string>
     <string name="qr_info_text">QR코드를 외부출입기에\n10~15cm 간격을 두고 스캔해주세요!</string>
     <string name="barcode_info">쿠폰을 바코드 리더기에 스캔해주세요!\n스캔이 안된다면 바코드 번호를 직접 입력해주세요.</string>
+    <string name="best_item">BEST 인기상품</string>
+    <string name="edit_button_text">편집</string>
+    <string name="recently_store_text">최근 방문매장</string>
+    <string name="home_more_button">더보기</string>
+    <string name="home_recommend_text">이런 매장은 어때요?</string>
 </resources>

@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemfavoriteStoreVisitor"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="20dp"
+    android:clipToPadding="false">
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/shop_img"
@@ -103,13 +107,6 @@
                     android:layout_height="wrap_content"
                     tools:text="999999" />
             </com.google.android.flexbox.FlexboxLayout>
-
-            <com.google.android.material.button.MaterialButtonToggleGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints">
-
-            </com.google.android.material.button.MaterialButtonToggleGroup>
 
             <Button
                 android:id="@+id/main_card_login_btn"

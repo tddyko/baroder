@@ -130,7 +130,6 @@ dependencies {
     implementation(Depends.Libraries.shimmer)
     implementation(Depends.Libraries.shimmer_recyclerview)
     implementation(Depends.Libraries.progress)
-    implementation(Depends.Libraries.expandable)
     implementation(Depends.Libraries.zxing)
     implementation(Depends.Libraries.zxingCore)
     //network

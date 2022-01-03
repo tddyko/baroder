@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:padding="20dp">
 
     <com.google.android.material.card.MaterialCardView
-        style="@style/home_card_expand"
         android:id="@+id/point_card"
+        style="@style/home_card_expand"
         android:layout_width="match_parent"
         android:layout_height="267dp"
         app:contentPadding="20dp"
@@ -56,15 +57,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/main_text"
-                app:progressView_min="0"
-                app:progressView_max="100000"
-                app:progressView_progress="500"
-                app:progressView_progressFromPrevious="true"
                 app:progressView_autoAnimate="true"
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
                 app:progressView_colorGradientEnd="@color/starYellow"
-                app:progressView_colorGradientStart="@color/mainGreen" />
+                app:progressView_colorGradientStart="@color/mainGreen"
+                app:progressView_max="100000"
+                app:progressView_min="0"
+                app:progressView_progress="500"
+                app:progressView_progressFromPrevious="true" />
 
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/point_text"
@@ -106,31 +107,128 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 app:icon="@drawable/ic_coupon_icon"
+                app:iconGravity="textStart"
                 app:iconTint="@android:color/transparent"
                 app:iconTintMode="add"
-                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/point_text"
-                app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="내 쿠폰 9,999,999개" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-    <com.skydoves.expandablelayout.ExpandableLayout
-        android:id="@+id/expand_item"
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/expand_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/point_card"
-        app:expandable_isExpanded="false"
-        app:expandable_parentLayout="@layout/item_expand"
-        app:expandable_showSpinner="true"
-        app:expandable_spinner="@drawable/ic_arrow_down"
-        app:expandable_spinner_margin="20dp"
-        app:expandable_spinner_size="20dp"
-        app:expandable_spinner_gravity="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/point_card">
 
-        />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expand_title_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expand_title"
+                    style="@style/item_title_text_white_no_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/best_item"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrow_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_arrow_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expand_item"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expand_title_constraint">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/first_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_preview_img" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/first_img"
+                    app:layout_constraintStart_toStartOf="@+id/first_img"
+                    app:layout_constraintTop_toBottomOf="@+id/first_img"
+                    tools:text="녹차라떼" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/second_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    app:layout_constraintEnd_toStartOf="@+id/third_img"
+                    app:layout_constraintStart_toEndOf="@+id/first_img"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_preview_img" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/second_img"
+                    app:layout_constraintStart_toStartOf="@+id/second_img"
+                    app:layout_constraintTop_toBottomOf="@+id/second_img"
+                    tools:text="녹차라떼" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/third_img"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/ic_preview_img" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    app:layout_constraintEnd_toEndOf="@+id/third_img"
+                    app:layout_constraintStart_toStartOf="@+id/third_img"
+                    app:layout_constraintTop_toBottomOf="@+id/third_img"
+                    tools:text="녹차라떼" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

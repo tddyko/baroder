@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
@@ -19,8 +20,13 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        statusBarColorChange()
         return binding.root
+    }
+
+    private fun statusBarColorChange() {
+        val window = requireActivity().window
+        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
     }
 
 }

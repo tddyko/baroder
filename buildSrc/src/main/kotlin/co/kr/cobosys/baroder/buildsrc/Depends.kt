@@ -65,7 +65,6 @@ object Depends {
         const val glideVersion = "4.12.0"
         const val dataStorePreferenceVersion = "1.0.0"
         const val indicatorVersion = "4.2"
-        const val expandableVersion = "1.0.7"
         const val zxingVersion = "4.3.0"
         const val zxingCoreVersion = "3.3.0"
     }
@@ -170,7 +169,6 @@ object Depends {
         const val shimmer_recyclerview = "com.todkars:shimmer-recyclerview:${Versions.shimmer_recyclerview}"
         const val indicator = "com.tbuonomo:dotsindicator:${Versions.indicatorVersion}"
         const val progress = "com.github.skydoves:progressview:${Versions.progress}"
-        const val expandable = "com.github.skydoves:expandablelayout:${Versions.expandableVersion}"
         const val zxing = "com.journeyapps:zxing-android-embedded:${Versions.zxingVersion}"
         const val zxingCore = "com.google.zxing:core:${Versions.zxingCoreVersion}"
     }

@@ -46,8 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="0dp"
+        android:paddingHorizontal="20dp"
         app:alignItems="center"
         app:flexDirection="row"
         app:justifyContent="flex_start"
@@ -59,22 +58,115 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hello_baroder" />
+
     </com.google.android.flexbox.FlexboxLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/main_card_viewpager"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_button"
+        style="@style/edit_button"
+        android:layout_width="68dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="20dp"
+        android:padding="0dp"
+        android:text="@string/edit_button_text"
+        app:icon="@drawable/ic_edit_icon"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello_baroder" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/home_card_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hello_baroder"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_button">
 
-    <androidx.recyclerview.widget.RecyclerView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/home_viewpager_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_viewpager_card"
+                app:dotsSize="6dp"
+                app:dotsStrokeColor="@color/stroke"
+                app:dotsColor="@color/secondary_text_color"
+                app:dotsSpacing="6dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/home_recently_title"
+        style="@style/title_sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:text="@string/recently_store_text"
+        app:layout_constraintBottom_toTopOf="@+id/home_recently_store"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_card_viewpager" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_more_button"
+        style="@style/edit_button"
+        android:layout_width="68dp"
+        android:layout_height="34dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="0dp"
+        android:text="@string/home_more_button"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_recently_store"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_card_viewpager" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/home_recently_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_recently_title">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/home_recommend_title"
+        style="@style/title_sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:text="@string/home_recommend_text"
+        app:layout_constraintBottom_toTopOf="@+id/home_recyclerview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_recently_store" />
+
+    <com.todkars.shimmer.ShimmerRecyclerView
         android:id="@+id/home_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_card_viewpager" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_recently_store" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ data class Store(
     val favorite: Boolean
 )
 
-data class favoriteStore(
+data class FavoriteStore(
     val id: Int,
     val storeName: String?,
     val point: Int?,
@@ -21,6 +21,6 @@ data class favoriteStore(
     val bestProductImgUrl: List<String>?
 )
 
-data class QRcode(
+data class QrCode(
     val QrUrl: String
 )
