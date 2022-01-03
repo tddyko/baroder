@@ -5,9 +5,8 @@ import co.kr.cobosys.domain.model.FavoriteStore
 import co.kr.cobosys.domain.model.Store
 import kotlinx.coroutines.flow.Flow
 
-interface BaroderLIstRepository {
+interface BaroderListRepository {
 
-    fun getFavoriteStoreList(ids: String): Flow<PagingData<FavoriteStore>>
+    fun getFavoriteStoreList(ids: String): Flow<FavoriteStore>
     fun getStoreList(ids: String): Flow<PagingData<Store>>
-
 }
