@@ -1,10 +1,9 @@
 package co.kr.cobosys.baroder.base.adapter
 
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-interface Cell<T, R> {
+interface PagerCell<T, R> {
 
     fun belongsTo(item: T?): Boolean
     fun type(): Int
@@ -12,7 +11,6 @@ interface Cell<T, R> {
     fun holder(parent: ViewGroup): RecyclerView.ViewHolder
     fun bind(
         holder: RecyclerView.ViewHolder,
-        item: T?,
-        onItemClick: ((RecyclerItem, View) -> Unit)?
+        item: T?
     )
 }

@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
-import co.kr.cobosys.baroder.base.adapter.Cell
+import co.kr.cobosys.baroder.base.adapter.RecyclerCell
 import co.kr.cobosys.baroder.base.adapter.RecyclerItem
-import co.kr.cobosys.baroder.model.favoriteStoreUI
+import co.kr.cobosys.baroder.model.FavoriteStoreUI
 
-object favoriteStoreCell: Cell<RecyclerItem, ViewBinding> {
+object FavoriteStoreCell: RecyclerCell<RecyclerItem, ViewBinding> {
 
     override fun belongsTo(item: RecyclerItem?): Boolean {
-        return item is favoriteStoreUI
+        return item is FavoriteStoreUI
     }
 
     override fun type(): Int {
@@ -26,7 +26,7 @@ object favoriteStoreCell: Cell<RecyclerItem, ViewBinding> {
     }
 
     override fun holder(parent: ViewGroup): RecyclerView.ViewHolder {
-        return favoriteStoreViewHolder(binding(parent))
+        return FavoriteStoreViewHolder(binding(parent))
     }
 
     override fun bind(
@@ -34,7 +34,7 @@ object favoriteStoreCell: Cell<RecyclerItem, ViewBinding> {
         item: RecyclerItem?,
         onItemClick: ((RecyclerItem, View) -> Unit)?
     ) {
-        if (holder is favoriteStoreViewHolder && item is favoriteStoreUI) {
+        if (holder is FavoriteStoreViewHolder && item is FavoriteStoreUI) {
             holder.bind(item)
             holder.itemView.setOnClickListener {
                 onItemClick?.run {
