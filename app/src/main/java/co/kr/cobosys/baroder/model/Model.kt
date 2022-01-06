@@ -18,7 +18,7 @@ data class StoreUI(
 data class EmptyFavoriteStoreUI(
     override val id: Int?,
     val emptyStoreName: String,
-    val emptyPoint: Int,
+    val emptyPoint: String,
     val emptyMainText: String,
     val emptyStartPoint: Int,
     val emptyEndPoint: Int,
@@ -30,11 +30,11 @@ data class EmptyFavoriteStoreUI(
 data class FavoriteStoreUI(
     override val id: Int?,
     val storeName: String?,
-    val point: Int?,
+    val point: String?,
     val mainText: String,
     val minPoint: Int,
     val maxPoint: Int,
-    val coupon: Int?,
+    val coupon: String?,
     val bestProduct: List<String>?,
     val bestProductImgUrl: List<String>?
 ): RecyclerItem, Parcelable

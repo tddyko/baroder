@@ -5,10 +5,10 @@
     android:id="@+id/itemfavoriteStoreVisitor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
     android:paddingHorizontal="20dp"
     android:paddingTop="16dp"
-    android:paddingBottom="20dp"
-    android:clipToPadding="false">
+    android:paddingBottom="20dp">
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/shop_img"
@@ -30,8 +30,8 @@
     </com.google.android.flexbox.FlexboxLayout>
 
     <com.google.android.material.card.MaterialCardView
-        style="@style/main_card"
         android:id="@+id/empty_point_card"
+        style="@style/main_card"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shop_img">
@@ -79,7 +79,11 @@
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
                 app:progressView_colorGradientEnd="@color/starYellow"
-                app:progressView_colorGradientStart="@color/mainGreen" />
+                app:progressView_colorGradientStart="@color/mainGreen"
+                app:progressView_max="500"
+                app:progressView_min="0"
+                app:progressView_progress="60"
+                app:progressView_progressFromPrevious="true" />
 
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/empty_point_text"

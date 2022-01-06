@@ -9,7 +9,7 @@ class EmptyFavoriteStoreViewHolder(private val itemBinding: ItemHomeCardBinding)
     fun bind(empty: EmptyFavoriteStoreUI) = with(itemView) {
         itemBinding.emptyPointCard.transitionName = empty.id.toString()
         itemBinding.emptyStoreName.text = empty.emptyStoreName
-        itemBinding.emptyPoint.text = empty.emptyPoint.toString()
+        itemBinding.emptyPoint.text = empty.emptyPoint
         itemBinding.emptyMainText.text = empty.emptyMainText
         itemBinding.emptyStartPoint.text = empty.emptyStartPoint.toString()
         itemBinding.emptyEndPoint.text = empty.emptyEndPoint.toString()

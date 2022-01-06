@@ -12,11 +12,11 @@ data class Store(
 data class FavoriteStore(
     val id: Int,
     val storeName: String?,
-    val point: Int?,
+    val point: String?,
     val mainText: String,
     val minPoint: Int,
     val maxPoint: Int,
-    val coupon: Int?,
+    val coupon: String?,
     val bestProduct: List<String>?,
     val bestProductImgUrl: List<String>?
 )

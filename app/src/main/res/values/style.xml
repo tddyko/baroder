@@ -186,7 +186,7 @@
         <item name="android:insetBottom">0dp</item>
     </style>
 
-    <style name="edit_button" parent="Widget.MaterialComponents.Button">
+    <style name="edit_button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
@@ -195,6 +195,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="cornerRadius">10dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
         <item name="backgroundTint">@color/btnGrey</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:insetLeft">0dp</item>

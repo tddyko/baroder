@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
+import co.kr.cobosys.baroder.base.adapter.PagerCell
 import co.kr.cobosys.baroder.base.adapter.RecyclerCell
 import co.kr.cobosys.baroder.base.adapter.RecyclerItem
 import co.kr.cobosys.baroder.model.FavoriteStoreUI
 
-object FavoriteStoreCell: RecyclerCell<RecyclerItem, ViewBinding> {
-
+object FavoriteStoreCell: PagerCell<RecyclerItem, ViewBinding> {
     override fun belongsTo(item: RecyclerItem?): Boolean {
         return item is FavoriteStoreUI
     }
@@ -29,18 +29,9 @@ object FavoriteStoreCell: RecyclerCell<RecyclerItem, ViewBinding> {
         return FavoriteStoreViewHolder(binding(parent))
     }
 
-    override fun bind(
-        holder: RecyclerView.ViewHolder,
-        item: RecyclerItem?,
-        onItemClick: ((RecyclerItem, View) -> Unit)?
-    ) {
-        if (holder is FavoriteStoreViewHolder && item is FavoriteStoreUI) {
+    override fun bind(holder: RecyclerView.ViewHolder, item: RecyclerItem?) {
+        if(holder is FavoriteStoreViewHolder && item is FavoriteStoreUI) {
             holder.bind(item)
-            holder.itemView.setOnClickListener {
-                onItemClick?.run {
-                    this(item, holder.itemBinding.pointCard)
-                }
-            }
         }
     }
 }

@@ -10,5 +10,4 @@ val BASE_DIFF_CALLBACK = object : DiffUtil.ItemCallback<RecyclerItem>() {
     override fun areContentsTheSame(oldItem: RecyclerItem, newItem: RecyclerItem): Boolean {
         return oldItem == newItem
     }
-
 }

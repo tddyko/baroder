@@ -6,18 +6,16 @@ import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentPointBinding
+import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
 
 class PointFragment : Fragment() {
 
-    private val binding by viewInflateBinding(FragmentPointBinding::inflate)
+    private val binding by viewBinding(FragmentPointBinding::bind)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         statusBarColorChange()
-        return binding.root
     }
 
     private fun statusBarColorChange() {

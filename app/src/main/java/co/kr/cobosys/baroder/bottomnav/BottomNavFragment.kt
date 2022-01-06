@@ -32,29 +32,28 @@ class BottomNavFragment : Fragment() {
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            if (binding.bottomNavi.selectedItemId == R.id.nav_home) {
+            if (binding.bottomNavi.selectedItemId == R.id.home_fragment) {
                 requireActivity().finish()
             } else {
-                binding.bottomNavi.selectedItemId = R.id.nav_home
+                binding.bottomNavi.selectedItemId = R.id.home_fragment
             }
         }
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (childFragmentManager.fragments.isEmpty()) {
-            onNavSelected(R.id.nav_home)
+            onNavSelected(R.id.home_fragment)
         }
     }
 
     private fun createNewInstanceOf(itemId: Int): Fragment {
         return when (itemId) {
-            R.id.nav_home -> HomeFragment()
-            R.id.nav_store -> StoreFragment()
-            R.id.nav_coupon -> CouponFragment()
-            R.id.nav_point -> PointFragment()
+            R.id.home_fragment -> HomeFragment()
+            R.id.store_fragment -> StoreFragment()
+            R.id.coupon_fragment -> CouponFragment()
+            R.id.point_fragment -> PointFragment()
             else -> ShopFragment()
         }
     }
@@ -66,22 +65,22 @@ class BottomNavFragment : Fragment() {
             }
         } else {
             when (itemId) {
-                R.id.nav_home -> {
+                R.id.home_fragment -> {
                     if (childFragmentManager.fragments[0] !is HomeFragment) {
                         replaceChildFragment(createNewInstanceOf(itemId))
                     }
                 }
-                R.id.nav_store -> {
+                R.id.store_fragment -> {
                     if (childFragmentManager.fragments[0] !is StoreFragment) {
                         replaceChildFragment(createNewInstanceOf(itemId))
                     }
                 }
-                R.id.nav_coupon -> {
+                R.id.coupon_fragment -> {
                     if (childFragmentManager.fragments[0] !is CouponFragment) {
                         replaceChildFragment(createNewInstanceOf(itemId))
                     }
                 }
-                R.id.nav_point -> {
+                R.id.point_fragment -> {
                     if (childFragmentManager.fragments[0] !is PointFragment) {
                         replaceChildFragment(createNewInstanceOf(itemId))
                     }

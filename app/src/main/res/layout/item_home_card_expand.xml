@@ -11,7 +11,7 @@
         android:id="@+id/point_card"
         style="@style/home_card_expand"
         android:layout_width="match_parent"
-        android:layout_height="267dp"
+        android:layout_height="wrap_content"
         app:contentPadding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,18 +94,12 @@
                     tools:text="999999" />
             </com.google.android.flexbox.FlexboxLayout>
 
-            <com.google.android.material.button.MaterialButtonToggleGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints">
-
-            </com.google.android.material.button.MaterialButtonToggleGroup>
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/coupon_btn"
                 style="@style/cardview_negative_btn"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
+                android:layout_marginTop="20dp"
                 app:icon="@drawable/ic_coupon_icon"
                 app:iconGravity="textStart"
                 app:iconTint="@android:color/transparent"
@@ -120,6 +114,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/expand_card"
         style="@style/expand_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -167,12 +162,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:visibility="gone"
+                tools:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/expand_title_constraint">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/first_img"
+                    android:id="@+id/expand_first_img"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
                     android:layout_marginStart="20dp"
@@ -181,36 +177,38 @@
                     tools:src="@drawable/ic_preview_img" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expand_item_first"
                     style="@style/item_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
-                    app:layout_constraintEnd_toEndOf="@+id/first_img"
-                    app:layout_constraintStart_toStartOf="@+id/first_img"
-                    app:layout_constraintTop_toBottomOf="@+id/first_img"
+                    app:layout_constraintEnd_toEndOf="@+id/expand_first_img"
+                    app:layout_constraintStart_toStartOf="@+id/expand_first_img"
+                    app:layout_constraintTop_toBottomOf="@+id/expand_first_img"
                     tools:text="녹차라떼" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/second_img"
+                    android:id="@+id/expand_second_img"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
-                    app:layout_constraintEnd_toStartOf="@+id/third_img"
-                    app:layout_constraintStart_toEndOf="@+id/first_img"
+                    app:layout_constraintEnd_toStartOf="@+id/expand_third_img"
+                    app:layout_constraintStart_toEndOf="@+id/expand_first_img"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:src="@drawable/ic_preview_img" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/expand_item_second"
                     style="@style/item_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
-                    app:layout_constraintEnd_toEndOf="@+id/second_img"
-                    app:layout_constraintStart_toStartOf="@+id/second_img"
-                    app:layout_constraintTop_toBottomOf="@+id/second_img"
-                    tools:text="녹차라떼" />
+                    app:layout_constraintEnd_toEndOf="@+id/expand_second_img"
+                    app:layout_constraintStart_toStartOf="@+id/expand_second_img"
+                    app:layout_constraintTop_toBottomOf="@+id/expand_second_img"
+                    tools:text="초코라떼" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/third_img"
+                    android:id="@+id/expand_third_img"
                     android:layout_width="96dp"
                     android:layout_height="96dp"
                     android:layout_marginEnd="20dp"
@@ -220,13 +218,14 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/item_text"
+                    android:id="@+id/expand_item_third"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
-                    app:layout_constraintEnd_toEndOf="@+id/third_img"
-                    app:layout_constraintStart_toStartOf="@+id/third_img"
-                    app:layout_constraintTop_toBottomOf="@+id/third_img"
-                    tools:text="녹차라떼" />
+                    app:layout_constraintEnd_toEndOf="@+id/expand_third_img"
+                    app:layout_constraintStart_toStartOf="@+id/expand_third_img"
+                    app:layout_constraintTop_toBottomOf="@+id/expand_third_img"
+                    tools:text="딸기라떼" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

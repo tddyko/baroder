@@ -1,18 +1,49 @@
 package co.kr.cobosys.baroder.model.favoritestore
 
+import android.transition.AutoTransition
+import android.transition.TransitionManager
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
+import co.kr.cobosys.baroder.extension.gone
+import co.kr.cobosys.baroder.extension.load
+import co.kr.cobosys.baroder.extension.visible
 import co.kr.cobosys.baroder.model.FavoriteStoreUI
 
-class FavoriteStoreViewHolder(val itemBinding: ItemHomeCardExpandBinding) :
+class FavoriteStoreViewHolder(private val itemBinding: ItemHomeCardExpandBinding) :
     RecyclerView.ViewHolder(itemBinding.root) {
     fun bind(favorite: FavoriteStoreUI) = with(itemView) {
         itemBinding.pointCard.transitionName = favorite.id.toString()
         itemBinding.storeName.text = favorite.storeName
-        itemBinding.point.text = favorite.point.toString()
+        itemBinding.point.text = favorite.point
         itemBinding.mainText.text = favorite.mainText
         itemBinding.startPoint.text = favorite.minPoint.toString()
         itemBinding.endPoint.text = favorite.maxPoint.toString()
         itemBinding.couponBtn.text = favorite.coupon.toString()
+        itemBinding.expandItemFirst.text = favorite.bestProduct?.component1()
+        itemBinding.expandItemSecond.text = favorite.bestProduct?.component2()
+        itemBinding.expandItemThird.text = favorite.bestProduct?.component3()
+        itemBinding.expandFirstImg.load(favorite.bestProductImgUrl?.component1())
+        itemBinding.expandSecondImg.load(favorite.bestProductImgUrl?.component2())
+        itemBinding.expandThirdImg.load(favorite.bestProductImgUrl?.component3())
+
+        itemBinding.couponBtn.setOnClickListener {
+            Toast.makeText(context, "버튼눌림", Toast.LENGTH_SHORT).show()
+        }
+
+        itemBinding.expandTitleConstraint.setOnClickListener {
+            if(itemBinding.expandItem.visibility == View.VISIBLE) {
+                TransitionManager.beginDelayedTransition(itemBinding.expandCard, AutoTransition())
+                itemBinding.expandItem.gone()
+                itemBinding.arrowImg.setImageResource(R.drawable.ic_arrow_down)
+            } else {
+                TransitionManager.beginDelayedTransition(itemBinding.expandCard, AutoTransition())
+                itemBinding.expandItem.visible()
+                itemBinding.arrowImg.setImageResource(R.drawable.ic_arrow_up)
+            }
+        }
+
     }
 }

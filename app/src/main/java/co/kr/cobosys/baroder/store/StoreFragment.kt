@@ -8,18 +8,16 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentStoreBinding
+import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
 
 class StoreFragment : Fragment() {
 
-    private val binding by viewInflateBinding(FragmentStoreBinding::inflate)
+    private val binding by viewBinding(FragmentStoreBinding::bind)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         statusBarColorChange()
-        return binding.root
     }
 
     private fun statusBarColorChange() {

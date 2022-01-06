@@ -28,10 +28,7 @@ object EmptyFavoriteStoreCell : PagerCell<RecyclerItem, ViewBinding> {
         return EmptyFavoriteStoreViewHolder(binding(parent))
     }
 
-    override fun bind(
-        holder: RecyclerView.ViewHolder,
-        item: RecyclerItem?
-    ) {
+    override fun bind(holder: RecyclerView.ViewHolder, item: RecyclerItem?) {
         if (holder is EmptyFavoriteStoreViewHolder && item is EmptyFavoriteStoreUI) {
             holder.bind(item)
         }

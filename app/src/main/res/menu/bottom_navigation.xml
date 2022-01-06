@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/home_fragment"
         android:title="@string/home"
         android:icon="@drawable/ic_menu_home_active" />
 
     <item
-        android:id="@+id/nav_store"
+        android:id="@+id/store_fragment"
         android:title="@string/store"
         android:icon="@drawable/ic_menu_store_disabled" />
 
     <item
-        android:id="@+id/nav_coupon"
+        android:id="@+id/coupon_fragment"
         android:title="@string/nav_coupon"
         android:icon="@drawable/ic_menu_coupon_disabled" />
 
     <item
-        android:id="@+id/nav_point"
+        android:id="@+id/point_fragment"
         android:title="@string/nav_point"
         android:icon="@drawable/ic_menu_point_disabled" />
 
     <item
-        android:id="@+id/nav_shop"
+        android:id="@+id/shop_fragment"
         android:title="@string/nav_shop"
         android:icon="@drawable/ic_menu_shop_disabled" />
 
