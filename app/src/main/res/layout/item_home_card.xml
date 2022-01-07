@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingHorizontal="20dp"
+    android:paddingHorizontal="37dp"
     android:paddingTop="16dp"
     android:paddingBottom="20dp">
 
@@ -43,8 +43,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_store_name"
                 style="@style/title_sub_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="232dp"
+                android:layout_height="31dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="아직 등록된 매장이 없어요 :(" />
@@ -56,13 +56,13 @@
                 android:layout_height="46dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_store_name"
-                tools:text="0P" />
+                tools:text="0 P" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_main_text"
                 style="@style/main_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="238dp"
+                android:layout_height="22dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point"
                 tools:text="회원가입하고 매장 포인트를 확인하세요!" />

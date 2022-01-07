@@ -15,16 +15,16 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class StoreFragment : Fragment() {
 
-    private val binding by viewBinding(FragmentStoreBinding::bind)
+    private val binding by viewInflateBinding(FragmentStoreBinding::inflate)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        statusBarColorChange()
+        binding.root
     }
 
-    private fun statusBarColorChange() {
-        val window = requireActivity().window
-        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.mainGreen)
-    }
+//    private fun statusBarColorChange() {
+//        val window = requireActivity().window
+//        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.mainGreen)
+//    }
 
 }

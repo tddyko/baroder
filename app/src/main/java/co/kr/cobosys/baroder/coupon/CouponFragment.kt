@@ -16,18 +16,14 @@ class CouponFragment : Fragment() {
 
     private val binding by viewInflateBinding(FragmentCouponBinding::inflate)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        statusBarColorChange()
-        // Inflate the layout for this fragment
-        return binding.root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.root
     }
 
-    private fun statusBarColorChange() {
-        val window = requireActivity().window
-        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.starYellow)
-    }
+//    private fun statusBarColorChange() {
+//        val window = requireActivity().window
+//        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.starYellow)
+//    }
 
 }

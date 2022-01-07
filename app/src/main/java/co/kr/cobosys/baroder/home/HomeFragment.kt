@@ -29,14 +29,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        statusBarColorChange()
         setupPager()
     }
 
-    private fun statusBarColorChange() {
-        val window = requireActivity().window
-        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
-    }
+//    private fun statusBarColorChange() {
+//        val window = requireActivity().window
+//        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
+//    }
 
     private fun setupPager() {
         val emptyList = arrayListOf<RecyclerItem>(

@@ -17,12 +17,12 @@ class PointFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        statusBarColorChange()
+        binding.root
     }
 
-    private fun statusBarColorChange() {
-        val window = requireActivity().window
-        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.disabled_text)
-    }
+//    private fun statusBarColorChange() {
+//        val window = requireActivity().window
+//        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.disabled_text)
+//    }
 
 }

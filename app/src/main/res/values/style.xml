@@ -10,6 +10,7 @@
 
     <!--텍스트-->
     <style name="title_text">
+        <item name="android:letterSpacing">-0.0124</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">31sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
@@ -20,7 +21,9 @@
     </style>
 
     <style name="title_sub_text">
-        <item name="android:textSize">21sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">21sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
@@ -119,7 +122,10 @@
     </style>
 
     <style name="qr_text">
-        <item name="android:textSize">21sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">21sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="android:letterSpacing">-0.004</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>

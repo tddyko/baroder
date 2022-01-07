@@ -162,8 +162,8 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/qr_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="119dp"
+            android:layout_height="31dp"
             android:text="@string/recently_store_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -191,8 +191,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/recommend_text"
         style="@style/qr_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="166dp"
+        android:layout_height="31dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:text="@string/home_recommend_text"
