@@ -10,7 +10,9 @@ import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentStoreBinding
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class StoreFragment : Fragment() {
 
     private val binding by viewBinding(FragmentStoreBinding::bind)

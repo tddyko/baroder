@@ -5,12 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentCouponBinding
 import co.kr.cobosys.baroder.extension.viewInflateBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CouponFragment : Fragment() {
 
     private val binding by viewInflateBinding(FragmentCouponBinding::inflate)

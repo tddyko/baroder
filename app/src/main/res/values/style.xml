@@ -10,7 +10,9 @@
 
     <!--텍스트-->
     <style name="title_text">
-        <item name="android:textSize">31sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">31sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/noto_sans</item>
@@ -152,6 +154,7 @@
 
     <style name="cardview_positive_btn" parent="Widget.MaterialComponents.Button">
         <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.006</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:layout_width">wrap_content</item>
@@ -169,6 +172,7 @@
 
     <style name="cardview_negative_btn" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.006</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
