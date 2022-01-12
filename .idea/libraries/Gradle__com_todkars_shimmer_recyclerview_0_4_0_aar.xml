@@ -10,7 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.todkars/shimmer-recyclerview/0.4.0/45f033dc7043efed683dc09a394559dfae3a375d/shimmer-recyclerview-0.4.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.todkars/shimmer-recyclerview/0.4.0/45f033dc7043efed683dc09a394559dfae3a375d/shimmer-recyclerview-0.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

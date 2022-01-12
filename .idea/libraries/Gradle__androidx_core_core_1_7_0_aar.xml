@@ -10,7 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.7.0/f1c3685231d49092ae301932de1481d9b7a9e025/core-1.7.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.core/core/1.7.0/f1c3685231d49092ae301932de1481d9b7a9e025/core-1.7.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

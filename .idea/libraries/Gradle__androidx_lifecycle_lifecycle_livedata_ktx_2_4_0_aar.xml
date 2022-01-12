@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-ktx/2.4.0/4aa2db934fc7bfa0f648f1ddee7fd2a436d7712c/lifecycle-livedata-ktx-2.4.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-ktx/2.4.0/4aa2db934fc7bfa0f648f1ddee7fd2a436d7712c/lifecycle-livedata-ktx-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

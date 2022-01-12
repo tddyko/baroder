@@ -32,8 +32,10 @@
             <TextView
                 android:id="@+id/qr_text"
                 style="@style/qr_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="31dp"
+                android:gravity="center"
                 android:text="@string/qr_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +43,10 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/baroder_logo"
-                android:layout_width="78dp"
-                android:layout_height="41dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="78dp"
+                app:layout_constraintHeight_min="41dp"
                 android:layout_marginTop="5dp"
                 android:src="@drawable/ic_baroder_logo"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +55,10 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/qr_code"
-                android:layout_width="240dp"
-                android:layout_height="240dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_max="240dp"
+                app:layout_constraintHeight_min="240dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/mainGreen"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +68,9 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/qr_count_text"
                 style="@style/title_bold_31sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="46dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,8 +80,9 @@
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/coupon_info_text"
                 android:id="@+id/qr_info_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/qr_count_text"

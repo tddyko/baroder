@@ -69,6 +69,7 @@
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:gravity">center</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginTop">3dp</item>
@@ -85,6 +86,9 @@
     </style>
 
     <style name="point_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintHeight_min">41dp</item>
         <item name="android:letterSpacing">-0.004</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -96,6 +100,9 @@
     </style>
 
     <style name="sub_main_text_14sp">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintHeight_min">25dp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -179,6 +186,7 @@
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">bold</item>
         <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:gravity">center</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 

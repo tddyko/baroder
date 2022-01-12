@@ -26,4 +26,5 @@ abstract class BaseViewPagerAdapter(
             return pagerCellTypes.of(it).type()
         }
     }
+
 }

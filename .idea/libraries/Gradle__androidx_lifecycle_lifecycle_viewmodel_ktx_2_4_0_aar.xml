@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-ktx/2.4.0/a900dc99643d8638beb02bd809a495f772d457e7/lifecycle-viewmodel-ktx-2.4.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-ktx/2.4.0/a900dc99643d8638beb02bd809a495f772d457e7/lifecycle-viewmodel-ktx-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

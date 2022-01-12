@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/viewbinding/7.0.4/afb2fba7b45ae3613ed80a9d306bfb0adc5afed9/viewbinding-7.0.4-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.databinding/viewbinding/7.0.4/afb2fba7b45ae3613ed80a9d306bfb0adc5afed9/viewbinding-7.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

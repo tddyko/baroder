@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime/2.4.0/ae7040cf314de81d20ac69f28f5ab6c9a2c0d1ab/lifecycle-runtime-2.4.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime/2.4.0/ae7040cf314de81d20ac69f28f5ab6c9a2c0d1ab/lifecycle-runtime-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.4.0-rc01/2064e157d891676f2cf4e59c4643c54b759b3ad/fragment-ktx-1.4.0-rc01-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.4.0-rc01/2064e157d891676f2cf4e59c4643c54b759b3ad/fragment-ktx-1.4.0-rc01-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

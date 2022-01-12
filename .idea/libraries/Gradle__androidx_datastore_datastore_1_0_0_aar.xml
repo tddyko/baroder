@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore/1.0.0/b00f14f5978f6ec5072348e9f4c8f47f1bf9131a/datastore-1.0.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.datastore/datastore/1.0.0/b00f14f5978f6ec5072348e9f4c8f47f1bf9131a/datastore-1.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

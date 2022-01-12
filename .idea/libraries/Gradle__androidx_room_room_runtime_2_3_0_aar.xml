@@ -10,7 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.room/room-runtime/2.3.0/578ba82a8a4cbcdb53377bd57687ffbb2cb1924a/room-runtime-2.3.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.room/room-runtime/2.3.0/578ba82a8a4cbcdb53377bd57687ffbb2cb1924a/room-runtime-2.3.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

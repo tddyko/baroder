@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.activity/activity-ktx/1.2.4/8de8463662d207920c11530ec0e76af3005f0061/activity-ktx-1.2.4-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.activity/activity-ktx/1.2.4/8de8463662d207920c11530ec0e76af3005f0061/activity-ktx-1.2.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

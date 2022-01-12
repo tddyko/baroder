@@ -1,7 +1,5 @@
 package co.kr.cobosys.baroder.model.favoritestore
 
-import android.transition.AutoTransition
-import android.transition.TransitionManager
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -35,13 +33,11 @@ class FavoriteStoreViewHolder(private val itemBinding: ItemHomeCardExpandBinding
 
         itemBinding.expandTitleConstraint.setOnClickListener {
             if(itemBinding.expandItem.visibility == View.VISIBLE) {
-                TransitionManager.beginDelayedTransition(itemBinding.expandCard, AutoTransition())
                 itemBinding.expandItem.gone()
-                itemBinding.arrowImg.setImageResource(R.drawable.ic_arrow_down)
+                itemBinding.arrowImg.animate().setDuration(200).rotation(0f)
             } else {
-                TransitionManager.beginDelayedTransition(itemBinding.expandCard, AutoTransition())
                 itemBinding.expandItem.visible()
-                itemBinding.arrowImg.setImageResource(R.drawable.ic_arrow_up)
+                itemBinding.arrowImg.animate().setDuration(200).rotation(180f)
             }
         }
 

@@ -10,7 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.flexbox/flexbox/3.0.0/ab0cfea1daeb94f54c8f0b4f5d1e34882d97e37b/flexbox-3.0.0-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.google.android.flexbox/flexbox/3.0.0/ab0cfea1daeb94f54c8f0b4f5d1e34882d97e37b/flexbox-3.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

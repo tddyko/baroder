@@ -4,7 +4,7 @@
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
         <option name="GRADLE_PROJECT_PATH" value=":app" />
-        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="7.0.4" />
         <option name="LAST_KNOWN_AGP_VERSION" value="7.0.4" />
       </configuration>
     </facet>
@@ -228,7 +228,5 @@
     <orderEntry type="library" name="Gradle: com.tbuonomo:dotsindicator:4.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.todkars:shimmer-recyclerview:0.4.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.journeyapps:zxing-android-embedded:4.3.0@aar" level="project" />
-    <orderEntry type="module" module-name="AOS.baroder.data" />
-    <orderEntry type="module" module-name="AOS.baroder.domain" />
   </component>
 </module>

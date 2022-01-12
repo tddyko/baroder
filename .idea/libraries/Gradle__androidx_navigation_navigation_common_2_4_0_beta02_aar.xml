@@ -7,7 +7,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-common/2.4.0-beta02/4ab1886737bb33d3cd46ec4d8eeb50bb8a274c2e/navigation-common-2.4.0-beta02-sources.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.navigation/navigation-common/2.4.0-beta02/4ab1886737bb33d3cd46ec4d8eeb50bb8a274c2e/navigation-common-2.4.0-beta02-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
