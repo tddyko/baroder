@@ -43,8 +43,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_store_name"
                 style="@style/title_sub_text"
-                android:layout_width="232dp"
-                android:layout_height="31dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="아직 등록된 매장이 없어요 :(" />
@@ -52,8 +50,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_point"
                 style="@style/title_text"
-                android:layout_width="43dp"
-                android:layout_height="46dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_store_name"
                 tools:text="0 P" />
@@ -61,20 +57,23 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_main_text"
                 style="@style/main_text"
-                android:layout_width="238dp"
-                android:layout_height="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point"
                 tools:text="회원가입하고 매장 포인트를 확인하세요!" />
 
             <com.skydoves.progressview.ProgressView
                 android:id="@+id/empty_point_progress"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="10dp"
+                app:layout_constraintHeight_max="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_main_text"
+                app:layout_constraintBottom_toTopOf="@id/empty_point_text"
                 app:progressView_autoAnimate="true"
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
@@ -87,7 +86,7 @@
 
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/empty_point_text"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 app:alignItems="center"
@@ -101,50 +100,43 @@
                     android:id="@+id/empty_start_point"
                     style="@style/point_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     tools:text="0" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/empty_end_point"
                     style="@style/point_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     tools:text="999999" />
             </com.google.android.flexbox.FlexboxLayout>
 
-            <Button
-                android:id="@+id/main_card_login_btn"
-                style="@style/cardview_positive_btn"
-                android:layout_width="150dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/empty_point_text"
-                tools:text="로그인 하기" />
 
             <Button
                 android:id="@+id/empty_first_btn"
                 style="@style/cardview_positive_btn"
-                android:layout_width="150dp"
-                android:layout_height="54dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="23dp"
-                app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintHeight_min="54dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/empty_point_text"
+                app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
+                app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="단골매장 설정" />
-
 
             <Button
                 android:id="@+id/empty_second_btn"
                 style="@style/cardview_negative_btn"
-                android:layout_width="150dp"
-                android:layout_height="54dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="54dp"
                 android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
                 app:layout_constraintStart_toEndOf="@+id/empty_first_btn"
-                app:layout_constraintTop_toBottomOf="@id/empty_point_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 tools:text="바로더 알아보기" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

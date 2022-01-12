@@ -22,8 +22,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/coupon_store_name"
                 android:id="@+id/coupon_store_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="집어가 마산역점" />
@@ -31,8 +31,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/title_sub_text"
                 android:id="@+id/coupon_coupon_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/coupon_store_name"
                 tools:text="3,000원 할인쿠폰" />
@@ -40,8 +38,6 @@
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/main_sub_text"
                 android:id="@+id/coupon_period_of_use"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coupon_coupon_img"
                 android:layout_marginTop="3.5dp"
@@ -49,12 +45,16 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/coupon_coupon_img"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_coupon_img"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_coupon_img" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_min="40dp"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/coupon_coupon_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="60dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

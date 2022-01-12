@@ -97,6 +97,7 @@
         <entry key="app/src/main/res/layout/item_expand_parent.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_home_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card_expand.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_home_card_shimmer.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_main_card.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_recently_visiting_store_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_qr_code.xml" value="0.33" />
@@ -106,6 +107,5 @@
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

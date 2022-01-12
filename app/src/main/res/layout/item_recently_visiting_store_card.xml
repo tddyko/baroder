@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recently_visiting_store_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,6 +30,7 @@
         android:layout_marginStart="15dp"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recently_store_location"
         tools:text="바로더 매장 문정점" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -40,9 +42,11 @@
         android:layout_marginTop="3dp"
         app:layout_constraintStart_toEndOf="@id/recently_store"
         app:layout_constraintTop_toBottomOf="@id/recently_store_name"
+        app:layout_constraintBottom_toTopOf="@id/recently_store_more_location"
         tools:text="나와의 거리 280km" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recently_store_more_location"
         style="@style/point_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,9 +59,9 @@
     <com.google.android.material.checkbox.MaterialCheckBox
         android:layout_width="22dp"
         android:layout_height="22dp"
-        app:layout_constraintStart_toEndOf="@+id/recently_store_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="36dp"
+        android:layout_marginEnd="22dp"
         android:background="@drawable/favorite_checkbox"
         android:button="@android:color/transparent" />
 
