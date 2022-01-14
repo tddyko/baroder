@@ -19,7 +19,9 @@
         app:justifyContent="flex_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/title_text"
@@ -38,9 +40,11 @@
         app:alignItems="center"
         app:flexDirection="row"
         app:justifyContent="flex_end"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/visitor_name">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -52,9 +56,14 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/empty_point_card"
         style="@style/main_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_max="267dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shop_img">
+        app:layout_constraintTop_toBottomOf="@+id/shop_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -63,22 +72,41 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_store_name"
                 style="@style/title_sub_text"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textColor="@color/primary_color_text"
+                app:layout_constraintHeight_max="31dp"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="아직 등록된 매장이 없어요 :(" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_point"
                 style="@style/title_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="46dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_store_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="0 P" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_main_text"
                 style="@style/main_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="회원가입하고 매장 포인트를 확인하세요!" />
 
             <com.skydoves.progressview.ProgressView
@@ -86,12 +114,12 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toTopOf="@id/empty_point_text"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_max="10dp"
-                app:layout_constraintHeight_min="10dp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_main_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:progressView_autoAnimate="true"
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
@@ -105,7 +133,8 @@
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/empty_point_text"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_min="20dp"
                 android:layout_marginTop="4dp"
                 app:alignItems="center"
                 app:flexDirection="row"
@@ -137,11 +166,11 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
-                app:layout_constraintHeight_min="54dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHeight_max="54dp"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
                 tools:text="단골매장 설정" />
 
             <Button
@@ -152,7 +181,7 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_min="54dp"
+                app:layout_constraintHeight_max="54dp"
                 app:layout_constraintStart_toEndOf="@+id/empty_first_btn"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
                 tools:text="바로더 알아보기" />

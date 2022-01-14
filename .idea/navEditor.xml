@@ -34,6 +34,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_bottom_navigation_fragment_to_root_fragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_bottom_navigation_fragment_to_shop_fragment">
                               <value>
                                 <LayoutPositions />

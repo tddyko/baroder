@@ -1,15 +1,13 @@
 package co.kr.cobosys.baroder.main
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ActivityMainBinding
@@ -55,16 +53,17 @@ class MainActivity : AppCompatActivity() {
     private fun setNav() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
 
+        navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(navController.graph)
 
         toolBar.setupWithNavController(navController, appBarConfiguration)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
+            toolBar.setNavigationIcon(R.drawable.ic_move_icon_left)
             when (destination.id) {
 //                R.id.root_fragment,
-                R.id.bottom_navigation_fragment,
+//                R.id.bottom_navigation_fragment,
                 R.id.home_fragment,
                 R.id.store_fragment,
                 R.id.coupon_fragment,

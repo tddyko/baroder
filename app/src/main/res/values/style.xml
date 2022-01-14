@@ -10,9 +10,6 @@
 
     <!--텍스트-->
     <style name="title_text">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintHeight_min">46dp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">31sp</item>
@@ -24,9 +21,6 @@
     </style>
 
     <style name="title_sub_text">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintHeight_min">31dp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">21sp</item>
@@ -79,6 +73,7 @@
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
+        <item name="android:letterSpacing">-0.004</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
@@ -86,9 +81,6 @@
     </style>
 
     <style name="point_text">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintHeight_min">41dp</item>
         <item name="android:letterSpacing">-0.004</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -100,9 +92,6 @@
     </style>
 
     <style name="sub_main_text_14sp">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintHeight_min">25dp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -114,8 +103,6 @@
     </style>
 
     <style name="main_text">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">22dp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
@@ -123,7 +110,6 @@
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:layout_marginTop">10dp</item>
     </style>
 
     <style name="main_sub_text">
@@ -237,14 +223,10 @@
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/mainGreen</item>
         <item name="cornerRadius">10dp</item>
         <item name="strokeColor">@color/mainGreen</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
-        <item name="android:minWidth">0dp</item>
+        <item name="strokeWidth">1dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -264,7 +246,6 @@
         <item name="elevation">0dp</item>
         <item name="android:elevation">0dp</item>
         <item name="backgroundTint">@color/btnGrey</item>
-        <item name="android:minWidth">0dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>

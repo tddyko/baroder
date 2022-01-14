@@ -3,23 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/baroder_nav"
-    app:startDestination="@id/bottom_navigation_fragment">
+    app:startDestination="@id/root_fragment">
 
     <fragment
         android:id="@+id/root_fragment"
         android:name="co.kr.cobosys.baroder.main.RootViewFragment"
-        tools:layout="@layout/fragment_root_view">
+        tools:layout="@layout/fragment_root_view"
+        android:label="루트">
 
         <action
             android:id="@+id/action_root_fragment_to_bottom_navigation_fragment"
-            app:destination="@id/bottom_navigation_fragment" />
+            app:destination="@id/bottom_navigation_fragment"
+            app:popUpTo="@id/root_fragment"/>
 
     </fragment>
 
     <fragment
         android:id="@+id/bottom_navigation_fragment"
         android:name="co.kr.cobosys.baroder.bottomnav.BottomNavFragment"
-        tools:layout="@layout/fragment_bottom_nav">
+        tools:layout="@layout/fragment_bottom_nav"
+        android:label="바텀내비게이션">
 
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_home_fragment"
@@ -36,6 +39,11 @@
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_shop_fragment"
             app:destination="@id/shop_fragment" />
+        <action
+            android:id="@+id/action_bottom_navigation_fragment_to_root_fragment2"
+            app:destination="@id/root_fragment"
+            app:popUpTo="@id/root_fragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -47,8 +55,7 @@
 
     <fragment
         android:id="@+id/store_fragment"
-        android:name="co.kr.cobosys.baroder.store.StoreFragment"
-        tools:layout="@layout/fragment_store">
+        android:name="co.kr.cobosys.baroder.store.StoreFragment">
 
     </fragment>
 
@@ -73,5 +80,6 @@
         tools:layout="@layout/fragment_shop">
 
     </fragment>
+
 
 </navigation>

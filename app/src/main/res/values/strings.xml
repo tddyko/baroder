@@ -16,4 +16,6 @@
     <string name="recently_store_text">최근 방문매장</string>
     <string name="home_more_button">더보기</string>
     <string name="home_recommend_text">이런 매장은 어때요?</string>
+    <string name="recently_visiting_store_selected">단골매장 선택</string>
+    <string name="recently_visiting_store_change">단골매장 순서변경</string>
 </resources>

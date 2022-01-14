@@ -18,7 +18,9 @@
         app:justifyContent="flex_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/title_text"
@@ -34,31 +36,36 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="0dp"
+        app:layout_constraintHeight_max="34dp"
+        app:layout_constraintWidth_max="68dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/edit_button_text"
         app:icon="@drawable/ic_edit_icon"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:iconTint="@android:color/transparent"
         app:iconTintMode="add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_min="34dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/visitor_name"
-        app:layout_constraintBottom_toTopOf="@id/point_card"
-        app:layout_constraintWidth_max="68dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/point_card"
         style="@style/home_card_expand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_max="277dp"
         app:contentPadding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_button"
-        app:layout_constraintBottom_toTopOf="@id/expand_card">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -68,37 +75,55 @@
                 android:id="@+id/store_name"
                 style="@style/title_sub_text"
                 android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="31dp"
                 app:layout_constraintEnd_toStartOf="@id/store_more"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="바로더 매장 문정점" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/store_more"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:backgroundTint="@android:color/transparent"
                 android:padding="0dp"
                 android:src="@drawable/ic_move_icon_right"
-                app:layout_constraintBottom_toTopOf="@+id/point"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintWidth_max="22dp"
                 app:layout_constraintHeight_max="22dp"
-                app:layout_constraintStart_toEndOf="@id/store_name"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/store_name"
+                app:layout_constraintBottom_toBottomOf="@id/store_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/point"
                 style="@style/title_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="46dp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/store_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="4,055 P" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/main_text"
                 style="@style/main_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="22dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/point"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="1,000,000,000 포인트까지 1포인트 남았어요!" />
 
             <com.skydoves.progressview.ProgressView
@@ -106,11 +131,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toTopOf="@id/point_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_min="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_text"
+                app:layout_constraintHeight_max="10dp"
                 app:progressView_autoAnimate="true"
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
@@ -119,19 +140,27 @@
                 app:progressView_max="100000"
                 app:progressView_min="0"
                 app:progressView_progress="500"
-                app:progressView_progressFromPrevious="true" />
+                app:progressView_progressFromPrevious="true"
+                app:layout_constraintTop_toBottomOf="@+id/main_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
 
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/point_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_max="20dp"
                 android:layout_marginTop="4dp"
                 app:alignItems="center"
                 app:flexDirection="row"
                 app:justifyContent="space_between"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/point_progress">
+                app:layout_constraintTop_toBottomOf="@+id/point_progress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/start_point"
@@ -153,16 +182,17 @@
                 style="@style/cardview_negative_btn"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                app:layout_constraintHeight_max="54dp"
                 android:layout_marginTop="20dp"
                 app:icon="@drawable/ic_coupon_icon"
                 app:iconGravity="textStart"
                 app:iconTint="@android:color/transparent"
                 app:iconTintMode="add"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_min="54dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:layout_constraintTop_toBottomOf="@id/point_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="내 쿠폰 9,999,999개" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

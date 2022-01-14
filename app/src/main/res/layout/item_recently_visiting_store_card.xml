@@ -3,16 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recently_visiting_store_card"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/recently_store"
         style="@style/recently_store_card"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_max="120dp"
+        app:layout_constraintHeight_max="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/recently_store_img"
@@ -28,10 +35,12 @@
         android:layout_marginStart="15dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintHeight_max="25dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@id/materialCheckBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintHorizontal_bias="0.0"
         tools:text="바로더 매장 문정점" />
 
@@ -40,13 +49,14 @@
         style="@style/sub_main_text_14sp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="3dp"
-        android:layout_marginEnd="36dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_min="20dp"
+        app:layout_constraintHeight_max="20dp"
         app:layout_constraintTop_toBottomOf="@+id/recently_store_name"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="나와의 거리 280km" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -54,26 +64,32 @@
         style="@style/point_text"
         android:layout_marginStart="15dp"
         android:layout_marginTop="3dp"
-        android:layout_marginEnd="36dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_min="41dp"
+        app:layout_constraintHeight_max="41dp"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintTop_toBottomOf="@id/recently_store_location"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:text="경남 창원시 대산회원구\n영덕5길 18 401동 110호" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/materialCheckBox"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_max="22dp"
+        app:layout_constraintWidth_max="22dp"
         android:layout_marginEnd="22dp"
         android:layout_marginStart="36dp"
         android:background="@drawable/favorite_checkbox"
         android:button="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/recently_store_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
