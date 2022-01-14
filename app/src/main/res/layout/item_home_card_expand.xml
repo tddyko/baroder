@@ -226,7 +226,8 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/expand_title"
-                    style="@style/item_title_text_white_no_margin"
+                    style="@style/item_title_text"
+                    android:textColor="@color/white"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="@string/best_item"
@@ -285,6 +286,7 @@
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="21dp"
                     android:gravity="center"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/expand_first_img"
                     app:layout_constraintHeight_min="22dp"
@@ -312,6 +314,7 @@
                     android:layout_height="0dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="21dp"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/expand_second_img"
@@ -339,6 +342,7 @@
                     android:layout_height="0dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="21dp"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/expand_third_img"

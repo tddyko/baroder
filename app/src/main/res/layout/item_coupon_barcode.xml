@@ -9,6 +9,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/barcode_card"
         style="@style/bottom_20dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -40,7 +41,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/barcode_store_name"
-                style="@style/item_title_text_black"
+                style="@style/item_title_text"
                 android:textColor="@color/primary_color_text"
                 android:layout_marginTop="3dp"
                 android:layout_width="0dp"
@@ -83,7 +84,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/barcode_number"
-                style="@style/item_title_text_black"
+                style="@style/item_title_text"
                 android:textColor="@color/primary_color_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -98,7 +99,8 @@
                 tools:text="123456789000" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/item_text_14sp_black"
+                style="@style/item_text"
+                android:textColor="@color/primary_color_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"

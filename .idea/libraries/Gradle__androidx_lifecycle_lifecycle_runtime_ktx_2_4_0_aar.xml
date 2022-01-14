@@ -4,10 +4,14 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/13f741f448abb3b2cbe3eedef5913215/transformed/lifecycle-runtime-ktx-2.4.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx/2.4.0/6d338022f8fa82c24121d5d249fe5daeeb297742/lifecycle-runtime-ktx-2.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx/2.4.0/6d338022f8fa82c24121d5d249fe5daeeb297742/lifecycle-runtime-ktx-2.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

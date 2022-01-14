@@ -4,10 +4,14 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.databinding/viewbinding/7.0.4/afb2fba7b45ae3613ed80a9d306bfb0adc5afed9/viewbinding-7.0.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/viewbinding/7.0.4/afb2fba7b45ae3613ed80a9d306bfb0adc5afed9/viewbinding-7.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

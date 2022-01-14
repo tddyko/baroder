@@ -3,7 +3,6 @@ package co.kr.cobosys.baroder.model.favoritestore
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.load

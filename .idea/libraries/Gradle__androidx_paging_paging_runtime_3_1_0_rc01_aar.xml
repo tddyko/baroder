@@ -4,10 +4,14 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/304b97808007cdeb75226a526e833ffc/transformed/paging-runtime-3.1.0-rc01/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.paging/paging-runtime/3.1.0-rc01/4379f9bd714b051dbd90fae003cd58905df25f59/paging-runtime-3.1.0-rc01-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-runtime/3.1.0-rc01/4379f9bd714b051dbd90fae003cd58905df25f59/paging-runtime-3.1.0-rc01-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

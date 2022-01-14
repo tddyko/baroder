@@ -30,6 +30,7 @@
 
             <Button
                 style="@style/btn_qr"
+                android:paddingHorizontal="8dp"
                 android:text="@string/qr" />
 
             <ImageButton

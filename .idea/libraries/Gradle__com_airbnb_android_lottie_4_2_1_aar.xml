@@ -2,17 +2,23 @@
   <library name="Gradle: com.airbnb.android:lottie:4.2.1@aar">
     <ANNOTATIONS>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b374385645de0dd4d5fb28c12e78515d/transformed/lottie-4.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.airbnb.android/lottie/4.2.1/845baf1002a1a255c35fdf2f11129d986450bde7/lottie-4.2.1-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/lottie/4.2.1/845baf1002a1a255c35fdf2f11129d986450bde7/lottie-4.2.1-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.airbnb.android/lottie/4.2.1/3e955ca59d9dc940418cd8640b3cc6cf60282838/lottie-4.2.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.airbnb.android/lottie/4.2.1/3e955ca59d9dc940418cd8640b3cc6cf60282838/lottie-4.2.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

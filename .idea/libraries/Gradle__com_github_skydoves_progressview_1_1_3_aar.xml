@@ -4,12 +4,17 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6bf507132b947e1d36d90b41b48a6565/transformed/progressview-1.1.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.github.skydoves/progressview/1.1.3/ce59bea5e06cc7b0c09ac7527758bf0812926f8e/progressview-1.1.3-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.skydoves/progressview/1.1.3/ce59bea5e06cc7b0c09ac7527758bf0812926f8e/progressview-1.1.3-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.github.skydoves/progressview/1.1.3/4c739e7a23ec4279edf3e0b18b68ab1a880f8365/progressview-1.1.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.skydoves/progressview/1.1.3/4c739e7a23ec4279edf3e0b18b68ab1a880f8365/progressview-1.1.3-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

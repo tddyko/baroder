@@ -98,7 +98,8 @@
             android:layout_height="match_parent">
 
             <TextView
-                style="@style/coupon_text"
+                style="@style/sub_main_text_14sp"
+                android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"

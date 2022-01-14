@@ -31,51 +31,12 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="item_title_text_white">
-        <item name="autoSizeMinTextSize">1sp</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="autoSizeMaxTextSize">19sp</item>
-        <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-    </style>
-
-    <style name="item_title_text_white_no_margin">
+    <style name="item_title_text">
         <item name="autoSizeMaxTextSize">19sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <style name="item_title_text_black">
-        <item name="autoSizeMaxTextSize">19sp</item>
-        <item name="autoSizeMinTextSize">1sp</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">@color/primary_color_text</item>
-        <item name="android:textStyle">bold</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:gravity">center</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:layout_marginTop">3dp</item>
-    </style>
-
-    <style name="coupon_text">
-        <item name="autoSizeMinTextSize">1sp</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="autoSizeMaxTextSize">14sp</item>
-        <item name="android:letterSpacing">-0.004</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
@@ -126,20 +87,8 @@
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeMaxTextSize">16sp</item>
         <item name="android:letterSpacing">-0.04</item>
-        <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <style name="coupon_info_text">
-        <item name="autoSizeMaxTextSize">16sp</item>
-        <item name="autoSizeMinTextSize">1sp</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="android:textColor">@color/primary_color_text</item>
-        <item name="android:textStyle">normal</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:gravity">center</item>
     </style>
 
     <style name="coupon_store_name">
@@ -188,8 +137,22 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="cornerRadius">40dp</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="onboarding_complete_btn" parent="Widget.MaterialComponents.Button">
+        <item name="autoSizeMaxTextSize">17sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">12dp</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
@@ -206,8 +169,6 @@
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/white</item>
         <item name="cornerRadius">12dp</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>

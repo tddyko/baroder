@@ -37,7 +37,8 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
-        style="@style/item_text_14sp_black"
+        style="@style/item_text"
+        android:textColor="@color/primary_color_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintHeight_max="21dp"
