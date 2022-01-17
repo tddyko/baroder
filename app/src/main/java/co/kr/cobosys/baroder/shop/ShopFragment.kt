@@ -19,12 +19,5 @@ class ShopFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        statusBarColorChange()
     }
-
-    private fun statusBarColorChange() {
-        val window = requireActivity().window
-        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.warmBlue)
-    }
-
 }

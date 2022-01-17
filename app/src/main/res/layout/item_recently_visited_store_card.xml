@@ -2,8 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recently_visiting_store_card"
-    android:padding="20dp"
+    android:id="@+id/recently_visited_store_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -61,7 +60,8 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/recently_store_more_location"
-        style="@style/point_text"
+        style="@style/sub_text_14sp"
+        android:textColor="@color/disabled_text"
         android:layout_marginStart="15dp"
         android:layout_marginTop="3dp"
         android:layout_width="0dp"

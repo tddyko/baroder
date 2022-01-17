@@ -100,6 +100,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_main_text"
                 style="@style/main_text"
+                android:textColor="@color/primary_color_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintHeight_max="22dp"
@@ -135,25 +136,29 @@
                 android:id="@+id/empty_point_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintHeight_min="20dp"
+                app:layout_constraintHeight_max="20dp"
                 android:layout_marginTop="4dp"
                 app:alignItems="center"
                 app:flexDirection="row"
                 app:justifyContent="space_between"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/empty_point_progress">
+                app:layout_constraintTop_toBottomOf="@+id/empty_point_progress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/empty_start_point"
-                    style="@style/point_text"
+                    style="@style/sub_text_14sp"
+                    android:textColor="@color/disabled_text"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     tools:text="0" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/empty_end_point"
-                    style="@style/point_text"
+                    style="@style/sub_text_14sp"
+                    android:textColor="@color/disabled_text"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     tools:text="999999" />

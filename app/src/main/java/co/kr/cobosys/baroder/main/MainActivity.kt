@@ -1,8 +1,10 @@
 package co.kr.cobosys.baroder.main
 
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
@@ -50,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun setNav() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -70,7 +73,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.point_fragment,
                 R.id.shop_fragment
                 -> toolBar.visibility = View.GONE
-                else -> toolBar.visibility = View.VISIBLE
+//                R.id.home_mypage
+//                -> {
+//                    toolBar.setBackgroundColor(getColor(R.color.mainGreen))
+//                    window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.white)
+//                }
+                else -> {
+                    toolBar.visibility = View.VISIBLE
+                }
             }
         }
     }

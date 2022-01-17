@@ -56,7 +56,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/coupon_period_of_use"
-                style="@style/main_sub_text"
+                style="@style/main_text"
+                android:textColor="@color/secondary_text_color"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="3.5dp"

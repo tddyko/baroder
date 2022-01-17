@@ -16,9 +16,19 @@
     <string name="recently_store_text">최근 방문매장</string>
     <string name="home_more_button">더보기</string>
     <string name="home_recommend_text">이런 매장은 어때요?</string>
-    <string name="recently_visiting_store_selected">단골매장 선택</string>
-    <string name="recently_visiting_store_change">단골매장 순서변경</string>
+    <string name="recently_visited_store_selected">단골매장 선택</string>
+    <string name="recently_visited_store_change">단골매장 순서변경</string>
     <string name="onboarding_start">시작하기</string>
     <string name="visitor_information_text">로그인 후 출입 QR을 사용할 수 있습니다.</string>
     <string name="qr_login_text">로그인 하기</string>
+    <string name="not_coupon">아직 사용 가능한 쿠폰이 없어요\n해당 매장의 포인트를 쿠폰으로 바꿔보세요!</string>
+    <string name="check_my_point">내 포인트 확인</string>
+    <string name="browse_store">매장 둘러보기</string>
+    <string name="not_recently_visited_store">최근 방문한 매장이 없어요\n내 주변 매장을 방문하고 포인트를 쌓아보세요!</string>
+    <string name="login_pls">로그인을 해주세요</string>
+    <string name="mypage_baroder_learn_more">바로더 알아보기</string>
+    <string name="mypage_favorite_store">즐겨찾기 매장</string>
+    <string name="mypage_my_coupon">MY 쿠폰</string>
+    <string name="terms_of_use">이용약관</string>
+    <string name="app_version">앱 버전</string>
 </resources>

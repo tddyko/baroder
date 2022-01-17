@@ -41,13 +41,12 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="point_text">
-        <item name="android:letterSpacing">-0.004</item>
+    <style name="sub_text_14sp">
+        <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/disabled_text</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
@@ -68,16 +67,6 @@
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
-        <item name="android:textColor">@color/primary_color_text</item>
-        <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <style name="main_sub_text">
-        <item name="autoSizeMaxTextSize">15sp</item>
-        <item name="autoSizeMinTextSize">1sp</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="android:textColor">@color/secondary_text_color</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
     </style>
@@ -106,7 +95,7 @@
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">21sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
-        <item name="android:letterSpacing">-0.004</item>
+        <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
@@ -188,6 +177,23 @@
         <item name="cornerRadius">10dp</item>
         <item name="strokeColor">@color/mainGreen</item>
         <item name="strokeWidth">1dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+    
+    <style name="point_btn" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="autoSizeMaxTextSize">15sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="fontFamily">@font/font</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/mainGreen</item>
+        <item name="strokeColor">@color/mainGreen</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">12dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -277,8 +283,6 @@
     <!--아이템-->
     <style name="card_circle">
         <item name="cardCornerRadius">100dp</item>
-        <item name="layout_constraintWidth_max">84dp</item>
-        <item name="layout_constraintHeight_min">84dp</item>
     </style>
 
 </resources>

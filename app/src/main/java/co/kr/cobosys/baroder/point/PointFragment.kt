@@ -19,10 +19,4 @@ class PointFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.root
     }
-
-//    private fun statusBarColorChange() {
-//        val window = requireActivity().window
-//        window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.disabled_text)
-//    }
-
 }
