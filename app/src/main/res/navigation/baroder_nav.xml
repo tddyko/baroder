@@ -7,62 +7,83 @@
 
     <fragment
         android:id="@+id/root_fragment"
-        android:name="co.kr.cobosys.baroder.main.RootViewFragment"
-        tools:layout="@layout/fragment_root_view"
-        android:label="루트">
+        android:name="co.kr.cobosys.baroder.main.RootFragment"
+        android:label="루트"
+        tools:layout="@layout/fragment_root">
 
         <action
             android:id="@+id/action_root_fragment_to_bottom_navigation_fragment"
             app:destination="@id/bottom_navigation_fragment"
-            app:popUpTo="@id/root_fragment"/>
+            app:popUpTo="@id/root_fragment" />
 
     </fragment>
 
     <fragment
         android:id="@+id/bottom_navigation_fragment"
         android:name="co.kr.cobosys.baroder.bottomnav.BottomNavFragment"
-        tools:layout="@layout/fragment_bottom_nav"
-        android:label="바텀내비게이션">
+        android:label="바텀내비게이션"
+        tools:layout="@layout/fragment_bottom_nav">
 
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_home_fragment"
-            app:destination="@id/home_fragment" />
+            app:destination="@id/home_navigation" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_store_fragment"
-            app:destination="@id/store_fragment" />
+            app:destination="@id/store_navigation" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_coupon_fragment"
             app:destination="@id/coupon_fragment" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_point_fragment"
-            app:destination="@id/point_fragment" />
+            app:destination="@id/point_navigation" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_shop_fragment"
-            app:destination="@id/shop_fragment" />
+            app:destination="@id/shop_navigation" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_root_fragment2"
             app:destination="@id/root_fragment"
             app:popUpTo="@id/root_fragment"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
 
-    <navigation android:id="@+id/home_navigation"
-        app:startDestination="@id/home_fragment" >
+    <navigation
+        android:id="@+id/mypage_navigation"
+        app:startDestination="@layout/fragment_my_page">
 
         <fragment
-            android:id="@+id/home_fragment"
-            android:name="co.kr.cobosys.baroder.home.HomeFragment"
-            tools:layout="@layout/fragment_home" >
+            android:id="@+id/mypage_fragment"
+            android:name="co.kr.cobosys.baroder.mypage.MyPageFragmnet"
+            tools:layout="@layout/fragment_my_page">
 
         </fragment>
 
     </navigation>
 
-    <fragment
-        android:id="@+id/store_fragment"
-        android:name="co.kr.cobosys.baroder.store.StoreFragment">
+    <navigation
+        android:id="@+id/home_navigation"
+        app:startDestination="@id/home_fragment">
 
-    </fragment>
+        <fragment
+            android:id="@+id/home_fragment"
+            android:name="co.kr.cobosys.baroder.home.HomeFragment"
+            tools:layout="@layout/fragment_home">
+
+        </fragment>
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/store_navigation"
+        app:startDestination="@id/store_fragment">
+
+        <fragment
+            android:id="@+id/store_fragment"
+            android:name="co.kr.cobosys.baroder.store.StoreFragment"
+            tools:layout="@layout/fragment_store">
+
+        </fragment>
+
+    </navigation>
 
     <fragment
         android:id="@+id/coupon_fragment"
@@ -72,19 +93,31 @@
 
     </fragment>
 
-    <fragment
-        android:id="@+id/point_fragment"
-        android:name="co.kr.cobosys.baroder.point.PointFragment"
-        tools:layout="@layout/fragment_point">
+    <navigation
+        android:id="@+id/point_navigation"
+        app:startDestination="@id/point_fragment">
 
-    </fragment>
+        <fragment
+            android:id="@+id/point_fragment"
+            android:name="co.kr.cobosys.baroder.point.PointFragment"
+            tools:layout="@layout/fragment_point">
 
-    <fragment
-        android:id="@+id/shop_fragment"
-        android:name="co.kr.cobosys.baroder.shop.ShopFragment"
-        tools:layout="@layout/fragment_shop">
+        </fragment>
 
-    </fragment>
+    </navigation>
 
+
+    <navigation
+        android:id="@+id/shop_navigation"
+        app:startDestination="@id/shop_fragment">
+
+        <fragment
+            android:id="@+id/shop_fragment"
+            android:name="co.kr.cobosys.baroder.shop.ShopFragment"
+            tools:layout="@layout/fragment_shop">
+
+        </fragment>
+
+    </navigation>
 
 </navigation>

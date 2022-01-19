@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudioProjects.baroder.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudioProjects.baroder.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudioProjects.baroder.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/StudioProjects.baroder.buildSrc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/StudioProjects.baroder.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/StudioProjects.baroder.data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/StudioProjects.baroder.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/StudioProjects.baroder.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AOS.baroder.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AOS.baroder.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AOS.baroder.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/AOS.baroder.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/AOS.baroder.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/AOS.baroder.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/AOS.baroder.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/AOS.baroder.domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/baroder.iml" filepath="$PROJECT_DIR$/.idea/modules/baroder.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/baroder.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/baroder.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/baroder.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/baroder.buildSrc.iml" />

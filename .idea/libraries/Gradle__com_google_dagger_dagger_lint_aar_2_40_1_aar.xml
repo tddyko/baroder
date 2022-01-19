@@ -4,9 +4,6 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

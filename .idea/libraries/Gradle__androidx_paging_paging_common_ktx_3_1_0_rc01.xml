@@ -2,12 +2,10 @@
   <library name="Gradle: androidx.paging:paging-common-ktx:3.1.0-rc01">
     <CLASSES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.paging/paging-common-ktx/3.1.0-rc01/5b8f86fea035328fc9e8c660773037a3401ce25f/paging-common-ktx-3.1.0-rc01.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-common-ktx/3.1.0-rc01/5b8f86fea035328fc9e8c660773037a3401ce25f/paging-common-ktx-3.1.0-rc01.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.paging/paging-common-ktx/3.1.0-rc01/5b8f86fea035328fc9e8c660773037a3401ce25f/paging-common-ktx-3.1.0-rc01-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-common-ktx/3.1.0-rc01/5b8f86fea035328fc9e8c660773037a3401ce25f/paging-common-ktx-3.1.0-rc01-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

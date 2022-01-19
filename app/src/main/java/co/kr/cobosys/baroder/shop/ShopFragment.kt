@@ -2,18 +2,14 @@ package co.kr.cobosys.baroder.shop
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentShopBinding
 import co.kr.cobosys.baroder.extension.viewBinding
-import co.kr.cobosys.baroder.extension.viewInflateBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ShopFragment : Fragment() {
+class ShopFragment : Fragment(R.layout.fragment_shop) {
 
     private val binding by viewBinding(FragmentShopBinding::bind)
 

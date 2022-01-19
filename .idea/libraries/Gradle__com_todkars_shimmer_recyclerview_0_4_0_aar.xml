@@ -2,20 +2,15 @@
   <library name="Gradle: com.todkars:shimmer-recyclerview:0.4.0@aar">
     <ANNOTATIONS>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/da161a2e2438ecdff14234a29abf65c1/transformed/shimmer-recyclerview-0.4.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.todkars/shimmer-recyclerview/0.4.0/45f033dc7043efed683dc09a394559dfae3a375d/shimmer-recyclerview-0.4.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.todkars/shimmer-recyclerview/0.4.0/45f033dc7043efed683dc09a394559dfae3a375d/shimmer-recyclerview-0.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

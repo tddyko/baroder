@@ -13,7 +13,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ActivityMainBinding
+import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewInflateBinding
+import co.kr.cobosys.baroder.extension.visible
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.MaterialToolbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,9 +24,11 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)
-    private val toolBar: MaterialToolbar by lazy { binding.rootToolbar }
+    private val toolBar: MaterialToolbar by lazy { binding.rootActivityToolbar }
+    private val appBar: AppBarLayout by lazy { binding.rootActivityAppBarLayout }
     private lateinit var navController: NavController
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Baroder)
         super.onCreate(savedInstanceState)
@@ -52,7 +57,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun setNav() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -65,21 +69,23 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             toolBar.setNavigationIcon(R.drawable.ic_move_icon_left)
             when (destination.id) {
-//                R.id.root_fragment,
-//                R.id.bottom_navigation_fragment,
+                R.id.root_fragment,
+                R.id.bottom_navigation_fragment,
                 R.id.home_fragment,
                 R.id.store_fragment,
                 R.id.coupon_fragment,
                 R.id.point_fragment,
                 R.id.shop_fragment
-                -> toolBar.visibility = View.GONE
+                -> {
+                    toolBar.gone()
+                }
 //                R.id.home_mypage
 //                -> {
 //                    toolBar.setBackgroundColor(getColor(R.color.mainGreen))
 //                    window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.white)
 //                }
                 else -> {
-                    toolBar.visibility = View.VISIBLE
+                    toolBar.visible()
                 }
             }
         }

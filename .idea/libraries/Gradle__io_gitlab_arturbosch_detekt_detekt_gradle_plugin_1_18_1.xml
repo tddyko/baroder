@@ -2,12 +2,10 @@
   <library name="Gradle: io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.18.1">
     <CLASSES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/io.gitlab.arturbosch.detekt/detekt-gradle-plugin/1.18.1/707d3630f554602c3468240416eb9374d9203563/detekt-gradle-plugin-1.18.1.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gitlab.arturbosch.detekt/detekt-gradle-plugin/1.18.1/707d3630f554602c3468240416eb9374d9203563/detekt-gradle-plugin-1.18.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/io.gitlab.arturbosch.detekt/detekt-gradle-plugin/1.18.1/2a77f26ca30b9f8010eae23ede7a9528668eb9d/detekt-gradle-plugin-1.18.1-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gitlab.arturbosch.detekt/detekt-gradle-plugin/1.18.1/2a77f26ca30b9f8010eae23ede7a9528668eb9d/detekt-gradle-plugin-1.18.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

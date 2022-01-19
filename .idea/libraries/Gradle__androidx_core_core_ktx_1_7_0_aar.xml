@@ -4,14 +4,10 @@
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/res" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2246b030baeed803a7483fbf8ec91c82/transformed/core-ktx-1.7.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/androidx.core/core-ktx/1.7.0/8ab417a25ecc45ec8996edeef98f1b77b4690dd8/core-ktx-1.7.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.core/core-ktx/1.7.0/8ab417a25ecc45ec8996edeef98f1b77b4690dd8/core-ktx-1.7.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
