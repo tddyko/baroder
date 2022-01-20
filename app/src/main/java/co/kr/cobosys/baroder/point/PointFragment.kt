@@ -3,6 +3,9 @@ package co.kr.cobosys.baroder.point
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentPointBinding
 import co.kr.cobosys.baroder.extension.viewBinding
@@ -15,6 +18,5 @@ class PointFragment : Fragment(R.layout.fragment_point) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.root
     }
 }

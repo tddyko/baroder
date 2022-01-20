@@ -110,7 +110,7 @@
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_bottom_nav.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.40575539568345326" />
+        <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_home_mycoupon.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/fragment_home_recently_visiting_store.xml" value="0.338768115942029" />
@@ -138,7 +138,7 @@
         <entry key="app/src/main/res/layout/item_onboarding_first.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/item_onboarding_second.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/item_onboarding_third.xml" value="0.338768115942029" />
-        <entry key="app/src/main/res/layout/item_recently_visited_store_card.xml" value="0.9" />
+        <entry key="app/src/main/res/layout/item_recently_visited_store_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_recently_visiting_store_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_home_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_qr_code.xml" value="0.33" />
@@ -150,11 +150,4 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.33" />
-      </ProjectState>
-    </option>
-  </component>
 </project>

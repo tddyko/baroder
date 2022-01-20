@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/baroder_nav"
@@ -8,7 +9,6 @@
     <fragment
         android:id="@+id/root_fragment"
         android:name="co.kr.cobosys.baroder.main.RootFragment"
-        android:label="루트"
         tools:layout="@layout/fragment_root">
 
         <action
@@ -21,7 +21,6 @@
     <fragment
         android:id="@+id/bottom_navigation_fragment"
         android:name="co.kr.cobosys.baroder.bottomnav.BottomNavFragment"
-        android:label="바텀내비게이션"
         tools:layout="@layout/fragment_bottom_nav">
 
         <action

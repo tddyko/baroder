@@ -24,8 +24,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)
-    private val toolBar: MaterialToolbar by lazy { binding.rootActivityToolbar }
-    private val appBar: AppBarLayout by lazy { binding.rootActivityAppBarLayout }
     private lateinit var navController: NavController
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -64,10 +62,10 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        toolBar.setupWithNavController(navController, appBarConfiguration)
+        binding.rootActivityToolbar.setupWithNavController(navController, appBarConfiguration)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            toolBar.setNavigationIcon(R.drawable.ic_move_icon_left)
+            binding.rootActivityToolbar.setNavigationIcon(R.drawable.ic_move_icon_left)
             when (destination.id) {
                 R.id.root_fragment,
                 R.id.bottom_navigation_fragment,
@@ -77,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.point_fragment,
                 R.id.shop_fragment
                 -> {
-                    toolBar.gone()
+                    binding.rootActivityToolbar.gone()
                 }
 //                R.id.home_mypage
 //                -> {
@@ -85,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 //                    window.statusBarColor = ContextCompat.getColor(applicationContext, R.color.white)
 //                }
                 else -> {
-                    toolBar.visible()
+                    binding.rootActivityToolbar.visible()
                 }
             }
         }
