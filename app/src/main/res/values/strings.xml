@@ -31,4 +31,6 @@
     <string name="mypage_my_coupon">MY 쿠폰</string>
     <string name="terms_of_use">이용약관</string>
     <string name="app_version">앱 버전</string>
+    <string name="coupon_noti_text">전환한 쿠폰은 해당 매장에서만 사용 가능합니다.</string>
+    <string name="coupon_count">보유쿠폰 : 2개</string>
 </resources>

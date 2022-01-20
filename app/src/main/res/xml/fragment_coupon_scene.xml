@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:motion="http://schemas.android.com/apk/res-auto">
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@id/start" />
+        app:constraintSetEnd="@layout/fragment_coupon_end"
+        app:constraintSetStart="@layout/fragment_coupon"
+        app:duration="500"
+        app:motionInterpolator="linear">
 
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/coupon_recyclerView"
+            app:touchAnchorSide="top" />
 
-    <ConstraintSet android:id="@+id/start">
-    </ConstraintSet>
+        <KeyFrameSet>
 
-    <ConstraintSet android:id="@+id/end">
-    </ConstraintSet>
+            <KeyAttribute
+                android:alpha="0"
+                app:framePosition="45"
+                app:motionTarget="@id/coupon_sub_title" />
+
+        </KeyFrameSet>
+
+    </Transition>
 </MotionScene>

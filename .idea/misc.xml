@@ -111,6 +111,7 @@
         <entry key="app/src/main/res/layout/fragment_bottom_nav.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_coupon_end.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_home_mycoupon.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/fragment_home_recently_visiting_store.xml" value="0.338768115942029" />
