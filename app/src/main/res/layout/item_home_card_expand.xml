@@ -9,27 +9,6 @@
     android:paddingTop="16dp"
     android:paddingBottom="20dp">
 
-    <com.google.android.flexbox.FlexboxLayout
-        android:id="@+id/visitor_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:alignItems="center"
-        app:flexDirection="row"
-        app:justifyContent="flex_start"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/title_text"
-            android:layout_width="180dp"
-            android:layout_height="87dp"
-            tools:text="홍길동님의\n단골매장" />
-
-    </com.google.android.flexbox.FlexboxLayout>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/edit_button"
         style="@style/edit_button"
@@ -48,7 +27,7 @@
         app:layout_constraintHeight_max="34dp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/visitor_name"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_max="68dp" />
 
@@ -59,6 +38,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
         app:contentPadding="20dp"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_max="277dp"

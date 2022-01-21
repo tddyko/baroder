@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:id="@+id/home_store_constraint"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/home_store_card"

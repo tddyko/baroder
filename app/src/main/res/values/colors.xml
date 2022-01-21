@@ -11,6 +11,7 @@
     <color name="bgGrey">#f4f4f6</color>
     <color name="mainGreen">#22bf50</color>
     <color name="warmBlue">#5245db</color>
+    <color name="warmBlue_30">#4dffffff</color>
     <color name="warningCoral">#ff403f</color>
     <color name="starYellow">#ffa436</color>
 </resources>

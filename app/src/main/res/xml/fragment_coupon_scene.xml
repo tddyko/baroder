@@ -5,7 +5,7 @@
     <Transition
         app:constraintSetEnd="@layout/fragment_coupon_end"
         app:constraintSetStart="@layout/fragment_coupon"
-        app:duration="500"
+        app:duration="1000"
         app:motionInterpolator="linear">
 
         <OnSwipe

@@ -28,9 +28,18 @@
     <string name="login_pls">로그인을 해주세요</string>
     <string name="mypage_baroder_learn_more">바로더 알아보기</string>
     <string name="mypage_favorite_store">즐겨찾기 매장</string>
-    <string name="mypage_my_coupon">MY 쿠폰</string>
+    <string name="my_coupon">MY 쿠폰</string>
     <string name="terms_of_use">이용약관</string>
     <string name="app_version">앱 버전</string>
     <string name="coupon_noti_text">전환한 쿠폰은 해당 매장에서만 사용 가능합니다.</string>
     <string name="coupon_count">보유쿠폰 : 2개</string>
+    <string name="my_point">MY 포인트</string>
+    <string name="point_noti">포인트는 1년 동안 사용하지 않을 경우 소멸됩니다.</string>
+    <string name="point_minimum_noti">최소 500p부터 쿠폰 전환 가능</string>
+    <string name="point_details">상세내역</string>
+    <string name="point_coupon_convert">쿠폰전환</string>
+    <string name="point_details_accumulate">적립</string>
+    <string name="not_visited_store">최근 방문한 매장이 없어요\n내 주변 매장을 방문하고 포인트를 쌓아보세요!</string>
+    <string name="store_take_a_tour">매장 둘러보기</string>
+    <string name="favorite_store_setting">단골설정</string>
 </resources>
