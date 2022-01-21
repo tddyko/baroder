@@ -42,4 +42,5 @@
     <string name="not_visited_store">최근 방문한 매장이 없어요\n내 주변 매장을 방문하고 포인트를 쌓아보세요!</string>
     <string name="store_take_a_tour">매장 둘러보기</string>
     <string name="favorite_store_setting">단골설정</string>
+    <string name="not_favorite_store_list">아직 즐겨찾기한 매장이 없어요\n마음에 드는 매장을 즐겨찾기 해주세요!</string>
 </resources>

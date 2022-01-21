@@ -117,7 +117,7 @@
 
     <style name="floating_btn" parent="Widget.AppCompat.ImageButton">
 
-        <item name="android:radius">100dp</item>
+
 
     </style>
 
