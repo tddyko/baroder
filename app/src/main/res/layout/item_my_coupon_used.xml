@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:clipToPadding="false"
-
+    android:paddingTop="20dp"
+    android:paddingBottom="1dp"
     android:paddingHorizontal="20dp"
-    android:paddingVertical="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/coupon_card_top"
-        style="@style/recently_store_card"
+        style="@style/card_radius_15dp"
         app:contentPadding="20dp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="180dp"
         app:cardBackgroundColor="@color/btnGrey"
-        app:layout_constraintHeight_max="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

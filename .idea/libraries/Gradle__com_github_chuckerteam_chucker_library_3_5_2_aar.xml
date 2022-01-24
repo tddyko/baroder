@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.chuckerteam.chucker:library:3.5.2@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/77257998914a9ef72501e4598988f222/transformed/library-3.5.2/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/77257998914a9ef72501e4598988f222/transformed/library-3.5.2/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/77257998914a9ef72501e4598988f222/transformed/library-3.5.2/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b0200e30e6c88f375d661d22add7451e/transformed/library-3.5.2/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b0200e30e6c88f375d661d22add7451e/transformed/library-3.5.2/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b0200e30e6c88f375d661d22add7451e/transformed/library-3.5.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.github.chuckerteam.chucker/library/3.5.2/c4261c5ce8832cf909f458728fcb7de3df30ec06/library-3.5.2-javadoc.jar!/" />

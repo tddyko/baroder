@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.2.0-beta01@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b7235d1d44acc8fcb723b93f552a6a16/transformed/slidingpanelayout-1.2.0-beta01/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9a6e35ed297e888c62c78d743542e1ed/transformed/slidingpanelayout-1.2.0-beta01/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b7235d1d44acc8fcb723b93f552a6a16/transformed/slidingpanelayout-1.2.0-beta01/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b7235d1d44acc8fcb723b93f552a6a16/transformed/slidingpanelayout-1.2.0-beta01/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b7235d1d44acc8fcb723b93f552a6a16/transformed/slidingpanelayout-1.2.0-beta01/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9a6e35ed297e888c62c78d743542e1ed/transformed/slidingpanelayout-1.2.0-beta01/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9a6e35ed297e888c62c78d743542e1ed/transformed/slidingpanelayout-1.2.0-beta01/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9a6e35ed297e888c62c78d743542e1ed/transformed/slidingpanelayout-1.2.0-beta01/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

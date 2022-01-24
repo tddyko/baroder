@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-runtime-ktx:2.4.0-beta02@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/be9b69082b715782bca9cb52d8e73d3d/transformed/navigation-runtime-ktx-2.4.0-beta02/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/be9b69082b715782bca9cb52d8e73d3d/transformed/navigation-runtime-ktx-2.4.0-beta02/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/be9b69082b715782bca9cb52d8e73d3d/transformed/navigation-runtime-ktx-2.4.0-beta02/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67e97cb0bd791031cd483b748898fd8e/transformed/navigation-runtime-ktx-2.4.0-beta02/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67e97cb0bd791031cd483b748898fd8e/transformed/navigation-runtime-ktx-2.4.0-beta02/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67e97cb0bd791031cd483b748898fd8e/transformed/navigation-runtime-ktx-2.4.0-beta02/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

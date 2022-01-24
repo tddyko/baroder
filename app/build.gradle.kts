@@ -112,6 +112,7 @@ dependencies {
     implementation(Depends.Libraries.fragment_ktx)
     implementation(Depends.Libraries.recyclerview)
     implementation(Depends.Libraries.viewpager)
+    implementation(Depends.Libraries.work_manager)
     //reactive
     implementation(Depends.Libraries.coroutines)
     //ui

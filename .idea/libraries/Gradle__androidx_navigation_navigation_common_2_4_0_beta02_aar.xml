@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-common:2.4.0-beta02@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bcf03c993fd6417066bbef404e10a192/transformed/navigation-common-2.4.0-beta02/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bcf03c993fd6417066bbef404e10a192/transformed/navigation-common-2.4.0-beta02/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bcf03c993fd6417066bbef404e10a192/transformed/navigation-common-2.4.0-beta02/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5b121203a6b07d15897a1c489bb0f314/transformed/navigation-common-2.4.0-beta02/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5b121203a6b07d15897a1c489bb0f314/transformed/navigation-common-2.4.0-beta02/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5b121203a6b07d15897a1c489bb0f314/transformed/navigation-common-2.4.0-beta02/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

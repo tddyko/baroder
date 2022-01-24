@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemfavoriteStoreVisitor"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:clipToPadding="false"
     android:paddingHorizontal="37dp"
-    android:paddingTop="16dp">
+    android:paddingTop="16dp"
+    android:paddingBottom="20dp">
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/shop_img"
@@ -37,8 +38,7 @@
         style="@style/main_card"
         app:contentPadding="20dp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_max="267dp"
+        android:layout_height="267dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shop_img"

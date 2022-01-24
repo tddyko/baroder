@@ -3,21 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:clipToPadding="false"
-
     android:paddingHorizontal="20dp"
-    android:paddingVertical="16dp"
+    android:paddingTop="15dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/coupon_card_top"
         style="@style/top_20dp"
-        app:strokeWidth="@null"
         app:cardPreventCornerOverlap="false"
+        app:cardElevation="3dp"
         app:contentPadding="20dp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_max="134dp"
+        android:layout_height="134dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -86,9 +84,9 @@
     <com.google.android.material.card.MaterialCardView
         style="@style/bottom_20dp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="45dp"
+        app:cardElevation="0dp"
         app:cardPreventCornerOverlap="false"
-        app:layout_constraintHeight_max="45dp"
         android:backgroundTint="@color/mainGreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

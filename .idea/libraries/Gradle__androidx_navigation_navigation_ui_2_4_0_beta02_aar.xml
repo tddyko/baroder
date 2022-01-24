@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-ui:2.4.0-beta02@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/41096001bfab7a54a931e5ecdd587752/transformed/navigation-ui-2.4.0-beta02/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/41096001bfab7a54a931e5ecdd587752/transformed/navigation-ui-2.4.0-beta02/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/41096001bfab7a54a931e5ecdd587752/transformed/navigation-ui-2.4.0-beta02/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e959e12d24200e3d69fd0dd4cc1dbc90/transformed/navigation-ui-2.4.0-beta02/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e959e12d24200e3d69fd0dd4cc1dbc90/transformed/navigation-ui-2.4.0-beta02/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e959e12d24200e3d69fd0dd4cc1dbc90/transformed/navigation-ui-2.4.0-beta02/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

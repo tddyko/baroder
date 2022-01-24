@@ -42,6 +42,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2675" />
         <entry key="app/src/main/res/drawable/btn_shape.xml" value="0.231" />
         <entry key="app/src/main/res/drawable/button_radius.xml" value="0.3861111111111111" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.4046875" />
         <entry key="app/src/main/res/drawable/down_shadow.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/favoraite_checkbox.xml" value="0.334" />
         <entry key="app/src/main/res/drawable/favorite_checkbox.xml" value="0.334" />
@@ -108,9 +109,11 @@
         <entry key="app/src/main/res/drawable/ic_profile_img.xml" value="0.334" />
         <entry key="app/src/main/res/drawable/ic_qr_prev_img.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_regular_store_mark_m_1.xml" value="0.328" />
+        <entry key="app/src/main/res/drawable/ic_regular_store_mark_m_2.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_right_arrow_icon_grey.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_setting_btn.xml" value="0.334" />
         <entry key="app/src/main/res/drawable/ic_shop_img.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/ic_unchecked_btn.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_withdrawal_img.xml" value="0.334" />
         <entry key="app/src/main/res/drawable/item_expand.xml" value="0.2895" />
         <entry key="app/src/main/res/drawable/regular_store_mark_m_1.xml" value="0.328" />
@@ -118,6 +121,7 @@
         <entry key="app/src/main/res/drawable/test.xml" value="0.2895" />
         <entry key="app/src/main/res/font-v26/font.xml" value="0.40625" />
         <entry key="app/src/main/res/font/font.xml" value="0.40625" />
+        <entry key="app/src/main/res/layout-v23/item_regular_store.xml" value="0.33695652173913043" />
         <entry key="app/src/main/res/layout-v31/item_home_card_expand.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.22" />
@@ -139,15 +143,17 @@
         <entry key="app/src/main/res/layout/fragment_onboarding_first.xml" value="0.3523550724637681" />
         <entry key="app/src/main/res/layout/fragment_point.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_point_end.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_regular_store.xml" value="0.33695652173913043" />
         <entry key="app/src/main/res/layout/fragment_root.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/fragment_root_view.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/item_coupon.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_coupon.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_coupon_barcode.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_expand.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_expand_child.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_expand_parent.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/item_favorite_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card_expand.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card_expand_edit_button.xml" value="0.37604166666666666" />
@@ -162,12 +168,14 @@
         <entry key="app/src/main/res/layout/item_onboarding_first.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/item_onboarding_second.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/item_onboarding_third.xml" value="0.338768115942029" />
-        <entry key="app/src/main/res/layout/item_point_card.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_point_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_recently_visited_store.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_recently_visited_store_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_recently_visiting_store_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_regular_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_home_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_point_details.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/itme_qr_code.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/itme_qr_code.xml" value="0.2025813692480359" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/menu/recently_visiting_store_menu.xml" value="0.37604166666666666" />
@@ -176,4 +184,11 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.67" />
+      </ProjectState>
+    </option>
+  </component>
 </project>

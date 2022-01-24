@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recently_visited_store_constraint"
+    android:paddingStart="0dp"
     android:paddingEnd="15dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/recently_visited_store"
-        style="@style/recently_store_card"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/card_radius_15dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="130dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_max="130dp">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/recently_store_img"
@@ -37,8 +37,7 @@
         style="@style/item_text"
         android:textColor="@color/primary_color_text"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_max="21dp"
+        android:layout_height="21dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recently_visited_store"
         app:layout_constraintEnd_toEndOf="parent"

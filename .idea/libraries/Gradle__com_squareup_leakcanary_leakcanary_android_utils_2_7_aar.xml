@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.leakcanary:leakcanary-android-utils:2.7@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fb58c9dbab5d7bef167171d675640539/transformed/leakcanary-android-utils-2.7/jars/classes.jar!/" />
       <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fb58c9dbab5d7bef167171d675640539/transformed/leakcanary-android-utils-2.7/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fb58c9dbab5d7bef167171d675640539/transformed/leakcanary-android-utils-2.7/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/44686b994d8cf7729818fcee8114c2f8/transformed/leakcanary-android-utils-2.7/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/44686b994d8cf7729818fcee8114c2f8/transformed/leakcanary-android-utils-2.7/AndroidManifest.xml" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/44686b994d8cf7729818fcee8114c2f8/transformed/leakcanary-android-utils-2.7/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-android-utils/2.7/b29829aac9c69fbc3d76e726011995321264e7b9/leakcanary-android-utils-2.7-javadoc.jar!/" />

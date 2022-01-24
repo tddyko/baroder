@@ -299,8 +299,12 @@
         </item>
     </style>
 
-    <style name="recently_store_card" parent="Widget.MaterialComponents.CardView">
+    <style name="card_radius_15dp" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">15dp</item>
+    </style>
+
+    <style name="card_radius_20dp" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">20dp</item>
     </style>
 
     <!--아이템-->
