@@ -199,6 +199,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="sign_in_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-85" />
+                            <option name="y" value="804" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="store_navigation">
                     <value>
                       <LayoutPositions>

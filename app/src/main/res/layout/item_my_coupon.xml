@@ -85,7 +85,6 @@
         style="@style/bottom_20dp"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        app:cardElevation="0dp"
         app:cardPreventCornerOverlap="false"
         android:backgroundTint="@color/mainGreen"
         app:layout_constraintEnd_toEndOf="parent"

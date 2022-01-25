@@ -43,6 +43,16 @@
             app:destination="@id/root_fragment"
             app:popUpTo="@id/root_fragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bottom_navigation_fragment_to_sign_in_fragment"
+            app:destination="@id/sign_in_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sign_in_fragment"
+        android:name="co.kr.cobosys.baroder.auth.signin.SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+
     </fragment>
 
     <navigation

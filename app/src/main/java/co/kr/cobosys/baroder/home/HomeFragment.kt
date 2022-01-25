@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
 import co.kr.cobosys.baroder.base.adapter.RecyclerItem
+import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.visible
@@ -15,6 +17,8 @@ import co.kr.cobosys.baroder.home.adapters.EmptyFavoriteStoreListAdapter
 import co.kr.cobosys.baroder.home.adapters.FavoriteStoreListAdapter
 import co.kr.cobosys.baroder.model.EmptyFavoriteStoreUI
 import co.kr.cobosys.baroder.model.FavoriteStoreUI
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,6 +33,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.homeMenu.setOnClickListener{
+            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
+        }
+
 //        setupPager()
     }
 //    private fun setupPager() {

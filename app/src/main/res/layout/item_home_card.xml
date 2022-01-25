@@ -158,7 +158,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/empty_second_btn"
                 tools:text="단골매장 설정" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/empty_second_btn"
                 style="@style/cardview_negative_btn"
                 android:layout_width="0dp"

@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNav() {
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
         navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(navController.graph)
@@ -73,7 +74,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.store_fragment,
                 R.id.coupon_fragment,
                 R.id.point_fragment,
-                R.id.shop_fragment
+                R.id.shop_fragment,
+                R.id.sign_in_fragment
                 -> {
                     binding.rootActivityToolbar.gone()
                 }

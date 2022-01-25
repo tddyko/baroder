@@ -10,6 +10,7 @@
     <color name="goldgreen">#dea83a</color>
     <color name="bgGrey">#f4f4f6</color>
     <color name="mainGreen">#22bf50</color>
+    <color name="mainGreen_50">#8022bf50</color>
     <color name="warmBlue">#5245db</color>
     <color name="warmBlue_30">#4dffffff</color>
     <color name="warningCoral">#ff403f</color>

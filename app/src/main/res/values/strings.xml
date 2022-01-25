@@ -44,4 +44,11 @@
     <string name="favorite_store_setting">단골설정</string>
     <string name="not_favorite_store_list">아직 즐겨찾기한 매장이 없어요\n마음에 드는 매장을 즐겨찾기 해주세요!</string>
     <string name="regular_noti">아직 단골로 등록한 매장이 없어요.\n매장을 즐겨찾기 한 후 단골로 설정해보세요!</string>
+    <string name="sign_info_text">포인트 적립부터 할인 쿠폰까지\n무인매장 앱테크의 시작 바로더</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">회원가입</string>
+    <string name="sign_in_id">아이디</string>
+    <string name="sign_in_password">비밀번호</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_pwd">비밀번호 찾기</string>
 </resources>
