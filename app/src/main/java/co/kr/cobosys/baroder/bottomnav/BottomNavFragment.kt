@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.addCallback
+import androidx.core.view.get
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentBottomNavBinding
 import co.kr.cobosys.baroder.coupon.CouponFragment
@@ -67,6 +69,7 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(HomeFragment(), itemId)
+                Toast.makeText(context, "홈 버튼", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.store_fragment -> {
@@ -74,6 +77,7 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(StoreFragment(), itemId)
+                Toast.makeText(context, "스토어 버튼", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.coupon_fragment -> {
@@ -81,6 +85,7 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(CouponFragment(), itemId)
+                Toast.makeText(context, "쿠폰 버튼", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.point_fragment -> {
@@ -88,6 +93,7 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(PointFragment(), itemId)
+                Toast.makeText(context, "포인트 버튼", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.shop_fragment -> {
@@ -95,6 +101,7 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(ShopFragment(), itemId)
+                Toast.makeText(context, "상점 버튼", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> false

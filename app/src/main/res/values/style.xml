@@ -102,6 +102,16 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="title_bold_23sp">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">23sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="title_bold_31sp">
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>

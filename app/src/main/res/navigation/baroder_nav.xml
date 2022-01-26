@@ -57,7 +57,7 @@
 
     <navigation
         android:id="@+id/mypage_navigation"
-        app:startDestination="@layout/fragment_my_page">
+        app:startDestination="@id/mypage_fragment">
 
         <fragment
             android:id="@+id/mypage_fragment"
@@ -126,6 +126,17 @@
             tools:layout="@layout/fragment_shop">
 
         </fragment>
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/sign_up_navigation"
+        app:startDestination="@id/sign_up_agreement_fragment">
+
+        <fragment
+            android:id="@+id/sign_up_agreement_fragment"
+            android:name="co.kr.cobosys.baroder.auth.signup.SignUpAgreementFragment"
+            tools:layout="@layout/fragment_sign_up_agreement" />
 
     </navigation>
 

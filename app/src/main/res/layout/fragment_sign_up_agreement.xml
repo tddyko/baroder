@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sign_up_agreement_info_text"
+        style="@style/title_bold_23sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/agreement_info_text"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_agreement_all_checked"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHeight_max="67dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sign_up_agreement_all_checked"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/btnGrey"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_terms_and_conditions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_agreement_info_text"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/sign_up_agreement_all_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_checkbox"
+                android:button="@android:color/transparent"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintEnd_toStartOf="@id/sign_up_agreement_text"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sign_up_agreement_text"
+                style="@style/coupon_store_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/all_agreement"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="25dp"
+                app:layout_constraintStart_toEndOf="@id/sign_up_agreement_all_check_box"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <include layout="@layout/item_agreement_check_box"
+        android:id="@+id/sign_up_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_agree_14_old"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_agreement_all_checked"
+        app:layout_goneMarginTop="10dp" />
+
+    <include
+        android:id="@+id/sign_up_agree_14_old"
+        layout="@layout/item_agreement_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_agree_collect_personal_information"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_terms_and_conditions" />
+
+    <include
+        android:id="@+id/sign_up_agree_collect_personal_information"
+        layout="@layout/item_agreement_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_agree_local_based_service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_agree_14_old" />
+
+    <include
+        android:id="@+id/sign_up_agree_local_based_service"
+        layout="@layout/item_agreement_check_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_agree_collect_personal_information" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

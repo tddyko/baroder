@@ -12,33 +12,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8d1b639-6655-4030-b468-8f59ba20f0a7" name="Default Changelist" comment="아이템 height match_parent -&gt; wrap_parent로 전부 수정 및 앞으로도 그렇게 해야함">
-      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/auth/signin/SignInFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sign_in_custom_input.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_modify_myinfo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_in.xml" afterDir="false" />
+    <list default="true" id="a8d1b639-6655-4030-b468-8f59ba20f0a7" name="Default Changelist" comment="로그인, 회원가입 뷰 그리는중">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/auth/signin/SignInViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/auth/signup/SignUpAgreementFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/auth/signup/SignUpViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/coupon/CouponViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/point/PointViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sign_up_agreement.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_agreement_check_box.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/AOS.baroder.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/AOS.baroder.app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/data/AOS.baroder.data.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/data/AOS.baroder.data.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/domain/AOS.baroder.domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/domain/AOS.baroder.domain.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/main/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_coupon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_coupon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_onboarding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_onboarding.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_home_card.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_my_coupon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_my_coupon.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_recently_visited_store_card.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/itme_qr_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/itme_qr_code.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/bottomnav/BottomNavFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/bottomnav/BottomNavFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/main/RootViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/co/kr/cobosys/baroder/main/RootViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/baroder_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/baroder_nav.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/style.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +67,9 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="valueResourceFile" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -463,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643018444665</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="로그인, 회원가입 뷰 그리는중">
+      <created>1643103402760</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1643103402760</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -495,6 +492,7 @@
     <MESSAGE value="모션 레이아웃 적용중[#3]" />
     <MESSAGE value="마이페이지 뷰 그리는중[#1]" />
     <MESSAGE value="아이템 height match_parent -&gt; wrap_parent로 전부 수정 및 앞으로도 그렇게 해야함" />
-    <option name="LAST_COMMIT_MESSAGE" value="아이템 height match_parent -&gt; wrap_parent로 전부 수정 및 앞으로도 그렇게 해야함" />
+    <MESSAGE value="로그인, 회원가입 뷰 그리는중" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인, 회원가입 뷰 그리는중" />
   </component>
 </project>

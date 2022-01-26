@@ -18,5 +18,4 @@ class RootViewModel @Inject constructor(): ViewModel() {
     private fun goHome() {
         _userAuthResult.value = true
     }
-
 }
