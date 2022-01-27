@@ -10,6 +10,7 @@ import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
 import co.kr.cobosys.baroder.base.adapter.RecyclerItem
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
+import co.kr.cobosys.baroder.dialog.barcode.BarcodeDialog
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.visible
@@ -35,7 +36,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.homeMenu.setOnClickListener{
-            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
+//            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
+            val dialog = BarcodeDialog()
+            dialog.show(childFragmentManager, "barcode")
         }
 
 //        setupPager()

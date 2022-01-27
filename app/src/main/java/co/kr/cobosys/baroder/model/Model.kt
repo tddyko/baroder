@@ -41,5 +41,10 @@ data class FavoriteStoreUI(
 
 @Parcelize
 data class QRcode(
-    val QrUrl: String
+    val qrUrl: String
+): Parcelable
+
+@Parcelize
+data class BarCode(
+    val barCodeUrl: String
 ): Parcelable
