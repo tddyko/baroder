@@ -36,9 +36,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.homeMenu.setOnClickListener{
-//            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
-            val dialog = BarcodeDialog()
-            dialog.show(childFragmentManager, "barcode")
+            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
         }
 
 //        setupPager()

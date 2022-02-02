@@ -12,147 +12,120 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="14dp"
         android:src="@drawable/ic_cancel_icon"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sign_in_baroder_logo"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:src="@drawable/ic_baroder_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="51dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_cancel_btn"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_max="95dp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/sign_in_info_text"
         style="@style/sub_text_14sp"
+        android:maxLines="2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center|center_vertical"
         android:text="@string/sign_info_text"
         android:textColor="@color/secondary_text_color"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_max="51dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_baroder_logo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/sign_in_baroder_logo" />
 
 
-    <com.google.android.material.card.MaterialCardView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_in_id"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="63dp"
-        android:clipToPadding="false"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="0dp"
-        app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_info_text"
-        app:layout_constraintVertical_bias="0.0">
+        app:boxBackgroundColor="@color/btnGrey"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_info_text">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_in_id_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            app:endIconMode="clear_text"
-            app:hintEnabled="false">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/noto_sans"
+            android:hint="@string/sign_in_id"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:letterSpacing="-0.04"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp"
+            app:layout_alignSelf="center" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/sign_in_id_field"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/btnGrey"
-                android:backgroundTint="@color/btnGrey"
-                android:fontFamily="@font/noto_sans"
-                android:hint="@string/sign_in_id"
-                android:includeFontPadding="false"
-                android:inputType="text"
-                android:letterSpacing="-0.04"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textSize="15sp"
-                app:layout_alignSelf="center" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sign_in_pwd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxBackgroundColor="@color/btnGrey"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:clipToPadding="false"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="0dp"
-        app:cardPreventCornerOverlap="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_id"
-        app:layout_constraintVertical_bias="0.0">
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_id">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sign_in_pwd_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
-            app:endIconMode="clear_text"
-            app:hintEnabled="false">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/noto_sans"
+            android:hint="@string/sign_in_password"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:letterSpacing="-0.04"
+            android:maxLength="15"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp"
+            app:layout_alignSelf="center" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/sign_in_pwd_field"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/btnGrey"
-                android:backgroundTint="@color/btnGrey"
-                android:fontFamily="@font/noto_sans"
-                android:hint="@string/sign_in_password"
-                android:includeFontPadding="false"
-                android:inputType="textPassword"
-                android:letterSpacing="-0.04"
-                android:maxLength="15"
-                android:padding="15dp"
-                android:singleLine="true"
-                android:textSize="15sp"
-                app:layout_alignSelf="center" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sign_in_btn"
         style="@style/sign_in_btn"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="136dp"
+        android:paddingVertical="15dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/mainGreen_50"
         android:text="@string/sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="54dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_pwd"
         app:layout_constraintVertical_bias="0.0" />
@@ -160,21 +133,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="68dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_btn"
-        app:layout_constraintVertical_bias="0.0">
-
+        app:layout_constraintTop_toBottomOf="@id/sign_in_btn">
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/sign_in_find_id"
             style="@style/sub_text_14sp"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/find_id"
@@ -188,7 +157,7 @@
         <View
             android:id="@+id/sig_in_in_devider_first"
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="8dp"
             android:background="@color/stroke"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -200,7 +169,7 @@
             android:id="@+id/sign_in_find_pwd"
             style="@style/sub_text_14sp"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/find_pwd"
@@ -213,7 +182,7 @@
         <View
             android:id="@+id/sig_in_in_devider_second"
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="8dp"
             android:background="@color/stroke"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -225,7 +194,7 @@
             android:id="@+id/sign_in_sign_up"
             style="@style/sub_text_14sp"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/sign_up"

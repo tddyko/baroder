@@ -10,6 +10,7 @@
 
     <!--텍스트-->
     <style name="title_text">
+        <item name="android:textSize">31sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">31sp</item>
@@ -22,6 +23,7 @@
 
     <style name="title_sub_text">
         <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textSize">21sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">21sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
@@ -32,6 +34,7 @@
     </style>
 
     <style name="item_title_text">
+        <item name="android:textSize">19sp</item>
         <item name="autoSizeMaxTextSize">19sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
@@ -41,7 +44,18 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="sub_text_13sp">
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">13sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="sub_text_14sp">
+        <item name="android:textSize">14sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -52,6 +66,7 @@
     </style>
 
     <style name="sub_main_text_14sp">
+        <item name="android:textSize">14sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">14sp</item>
@@ -64,6 +79,7 @@
 
     <style name="main_text">
         <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textSize">15sp</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
@@ -72,6 +88,7 @@
     </style>
 
     <style name="item_text">
+        <item name="android:textSize">16sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeMaxTextSize">16sp</item>
@@ -81,9 +98,10 @@
     </style>
 
     <style name="coupon_store_name">
-        <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="android:textSize">17sp</item>
         <item name="autoSizeMaxTextSize">17sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="android:textStyle">normal</item>
@@ -93,6 +111,7 @@
 
     <style name="qr_text">
         <item name="autoSizeTextType">uniform</item>
+        <item name="android:textSize">21sp</item>
         <item name="autoSizeMaxTextSize">21sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:letterSpacing">-0.04</item>
@@ -104,6 +123,7 @@
 
     <style name="title_bold_23sp">
         <item name="autoSizeTextType">uniform</item>
+        <item name="android:textSize">23dp</item>
         <item name="autoSizeMaxTextSize">23sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">@color/primary_color_text</item>
@@ -113,6 +133,7 @@
     </style>
 
     <style name="title_bold_31sp">
+        <item name="android:textSize">31sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">31sp</item>
@@ -126,7 +147,6 @@
     <!--버튼-->
 
     <style name="floating_btn" parent="Widget.AppCompat.ImageButton">
-
 
 
     </style>
@@ -164,13 +184,14 @@
     </style>
 
     <style name="cardview_positive_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textSize">15sp</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="fontFamily">@font/noto_sans</item>
-        <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
         <item name="cornerRadius">12dp</item>
         <item name="elevation">0dp</item>
         <item name="android:insetLeft">0dp</item>
@@ -197,6 +218,7 @@
     </style>
 
     <style name="cardview_negative_btn" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textSize">15sp</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
@@ -213,7 +235,7 @@
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
     </style>
-    
+
     <style name="point_btn" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
@@ -232,6 +254,7 @@
     </style>
 
     <style name="sign_in_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textSize">17sp</item>
         <item name="autoSizeMaxTextSize">17sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
@@ -265,18 +288,20 @@
     </style>
 
     <style name="edit_button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textSize">15sp</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
+        <item name="iconPadding">0dp</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="cornerRadius">10dp</item>
         <item name="elevation">0dp</item>
-        <item name="android:elevation">0dp</item>
         <item name="backgroundTint">@color/btnGrey</item>
+        <item name="android:elevation">0dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -362,7 +387,6 @@
     </style>
 
     <!--애니메이션-->
-
     <style name="TopSheet_DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_out_from_top</item>
         <item name="android:windowExitAnimation">@anim/slide_back_to_top</item>

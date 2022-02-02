@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,33 +9,30 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/point_app_bar"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        app:layout_constraintHeight_max="50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:elevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/point_menu_area"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/point_menu"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
                 android:backgroundTint="@android:color/transparent"
+                android:padding="0dp"
                 android:src="@drawable/ic_menu_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_max="30dp"
-                app:layout_constraintHorizontal_bias="1.0"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="30dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -43,11 +41,15 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingVertical="25dp"
             android:background="@color/white"
+            android:visibility="gone"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:titleCentered="true"
-            app:titleTextColor="@color/black" >
+            app:titleTextColor="@color/black">
 
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -57,31 +59,27 @@
         android:id="@+id/point_title_txt"
         style="@style/title_text"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="20dp"
         android:text="@string/my_point"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="46dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/point_app_bar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/point_app_bar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/point_sub_title"
         style="@style/main_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:maxLines="1"
         android:layout_marginTop="5dp"
         android:paddingHorizontal="20dp"
         android:text="@string/point_noti"
         android:textColor="@color/primary_color_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/point_title_txt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/point_title_txt" />
 
 
     <androidx.recyclerview.widget.RecyclerView

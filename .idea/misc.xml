@@ -132,9 +132,10 @@
         <entry key="app/src/main/res/layout/fragment_bottom_navigation.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_conver_coupon_details.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_convert_coupon.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_convert_coupon_details.xml" value="0.31657608695652173" />
         <entry key="app/src/main/res/layout/fragment_coupon.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_coupon_end.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_favorite_store.xml" value="0.2612986119023204" />
+        <entry key="app/src/main/res/layout/fragment_favorite_store.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_home_mycoupon.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/fragment_home_recently_visited_store.xml" value="0.25" />
@@ -153,9 +154,11 @@
         <entry key="app/src/main/res/layout/fragment_root.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/fragment_root_view.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_sign_up_agreement.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_phone_number_.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_phone_number_verification.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_agreement_check_box.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_coupon.xml" value="0.33" />
@@ -164,16 +167,16 @@
         <entry key="app/src/main/res/layout/item_expand_child.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_expand_parent.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_favorite_store.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_home_card.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_home_card.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_home_card_expand.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_card_expand_edit_button.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/item_home_card_expand_recently_visited_recyclerview.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_home_card_expand_recently_visited_recyclerview.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_home_card_shimmer.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_home_recently_store.xml" value="0.3704710144927536" />
         <entry key="app/src/main/res/layout/item_home_recently_visited_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_home_title.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_main_card.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/item_my_coupon.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_my_coupon.xml" value="0.45" />
         <entry key="app/src/main/res/layout/item_my_coupon_used.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_onboarding_first.xml" value="0.338768115942029" />
         <entry key="app/src/main/res/layout/item_onboarding_second.xml" value="0.338768115942029" />
@@ -182,7 +185,7 @@
         <entry key="app/src/main/res/layout/item_recently_visited_store.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_recently_visited_store_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_recently_visiting_store_card.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_regular_store.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_regular_store.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_terms_of_use_bottom_sheet.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/itme_home_store.xml" value="0.33" />
         <entry key="app/src/main/res/layout/itme_point_details.xml" value="0.33" />
@@ -198,7 +201,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.67" />
+        <option name="scale" value="0.33" />
       </ProjectState>
     </option>
   </component>

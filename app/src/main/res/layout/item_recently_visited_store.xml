@@ -11,15 +11,11 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/recently_store"
         style="@style/card_radius_15dp"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/recently_store_img"
@@ -34,13 +30,11 @@
         style="@style/coupon_store_name"
         android:layout_marginStart="15dp"
         android:layout_width="0dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@id/materialCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.0"
         tools:text="바로더 매장 문정점" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -49,12 +43,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="3dp"
         android:layout_width="0dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
         app:layout_constraintTop_toBottomOf="@+id/recently_store_name"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:text="나와의 거리 280km" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -64,13 +57,11 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="3dp"
         android:layout_width="0dp"
-        android:layout_height="41dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
         app:layout_constraintTop_toBottomOf="@id/recently_store_location"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
         app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:text="경남 창원시 대산회원구\n영덕5길 18 401동 110호" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -82,10 +73,6 @@
         android:background="@drawable/favorite_checkbox"
         android:button="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="1.0"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

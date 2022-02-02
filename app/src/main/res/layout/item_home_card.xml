@@ -22,9 +22,7 @@
         app:justifyContent="flex_end"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -38,7 +36,7 @@
         style="@style/main_card"
         app:contentPadding="20dp"
         android:layout_width="0dp"
-        android:layout_height="267dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shop_img"
@@ -52,55 +50,49 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_store_name"
                 style="@style/title_sub_text"
+                android:maxLines="1"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:textColor="@color/primary_color_text"
-                app:layout_constraintHeight_max="31dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 tools:text="아직 등록된 매장이 없어요 :(" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_point"
                 style="@style/title_text"
+                android:maxLines="1"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintHeight_max="46dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_store_name"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="0 P" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/empty_main_text"
                 style="@style/main_text"
+                android:maxLines="1"
                 android:textColor="@color/primary_color_text"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintHeight_max="22dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="회원가입하고 매장 포인트를 확인하세요!" />
 
             <com.skydoves.progressview.ProgressView
                 android:id="@+id/empty_point_progress"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_min="10dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintHeight_max="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/empty_main_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:progressView_autoAnimate="true"
                 app:progressView_colorBackground="@color/stroke"
                 app:progressView_colorGradientCenter="@color/goldgreen"
@@ -114,24 +106,21 @@
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/empty_point_text"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintHeight_max="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 app:alignItems="center"
                 app:flexDirection="row"
                 app:justifyContent="space_between"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/empty_point_progress"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0">
-
+                app:layout_constraintTop_toBottomOf="@+id/empty_point_progress">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/empty_start_point"
                     style="@style/sub_text_14sp"
+                    android:maxLines="1"
                     android:textColor="@color/disabled_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     tools:text="0" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -139,7 +128,8 @@
                     style="@style/sub_text_14sp"
                     android:textColor="@color/disabled_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
                     tools:text="999999" />
             </com.google.android.flexbox.FlexboxLayout>
 
@@ -148,10 +138,12 @@
                 android:id="@+id/empty_first_btn"
                 style="@style/cardview_positive_btn"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
-                app:layout_constraintHeight_max="54dp"
+                android:paddingHorizontal="26dp"
+                android:paddingVertical="16dp"
+                android:maxLines="1"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -162,11 +154,13 @@
                 android:id="@+id/empty_second_btn"
                 style="@style/cardview_negative_btn"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_max="54dp"
                 app:layout_constraintStart_toEndOf="@+id/empty_first_btn"
                 app:layout_constraintTop_toBottomOf="@+id/empty_point_text"
                 tools:text="바로더 알아보기" />

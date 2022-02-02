@@ -18,8 +18,8 @@
 
             <KeyAttribute
                 android:alpha="0"
-                app:framePosition="45"
-                app:motionTarget="point_sub_title" />
+                app:framePosition="50"
+                app:motionTarget="@id/point_sub_title" />
 
        </KeyFrameSet>
 

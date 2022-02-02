@@ -53,4 +53,9 @@
     <string name="find_pwd">비밀번호 찾기</string>
     <string name="agreement_info_text">서비스 이용 약관에\n동의해 주세요:)</string>
     <string name="all_agreement">전체동의</string>
+    <string name="please_phone_num_verification">휴대폰 번호를 인증해주세요.</string>
+    <string name="please_input_youre_phone_number">휴대폰 번호를 입력하세요.</string>
+    <string name="phone_number">휴대폰 번호</string>
+    <string name="auth_verification">인증받기</string>
+    <string name="auth_number">인증번호</string>
 </resources>

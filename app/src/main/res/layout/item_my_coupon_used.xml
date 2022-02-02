@@ -14,13 +14,11 @@
         style="@style/card_radius_15dp"
         app:contentPadding="20dp"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/btnGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,41 +29,35 @@
                 style="@style/coupon_store_name"
                 android:textColor="@color/secondary_text_color"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHeight_max="25dp"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="집어가 마산역점" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/used_coupon_price"
                 style="@style/qr_text"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:textColor="@color/secondary_text_color"
                 app:layout_constraintTop_toBottomOf="@id/used_store_name"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHeight_max="31dp"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="3,000원 할인쿠폰"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/used_date"
                 style="@style/main_text"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:textColor="@color/secondary_text_color"
                 app:layout_constraintTop_toBottomOf="@id/used_coupon_price"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHeight_max="22dp"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_marginTop="14dp"
                 tools:text="사용일자 : 2021-11-18" />
             <androidx.appcompat.widget.AppCompatTextView
@@ -73,13 +65,10 @@
                 style="@style/main_text"
                 android:textColor="@color/secondary_text_color"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/used_date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintHeight_max="22dp"
                 tools:text="사용시간 : 15:39" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -87,13 +76,10 @@
                 style="@style/main_text"
                 android:textColor="@color/secondary_text_color"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/used_time"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:layout_constraintHeight_max="22dp"
                 tools:text="쿠폰번호 : 00001234" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

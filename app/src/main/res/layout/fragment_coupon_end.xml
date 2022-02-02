@@ -9,34 +9,30 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/coupon_app_bar"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:elevation="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
-        app:layout_constraintHeight_max="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coupon_menu_area"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/coupon_menu"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:backgroundTint="@android:color/transparent"
+                android:padding="0dp"
                 android:src="@drawable/ic_menu_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHeight_max="30dp"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_max="30dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -45,6 +41,10 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingVertical="25dp"
+            android:visibility="gone"
             android:background="@color/white"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -60,32 +60,31 @@
         android:id="@+id/coupon_title_txt"
         style="@style/coupon_store_name"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:scaleX="0.55"
+        android:scaleY="0.55"
         android:gravity="center_vertical"
         android:text="@string/my_coupon"
-        app:layout_constraintTop_toTopOf="@id/coupon_app_bar"
-        app:layout_constraintStart_toStartOf="@id/coupon_app_bar"
-        app:layout_constraintEnd_toEndOf="@id/coupon_app_bar"
         app:layout_constraintBottom_toBottomOf="@id/coupon_app_bar"
-        app:layout_constraintHeight_max="24dp" />
+        app:layout_constraintEnd_toEndOf="@id/coupon_app_bar"
+        app:layout_constraintStart_toStartOf="@id/coupon_app_bar"
+        app:layout_constraintTop_toTopOf="@id/coupon_app_bar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/coupon_sub_title"
         style="@style/main_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:paddingHorizontal="20dp"
         android:gravity="center_vertical"
-        android:visibility="gone"
+        android:alpha="0"
+        android:maxLines="1"
+        android:paddingHorizontal="20dp"
         android:text="@string/coupon_noti_text"
         android:textColor="@color/primary_color_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/coupon_title_txt"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/coupon_tab"
@@ -93,12 +92,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/coupon_sub_title"
-        app:layout_constraintVertical_bias="0.0"
         app:tabGravity="center"
         app:tabIndicatorHeight="3dp"
         app:tabRippleColor="@null"
@@ -121,11 +116,9 @@
         android:layout_width="0dp"
         android:layout_height="5dp"
         android:background="@drawable/down_shadow"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/coupon_tab"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@id/coupon_tab" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/coupon_recyclerView"

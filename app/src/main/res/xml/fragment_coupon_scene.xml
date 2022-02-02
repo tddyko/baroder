@@ -17,7 +17,7 @@
 
             <KeyAttribute
                 android:alpha="0"
-                app:framePosition="45"
+                app:framePosition="50"
                 app:motionTarget="@id/coupon_sub_title" />
 
         </KeyFrameSet>
