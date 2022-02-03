@@ -1,37 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="20dp">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/verification_title"
         style="@style/title_bold_23sp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/please_phone_num_verification"
+        android:maxLines="1"
         android:textColor="@color/primary_color_text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="34dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/verification_phone_number_area"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/verification_auth_number_area"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/verification_title"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@id/verification_title">
 
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verification_phone_number_text"
+            style="@style/sub_text_13sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/phone_number"/>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/verification_phone_number_layout"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:background="@color/box_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:layout_marginEnd="10dp"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/warning_coral"
+            app:layout_constraintTop_toBottomOf="@id/verification_phone_number_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/verification_auth_btn">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/verification_phone_number_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/please_phone_num_verification"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:letterSpacing="-0.04"
+                android:paddingVertical="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                app:layout_alignSelf="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/edit_button"
+            android:id="@+id/verification_auth_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/verification_phone_number_layout"
+            android:textColor="@color/primary_color_text"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="12dp"
+            android:text="@string/auth_verification"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,11 +101,78 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/verification_phone_number_area"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verification_auth_number_text"
+            style="@style/sub_text_13sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text_color"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/auth_number"/>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/verification_auth_area"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:background="@color/box_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:layout_marginEnd="10dp"
+            app:hintEnabled="false"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/warning_coral"
+            app:layout_constraintTop_toBottomOf="@id/verification_auth_number_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/verification_auth_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/noto_sans"
+                android:hint="@string/input_auth_number"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:letterSpacing="-0.04"
+                android:paddingVertical="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                app:layout_alignSelf="center" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verification_auth_timer"
+            style="@style/sub_text_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/warning_coral"
+            app:layout_constraintBaseline_toBaselineOf="@id/verification_auth_area"
+            app:layout_constraintEnd_toEndOf="@id/verification_auth_area"
+            android:layout_marginEnd="15dp"
+            tools:text="03:00"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verification_next_btn"
+        style="@style/positive_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/next"
+        android:paddingVertical="15dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

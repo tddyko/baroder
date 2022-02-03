@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/btnGrey">
+    android:background="@color/btn_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/my_page_login_area"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/mainGreen"
+        android:background="@color/main_green"
         android:paddingHorizontal="20dp"
         android:paddingVertical="30dp"
         app:layout_constraintEnd_toEndOf="parent"

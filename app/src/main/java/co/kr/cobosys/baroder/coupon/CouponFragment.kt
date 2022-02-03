@@ -34,10 +34,11 @@ class CouponFragment : Fragment(R.layout.fragment_coupon) {
                 R.id.bottom_navigation_fragment
                 -> {
                     binding.couponToolBar.gone()
+                    binding.couponMenuArea.visible()
                 }
                 else -> {
                     binding.couponToolBar.visible()
-                    binding.couponMenu.gone()
+                    binding.couponMenuArea.gone()
                 }
             }
         }

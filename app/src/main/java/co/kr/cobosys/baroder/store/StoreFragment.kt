@@ -34,9 +34,11 @@ class StoreFragment : Fragment(R.layout.fragment_store) {
                 R.id.bottom_navigation_fragment
                 -> {
                     binding.storeToolBar.gone()
+                    binding.storeMenuArea.visible()
                 }
                 else -> {
                     binding.storeToolBar.visible()
+                    binding.storeMenuArea.gone()
                 }
             }
         }

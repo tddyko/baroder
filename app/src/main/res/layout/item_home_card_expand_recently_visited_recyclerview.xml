@@ -68,7 +68,7 @@
             android:paddingVertical="12dp"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:backgroundTint="@color/btnGrey"
+            android:backgroundTint="@color/btn_grey"
             android:text="@string/store_take_a_tour"
             android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="parent"

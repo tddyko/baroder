@@ -48,14 +48,29 @@
     <string name="sign_in">로그인</string>
     <string name="sign_up">회원가입</string>
     <string name="sign_in_id">아이디</string>
+    <string name="name">이름</string>
     <string name="sign_in_password">비밀번호</string>
     <string name="find_id">아이디 찾기</string>
     <string name="find_pwd">비밀번호 찾기</string>
     <string name="agreement_info_text">서비스 이용 약관에\n동의해 주세요:)</string>
     <string name="all_agreement">전체동의</string>
     <string name="please_phone_num_verification">휴대폰 번호를 인증해주세요.</string>
-    <string name="please_input_youre_phone_number">휴대폰 번호를 입력하세요.</string>
     <string name="phone_number">휴대폰 번호</string>
     <string name="auth_verification">인증받기</string>
     <string name="auth_number">인증번호</string>
+    <string name="input_auth_number">인증번호를 입력해주세요</string>
+    <string name="next">다음</string>
+    <string name="birthday">생년월일</string>
+    <string name="please_input_member_info">회원가입에 꼭 필요한 정보를\n입력해주세요.</string>
+    <string name="please_input_id">아이디를 입력해주세요</string>
+    <string name="please_input_pwd">영문,숫자, 특수문자를 포함한 8~15자를 입력해주세요</string>
+    <string name="please_input_name">이름을 입력해주세요.</string>
+    <string name="please_input_birthday">생년월일 6자리</string>
+    <string name="asterisk">*</string>
+    <string name="asterisk_group">* * * * * *</string>
+    <string name="signup_complete">회원가입 완료</string>
+    <string name="complete_sign_up">회원가입이\n완료되었습니다.</string>
+    <string name="sign_up_complete_sub_title">바로더 회원가입이 완료되었습니다.\n바로더로 매장별 포인트를 한꺼번에 관리해 보세요!</string>
+    <string name="go_home">홈으로 가기</string>
+
 </resources>

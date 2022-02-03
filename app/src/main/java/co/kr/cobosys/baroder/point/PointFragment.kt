@@ -34,10 +34,11 @@ class PointFragment : Fragment(R.layout.fragment_point) {
                 R.id.bottom_navigation_fragment
                 -> {
                     binding.pointToolBar.gone()
+                    binding.pointMenuArea.visible()
                 }
                 else -> {
                     binding.pointToolBar.visible()
-                    binding.pointMenu.gone()
+                    binding.pointMenuArea.gone()
                 }
             }
         }

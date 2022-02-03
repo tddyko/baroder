@@ -4,15 +4,16 @@
     <color name="secondary_text_color">#7f7f7f</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="btnGrey">#f0f0f0</color>
+    <color name="btn_grey">#f0f0f0</color>
     <color name="stroke">#e0e0e0</color>
     <color name="disabled_text">#a8a8a8</color>
-    <color name="goldgreen">#dea83a</color>
-    <color name="bgGrey">#f4f4f6</color>
-    <color name="mainGreen">#22bf50</color>
-    <color name="mainGreen_50">#8022bf50</color>
-    <color name="warmBlue">#5245db</color>
-    <color name="warmBlue_30">#4dffffff</color>
-    <color name="warningCoral">#ff403f</color>
-    <color name="starYellow">#ffa436</color>
+    <color name="gold_green">#dea83a</color>
+    <color name="bg_grey">#f4f4f6</color>
+    <color name="main_green">#22bf50</color>
+    <color name="main_green_50">#8022bf50</color>
+    <color name="warm_blue">#5245db</color>
+    <color name="warm_blue_30">#4dffffff</color>
+    <color name="warning_coral">#ff403f</color>
+    <color name="star_yellow">#ffa436</color>
+    <color name="divider_grey">#707070</color>
 </resources>

@@ -34,10 +34,11 @@ class ShopFragment : Fragment(R.layout.fragment_shop) {
                 R.id.bottom_navigation_fragment
                 -> {
                     binding.shopToolBar.gone()
+                    binding.shopMenuArea.visible()
                 }
                 else -> {
                     binding.shopToolBar.visible()
-                    binding.shopMenu.gone()
+                    binding.shopMenuArea.gone()
                 }
             }
         }

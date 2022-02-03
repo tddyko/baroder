@@ -37,7 +37,7 @@
             app:layout_constraintStart_toEndOf="@id/point_details_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/warmBlue"
+            android:textColor="@color/warm_blue"
             tools:text="+ 100 P" />
 
         <androidx.appcompat.widget.AppCompatTextView

@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bgGrey"
+        android:background="@color/bg_grey"
         android:clipToPadding="false">
 
         <com.google.android.material.checkbox.MaterialCheckBox

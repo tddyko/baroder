@@ -12,8 +12,6 @@
         android:paddingHorizontal="20dp"
         android:paddingVertical="14dp"
         android:src="@drawable/ic_cancel_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="63dp"
-        app:boxBackgroundColor="@color/btnGrey"
+        app:boxBackgroundColor="@color/btn_grey"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -88,7 +86,7 @@
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusBottomEnd="10dp"
-        app:boxBackgroundColor="@color/btnGrey"
+        app:boxBackgroundColor="@color/btn_grey"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         app:boxStrokeWidth="0dp"
@@ -123,7 +121,7 @@
         android:paddingVertical="15dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/mainGreen_50"
+        android:backgroundTint="@color/main_green_50"
         android:text="@string/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,13 +147,13 @@
             android:text="@string/find_id"
             android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/sig_in_in_devider_first"
+            app:layout_constraintEnd_toStartOf="@id/sig_in_in_divider_first"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:id="@+id/sig_in_in_devider_first"
+            android:id="@+id/sig_in_in_divider_first"
             android:layout_width="1dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="8dp"
@@ -175,12 +173,12 @@
             android:text="@string/find_pwd"
             android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/sig_in_in_devider_second"
-            app:layout_constraintStart_toEndOf="@id/sig_in_in_devider_first"
+            app:layout_constraintEnd_toStartOf="@id/sig_in_in_divider_second"
+            app:layout_constraintStart_toEndOf="@id/sig_in_in_divider_first"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:id="@+id/sig_in_in_devider_second"
+            android:id="@+id/sig_in_in_divider_second"
             android:layout_width="1dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="8dp"
@@ -201,7 +199,7 @@
             android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/sig_in_in_devider_second"
+            app:layout_constraintStart_toEndOf="@id/sig_in_in_divider_second"
             app:layout_constraintTop_toTopOf="parent" />
 
 

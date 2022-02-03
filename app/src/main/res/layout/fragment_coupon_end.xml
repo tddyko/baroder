@@ -41,9 +41,6 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:paddingVertical="25dp"
             android:visibility="gone"
             android:background="@color/white"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
@@ -112,7 +109,7 @@
 
     </com.google.android.material.tabs.TabLayout>
     <View
-        android:id="@+id/devider"
+        android:id="@+id/divider"
         android:layout_width="0dp"
         android:layout_height="5dp"
         android:background="@drawable/down_shadow"
@@ -127,6 +124,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/devider"/>
+        app:layout_constraintTop_toBottomOf="@id/divider"/>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

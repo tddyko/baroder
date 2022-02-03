@@ -78,7 +78,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:cardPreventCornerOverlap="false"
-        android:backgroundTint="@color/mainGreen"
+        android:backgroundTint="@color/main_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coupon_card_top">

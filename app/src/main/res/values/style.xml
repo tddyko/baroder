@@ -47,6 +47,7 @@
     <style name="sub_text_13sp">
         <item name="android:letterSpacing">-0.04</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="android:textSize">13sp</item>
         <item name="autoSizeMaxTextSize">13sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="android:textStyle">normal</item>
@@ -123,7 +124,7 @@
 
     <style name="title_bold_23sp">
         <item name="autoSizeTextType">uniform</item>
-        <item name="android:textSize">23dp</item>
+        <item name="android:textSize">23sp</item>
         <item name="autoSizeMaxTextSize">23sp</item>
         <item name="android:letterSpacing">-0.04</item>
         <item name="android:textColor">@color/primary_color_text</item>
@@ -226,10 +227,27 @@
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:textColor">@color/mainGreen</item>
+        <item name="android:textColor">@color/main_green</item>
         <item name="cornerRadius">10dp</item>
-        <item name="strokeColor">@color/mainGreen</item>
+        <item name="strokeColor">@color/main_green</item>
         <item name="strokeWidth">1dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="positive_btn" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textSize">17sp</item>
+        <item name="autoSizeMaxTextSize">17sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">10dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>
@@ -243,8 +261,8 @@
         <item name="android:letterSpacing">-0.04</item>
         <item name="fontFamily">@font/font</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:textColor">@color/mainGreen</item>
-        <item name="strokeColor">@color/mainGreen</item>
+        <item name="android:textColor">@color/main_green</item>
+        <item name="strokeColor">@color/main_green</item>
         <item name="strokeWidth">1dp</item>
         <item name="cornerRadius">12dp</item>
         <item name="android:insetLeft">0dp</item>
@@ -300,7 +318,7 @@
         <item name="android:textColor">@color/primary_color_text</item>
         <item name="cornerRadius">10dp</item>
         <item name="elevation">0dp</item>
-        <item name="backgroundTint">@color/btnGrey</item>
+        <item name="backgroundTint">@color/btn_grey</item>
         <item name="android:elevation">0dp</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
@@ -340,7 +358,7 @@
             @style/Widget.MaterialComponents.CardView.RadiusBottom20
         </item>
         <item name="cardElevation">10dp</item>
-        <item name="cardBackgroundColor">@color/mainGreen</item>
+        <item name="cardBackgroundColor">@color/main_green</item>
     </style>
 
     <style name="motion_card" parent="Widget.MaterialComponents.CardView">
@@ -385,6 +403,67 @@
         <item name="fontFamily">@font/noto_sans</item>
         <item name="android:letterSpacing">-0.04</item>
     </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+        <!--FilledBox일 경우 밑줄 색상, OutlinedBox일 경우 테두리 색상-->
+        <item name="boxStrokeColor">@color/box_stroke_color</item>
+        <!--Counter-->
+        <item name="counterTextAppearance">@style/CounterTextAppearance</item>
+        <!--Helper-->
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+        <!--Error-->
+        <item name="colorError">@color/warning_coral</item>
+        <item name="errorIconDrawable">@android:color/transparent</item>
+        <item name="errorTextAppearance">@style/ErrorTextAppearance</item>
+    </style>
+
+    <style name="asterisk_top_padding">
+        <item name="contentPaddingTop">10dp</item>
+    </style>
+
+    <style name="ErrorTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="autoSizeMaxTextSize">13sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="HelperTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">13sp</item>
+        <item name="autoSizeMaxTextSize">13sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="CounterTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="textFillColor">@color/main_green</item>
+        <item name="android:textSize">13sp</item>
+        <item name="autoSizeMaxTextSize">13sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="autoSizeMaxTextSize">15sp</item>
+        <item name="autoSizeMinTextSize">1sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:textColor">@color/primary_color_text</item>
+        <item name="android:letterSpacing">-0.04</item>
+    </style>
+
 
     <!--애니메이션-->
     <style name="TopSheet_DialogAnimation">

@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.Baroder" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/mainGreen</item>
+        <item name="colorPrimary">@color/main_green</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/warmBlue</item>
-        <item name="colorError">@color/warningCoral</item>
+        <item name="colorSecondary">@color/warm_blue</item>
+        <item name="colorError">@color/warning_coral</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
