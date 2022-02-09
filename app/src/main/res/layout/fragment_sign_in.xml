@@ -65,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/noto_sans"
-            android:hint="@string/sign_in_id"
+            android:hint="@string/id"
             android:includeFontPadding="false"
             android:inputType="text"
             android:letterSpacing="-0.04"

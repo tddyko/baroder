@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.sqlite:sqlite-framework:2.1.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/148d251bf69085dba4f7015051ed5655/transformed/sqlite-framework-2.1.0/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3373d0b6e5409dfa5e5e44cb023519a3/transformed/sqlite-framework-2.1.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3373d0b6e5409dfa5e5e44cb023519a3/transformed/sqlite-framework-2.1.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3373d0b6e5409dfa5e5e44cb023519a3/transformed/sqlite-framework-2.1.0/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/044dbfc9244199cb3aeacb4e167a91d1/transformed/sqlite-framework-2.1.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/044dbfc9244199cb3aeacb4e167a91d1/transformed/sqlite-framework-2.1.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/044dbfc9244199cb3aeacb4e167a91d1/transformed/sqlite-framework-2.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

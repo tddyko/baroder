@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.interpolator:interpolator:1.0.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5f85e4fdef5f14822ce9cd7b175653da/transformed/interpolator-1.0.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/afed0f5004867b8051baadf346f861f0/transformed/interpolator-1.0.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/afed0f5004867b8051baadf346f861f0/transformed/interpolator-1.0.0/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/afed0f5004867b8051baadf346f861f0/transformed/interpolator-1.0.0/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e9c7fac00c3a7596a2dfcad7dc946c58/transformed/interpolator-1.0.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e9c7fac00c3a7596a2dfcad7dc946c58/transformed/interpolator-1.0.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e9c7fac00c3a7596a2dfcad7dc946c58/transformed/interpolator-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

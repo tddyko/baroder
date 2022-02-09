@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.paging:paging-runtime-ktx:3.1.0-rc01@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9355708b1cab3742cd5badc99a5d21ad/transformed/paging-runtime-ktx-3.1.0-rc01/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9355708b1cab3742cd5badc99a5d21ad/transformed/paging-runtime-ktx-3.1.0-rc01/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9355708b1cab3742cd5badc99a5d21ad/transformed/paging-runtime-ktx-3.1.0-rc01/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/a5e38bac874b569e45858dd2d9ea497b/transformed/paging-runtime-ktx-3.1.0-rc01/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/a5e38bac874b569e45858dd2d9ea497b/transformed/paging-runtime-ktx-3.1.0-rc01/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/a5e38bac874b569e45858dd2d9ea497b/transformed/paging-runtime-ktx-3.1.0-rc01/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

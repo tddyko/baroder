@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.fragment:fragment:1.4.0-rc01@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bc3ba24aaed4b2c6f51de12f3a38e95f/transformed/fragment-1.4.0-rc01/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e2e4475f8e4b0694221927554b5355dd/transformed/fragment-1.4.0-rc01/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bc3ba24aaed4b2c6f51de12f3a38e95f/transformed/fragment-1.4.0-rc01/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bc3ba24aaed4b2c6f51de12f3a38e95f/transformed/fragment-1.4.0-rc01/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/bc3ba24aaed4b2c6f51de12f3a38e95f/transformed/fragment-1.4.0-rc01/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e2e4475f8e4b0694221927554b5355dd/transformed/fragment-1.4.0-rc01/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e2e4475f8e4b0694221927554b5355dd/transformed/fragment-1.4.0-rc01/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e2e4475f8e4b0694221927554b5355dd/transformed/fragment-1.4.0-rc01/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

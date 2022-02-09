@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.airbnb.android:lottie:4.2.1@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3d8855cf57186082a3415e00c182b1fb/transformed/lottie-4.2.1/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9606ff24c699057a7c3cf00c0750a115/transformed/lottie-4.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3d8855cf57186082a3415e00c182b1fb/transformed/lottie-4.2.1/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3d8855cf57186082a3415e00c182b1fb/transformed/lottie-4.2.1/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/3d8855cf57186082a3415e00c182b1fb/transformed/lottie-4.2.1/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9606ff24c699057a7c3cf00c0750a115/transformed/lottie-4.2.1/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9606ff24c699057a7c3cf00c0750a115/transformed/lottie-4.2.1/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/9606ff24c699057a7c3cf00c0750a115/transformed/lottie-4.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.airbnb.android/lottie/4.2.1/845baf1002a1a255c35fdf2f11129d986450bde7/lottie-4.2.1-javadoc.jar!/" />

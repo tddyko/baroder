@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.shimmer:shimmer:0.5.0@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4be0aa9669c77bd31d2b38dd1fa8d8da/transformed/shimmer-0.5.0/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b55e2b11c4292f45de29c9878b91a4d4/transformed/shimmer-0.5.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4be0aa9669c77bd31d2b38dd1fa8d8da/transformed/shimmer-0.5.0/AndroidManifest.xml" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4be0aa9669c77bd31d2b38dd1fa8d8da/transformed/shimmer-0.5.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4be0aa9669c77bd31d2b38dd1fa8d8da/transformed/shimmer-0.5.0/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b55e2b11c4292f45de29c9878b91a4d4/transformed/shimmer-0.5.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b55e2b11c4292f45de29c9878b91a4d4/transformed/shimmer-0.5.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b55e2b11c4292f45de29c9878b91a4d4/transformed/shimmer-0.5.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.facebook.shimmer/shimmer/0.5.0/8f2cac7f46a15f00f1ee997fe744d0b16677cc30/shimmer-0.5.0-javadoc.jar!/" />

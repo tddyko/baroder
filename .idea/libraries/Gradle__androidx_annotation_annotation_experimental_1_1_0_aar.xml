@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.annotation:annotation-experimental:1.1.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a91d97d59efda21ebd2f7a246cc4aaf/transformed/annotation-experimental-1.1.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a91d97d59efda21ebd2f7a246cc4aaf/transformed/annotation-experimental-1.1.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a91d97d59efda21ebd2f7a246cc4aaf/transformed/annotation-experimental-1.1.0/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2d377f2f546fb1bb5b1d9da265afff21/transformed/annotation-experimental-1.1.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2d377f2f546fb1bb5b1d9da265afff21/transformed/annotation-experimental-1.1.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2d377f2f546fb1bb5b1d9da265afff21/transformed/annotation-experimental-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

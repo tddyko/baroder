@@ -12,14 +12,13 @@ data class StoreResponse(
 
 )
 
-data class FavoriteStoreResponse(
-    @SerializedName("id") val id: Int,
-    @SerializedName("storeName") val storeName: String,
-    @SerializedName("point") val point: String,
-    @SerializedName("mainText") val mainText: String,
-    @SerializedName("minPoint") val minPoint: Int,
-    @SerializedName("maxPoint") val maxPoint: Int,
-    @SerializedName("coupon") val coupon: String,
-    @SerializedName("bestProduct") val bestProduct: List<String>,
-    @SerializedName("bestProductImgUrl") val bestProductImgUrl: List<String>
+data class PointListResponse(
+    @SerializedName("store_cd") val code: String,
+    @SerializedName("store_nm") val storeName: String,
+    @SerializedName("remain_mile") val point: String,
+    @SerializedName("less_mile") val minPoint: Int,
+    @SerializedName("goal_mile") val maxPoint: Int,
+    @SerializedName("coupon_cnt") val coupon: String,
+    @SerializedName("product_nm") val bestProduct: List<String>,
+    @SerializedName("file_path") val bestProductImgUrl: List<String>
 )

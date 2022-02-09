@@ -178,9 +178,9 @@ object Depends {
 
     object Environments {
         // 개발서버
-        const val debugUrl = "https://apidev.baroder.com"
+        const val debugUrl = "http://apidevapp.baroder.co.kr/"
         // 상용서버
-        const val releaseUrl = "https://api.baroder.com/"
+        const val releaseUrl = "http://apidevapp.baroder.co.kr/"
     }
 
     fun generateVersionName(): String {

@@ -1,16 +1,15 @@
 package co.kr.cobosys.data.model
 
-import co.kr.cobosys.data.api.FavoriteStoreResponse
+import co.kr.cobosys.data.api.PointListResponse
 import co.kr.cobosys.domain.base.map.Mapper
-import co.kr.cobosys.domain.model.FavoriteStore
+import co.kr.cobosys.domain.model.PointList
 
-class FavoriteStoreMapper: Mapper<FavoriteStoreResponse, FavoriteStore> {
-    override fun mapLeftToRight(obj: FavoriteStoreResponse): FavoriteStore = with(obj) {
-        FavoriteStore(
-            id = id,
+class PointListMapper: Mapper<PointListResponse, PointList> {
+    override fun mapLeftToRight(obj: PointListResponse): PointList = with(obj) {
+        PointList(
+            code = code,
             storeName = storeName,
             point = point,
-            mainText = mainText,
             minPoint = minPoint,
             maxPoint = maxPoint,
             coupon = coupon,

@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.transition:transition:1.4.1@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a0815af1168d212f1c69564024fe3c1/transformed/transition-1.4.1/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8cc74c421b25e83fc0b21cb014d2e88d/transformed/transition-1.4.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a0815af1168d212f1c69564024fe3c1/transformed/transition-1.4.1/AndroidManifest.xml" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a0815af1168d212f1c69564024fe3c1/transformed/transition-1.4.1/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8a0815af1168d212f1c69564024fe3c1/transformed/transition-1.4.1/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8cc74c421b25e83fc0b21cb014d2e88d/transformed/transition-1.4.1/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8cc74c421b25e83fc0b21cb014d2e88d/transformed/transition-1.4.1/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8cc74c421b25e83fc0b21cb014d2e88d/transformed/transition-1.4.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

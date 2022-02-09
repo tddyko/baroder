@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.activity:activity-ktx:1.2.3@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/594e6aaab9d560021216fd6435987607/transformed/activity-ktx-1.2.3/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/85ec1720ba1cb04d558640f06dfe824c/transformed/activity-ktx-1.2.3/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/85ec1720ba1cb04d558640f06dfe824c/transformed/activity-ktx-1.2.3/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/85ec1720ba1cb04d558640f06dfe824c/transformed/activity-ktx-1.2.3/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/49ae6e65d0722abdd01e11e47a5f2e36/transformed/activity-ktx-1.2.3/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/49ae6e65d0722abdd01e11e47a5f2e36/transformed/activity-ktx-1.2.3/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/49ae6e65d0722abdd01e11e47a5f2e36/transformed/activity-ktx-1.2.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d6fd4086a63cf2debbbc21a17e4e8ce1/transformed/coordinatorlayout-1.1.0/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/eaedaecbd01dc22dc30e57004b60d03e/transformed/coordinatorlayout-1.1.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d6fd4086a63cf2debbbc21a17e4e8ce1/transformed/coordinatorlayout-1.1.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d6fd4086a63cf2debbbc21a17e4e8ce1/transformed/coordinatorlayout-1.1.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d6fd4086a63cf2debbbc21a17e4e8ce1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/eaedaecbd01dc22dc30e57004b60d03e/transformed/coordinatorlayout-1.1.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/eaedaecbd01dc22dc30e57004b60d03e/transformed/coordinatorlayout-1.1.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/eaedaecbd01dc22dc30e57004b60d03e/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

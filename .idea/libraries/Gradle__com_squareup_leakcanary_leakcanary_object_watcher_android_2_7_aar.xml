@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.leakcanary:leakcanary-object-watcher-android:2.7@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/46f2545297ea5c3ef4464be5538ac1e5/transformed/leakcanary-object-watcher-android-2.7/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/46f2545297ea5c3ef4464be5538ac1e5/transformed/leakcanary-object-watcher-android-2.7/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/46f2545297ea5c3ef4464be5538ac1e5/transformed/leakcanary-object-watcher-android-2.7/res" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b18821b8982bc364c1fd152c25d83a30/transformed/leakcanary-object-watcher-android-2.7/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b18821b8982bc364c1fd152c25d83a30/transformed/leakcanary-object-watcher-android-2.7/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/b18821b8982bc364c1fd152c25d83a30/transformed/leakcanary-object-watcher-android-2.7/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-object-watcher-android/2.7/b29829aac9c69fbc3d76e726011995321264e7b9/leakcanary-object-watcher-android-2.7-javadoc.jar!/" />

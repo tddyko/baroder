@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.skydoves:progressview:1.1.3@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bba99cf4233292485b557e1681e5896/transformed/progressview-1.1.3/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bba99cf4233292485b557e1681e5896/transformed/progressview-1.1.3/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bba99cf4233292485b557e1681e5896/transformed/progressview-1.1.3/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4e2d2c2ea09b4bc3a66d05967ba45bb3/transformed/progressview-1.1.3/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4e2d2c2ea09b4bc3a66d05967ba45bb3/transformed/progressview-1.1.3/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4e2d2c2ea09b4bc3a66d05967ba45bb3/transformed/progressview-1.1.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.github.skydoves/progressview/1.1.3/ce59bea5e06cc7b0c09ac7527758bf0812926f8e/progressview-1.1.3-javadoc.jar!/" />

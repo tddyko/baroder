@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.recyclerview:recyclerview:1.2.0-rc01@aar">
     <ANNOTATIONS>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/759094321a701fdc060689738358e4e5/transformed/recyclerview-1.2.0-rc01/annotations.zip!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/405176614173bafd5154867fe631351f/transformed/recyclerview-1.2.0-rc01/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/759094321a701fdc060689738358e4e5/transformed/recyclerview-1.2.0-rc01/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/759094321a701fdc060689738358e4e5/transformed/recyclerview-1.2.0-rc01/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/759094321a701fdc060689738358e4e5/transformed/recyclerview-1.2.0-rc01/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/405176614173bafd5154867fe631351f/transformed/recyclerview-1.2.0-rc01/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/405176614173bafd5154867fe631351f/transformed/recyclerview-1.2.0-rc01/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/405176614173bafd5154867fe631351f/transformed/recyclerview-1.2.0-rc01/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

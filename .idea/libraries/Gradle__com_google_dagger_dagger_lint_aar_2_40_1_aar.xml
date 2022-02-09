@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.dagger:dagger-lint-aar:2.40.1@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/4a66072ec6a7d3dce95d69cfa65daba8/transformed/dagger-lint-aar-2.40.1/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/26729dd207e844d4941adb39cd103ec0/transformed/dagger-lint-aar-2.40.1/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/26729dd207e844d4941adb39cd103ec0/transformed/dagger-lint-aar-2.40.1/AndroidManifest.xml" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/26729dd207e844d4941adb39cd103ec0/transformed/dagger-lint-aar-2.40.1/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5f79eaecfe0edd78709d0737b398d0c3/transformed/dagger-lint-aar-2.40.1/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5f79eaecfe0edd78709d0737b398d0c3/transformed/dagger-lint-aar-2.40.1/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/5f79eaecfe0edd78709d0737b398d0c3/transformed/dagger-lint-aar-2.40.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

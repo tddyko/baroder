@@ -17,13 +17,12 @@ abstract class BasePagedListAdapter(
         return recycleCellTypes.of(viewType).holder(parent)
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return super.getItemViewType(position)
-    }
-
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         getItem(position).let {
             recycleCellTypes.of(it).bind(holder, it, onItemClick)
         }
+    }
+    override fun getItemViewType(position: Int): Int {
+        return super.getItemViewType(position)
     }
 }

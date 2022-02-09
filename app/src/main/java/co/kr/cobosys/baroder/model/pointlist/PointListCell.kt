@@ -1,20 +1,18 @@
-package co.kr.cobosys.baroder.model.favoritestore
+package co.kr.cobosys.baroder.model.pointlist
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
 import co.kr.cobosys.baroder.base.adapter.PagerCell
-import co.kr.cobosys.baroder.base.adapter.RecyclerCell
 import co.kr.cobosys.baroder.base.adapter.RecyclerItem
-import co.kr.cobosys.baroder.model.FavoriteStoreUI
+import co.kr.cobosys.baroder.model.PointListUI
 
-object FavoriteStoreCell: PagerCell<RecyclerItem, ViewBinding> {
+object PointListCell: PagerCell<RecyclerItem, ViewBinding> {
     override fun belongsTo(item: RecyclerItem?): Boolean {
-        return item is FavoriteStoreUI
+        return item is PointListUI
     }
 
     override fun type(): Int {
@@ -26,11 +24,11 @@ object FavoriteStoreCell: PagerCell<RecyclerItem, ViewBinding> {
     }
 
     override fun holder(parent: ViewGroup): RecyclerView.ViewHolder {
-        return FavoriteStoreViewHolder(binding(parent))
+        return PointListViewHolder(binding(parent))
     }
 
     override fun bind(holder: RecyclerView.ViewHolder, item: RecyclerItem?) {
-        if(holder is FavoriteStoreViewHolder && item is FavoriteStoreUI) {
+        if(holder is PointListViewHolder && item is PointListUI) {
             holder.bind(item)
         }
     }

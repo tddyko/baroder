@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.journeyapps:zxing-android-embedded:4.3.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/57ca651fd3f282d913d66f62d7b26295/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/57ca651fd3f282d913d66f62d7b26295/transformed/zxing-android-embedded-4.3.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/57ca651fd3f282d913d66f62d7b26295/transformed/zxing-android-embedded-4.3.0/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d5257f454fe82c645fc4679dddb64042/transformed/zxing-android-embedded-4.3.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d5257f454fe82c645fc4679dddb64042/transformed/zxing-android-embedded-4.3.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d5257f454fe82c645fc4679dddb64042/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

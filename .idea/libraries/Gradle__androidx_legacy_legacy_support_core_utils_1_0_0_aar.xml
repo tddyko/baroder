@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc73e87231f9ad4a613a3b1cd8049d1f/transformed/legacy-support-core-utils-1.0.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d70dcc995f51562c393a582b3f835a9c/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d70dcc995f51562c393a582b3f835a9c/transformed/legacy-support-core-utils-1.0.0/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/d70dcc995f51562c393a582b3f835a9c/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/35dd82fdf1267b9cfec50eafc356add4/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/35dd82fdf1267b9cfec50eafc356add4/transformed/legacy-support-core-utils-1.0.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/35dd82fdf1267b9cfec50eafc356add4/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

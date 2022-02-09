@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.dagger:hilt-android:2.40.1@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/c6c87e51ac9faa9f3cfcf9fcb097bb40/transformed/hilt-android-2.40.1/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/ddd522a2f96e7ef6e334f09b1be1c858/transformed/hilt-android-2.40.1/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/ddd522a2f96e7ef6e334f09b1be1c858/transformed/hilt-android-2.40.1/AndroidManifest.xml" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/ddd522a2f96e7ef6e334f09b1be1c858/transformed/hilt-android-2.40.1/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/515aa683fde3914289a66018dfb4e4f9/transformed/hilt-android-2.40.1/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/515aa683fde3914289a66018dfb4e4f9/transformed/hilt-android-2.40.1/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/515aa683fde3914289a66018dfb4e4f9/transformed/hilt-android-2.40.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.google.dagger/hilt-android/2.40.1/ca22d5f2383f54c6dc946cdece9c59d097a40b2a/hilt-android-2.40.1-javadoc.jar!/" />

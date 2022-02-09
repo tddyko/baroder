@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class StoreUI(
-    override val id: Int?,
+    override val code: String?,
     val name: String,
     val location: String,
     val address: String,
@@ -15,23 +15,10 @@ data class StoreUI(
 ): RecyclerItem, Parcelable
 
 @Parcelize
-data class EmptyFavoriteStoreUI(
-    override val id: Int?,
-    val emptyStoreName: String,
-    val emptyPoint: String,
-    val emptyMainText: String,
-    val emptyStartPoint: Int,
-    val emptyEndPoint: Int,
-    val firstBtn: String,
-    val secondBtn: String
-): RecyclerItem, Parcelable
-
-@Parcelize
-data class FavoriteStoreUI(
-    override val id: Int?,
+data class PointListUI(
+    override val code: String?,
     val storeName: String?,
     val point: String?,
-    val mainText: String,
     val minPoint: Int,
     val maxPoint: Int,
     val coupon: String?,

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.datastore:datastore:1.0.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e26e0c7052ee9e3aac3fb2eeaabcfe5f/transformed/datastore-1.0.0/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e26e0c7052ee9e3aac3fb2eeaabcfe5f/transformed/datastore-1.0.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/e26e0c7052ee9e3aac3fb2eeaabcfe5f/transformed/datastore-1.0.0/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/81270829b7f65cb4a29a4dedf9fccb1f/transformed/datastore-1.0.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/81270829b7f65cb4a29a4dedf9fccb1f/transformed/datastore-1.0.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/81270829b7f65cb4a29a4dedf9fccb1f/transformed/datastore-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

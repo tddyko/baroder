@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-runtime:2.3.1@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67c43cefdb17d23d2c1f6d6163d0d3c8/transformed/lifecycle-runtime-2.3.1/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67c43cefdb17d23d2c1f6d6163d0d3c8/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/67c43cefdb17d23d2c1f6d6163d0d3c8/transformed/lifecycle-runtime-2.3.1/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da9861b759d9a8fd300fab35673d0cf3/transformed/lifecycle-runtime-2.3.1/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da9861b759d9a8fd300fab35673d0cf3/transformed/lifecycle-runtime-2.3.1/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/da9861b759d9a8fd300fab35673d0cf3/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

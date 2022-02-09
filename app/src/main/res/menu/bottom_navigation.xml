@@ -23,7 +23,7 @@
 
     <item
         android:id="@+id/shop_fragment"
-        android:title="@string/nav_shop"
+        android:title="@string/shop"
         android:icon="@drawable/ic_menu_shop_disabled" />
 
 </menu>

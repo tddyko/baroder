@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.4.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8528f81ca57fa02226ae90b78d88ec66/transformed/lifecycle-livedata-core-2.4.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8528f81ca57fa02226ae90b78d88ec66/transformed/lifecycle-livedata-core-2.4.0/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8528f81ca57fa02226ae90b78d88ec66/transformed/lifecycle-livedata-core-2.4.0/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/62549bdd8fd80d6f9aeb06d130f75632/transformed/lifecycle-livedata-core-2.4.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/62549bdd8fd80d6f9aeb06d130f75632/transformed/lifecycle-livedata-core-2.4.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/62549bdd8fd80d6f9aeb06d130f75632/transformed/lifecycle-livedata-core-2.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

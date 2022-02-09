@@ -1,7 +1,7 @@
 package co.kr.cobosys.domain.model
 
 data class Store(
-    val id: Int,
+    val code: String,
     val name: String,
     val location: String,
     val address: String,
@@ -9,11 +9,14 @@ data class Store(
     val favorite: Boolean
 )
 
-data class FavoriteStore(
-    val id: Int,
+data class RecentlyVisitedStore(
+    val name: String
+)
+
+data class PointList(
+    val code: String,
     val storeName: String?,
     val point: String?,
-    val mainText: String,
     val minPoint: Int,
     val maxPoint: Int,
     val coupon: String?,

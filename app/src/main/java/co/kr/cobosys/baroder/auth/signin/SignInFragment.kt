@@ -2,6 +2,7 @@ package co.kr.cobosys.baroder.auth.signin
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentSignInBinding
@@ -13,6 +14,9 @@ class SignInFragment: Fragment(R.layout.fragment_sign_in) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-    }
 
+        binding.signInSignUp.setOnClickListener {
+            Toast.makeText(context, "눌림", Toast.LENGTH_SHORT).show()
+        }
+    }
 }

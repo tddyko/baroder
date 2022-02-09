@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.leakcanary:plumber-android:2.7@aar">
     <CLASSES>
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc77e2f0b22ca5163eec65862aa65d32/transformed/plumber-android-2.7/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc77e2f0b22ca5163eec65862aa65d32/transformed/plumber-android-2.7/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc77e2f0b22ca5163eec65862aa65d32/transformed/plumber-android-2.7/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/58933e23d415913713426ff3559b9e38/transformed/plumber-android-2.7/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/58933e23d415913713426ff3559b9e38/transformed/plumber-android-2.7/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/58933e23d415913713426ff3559b9e38/transformed/plumber-android-2.7/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/modules-2/files-2.1/com.squareup.leakcanary/plumber-android/2.7/8263537f0697a5a0252474c42ee3f3ba7f143a28/plumber-android-2.7-javadoc.jar!/" />

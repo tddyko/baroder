@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.databinding:viewbinding:7.0.4@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fc88b81ae58a7cdb586e71d1086c7ece/transformed/viewbinding-7.0.4/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fdfac2939d07a0a230018e37f867f80d/transformed/viewbinding-7.0.4/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fdfac2939d07a0a230018e37f867f80d/transformed/viewbinding-7.0.4/jars/classes.jar!/" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/fdfac2939d07a0a230018e37f867f80d/transformed/viewbinding-7.0.4/AndroidManifest.xml" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/0729e6d999492aa8ebd57f1e746ea830/transformed/viewbinding-7.0.4/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/0729e6d999492aa8ebd57f1e746ea830/transformed/viewbinding-7.0.4/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/0729e6d999492aa8ebd57f1e746ea830/transformed/viewbinding-7.0.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

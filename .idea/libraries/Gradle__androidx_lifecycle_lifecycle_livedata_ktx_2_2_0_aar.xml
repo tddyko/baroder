@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-ktx:2.2.0@aar">
     <CLASSES>
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/2220cf2a1a4ccf4d60ea7b82e80cc9e4/transformed/lifecycle-livedata-ktx-2.2.0/res" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/29140ded86be65c05431040189eb59ff/transformed/lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml" />
-      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/29140ded86be65c05431040189eb59ff/transformed/lifecycle-livedata-ktx-2.2.0/res" />
-      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/29140ded86be65c05431040189eb59ff/transformed/lifecycle-livedata-ktx-2.2.0/jars/classes.jar!/" />
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bcc4c8d5fbdde172b8ad6112e81379d/transformed/lifecycle-livedata-ktx-2.2.0/jars/classes.jar!/" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bcc4c8d5fbdde172b8ad6112e81379d/transformed/lifecycle-livedata-ktx-2.2.0/res" />
+      <root url="file:///Library/Java/JavaVirtualMachines/jdk-11.jdk/caches/transforms-3/8bcc4c8d5fbdde172b8ad6112e81379d/transformed/lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

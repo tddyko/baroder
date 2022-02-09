@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/sign_in_id"/>
+            android:text="@string/id"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/member_id_layout"

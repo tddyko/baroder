@@ -385,6 +385,14 @@
         </item>
     </style>
 
+    <style name="card_radius_10dp" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="card_radius_12dp" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+    </style>
+
     <style name="card_radius_15dp" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">15dp</item>
     </style>
