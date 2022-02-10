@@ -11,7 +11,7 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/shop_coupon_convert_title"
-        style="@style/coupon_store_name"
+        style="@style/title_text_17sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="1"
@@ -60,7 +60,7 @@
         tools:text="500원 할인 쿠폰" />
 
     <com.google.android.material.textview.MaterialTextView
-        style="@style/coupon_store_name"
+        style="@style/title_text_17sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"

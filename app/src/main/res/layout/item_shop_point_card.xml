@@ -36,7 +36,7 @@
                 tools:text="부대찌개&amp;매운쭈꾸미 강남점" />
 
             <com.google.android.material.textview.MaterialTextView
-                style="@style/coupon_store_name"
+                style="@style/title_text_17sp"
                 android:id="@+id/shop_point"
                 android:textColor="@color/primary_color_text"
                 android:maxLines="1"

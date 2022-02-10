@@ -55,7 +55,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/coupon_title_txt"
-        style="@style/coupon_store_name"
+        style="@style/title_text_17sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"

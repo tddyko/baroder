@@ -33,7 +33,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/terms_of_use_text"
-                    style="@style/coupon_store_name"
+                    style="@style/title_text_17sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical|center"

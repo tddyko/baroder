@@ -4,7 +4,7 @@
 
     <!--스플래시 이미지-->
     <style name="splash_screen" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_img</item>
+        <item name="android:windowBackground">@drawable/ic_img_splash</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
@@ -98,7 +98,7 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="coupon_store_name">
+    <style name="title_text_17sp">
         <item name="autoSizeTextType">uniform</item>
         <item name="android:textSize">17sp</item>
         <item name="autoSizeMaxTextSize">17sp</item>
@@ -255,6 +255,7 @@
     </style>
 
     <style name="point_btn" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textSize">15sp</item>
         <item name="autoSizeMaxTextSize">15sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
