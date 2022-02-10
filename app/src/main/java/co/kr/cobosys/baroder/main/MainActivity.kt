@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Baroder)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
         setNav()
     }
 
