@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/home_recently_store_title"
-        style="@style/qr_text"
+        style="@style/item_text_21sp"
         android:maxLines="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -9,8 +9,8 @@ import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.extension.viewBinding
-import co.kr.cobosys.baroder.home.adapters.EmptyFavoriteStoreListAdapter
-import co.kr.cobosys.baroder.home.adapters.FavoriteStoreListAdapter
+import co.kr.cobosys.baroder.home.adapters.EmptyPointListAdapter
+import co.kr.cobosys.baroder.home.adapters.PointListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,14 +20,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private val homeViewModel: HomeViewModel by viewModels()
 
-    private val emptyAdapter = EmptyFavoriteStoreListAdapter()
-    private val favoriteAdapter = FavoriteStoreListAdapter()
+    private val emptyAdapter = EmptyPointListAdapter()
+    private val favoriteAdapter = PointListAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.homeMenu.setOnClickListener{
-            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
+        binding.homeMenu.setOnClickListener {
+            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
 
 //        setupPager()

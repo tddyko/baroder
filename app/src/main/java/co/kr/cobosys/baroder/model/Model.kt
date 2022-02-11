@@ -15,6 +15,18 @@ data class StoreUI(
 ): RecyclerItem, Parcelable
 
 @Parcelize
+data class EmptyPointListUI(
+    override val code: String?,
+    val emptyStoreName: String,
+    val emptyPoint: String,
+    val emptyMainText: String,
+    val emptyStartPoint: Int,
+    val emptyEndPoint: Int,
+    val firstBtn: String,
+    val secondBtn: String
+): RecyclerItem, Parcelable
+
+@Parcelize
 data class PointListUI(
     override val code: String?,
     val storeName: String?,
@@ -24,6 +36,13 @@ data class PointListUI(
     val coupon: String?,
     val bestProduct: List<String>?,
     val bestProductImgUrl: List<String>?
+): RecyclerItem, Parcelable
+
+@Parcelize
+data class RecentlyVisitedStoreListUI(
+    override val code: String?,
+    val storeName: String?,
+    val imgUrl: String?
 ): RecyclerItem, Parcelable
 
 @Parcelize

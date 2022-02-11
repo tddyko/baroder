@@ -9,10 +9,6 @@ data class Store(
     val favorite: Boolean
 )
 
-data class RecentlyVisitedStore(
-    val name: String
-)
-
 data class PointList(
     val code: String,
     val storeName: String?,
@@ -22,6 +18,12 @@ data class PointList(
     val coupon: String?,
     val bestProduct: List<String>?,
     val bestProductImgUrl: List<String>?
+)
+
+data class RecentlyVisitedStoreList(
+    val code: String,
+    val storeName: String?,
+    val imgUrl: String?
 )
 
 data class QrCode(

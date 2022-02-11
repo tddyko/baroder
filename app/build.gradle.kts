@@ -113,6 +113,7 @@ dependencies {
     implementation(Depends.Libraries.recyclerview)
     implementation(Depends.Libraries.viewpager)
     implementation(Depends.Libraries.work_manager)
+    implementation(Depends.Libraries.splash)
     //reactive
     implementation(Depends.Libraries.coroutines)
     //ui

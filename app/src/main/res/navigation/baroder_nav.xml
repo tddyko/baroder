@@ -39,13 +39,21 @@
             android:id="@+id/action_bottom_navigation_fragment_to_shop_fragment"
             app:destination="@id/shop_navigation" />
         <action
-            android:id="@+id/action_bottom_navigation_fragment_to_root_fragment2"
+            android:id="@+id/action_bottom_navigation_fragment_to_root_fragment"
             app:destination="@id/root_fragment"
             app:popUpTo="@id/root_fragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_sign_in_fragment"
             app:destination="@id/sign_in_fragment" />
+        <action
+            android:id="@+id/action_bottom_navigation_fragment_to_mypage_navigation"
+            app:destination="@id/mypage_navigation"
+            app:enterAnim="@anim/animate_slide_left_enter"
+            app:exitAnim="@anim/animate_slide_left_exit"
+            app:popEnterAnim="@anim/animate_slide_in_left"
+            app:popExitAnim="@anim/animate_slide_out_right"
+            />
     </fragment>
 
     <fragment
@@ -62,7 +70,24 @@
         <fragment
             android:id="@+id/mypage_fragment"
             android:name="co.kr.cobosys.baroder.mypage.MyPageFragmnet"
-            tools:layout="@layout/fragment_my_page">
+            tools:layout="@layout/fragment_my_page"
+            android:label="MY">
+
+            <action
+                android:id="@+id/action_mypage_fragment_to_mypage_coupon"
+                app:destination="@id/mypage_coupon"
+                app:enterAnim="@anim/animate_slide_left_enter"
+                app:exitAnim="@anim/animate_slide_left_exit"
+                app:popEnterAnim="@anim/animate_slide_in_left"
+                app:popExitAnim="@anim/animate_slide_out_right"
+                />
+
+        </fragment>
+
+        <fragment
+            android:id="@+id/mypage_coupon"
+            android:name="co.kr.cobosys.baroder.coupon.CouponFragment"
+            tools:layout="@layout/fragment_coupon">
 
         </fragment>
 

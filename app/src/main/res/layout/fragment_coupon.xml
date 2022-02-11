@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/coupon_app_bar"
-        layout="@layout/shared_main_app_bar" />
+        layout="@layout/shared_app_bar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/coupon_title_txt"
@@ -49,6 +49,7 @@
         app:tabIndicatorHeight="3dp"
         app:tabRippleColor="@null"
         app:tabSelectedTextColor="@color/primary_color_text"
+        app:tabTextColor="@color/disabled_text"
         app:tabTextAppearance="@style/tab_style">
 
         <com.google.android.material.tabs.TabItem

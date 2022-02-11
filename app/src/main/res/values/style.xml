@@ -110,7 +110,7 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="qr_text">
+    <style name="item_text_21sp">
         <item name="autoSizeTextType">uniform</item>
         <item name="android:textSize">21sp</item>
         <item name="autoSizeMaxTextSize">21sp</item>

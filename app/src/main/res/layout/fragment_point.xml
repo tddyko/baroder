@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/point_app_bar"
-        layout="@layout/shared_main_app_bar" />
+        layout="@layout/shared_app_bar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/point_title_txt"

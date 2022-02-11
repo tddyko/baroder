@@ -41,7 +41,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/qr_text"
-                style="@style/qr_text"
+                style="@style/item_text_21sp"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center"

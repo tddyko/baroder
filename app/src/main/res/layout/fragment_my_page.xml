@@ -46,10 +46,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
             android:gravity="center_vertical"
             android:textColor="@color/white"
             android:visibility="visible"
-            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/mypage_user_info_more"
             app:layout_constraintStart_toEndOf="@id/mypage_profile_img"
             app:layout_constraintTop_toTopOf="@id/mypage_profile_img"
@@ -62,9 +62,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
             android:textColor="@color/white"
             android:visibility="visible"
-            android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="@id/mypage_profile_img"
             app:layout_constraintEnd_toStartOf="@id/mypage_user_info_more"
             app:layout_constraintStart_toEndOf="@id/mypage_profile_img"
@@ -87,9 +87,9 @@
         android:id="@+id/my_page_menu_area"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingVertical="15dp"
         android:background="@color/white"
         android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/my_page_login_area">
@@ -99,6 +99,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/mypage_favorite_store_area"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -118,10 +120,10 @@
                 android:id="@+id/mypage_my_coupon_txt"
                 style="@style/sub_text_14sp"
                 android:layout_width="0dp"
-                android:maxLines="1"
-                android:layout_marginTop="4dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:gravity="center_vertical|center"
+                android:maxLines="1"
                 android:text="@string/my_coupon"
                 android:textColor="@color/primary_color_text"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,12 +138,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/my_page_learn_more_are"
-            app:layout_constraintHeight_max="90dp"
             app:layout_constraintStart_toEndOf="@id/mypage_my_coupon_area"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_max="97dp">
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -158,13 +160,12 @@
                 style="@style/sub_text_14sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center"
                 android:layout_marginTop="4dp"
+                android:gravity="center_vertical|center"
                 android:maxLines="1"
                 android:text="@string/mypage_favorite_store"
                 android:textColor="@color/primary_color_text"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/my_page_my_favorite_store_img" />
 
@@ -175,12 +176,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="10dp"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_max="90dp"
             app:layout_constraintStart_toEndOf="@id/mypage_favorite_store_area"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_max="97dp">
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -197,10 +198,10 @@
                 style="@style/sub_text_14sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|center"
                 android:layout_marginTop="4dp"
-                android:text="@string/mypage_baroder_learn_more"
+                android:gravity="center_vertical|center"
                 android:maxLines="1"
+                android:text="@string/mypage_baroder_learn_more"
                 android:textColor="@color/primary_color_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -214,72 +215,73 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:background="@color/white"
         android:paddingHorizontal="20dp"
         android:paddingVertical="18dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/my_page_menu_area" >
+        app:layout_constraintTop_toBottomOf="@id/my_page_menu_area">
 
         <androidx.appcompat.widget.AppCompatTextView
-            style="@style/item_text"
-            android:textColor="@color/primary_color_text"
             android:id="@+id/mypage_terms_of_use"
+            style="@style/item_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:maxLines="1"
+            android:text="@string/terms_of_use"
+            android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/my_page_terms_of_use_more"
-            android:text="@string/terms_of_use"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/my_page_terms_of_use_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/mypage_terms_of_use"
+            android:src="@drawable/ic_right_arrow_icon_grey"
             app:layout_constraintBottom_toBottomOf="@id/mypage_terms_of_use"
             app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/ic_right_arrow_icon_grey" />
+            app:layout_constraintTop_toTopOf="@id/mypage_terms_of_use" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/app_ver_area"
-        android:paddingHorizontal="20dp"
-        android:paddingTop="20dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="3dp"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_terms_of_use_area"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/white">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_terms_of_use_area">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/app_ver_text"
             style="@style/item_text"
-            android:textColor="@color/primary_color_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:maxLines="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/app_version"
-            android:text="@string/app_version" />
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/sub_text_14sp"
+            android:text="@string/app_version"
             android:textColor="@color/primary_color_text"
+            app:layout_constraintEnd_toStartOf="@+id/app_version"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/app_version"
+            style="@style/sub_text_14sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            app:layout_constraintTop_toTopOf="@+id/app_ver_text"
+            android:textColor="@color/primary_color_text"
             app:layout_constraintBottom_toBottomOf="@id/app_ver_text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/app_ver_text"
             tools:text="1.0.0" />
 
 

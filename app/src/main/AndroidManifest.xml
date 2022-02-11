@@ -3,6 +3,9 @@
     package="co.kr.cobosys.baroder.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -17,8 +20,8 @@
         
         <activity
             android:name="co.kr.cobosys.baroder.main.MainActivity"
-            android:theme="@style/splash_screen"
             android:windowSoftInputMode="adjustResize"
+            android:theme="@style/splash_screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package co.kr.cobosys.baroder.model.pointlist
+package co.kr.cobosys.baroder.model.adapters.home
 
 import android.annotation.SuppressLint
 import android.view.View

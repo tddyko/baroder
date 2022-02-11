@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentPointBinding
+import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.visible
@@ -20,27 +21,8 @@ class PointFragment : Fragment(R.layout.fragment_point) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setNav()
-    }
-
-    private fun setNav() {
-        val navController = findNavController()
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        binding.pointToolBar.setupWithNavController(navController, appBarConfiguration)
-
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.root_fragment,
-                R.id.bottom_navigation_fragment
-                -> {
-                    binding.pointToolBar.gone()
-                    binding.pointMenuArea.visible()
-                }
-                else -> {
-                    binding.pointToolBar.visible()
-                    binding.pointMenuArea.gone()
-                }
-            }
+        binding.pointAppBar.sharedAppBarMenu.setOnClickListener {
+            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
     }
 }

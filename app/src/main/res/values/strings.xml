@@ -96,5 +96,6 @@
     <string name="checkable_convert_coupon">전환된 쿠폰은 언제든 쿠폰함에서\n확인하실 수 있습니다.</string>
     <string name="check_in_coupon_box">쿠폰함에서 확인하기</string>
     <string name="back_home">홈으로 돌아가기</string>
+    <string name="select_to_convert_coupon">전환할 쿠폰을\n선택해 주세요.</string>
 
 </resources>

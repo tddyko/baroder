@@ -62,7 +62,7 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/shop_point_selected"
-                style="@style/qr_text"
+                style="@style/item_text_21sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"

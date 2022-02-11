@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/shop_app_bar"
-        layout="@layout/shared_main_app_bar" />
+        layout="@layout/shared_app_bar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/shop_title_txt"

@@ -1,4 +1,4 @@
-package co.kr.cobosys.baroder.model.pointlist
+package co.kr.cobosys.baroder.model.adapters.home
 
 import co.kr.cobosys.baroder.model.PointListUI
 import co.kr.cobosys.domain.base.map.Mapper

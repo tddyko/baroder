@@ -38,7 +38,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/used_coupon_price"
-                style="@style/qr_text"
+                style="@style/item_text_21sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
