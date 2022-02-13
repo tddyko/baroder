@@ -13,6 +13,6 @@ interface RecyclerCell<T, R> {
     fun bind(
         holder: RecyclerView.ViewHolder,
         item: T?,
-        onItemClick: ((RecyclerItem, View) -> Unit)?
+        onItemClick: ((Code, View) -> Unit)?
     )
 }

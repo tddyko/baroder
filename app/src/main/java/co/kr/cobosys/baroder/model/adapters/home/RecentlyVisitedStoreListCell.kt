@@ -7,11 +7,11 @@ import androidx.viewbinding.ViewBinding
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeRecentlyVisitedStoreBinding
 import co.kr.cobosys.baroder.base.adapter.PagerCell
-import co.kr.cobosys.baroder.base.adapter.RecyclerItem
+import co.kr.cobosys.baroder.base.adapter.Code
 import co.kr.cobosys.baroder.model.RecentlyVisitedStoreListUI
 
-object RecentlyVisitedStoreListCell: PagerCell<RecyclerItem, ViewBinding> {
-    override fun belongsTo(item: RecyclerItem?): Boolean {
+object RecentlyVisitedStoreListCell: PagerCell<Code, ViewBinding> {
+    override fun belongsTo(item: Code?): Boolean {
         return item is RecentlyVisitedStoreListUI
     }
 
@@ -27,7 +27,7 @@ object RecentlyVisitedStoreListCell: PagerCell<RecyclerItem, ViewBinding> {
         return RecentlyVisitedStoreListViewHolder(binding(parent))
     }
 
-    override fun bind(holder: RecyclerView.ViewHolder, item: RecyclerItem?) {
+    override fun bind(holder: RecyclerView.ViewHolder, item: Code?) {
         if(holder is RecentlyVisitedStoreListViewHolder && item is RecentlyVisitedStoreListUI) {
             holder.bind(item)
         }

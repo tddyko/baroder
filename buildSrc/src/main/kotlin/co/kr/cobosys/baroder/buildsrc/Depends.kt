@@ -7,10 +7,10 @@ object Depends {
     object Versions {
         // 그레들 세팅
         const val appVersionCode = 1_000_000
-        const val gradleVersion = "7.0.3"
+        const val gradleVersion = "7.0.4"
         // 안드로이드 버전 세팅
-        const val androidCompileSdkVersion = 31
-        const val targetSdkVersion = 31
+        const val androidCompileSdkVersion = 32
+        const val targetSdkVersion = 32
         const val minSdkVersion = 21
         const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // 코틀린 세팅

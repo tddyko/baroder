@@ -9,7 +9,11 @@ class RecentlyVisitedStoreListMapper: Mapper<RecentlyVisitedStoreList, RecentlyV
         RecentlyVisitedStoreListUI(
             code = code,
             storeName = storeName,
-            imgUrl = imgUrl
+            address = address,
+            favorite = favorite,
+            regular = regular,
+            distance = distance,
+            storeImgUrl = storeImgUrl
         )
     }
 }

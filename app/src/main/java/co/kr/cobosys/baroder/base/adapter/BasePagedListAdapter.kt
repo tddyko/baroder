@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 
 abstract class BasePagedListAdapter(
-    vararg types: RecyclerCell<RecyclerItem, ViewBinding>,
-    private val onItemClick: (RecyclerItem, View) -> Unit
-) : PagingDataAdapter<RecyclerItem, RecyclerView.ViewHolder>(BASE_DIFF_CALLBACK) {
+    vararg types: RecyclerCell<Code, ViewBinding>,
+    private val onItemClick: (Code, View) -> Unit
+) : PagingDataAdapter<Code, RecyclerView.ViewHolder>(BASE_DIFF_CALLBACK) {
 
-    private val recycleCellTypes: RecyclerCellTypes<RecyclerItem, ViewBinding> = RecyclerCellTypes(*types)
+    private val recycleCellTypes: RecyclerCellTypes<Code, ViewBinding> = RecyclerCellTypes(*types)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return recycleCellTypes.of(viewType).holder(parent)

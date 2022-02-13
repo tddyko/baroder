@@ -7,12 +7,12 @@ import androidx.viewbinding.ViewBinding
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ItemHomeCardExpandBinding
 import co.kr.cobosys.baroder.base.adapter.PagerCell
-import co.kr.cobosys.baroder.base.adapter.RecyclerItem
-import co.kr.cobosys.baroder.model.PointListUI
+import co.kr.cobosys.baroder.base.adapter.Code
+import co.kr.cobosys.baroder.model.RegularStoreListUI
 
-object PointListCell: PagerCell<RecyclerItem, ViewBinding> {
-    override fun belongsTo(item: RecyclerItem?): Boolean {
-        return item is PointListUI
+object RegularStoreListCell: PagerCell<Code, ViewBinding> {
+    override fun belongsTo(item: Code?): Boolean {
+        return item is RegularStoreListUI
     }
 
     override fun type(): Int {
@@ -24,11 +24,11 @@ object PointListCell: PagerCell<RecyclerItem, ViewBinding> {
     }
 
     override fun holder(parent: ViewGroup): RecyclerView.ViewHolder {
-        return PointListViewHolder(binding(parent))
+        return RegularStoreListViewHolder(binding(parent))
     }
 
-    override fun bind(holder: RecyclerView.ViewHolder, item: RecyclerItem?) {
-        if(holder is PointListViewHolder && item is PointListUI) {
+    override fun bind(holder: RecyclerView.ViewHolder, item: Code?) {
+        if(holder is RegularStoreListViewHolder && item is RegularStoreListUI) {
             holder.bind(item)
         }
     }
