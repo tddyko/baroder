@@ -29,6 +29,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recently_store_name"
         style="@style/item_text"
         android:textColor="@color/primary_color_text"
         android:layout_width="0dp"
