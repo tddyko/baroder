@@ -2,7 +2,6 @@ package co.kr.cobosys.data.model
 
 import co.kr.cobosys.data.api.RegularStoreListResponse
 import co.kr.cobosys.domain.base.map.Mapper
-import co.kr.cobosys.domain.model.RegularStoreBestProduct
 import co.kr.cobosys.domain.model.RegularStoreList
 
 class RegularStoreListMapper: Mapper<RegularStoreListResponse, RegularStoreList> {
@@ -15,11 +14,7 @@ class RegularStoreListMapper: Mapper<RegularStoreListResponse, RegularStoreList>
             maxPoint = maxPoint,
             coupon = coupon,
             bestProduct = bestProduct.map { product ->
-                RegularStoreBestProduct(
-                    product.productName,
-                    product.productFileName,
-                    product.amt
-                )
+                RegularBestProductMapper().mapLeftToRight(product)
             },
             bestProductImgUrl = bestProductImgUrl
         )
