@@ -8,7 +8,7 @@ class RegularStoreListMapper: Mapper<RegularStoreListResponse, RegularStoreList>
     override fun mapLeftToRight(obj: RegularStoreListResponse): RegularStoreList = with(obj) {
         RegularStoreList(
             code = code,
-            storeName = storeName,
+            regularStoreName = storeName,
             point = point,
             minPoint = minPoint,
             maxPoint = maxPoint,

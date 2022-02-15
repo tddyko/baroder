@@ -2,6 +2,52 @@ package co.kr.cobosys.data.api
 
 import com.google.gson.annotations.SerializedName
 
+data class AccessTokenResponse(
+    @SerializedName("access_token")val accessToken: String
+)
+
+data class MemberInfoResponse(
+    @SerializedName ("member_id") val memberId: String,
+    @SerializedName ("member_nm") val memberName: String,
+    @SerializedName ("birth_day") val memberBirthDay: String,
+    @SerializedName ("gender_mf") val memberGender: String,
+    @SerializedName ("hp_no") val memberPhoneNum: String,
+    @SerializedName ("qr_code") val memberQrCode: String
+)
+
+data class ShareMessageResponse(
+    @SerializedName ("contents") val message: String
+)
+
+data class UserIDDuplicationCheckResponse(
+    @SerializedName ("is_duplicate") val isDuplication: Boolean
+)
+
+data class CertifyCodeResponse(
+    @SerializedName ("certify_no") val certifyCode: String
+)
+
+data class FoundMemberIdResponse(
+    @SerializedName("member_id") val id: String,
+    @SerializedName("reg_date") val regDate: String
+)
+
+data class FoundMemberPwdResponse(
+    @SerializedName ("member_uuid") val memberUUID: String
+)
+
+data class TermsResponse(
+    @SerializedName ("use_clause") val useTerms: String,
+    @SerializedName ("over_youth") val overYouth: String,
+    @SerializedName ("personal_info") val personalInfo: String,
+    @SerializedName ("location_info") val locationInfo: String
+)
+
+data class HomeResponse(
+    @SerializedName ("patron_home") val regularStoreList: List<RegularStoreListResponse>,
+    @SerializedName ("recent_home") val RecentlyVisitedStoreList: List<RecentlyVisitedStoreListResponse>
+)
+
 data class StoreListResponse(
     @SerializedName("store_cd") val code: String,
     @SerializedName("store_nm") val name: String,
@@ -26,7 +72,19 @@ data class StoreDetailResponse(
     @SerializedName("patron_yn") val regular: String,
     @SerializedName("distance") val distance: Double,
     @SerializedName("tel_no") val telNumber: String,
-    @SerializedName("images(List)") val imgUrl: String
+    @SerializedName("images(List)") val imgUrl: List<String>?,
+    @SerializedName("menu_list") val menuList: List<MenuListResponse>
+)
+
+data class MenuListResponse(
+    @SerializedName ("menu") val menu: String,
+    @SerializedName ("product_list") val product: List<ProductListResponse>
+)
+
+data class ProductListResponse(
+    @SerializedName ("product_nm") val productName: String,
+    @SerializedName ("prst_imgfile_path") val productFileName: String,
+    @SerializedName ("amt") val amt: String
 )
 
 data class RegularStoreListResponse(
@@ -48,12 +106,6 @@ data class RegularStoreBestProductResponse(
 
 data class RecentlyVisitedStoreListResponse(
     @SerializedName ("store_cd") val code: String,
-    @SerializedName ("store_nm") val storeName: String,
-    @SerializedName ("address") val address: String,
-    @SerializedName ("booked_status") val favorite: Boolean,
-    @SerializedName ("patron_yn") val regular: String,
-    @SerializedName ("distance") val distance: Double,
-    @SerializedName ("file_path")  val storeImgUrl: List<String>,
 )
 
 data class PointListResponse(
@@ -87,22 +139,38 @@ data class AddResponse(
     @SerializedName ("mile_assign_at") val pointAmt: String
 )
 
-data class MemberInfoResponse(
-    @SerializedName ("member_id") val memberId: String,
-    @SerializedName ("member_nm") val memberName: String,
-    @SerializedName ("birth_day") val memberBirthDay: String,
-    @SerializedName ("gender_mf") val memberGender: String,
-    @SerializedName ("hp_no") val memberPhoneNum: String,
-    @SerializedName ("qr_code") val memberQrCode: String
+data class CouponPolicyResponse(
+    @SerializedName ("coupon_list") val couponPolicyList: List<CouponPolicyListResponse>
 )
 
-data class MenuListUI(
-    @SerializedName ("menu") val menu: String,
-    @SerializedName ("product_list") val product: List<ProductListResponse>
+data class CouponPolicyListResponse(
+    @SerializedName ("coupon_cm_pl_no") val couponNumber: Int,
+    @SerializedName ("coupon_amt") val couponPrice: String
 )
 
-data class ProductListResponse(
-    @SerializedName ("product_nm") val productName: String,
-    @SerializedName ("prst_imgfile_path") val productFileName: String,
-    @SerializedName ("amt") val amt: String
+data class CouponResponse(
+    @SerializedName ("coupon_cnt") val count: Int,
+    @SerializedName ("coupon_list") val couponList: List<CouponListResponse>
+)
+
+data class CouponListResponse(
+    @SerializedName ("store_nm") val storeName: String,
+    @SerializedName ("coupon_amt") val couponPrice: String,
+    @SerializedName ("date") val date: String,
+    @SerializedName ("time") val time: String,
+    @SerializedName ("coupon_cd") val couponCode: String,
+    @SerializedName ("used_yn") val usedStatus: String,
+    @SerializedName ("expired_date") val expiredDate: String,
+    @SerializedName ("gift_yn") val giftStatus: String,
+    @SerializedName ("expired_yn") val expiredStatus: String
+)
+
+data class CanBuyCouponStoreResponse(
+    @SerializedName ("coupon_list") val canBuyCouponStoreList: List<CanBuyCouponStoreListResponse>
+)
+
+data class CanBuyCouponStoreListResponse(
+    @SerializedName ("store_cd") val code: String,
+    @SerializedName ("store_nm") val storeName: String,
+    @SerializedName ("remain_mile") val remainPoint: String
 )

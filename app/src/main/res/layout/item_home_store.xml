@@ -21,6 +21,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_store_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_preview_img_big"
@@ -30,6 +31,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_store_regular_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,11 +41,12 @@
                 tools:visibility="visible"/>
 
             <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/materialCheckBox"
+                android:id="@+id/home_store_favorite_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="0dp"
                 android:minWidth="0dp"
+                android:checked="false"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginStart="36dp"
@@ -81,7 +84,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/item_text"
             android:textColor="@color/primary_color_text"
-            android:id="@+id/home_store_location"
+            android:id="@+id/home_store_distance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
@@ -92,7 +95,7 @@
             tools:text="나와의 거리 280km" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_store_location_more"
+            android:id="@+id/home_store_address"
             style="@style/sub_text_14sp"
             android:textColor="@color/disabled_text"
             android:layout_width="0dp"
@@ -101,7 +104,7 @@
             android:maxLines="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_store_location"
+            app:layout_constraintTop_toBottomOf="@+id/home_store_distance"
             tools:text="경남 창원시 대산회원구 영덕5길 18 401동 110호" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

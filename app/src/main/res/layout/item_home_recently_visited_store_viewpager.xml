@@ -16,11 +16,11 @@
         android:text="@string/recently_store_text"
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/home_recently_store_more_btn"
+        app:layout_constraintEnd_toStartOf="@id/regular_store_edit_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/home_recently_store_more_btn"
+        android:id="@+id/regular_store_edit_btn"
         style="@style/edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/empty_first_btn"
+            android:id="@+id/regular_store_positive_btn"
             style="@style/cardview_positive_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,9 +81,9 @@
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_recently_store_more_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/regular_store_edit_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

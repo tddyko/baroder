@@ -34,7 +34,7 @@
         android:maxLines="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
-        app:layout_constraintEnd_toStartOf="@id/materialCheckBox"
+        app:layout_constraintEnd_toStartOf="@id/home_store_favorite_check"
         tools:text="바로더 매장 문정점" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -47,7 +47,7 @@
         android:maxLines="1"
         app:layout_constraintTop_toBottomOf="@+id/recently_store_name"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
-        app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/home_store_favorite_check"
         tools:text="나와의 거리 280km" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -61,11 +61,11 @@
         android:maxLines="2"
         app:layout_constraintTop_toBottomOf="@id/recently_store_location"
         app:layout_constraintStart_toEndOf="@+id/recently_store"
-        app:layout_constraintEnd_toStartOf="@+id/materialCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/home_store_favorite_check"
         tools:text="경남 창원시 대산회원구\n영덕5길 18 401동 110호" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
-        android:id="@+id/materialCheckBox"
+        android:id="@+id/home_store_favorite_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minHeight="22dp"

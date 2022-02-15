@@ -59,7 +59,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="15dp"
             app:layout_constraintStart_toEndOf="@id/recently_store"
-            app:layout_constraintEnd_toStartOf="@id/materialCheckBox"
+            app:layout_constraintEnd_toStartOf="@id/home_store_favorite_check"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -101,7 +101,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/materialCheckBox"
+            android:id="@+id/home_store_favorite_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="0dp"

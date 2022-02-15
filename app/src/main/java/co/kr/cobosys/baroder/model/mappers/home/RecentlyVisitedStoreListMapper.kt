@@ -1,4 +1,4 @@
-package co.kr.cobosys.baroder.model.adapters.home
+package co.kr.cobosys.baroder.model.mappers.home
 
 import co.kr.cobosys.baroder.model.RecentlyVisitedStoreListUI
 import co.kr.cobosys.domain.base.map.Mapper

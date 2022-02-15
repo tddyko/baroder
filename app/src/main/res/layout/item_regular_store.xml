@@ -132,7 +132,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/materialCheckBox"
+                android:id="@+id/home_store_favorite_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_hamburger_btn"

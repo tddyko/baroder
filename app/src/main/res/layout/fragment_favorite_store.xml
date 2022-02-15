@@ -54,7 +54,7 @@
         android:id="@+id/favorite_store_list_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_favorite_store"
+        tools:listitem="@layout/item_home_recently_visited_store_favorite_store"
         android:visibility="visible"/>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

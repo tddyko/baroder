@@ -1,4 +1,4 @@
-package co.kr.cobosys.baroder.model.adapters.home
+package co.kr.cobosys.baroder.model.mappers.home
 
 import co.kr.cobosys.baroder.model.RegularStoreListUI
 import co.kr.cobosys.domain.base.map.Mapper
@@ -8,7 +8,7 @@ class RegularStoreListMapper : Mapper<RegularStoreList, RegularStoreListUI> {
     override fun mapLeftToRight(obj: RegularStoreList): RegularStoreListUI = with(obj) {
         RegularStoreListUI(
             code = code,
-            storeName = storeName,
+            regularStoreName = regularStoreName,
             point = point,
             minPoint = minPoint,
             maxPoint = maxPoint,

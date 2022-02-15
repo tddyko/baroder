@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checkable="false"
+    <item android:state_checked="false"
         android:drawable="@drawable/ic_favorite_icon_disable_white" />
-    <item android:state_checkable="true"
+    <item android:state_checked="true"
         android:drawable="@drawable/ic_favorite_icon_active" />
 </selector>

@@ -1,5 +1,55 @@
 package co.kr.cobosys.domain.model
 
+data class AccessToken(
+    val accessToken: String
+)
+
+data class MemberInfo(
+    val memberId: String,
+    val memberName: String,
+    val memberBirthDay: String,
+    val memberGender: String,
+    val memberPhoneNum: String,
+    val memberQrCode: String
+)
+
+data class SharedMessage(
+    val contents: String
+)
+
+data class UserIDDuplicationCheck(
+    val isDuplication: Boolean
+)
+
+data class CrtifyCode(
+    val certifyCode: String
+)
+
+data class FoundMemberId(
+    val memberId: String,
+    val regDate: String
+)
+
+data class FoundMemberPwd(
+    val memberUUID: String
+)
+
+data class Terms(
+    val useTerms: String,
+    val overYouth: String,
+    val personalInfo: String,
+    val locationInfo: String
+)
+
+data class Home(
+    val regularStoreList: List<RegularStoreList>,
+    val RecentlyVisitedStoreList: List<RecentlyVisitedStoreList>
+)
+
+data class Store(
+    val storeList: List<StoreList>
+)
+
 data class StoreList(
     val code: String,
     val name: String,
@@ -7,7 +57,7 @@ data class StoreList(
     val favorite: Boolean,
     val regular: String,
     val distance: Double,
-    val imgUrl: List<String>
+    val imgUrl: List<String>?
 )
 
 data class StoreDetail(
@@ -24,17 +74,29 @@ data class StoreDetail(
     val regular: String,
     val distance: Double,
     val telNumber: String,
-    val imgUrl: List<String>
+    val imgUrl: List<String>?,
+    val menuList: List<MenuList>
+)
+
+data class MenuList(
+    val menu: String,
+    val product: List<ProductList>
+)
+
+data class ProductList(
+    val productName: String,
+    val productFileName: String,
+    val amt: String
 )
 
 data class RegularStoreList(
     val code: String,
-    val storeName: String,
+    val regularStoreName: String,
     val point: String,
     val maxPoint: Int,
     val minPoint: Int,
     val coupon: Int,
-    val bestProductImgUrl: List<String>,
+    val bestProductImgUrl: List<String>?,
     val bestProduct: List<RegularStoreBestProduct>
 )
 
@@ -45,13 +107,15 @@ data class RegularStoreBestProduct(
 )
 
 data class RecentlyVisitedStoreList(
-    val code: String,
-    val storeName: String,
-    val address: String,
-    val favorite: Boolean,
-    val regular: String,
-    val distance: Double,
-    val storeImgUrl: List<String>,
+    val recentlyStoreList: List<StoreList>
+)
+
+data class FavoriteStoreList(
+    val favoriteStoreList: List<StoreList>
+)
+
+data class Point(
+    val pointList: List<PointList>
 )
 
 data class PointList(
@@ -85,22 +149,38 @@ data class Add(
     val pointAssignAt: String
 )
 
-data class MemberInfo(
-    val memberId: String,
-    val memberName: String,
-    val memberBirthDay: String,
-    val memberGender: String,
-    val memberPhoneNum: String,
-    val memberQrCode: String
+data class CouponPolicy(
+    val couponPolicyList: List<CouponPolicyList>
 )
 
-data class MenuList(
-    val menu: String,
-    val product: List<ProductList>
+data class CouponPolicyList(
+    val couponNumber: Int,
+    val couponPrice: String
 )
 
-data class ProductList(
-    val productName: String,
-    val productFileName: String,
-    val amt: String
+data class Coupon(
+    val count: Int,
+    val couponList: List<CouponList>
+)
+
+data class CouponList(
+    val storeName: String,
+    val couponPrice: String,
+    val date: String,
+    val time: String,
+    val couponCode: String,
+    val usedStatus: String,
+    val expiredDate: String,
+    val giftStatus: String,
+    val expiredStatus: String
+)
+
+data class CanBuyCouponStore(
+    val canBuyCouponStoreList: List<CanBuyCouponStoreList>
+)
+
+data class CanBuyCouponStoreList(
+    val code: String,
+    val storeName: String,
+    val remainPoint: String
 )

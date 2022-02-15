@@ -8,7 +8,7 @@
     android:paddingTop="20dp">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/point_card"
+        android:id="@+id/regular_store_point_card"
         style="@style/main_card"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

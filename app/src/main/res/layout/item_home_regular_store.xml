@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/regular_store_area"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/regular_store_visitor_area"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/regular_store_shop_img"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="30dp"
+            android:paddingEnd="0dp"
+            app:alignItems="center"
+            app:flexDirection="row"
+            app:justifyContent="flex_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shop_img" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/regular_store_visitor_card"
+            style="@style/main_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:contentPadding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regular_store_shop_img"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_non_registered_store"
+                    style="@style/title_sub_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/primary_color_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="아직 등록된 매장이 없어요 :(" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_non_point"
+                    style="@style/title_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="46dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_non_registered_store"
+                    tools:text="0 P" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_sign_up_text"
+                    style="@style/main_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/primary_color_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_non_point"
+                    tools:text="회원가입하고 매장 포인트를 확인하세요!" />
+
+                <com.skydoves.progressview.ProgressView
+                    android:id="@+id/regular_store_empty_point_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_min="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_sign_up_text"
+                    app:progressView_autoAnimate="true"
+                    app:progressView_colorBackground="@color/stroke"
+                    app:progressView_colorGradientCenter="@color/gold_green"
+                    app:progressView_colorGradientEnd="@color/star_yellow"
+                    app:progressView_colorGradientStart="@color/main_green"
+                    app:progressView_max="500"
+                    app:progressView_min="0"
+                    app:progressView_progress="60"
+                    app:progressView_progressFromPrevious="true" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/regular_store_empty_point_text_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:alignItems="center"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_empty_point_progress">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_empty_min_point"
+                        style="@style/sub_text_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/disabled_text"
+                        tools:text="0" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_empty_max_point"
+                        style="@style/sub_text_14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="@color/disabled_text"
+                        tools:text="999999" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/regular_store_positive_btn"
+                    style="@style/cardview_positive_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:maxLines="1"
+                    android:paddingHorizontal="26dp"
+                    android:paddingVertical="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/regular_store_negative_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_empty_point_text_area"
+                    tools:text="단골매장 설정" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/regular_store_negative_btn"
+                    style="@style/cardview_negative_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxLines="1"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/regular_store_positive_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_empty_point_text_area"
+                    tools:text="바로더 알아보기" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/regular_store_member_area"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/regular_store_edit_btn"
+            style="@style/edit_button"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_button_text"
+            app:icon="@drawable/ic_edit_icon"
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/transparent"
+            app:iconTintMode="add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/regular_store_point_card"
+            style="@style/home_card_expand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:contentPadding="20dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regular_store_edit_btn">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_name"
+                    style="@style/title_sub_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toStartOf="@id/regular_store_detail_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="바로더 매장 문정점" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/regular_store_detail_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_move_icon_right"
+                    app:layout_constraintBottom_toBottomOf="@id/regular_store_name"
+                    app:layout_constraintTop_toTopOf="@+id/regular_store_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_max="22dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_point"
+                    style="@style/title_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_name"
+                    tools:text="4,055 P" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regular_store_target_point"
+                    style="@style/main_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/primary_color_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_point"
+                    tools:text="1,000,000,000 포인트까지 1포인트 남았어요!" />
+
+                <com.skydoves.progressview.ProgressView
+                    android:id="@+id/regular_store_point_progree_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHeight_min="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_target_point"
+                    app:progressView_autoAnimate="true"
+                    app:progressView_colorBackground="@color/stroke"
+                    app:progressView_colorGradientCenter="@color/gold_green"
+                    app:progressView_colorGradientEnd="@color/star_yellow"
+                    app:progressView_colorGradientStart="@color/main_green"
+                    app:progressView_max="100000"
+                    app:progressView_min="0"
+                    app:progressView_progress="500"
+                    app:progressView_progressFromPrevious="true" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/regular_store_point_shame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:alignItems="center"
+                    app:flexDirection="row"
+                    app:justifyContent="space_between"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/regular_store_point_progree_bar">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_min_point"
+                        style="@style/sub_text_14sp"
+                        android:maxLines="1"
+                        android:textColor="@color/disabled_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="0" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_max_point"
+                        style="@style/sub_text_14sp"
+                        android:maxLines="1"
+                        android:textColor="@color/disabled_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="999999" />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/regular_store_coupon_btn"
+                    style="@style/cardview_negative_btn"
+                    android:maxLines="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:icon="@drawable/ic_coupon_icon"
+                    app:iconGravity="textStart"
+                    app:iconTint="@android:color/transparent"
+                    app:iconTintMode="add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/regular_store_point_shame"
+                    tools:text="내 쿠폰 9,999,999개" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/regular_store_best_product_card"
+            style="@style/expand_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/regular_store_point_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regular_store_best_product_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:visibility="gone"
+                android:animateLayoutChanges="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/regular_store_best_product_title_area"
+                    android:paddingVertical="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_best_product_title"
+                        style="@style/item_title_text"
+                        android:textColor="@color/white"
+                        android:maxLines="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/regular_store_best_product_detail_btn"
+                        android:text="@string/best_item"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/regular_store_best_product_detail_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_down"
+                        app:layout_constraintTop_toTopOf="@id/regular_store_best_product_title"
+                        app:layout_constraintBottom_toBottomOf="@id/regular_store_best_product_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/regular_store_best_product_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/regular_store_best_product_title_area"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/regular_store_best_product_img_first"
+                        style="@style/card_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:src="@drawable/ic_preview_img"
+                        app:layout_constraintEnd_toStartOf="@+id/regular_store_best_product_img_second"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_best_product_title_first"
+                        style="@style/item_text"
+                        android:maxLines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="21dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/regular_store_best_product_img_first"
+                        app:layout_constraintStart_toStartOf="@id/regular_store_best_product_img_first"
+                        app:layout_constraintTop_toBottomOf="@+id/regular_store_best_product_img_first"
+                        tools:text="녹차라떼" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/regular_store_best_product_img_second"
+                        style="@style/card_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:src="@drawable/ic_preview_img"
+                        app:layout_constraintEnd_toStartOf="@+id/regular_store_best_product_img_third"
+                        app:layout_constraintStart_toEndOf="@+id/regular_store_best_product_img_first"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_best_product_title_second"
+                        style="@style/item_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="21dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/regular_store_best_product_img_second"
+                        app:layout_constraintStart_toStartOf="@id/regular_store_best_product_img_second"
+                        app:layout_constraintTop_toBottomOf="@+id/regular_store_best_product_img_second"
+                        tools:text="바닐라 라떼" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/regular_store_best_product_img_third"
+                        style="@style/card_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_preview_img"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/regular_store_best_product_img_second"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/regular_store_best_product_title_third"
+                        style="@style/item_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="21dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/regular_store_best_product_img_third"
+                        app:layout_constraintStart_toStartOf="@id/regular_store_best_product_img_third"
+                        app:layout_constraintTop_toBottomOf="@+id/regular_store_best_product_img_third"
+                        tools:text="딸기라떼" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
