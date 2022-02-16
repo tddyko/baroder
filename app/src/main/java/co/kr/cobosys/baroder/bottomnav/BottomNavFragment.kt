@@ -17,6 +17,7 @@ import co.kr.cobosys.baroder.shop.ShopFragment
 import co.kr.cobosys.baroder.store.StoreFragment
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
+import java.io.Serializable
 
 @AndroidEntryPoint
 class BottomNavFragment : Fragment() {
@@ -127,4 +128,12 @@ class BottomNavFragment : Fragment() {
                 .commitAllowingStateLoss()
         }
     }
+}
+
+enum class BottomType: Serializable {
+    HOME,
+    STORE,
+    COUPON,
+    POINT,
+    SHOP
 }
