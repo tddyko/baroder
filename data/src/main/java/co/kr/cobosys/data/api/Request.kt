@@ -17,7 +17,7 @@ interface Request: ApiService {
         @Field("over_youth_yn") older: String,
         @Field("personal_info_yn") personal: String,
         @Field("location_info_yn") location: String
-    ): ShareMessageResponse
+    ): SharedMessageResponse
 
     @GET("v1/home/clause")
     suspend fun checkTerms(): TermsResponse
@@ -38,7 +38,7 @@ interface Request: ApiService {
     @DELETE("tku/v1/member/quit")
     suspend fun signOutMember(
         @Field("reason") reason: String
-    ): ShareMessageResponse
+    ): SharedMessageResponse
 
     @GET("tku/v1/member")
     suspend fun memberDetailInfo(): MemberInfoResponse
@@ -115,12 +115,12 @@ interface Request: ApiService {
     @POST("tku/v1/store/booked/status")
     suspend fun favoriteStoreRegister(
         @Field("store_cd") code: String
-    ): ShareMessageResponse
+    ): SharedMessageResponse
 
     @DELETE("tku/v1/store/booked/cancel")
     suspend fun favoriteStoreDelete(
         @Field("store_cd") code: String,
-    ): ShareMessageResponse
+    ): SharedMessageResponse
 
     @GET("tku/v1/store/patron")
     suspend fun recentStoreRegister(
@@ -132,7 +132,7 @@ interface Request: ApiService {
     @PUT("tku/v1/store/patron/status")
     suspend fun changeRecentStore(
         @Field("store_cd") code: Map<String, String>
-    ): ShareMessageResponse
+    ): SharedMessageResponse
 
     @GET("tku/v1/store/booked")
     suspend fun checkFavoriteStore(

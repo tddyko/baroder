@@ -31,7 +31,7 @@ data class UserIDDuplicationCheckUI(
 ) : Parcelable
 
 @Parcelize
-data class CrtifyCodeUI(
+data class CertifyCodeUI(
     val certifyCode: String
 ) : Parcelable
 
@@ -59,7 +59,7 @@ data class TermsUI(
 @Parcelize
 data class HomeUI(
     val regularStoreList: List<RegularStoreListUI>,
-    val RecentlyVisitedStoreList: List<RecentlyVisitedStoreListUI>
+    val recentlyVisitedStoreList: List<RecentlyVisitedStoreListUI>
 ) : Parcelable
 
 @Parcelize
@@ -79,7 +79,7 @@ data class StoreListUI(
 ) : Code, Parcelable
 
 @Parcelize
-data class StoreDetaiUI(
+data class StoreDetailUI(
     override val code: String,
     val storeName: String,
     val address: String,
@@ -89,7 +89,7 @@ data class StoreDetaiUI(
     val storeLatitude: Double,
     val storeLongitude: Double,
     val couponCount: Int,
-    val favoriteStatusL: Boolean,
+    val favoriteStatus: Boolean,
     val regular: String,
     val distance: Double,
     val telNumber: String,

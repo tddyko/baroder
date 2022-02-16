@@ -21,7 +21,7 @@ data class UserIDDuplicationCheck(
     val isDuplication: Boolean
 )
 
-data class CrtifyCode(
+data class CertifyCode(
     val certifyCode: String
 )
 
@@ -43,11 +43,7 @@ data class Terms(
 
 data class Home(
     val regularStoreList: List<RegularStoreList>,
-    val RecentlyVisitedStoreList: List<RecentlyVisitedStoreList>
-)
-
-data class Store(
-    val storeList: List<StoreList>
+    val recentlyVisitedStoreList: List<RecentlyVisitedStoreList>
 )
 
 data class StoreList(
@@ -70,7 +66,7 @@ data class StoreDetail(
     val storeLatitude: Double,
     val storeLongitude: Double,
     val couponCount: Int,
-    val favoriteStatusL: Boolean,
+    val favoriteStatus: Boolean,
     val regular: String,
     val distance: Double,
     val telNumber: String,
@@ -108,14 +104,6 @@ data class RegularStoreBestProduct(
 
 data class RecentlyVisitedStoreList(
     val recentlyStoreList: List<StoreList>
-)
-
-data class FavoriteStoreList(
-    val favoriteStoreList: List<StoreList>
-)
-
-data class Point(
-    val pointList: List<PointList>
 )
 
 data class PointList(

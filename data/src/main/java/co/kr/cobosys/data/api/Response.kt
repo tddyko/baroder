@@ -15,8 +15,8 @@ data class MemberInfoResponse(
     @SerializedName ("qr_code") val memberQrCode: String
 )
 
-data class ShareMessageResponse(
-    @SerializedName ("contents") val message: String
+data class SharedMessageResponse(
+    @SerializedName ("contents") val contents: String
 )
 
 data class UserIDDuplicationCheckResponse(
@@ -28,7 +28,7 @@ data class CertifyCodeResponse(
 )
 
 data class FoundMemberIdResponse(
-    @SerializedName("member_id") val id: String,
+    @SerializedName("member_id") val memberId: String,
     @SerializedName("reg_date") val regDate: String
 )
 
@@ -45,7 +45,7 @@ data class TermsResponse(
 
 data class HomeResponse(
     @SerializedName ("patron_home") val regularStoreList: List<RegularStoreListResponse>,
-    @SerializedName ("recent_home") val RecentlyVisitedStoreList: List<RecentlyVisitedStoreListResponse>
+    @SerializedName ("recent_home") val recentlyVisitedStoreList: List<RecentlyVisitedStoreListResponse>
 )
 
 data class StoreListResponse(
@@ -68,7 +68,7 @@ data class StoreDetailResponse(
     @SerializedName("store_latitude") val storeLatitude: Double,
     @SerializedName("store_longitude") val storeLongitude: Double,
     @SerializedName("coupon_cnt") val couponCount: Int,
-    @SerializedName("booked_status") val favoriteStatusL: Boolean,
+    @SerializedName("booked_status") val favoriteStatus: Boolean,
     @SerializedName("patron_yn") val regular: String,
     @SerializedName("distance") val distance: Double,
     @SerializedName("tel_no") val telNumber: String,
@@ -105,7 +105,7 @@ data class RegularStoreBestProductResponse(
     )
 
 data class RecentlyVisitedStoreListResponse(
-    @SerializedName ("store_cd") val code: String,
+    @SerializedName ("store") val recentlyStoreList: List<StoreListResponse>,
 )
 
 data class PointListResponse(

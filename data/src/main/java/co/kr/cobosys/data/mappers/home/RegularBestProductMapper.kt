@@ -1,4 +1,4 @@
-package co.kr.cobosys.data.model
+package co.kr.cobosys.data.mappers.home
 
 import co.kr.cobosys.data.api.RegularStoreBestProductResponse
 import co.kr.cobosys.domain.base.map.Mapper

@@ -12,11 +12,9 @@ import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.visible
 import co.kr.cobosys.baroder.model.RegularStoreListUI
 import co.kr.cobosys.baroder.home.viewholders.RegularStoreListViewHolder
-import javax.inject.Inject
 
 
-class RegularStoreListAdapter @Inject constructor(
-    private val regularStoreListUI: List<RegularStoreListUI>) :
+class RegularStoreListAdapter (private val regularStoreListUI: List<RegularStoreListUI>) :
     ListAdapter<Code, RegularStoreListViewHolder>(BASE_DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegularStoreListViewHolder {
         val itemBinding =
