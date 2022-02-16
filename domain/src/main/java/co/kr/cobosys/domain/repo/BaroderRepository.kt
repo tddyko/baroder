@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 interface BaroderRepository {
     fun getAccessToken(ids: String): Flow<AccessToken>
     fun getMemberInfo(ids: String): Flow<MemberInfo>
+    fun getsharedMessage(ids: String): Flow<SharedMessage>
     fun getHome(ids: String): Flow<Home>
     fun getPointList(ids: String): Flow<RegularStoreList>
     fun getStoreList(ids: String): Flow<PagingData<StoreList>>
