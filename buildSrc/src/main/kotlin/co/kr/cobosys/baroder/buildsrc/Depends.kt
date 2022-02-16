@@ -169,7 +169,6 @@ object Depends {
         // 외부 라이브러리
         const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
         const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
-        const val glide_compiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
         const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
         const val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
         const val shimmer_recyclerview = "com.todkars:shimmer-recyclerview:${Versions.shimmer_recyclerview}"
@@ -182,8 +181,11 @@ object Depends {
     object Environments {
         // 개발서버
         const val debugUrl = "http://apidevapp.baroder.co.kr/"
+        /*🙄🙄🙄🙄🙄🙄　개발서버도 특별히 건들일 없으니 건드리지 말것. 🙄🙄🙄🙄🙄🙄*/
         // 상용서버
-        const val releaseUrl = "http://apidevapp.baroder.co.kr/"
+        /*☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️ 건들지 말것 ☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️*/
+        const val releaseUrl = "http://apiapp.baroder.co.kr/"
+        /*☠️☠️☠️☠️☠️☠️☠️☠️ 상용서버 이므로 절대 건들지 말것 ☠️☠️☠️☠️☠️☠️☠️☠️*/
     }
 
     fun generateVersionName(): String {

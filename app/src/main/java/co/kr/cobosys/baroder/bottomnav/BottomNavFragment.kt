@@ -129,11 +129,3 @@ class BottomNavFragment : Fragment() {
         }
     }
 }
-
-enum class BottomType: Serializable {
-    HOME,
-    STORE,
-    COUPON,
-    POINT,
-    SHOP,
-}
