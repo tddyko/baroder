@@ -135,5 +135,5 @@ enum class BottomType: Serializable {
     STORE,
     COUPON,
     POINT,
-    SHOP
+    SHOP,
 }
