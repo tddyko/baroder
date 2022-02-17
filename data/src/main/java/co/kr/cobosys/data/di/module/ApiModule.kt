@@ -1,4 +1,4 @@
-package co.kr.cobosys.data.di
+package co.kr.cobosys.data.di.module
 
 import co.kr.cobosys.data.api.Request
 import dagger.Module

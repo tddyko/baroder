@@ -47,6 +47,11 @@ dependencies {
     implementation(Depends.Libraries.paging_runtime_ktx)
     implementation(Depends.Libraries.lifecycle_livedata)
     implementation(Depends.Libraries.multidex)
+    //dependency injection
+    implementation(Depends.Libraries.hilt_android)
+    kapt(Depends.Libraries.hilt_android_compiler)
+    kapt(Depends.Libraries.hilt_compiler)
+    implementation(Depends.Libraries.java_inject)
     //reactive
     implementation(Depends.Libraries.coroutines)
     //dependency injection

@@ -14,7 +14,7 @@ import javax.inject.Singleton
 private const val TIMEOUT = 5L
 
 @Singleton
-class HttpClient @Inject constructor(
+class BaroderHttpClient @Inject constructor(
     @ApplicationContext appContext: Context,
     chuckerCollector: ChuckerCollector
 ) {

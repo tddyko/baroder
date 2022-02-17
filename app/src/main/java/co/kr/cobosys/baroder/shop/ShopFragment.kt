@@ -24,5 +24,6 @@ class ShopFragment : Fragment(R.layout.fragment_shop) {
         binding.shopAppBar.sharedAppBarMenu.setOnClickListener {
             findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
+        binding.shopAppBar.homeQr.gone()
     }
 }

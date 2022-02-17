@@ -24,5 +24,6 @@ class PointFragment : Fragment(R.layout.fragment_point) {
         binding.pointAppBar.sharedAppBarMenu.setOnClickListener {
             findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
+        binding.pointAppBar.homeQr.gone()
     }
 }

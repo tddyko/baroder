@@ -1,15 +1,10 @@
 package co.kr.cobosys.baroder.main
 
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.view.Menu
-import android.view.View
-import android.view.Window
-import android.view.WindowManager
+import android.view.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -17,11 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ActivityMainBinding
-import co.kr.cobosys.baroder.extension.gone
-import co.kr.cobosys.baroder.extension.viewInflateBinding
-import co.kr.cobosys.baroder.extension.visible
-import com.google.android.material.appbar.AppBarLayout
-import com.google.android.material.appbar.MaterialToolbar
+import co.kr.cobosys.baroder.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Baroder)
         super.onCreate(savedInstanceState)
+        
         installSplashScreen()
         setContentView(binding.root)
         setNav()
@@ -80,30 +72,20 @@ class MainActivity : AppCompatActivity() {
                     binding.rootActivityToolbar.gone()
                     binding.rootActivityAppBarLayout.elevation = 0f
                     binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.white))
-                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-                    window.statusBarColor =
-                        ContextCompat.getColor(applicationContext, R.color.white)
-                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
                 }
                 R.id.mypage_fragment
                 -> {
                     binding.rootActivityToolbar.visible()
-                    binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.main_green))
                     binding.rootActivityAppBarLayout.elevation = 0f
-                    binding.rootActivityToolbar.setNavigationIconTint(getColor(R.color.white))
+                    binding.rootActivityToolbar.elevation = 0f
+                    binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.main_green))
                     binding.rootActivityToolbar.setTitleTextColor(getColor(R.color.white))
-                    window.statusBarColor =
-                        ContextCompat.getColor(applicationContext, R.color.main_green)
-                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
                 }
                 else -> {
                     binding.rootActivityToolbar.visible()
                     window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
                     binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.white))
                     binding.rootActivityToolbar.setNavigationIconTint(getColor(R.color.secondary_text_color))
-                    window.statusBarColor =
-                        ContextCompat.getColor(applicationContext, R.color.white)
-                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
                 }
             }
         }

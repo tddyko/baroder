@@ -9,7 +9,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class Retrofit @Inject constructor(
+class BaroderRetrofit @Inject constructor(
     okHttpClient: OkHttpClient,
     gson: Gson
 ) {

@@ -27,7 +27,6 @@ class CouponFragment : Fragment(R.layout.fragment_coupon) {
         binding.couponAppBar.sharedAppBarMenu.setOnClickListener {
             findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
-
-
+        binding.couponAppBar.homeQr.gone()
     }
 }

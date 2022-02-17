@@ -1,8 +1,11 @@
 package co.kr.cobosys.baroder.extension
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
@@ -70,6 +73,20 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
 
         return viewBindingFactory(thisRef).also { this.binding = it }
     }
+}
+
+fun Context.statusBarHeight(): Int {
+    val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+
+    return if (resourceId > 0) resources.getDimensionPixelSize(resourceId)
+    else 0
+}
+
+fun Context.navigationHeight(): Int {
+    val resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android")
+
+    return if (resourceId > 0) resources.getDimensionPixelSize(resourceId)
+    else 0
 }
 
 inline fun <T : ViewBinding> Fragment.viewBinding(

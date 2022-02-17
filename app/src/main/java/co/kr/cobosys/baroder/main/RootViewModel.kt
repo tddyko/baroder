@@ -6,16 +6,16 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
-enum class ViewType {
+/*enum class ViewType {
     HOME,
     STORE,
     COUPON,
     POINT,
     SHOP
-}
+}*/
 
 @HiltViewModel
-class RootViewModel @Inject constructor(): Base {
+class RootViewModel @Inject constructor(): BaseViewModel() {
     private val _userAuthResult = MutableStateFlow(false)
     val userAuthResult = _userAuthResult.asStateFlow()
 

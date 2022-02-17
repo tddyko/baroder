@@ -29,7 +29,6 @@ class BottomNavFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding.bottomNavi.setOnItemSelectedListener {
             onNavSelected(it.itemId)
             true
