@@ -20,5 +20,6 @@ buildscript {
         classpath(co.kr.cobosys.baroder.buildsrc.Depends.ClassPaths.navigation_safe_args_gradle_plugin)
         classpath(co.kr.cobosys.baroder.buildsrc.Depends.ClassPaths.hilt_android_gradle_plugin)
         classpath(co.kr.cobosys.baroder.buildsrc.Depends.ClassPaths.sonarqube_gradle_plugin)
+        classpath("com.android.tools.build:gradle:7.0.4")
     }
 }

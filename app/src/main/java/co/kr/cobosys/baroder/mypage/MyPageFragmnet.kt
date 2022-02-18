@@ -18,7 +18,6 @@ class MyPageFragmnet: Fragment(R.layout.fragment_my_page) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.mypageMyCouponArea.setOnClickListener{
             findNavController().navigate(MyPageFragmnetDirections.actionMypageFragmentToMypageCoupon())
         }

@@ -14,7 +14,7 @@ object Depends {
         const val minSdkVersion = 21
         const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // 코틀린 세팅
-        const val kotlinVersion = "1.6.0"
+        const val kotlinVersion = "1.6.10"
         // reactive 세팅
         const val coroutinesVersion = "1.5.2"
         // 네트워크 세팅
@@ -25,10 +25,10 @@ object Depends {
         // 제트팩 세팅
         const val lifecycleVersion = "2.4.0"
         const val coordinatorLayoutVersion = "1.1.0"
-        const val constraintLayoutVersion = "2.1.1"
+        const val constraintLayoutVersion = "2.1.3"
         const val flexboxLayoutVersion = "3.0.0"
-        const val supportVersion = "1.4.0-rc01"
-        const val materialVersion = "1.4.0"
+        const val supportVersion = "1.4.1"
+        const val materialVersion = "1.6.0-alpha02"
         const val coreKtxVersion = "1.7.0"
         const val navigationVersion = "2.4.0-beta02"
         const val pagingVersion = "3.1.0-rc01"
@@ -57,14 +57,14 @@ object Depends {
         const val sonarqubeVersion = "3.3"
         const val detektVersion = "1.18.1"
         const val checkDependencyVersionsVersion = "0.39.0"
-        const val leakCanaryVersion = "2.7"
+        const val leakCanaryVersion = "2.8.1"
         // 외부라이브러리
         const val progress = "1.1.3"
         const val shimmer = "0.5.0"
         const val shimmer_recyclerview = "0.4.0"
         const val timberVersion = "5.0.1"
         const val lottieVersion = "4.2.1"
-        const val glideVersion = "4.12.0"
+        const val glideVersion = "4.13.0"
         const val dataStorePreferenceVersion = "1.0.0"
         const val indicatorVersion = "4.2"
         const val zxingVersion = "4.3.0"

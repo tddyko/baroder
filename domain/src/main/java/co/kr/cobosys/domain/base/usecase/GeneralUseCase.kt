@@ -1,7 +1,7 @@
 package co.kr.cobosys.domain.base.usecase
 
-interface GeneralUseCase<Type, in Params> {
+interface GeneralUseCase<Type> {
 
-    operator fun invoke(params: Params): Type
+    operator fun invoke(): Type
 
 }

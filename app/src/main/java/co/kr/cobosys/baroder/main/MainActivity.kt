@@ -1,17 +1,20 @@
 package co.kr.cobosys.baroder.main
 
-import android.os.Build
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.*
-import androidx.annotation.RequiresApi
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.ActivityMainBinding
+import co.kr.cobosys.baroder.base.utils.Edge
+import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,13 +24,22 @@ class MainActivity : AppCompatActivity() {
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)
     private lateinit var navController: NavController
 
-    @RequiresApi(Build.VERSION_CODES.M)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_Baroder)
         super.onCreate(savedInstanceState)
-        
+        edgeToEdge {
+            if(binding.rootActivityToolbar.visibility == View.VISIBLE) {
+                binding.rootActivityToolbar.fit { Edge.TopArc }
+            }
+        }
         installSplashScreen()
         setContentView(binding.root)
+        setNav()
+    }
+
+    override fun onResume() {
+        super.onResume()
         setNav()
     }
 
@@ -51,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
+    @SuppressLint("NewApi")
     private fun setNav() {
 
         val navHostFragment =
@@ -70,22 +82,18 @@ class MainActivity : AppCompatActivity() {
                 R.id.sign_in_fragment,
                 -> {
                     binding.rootActivityToolbar.gone()
-                    binding.rootActivityAppBarLayout.elevation = 0f
-                    binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.white))
                 }
                 R.id.mypage_fragment
                 -> {
                     binding.rootActivityToolbar.visible()
-                    binding.rootActivityAppBarLayout.elevation = 0f
-                    binding.rootActivityToolbar.elevation = 0f
                     binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.main_green))
                     binding.rootActivityToolbar.setTitleTextColor(getColor(R.color.white))
+                    binding.rootActivityToolbar.setNavigationIconTint(getColor(R.color.white))
+                    binding.rootActivityAppBarLayout.elevation = 0f
+
                 }
                 else -> {
                     binding.rootActivityToolbar.visible()
-                    window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-                    binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.white))
-                    binding.rootActivityToolbar.setNavigationIconTint(getColor(R.color.secondary_text_color))
                 }
             }
         }

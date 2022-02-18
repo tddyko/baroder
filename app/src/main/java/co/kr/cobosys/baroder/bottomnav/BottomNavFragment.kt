@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.activity.addCallback
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentBottomNavBinding
+import co.kr.cobosys.baroder.base.utils.Edge
+import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.coupon.CouponFragment
 import co.kr.cobosys.baroder.extension.viewInflateBinding
 import co.kr.cobosys.baroder.home.HomeFragment
@@ -17,7 +19,6 @@ import co.kr.cobosys.baroder.shop.ShopFragment
 import co.kr.cobosys.baroder.store.StoreFragment
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
-import java.io.Serializable
 
 @AndroidEntryPoint
 class BottomNavFragment : Fragment() {
@@ -46,6 +47,7 @@ class BottomNavFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        edgeToEdge { binding.naviContainer.fit { Edge.TopArc } }
         if (childFragmentManager.fragments.isEmpty()) {
             onNavSelected(R.id.home_fragment)
         }
