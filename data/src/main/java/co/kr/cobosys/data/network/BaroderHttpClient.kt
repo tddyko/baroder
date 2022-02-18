@@ -2,6 +2,7 @@ package co.kr.cobosys.data.network
 
 import android.content.Context
 import co.kr.cobosys.baroder.data.BuildConfig.DEBUG
+import co.kr.cobosys.domain.usecase.GetAccessTokenUseCase
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -16,7 +17,8 @@ private const val TIMEOUT = 5L
 @Singleton
 class BaroderHttpClient @Inject constructor(
     @ApplicationContext appContext: Context,
-    chuckerCollector: ChuckerCollector
+    chuckerCollector: ChuckerCollector,
+    getAccessTokenUseCase: GetAccessTokenUseCase
 ) {
     private val chuckerInterceptor = ChuckerInterceptor.Builder(appContext)
         .collector(chuckerCollector)
