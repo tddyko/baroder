@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetCertifyCodeUseCase @Inject constructor(
     private val certifyCode: CertifyCodeRepo
 ) : GeneralUseCase<Flow<CertifyCode>> {
-    override fun invoke(): Flow<CertifyCode> =
+    override suspend fun invoke(): Flow<CertifyCode> =
         certifyCode.getCertifyCode()
 }

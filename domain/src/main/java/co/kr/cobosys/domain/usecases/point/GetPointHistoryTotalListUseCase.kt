@@ -10,6 +10,6 @@ import javax.inject.Inject
 class GetPointHistoryTotalListUseCase @Inject constructor(
     private val pointHistoryTotalList: PointHistoryTotlaListRepo
 ) : GeneralUseCase<Flow<PagingData<Total>>> {
-    override fun invoke(): Flow<PagingData<Total>> =
+    override suspend fun invoke(): Flow<PagingData<Total>> =
         pointHistoryTotalList.getPointHistoryTotalList()
 }

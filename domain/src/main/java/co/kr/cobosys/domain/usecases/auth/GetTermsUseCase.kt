@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetTermsUseCase @Inject constructor(
     private val terms: TermsRepo
 ) : GeneralUseCase<Flow<Terms>> {
-    override fun invoke(): Flow<Terms> =
+    override suspend fun invoke(): Flow<Terms> =
         terms.getTerms()
 }

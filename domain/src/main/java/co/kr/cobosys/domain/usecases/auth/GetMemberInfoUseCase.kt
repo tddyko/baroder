@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetMemberInfoUseCase @Inject constructor(
     private val storeRepository: MemberInfoRepo
 ) : GeneralUseCase<Flow<MemberInfo>> {
-    override fun invoke(): Flow<MemberInfo> =
+    override suspend fun invoke(): Flow<MemberInfo> =
         storeRepository.getMemberInfo()
 }

@@ -1,12 +1,12 @@
 package co.kr.cobosys.data.mappers.home
 
-import co.kr.cobosys.data.api.RegularStoreBestProductResponse
+import co.kr.cobosys.data.api.ProductListResponse
 import co.kr.cobosys.domain.base.mappers.Mapper
-import co.kr.cobosys.domain.models.RegularStoreBestProduct
+import co.kr.cobosys.domain.models.ProductList
 
-class RegularBestProductMapper: Mapper<RegularStoreBestProductResponse, RegularStoreBestProduct> {
-    override fun mapLeftToRight(obj: RegularStoreBestProductResponse): RegularStoreBestProduct = with(obj) {
-        RegularStoreBestProduct(
+class RegularBestProductMapper: Mapper<ProductListResponse, ProductList> {
+    override fun mapLeftToRight(obj: ProductListResponse): ProductList = with(obj) {
+        ProductList(
             productName = productName,
             productFileName = productFileName,
             amt = amt

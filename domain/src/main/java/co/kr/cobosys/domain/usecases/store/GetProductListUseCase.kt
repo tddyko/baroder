@@ -10,6 +10,6 @@ import javax.inject.Inject
 class GetProductListUseCase @Inject constructor(
     private val productList: ProductListRepo
 ) : GeneralUseCase<Flow<ProductList>> {
-    override fun invoke(): Flow<ProductList> =
+    override suspend fun invoke(): Flow<ProductList> =
         productList.getPrpdictList()
 }

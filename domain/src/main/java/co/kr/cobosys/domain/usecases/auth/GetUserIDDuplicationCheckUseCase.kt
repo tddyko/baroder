@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetUserIDDuplicationCheckUseCase @Inject constructor(
     private val storeRepository: UserIDDuplicationCheckRepo
 ) : GeneralUseCase<Flow<UserIDDuplicationCheck>> {
-    override fun invoke(): Flow<UserIDDuplicationCheck> =
+    override suspend fun invoke(): Flow<UserIDDuplicationCheck> =
         storeRepository.getUserIDDuplicationCheck()
 }

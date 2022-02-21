@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetCouponPolicyUseCase @Inject constructor(
     private val couponPolicy: CouponPolicyRepo
 ) : GeneralUseCase<Flow<CouponPolicy>> {
-    override fun invoke(): Flow<CouponPolicy> =
+    override suspend fun invoke(): Flow<CouponPolicy> =
         couponPolicy.getCouponPolicy()
 }

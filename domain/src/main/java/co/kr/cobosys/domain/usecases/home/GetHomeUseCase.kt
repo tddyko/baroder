@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetHomeUseCase @Inject constructor(
     private val storeRepository: HomeRepo
 ) : GeneralUseCase<Flow<Home>> {
-    override fun invoke(): Flow<Home> =
+    override suspend fun invoke(): Flow<Home> =
         storeRepository.getHome()
 }

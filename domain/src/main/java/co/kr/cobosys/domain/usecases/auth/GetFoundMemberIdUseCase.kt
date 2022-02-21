@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetFoundMemberIdUseCase @Inject constructor(
     private val foundMemberId: FoundMemberIdRepo
 ) : GeneralUseCase<Flow<FoundMemberId>> {
-    override fun invoke(): Flow<FoundMemberId> =
+    override suspend fun invoke(): Flow<FoundMemberId> =
         foundMemberId.getFoundMemberId()
 }

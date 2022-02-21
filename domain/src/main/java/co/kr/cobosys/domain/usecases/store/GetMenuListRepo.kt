@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetMenuListRepo @Inject constructor(
     private val menuList: MenuListRepo
 ) : GeneralUseCase<Flow<MenuList>> {
-    override fun invoke(): Flow<MenuList> =
+    override suspend fun invoke(): Flow<MenuList> =
         menuList.getMenuList()
 }

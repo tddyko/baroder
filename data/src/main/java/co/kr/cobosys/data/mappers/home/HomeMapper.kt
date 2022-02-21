@@ -1,6 +1,7 @@
 package co.kr.cobosys.data.mappers.home
 
 import co.kr.cobosys.data.api.HomeResponse
+import co.kr.cobosys.data.mappers.store.StoreListMapper
 import co.kr.cobosys.domain.base.mappers.Mapper
 import co.kr.cobosys.domain.models.Home
 
@@ -11,7 +12,7 @@ class HomeMapper: Mapper<HomeResponse, Home> {
                 RegularStoreListMapper().mapLeftToRight(regular)
             },
             recentlyVisitedStoreList = recentlyVisitedStoreList.map { recently ->
-                RecentlyVisitedStoreListMapper().mapLeftToRight(recently)
+                StoreListMapper().mapLeftToRight(recently)
             }
         )
     }

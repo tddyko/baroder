@@ -10,6 +10,6 @@ import javax.inject.Inject
 class GetPointHistoryAddListUseCase @Inject constructor(
     private val pointHistoryAddList: PointHistoryAddListRepo
 ) : GeneralUseCase<Flow<PagingData<Add>>> {
-    override fun invoke(): Flow<PagingData<Add>> =
+    override suspend fun invoke(): Flow<PagingData<Add>> =
         pointHistoryAddList.getPointHistoryAddList()
 }

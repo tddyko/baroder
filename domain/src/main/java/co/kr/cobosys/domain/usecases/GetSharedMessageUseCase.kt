@@ -9,6 +9,6 @@ import javax.inject.Inject
 class GetSharedMessageUseCase @Inject constructor(
     private val storeRepository: SharedMessageRepo
 ) : GeneralUseCase<Flow<SharedMessage>> {
-    override fun invoke(): Flow<SharedMessage> =
+    override suspend fun invoke(): Flow<SharedMessage> =
         storeRepository.getSharedMessage()
 }
