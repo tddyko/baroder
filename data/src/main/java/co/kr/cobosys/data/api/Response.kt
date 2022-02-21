@@ -43,9 +43,14 @@ data class TermsResponse(
     @SerializedName ("location_info") val locationInfo: String
 )
 
+// 회원
 data class HomeResponse(
     @SerializedName ("patron_home") val regularStoreList: List<RegularStoreListResponse>,
-    @SerializedName ("recent_home") val recentlyVisitedStoreList: List<RecentlyVisitedStoreListResponse>
+    @SerializedName ("recent_home") val recentlyVisitedStoreList: List<StoreListResponse>
+)
+
+data class StoreResponse(
+    @SerializedName ("store_list") val storeList: List<StoreListResponse>
 )
 
 data class StoreListResponse(
@@ -76,6 +81,7 @@ data class StoreDetailResponse(
     @SerializedName("menu_list") val menuList: List<MenuListResponse>
 )
 
+
 data class MenuListResponse(
     @SerializedName ("menu") val menu: String,
     @SerializedName ("product_list") val product: List<ProductListResponse>
@@ -95,17 +101,11 @@ data class RegularStoreListResponse(
     @SerializedName("less_mile") val minPoint: Int,
     @SerializedName("coupon_cnt") val coupon: Int,
     @SerializedName("file_path") val bestProductImgUrl: List<String>,
-    @SerializedName("product_list") val bestProduct: List<RegularStoreBestProductResponse>
+    @SerializedName("product_list") val bestProduct: List<ProductListResponse>
 )
 
-data class RegularStoreBestProductResponse(
-    @SerializedName("product_nm") val productName: String,
-    @SerializedName("prst_imgfile_path") val productFileName: String,
-    @SerializedName("amt") val amt: String
-    )
-
-data class RecentlyVisitedStoreListResponse(
-    @SerializedName ("store") val recentlyStoreList: List<StoreListResponse>,
+data class PointResponse(
+    @SerializedName ("store_point") val pointList: List<PointListResponse>
 )
 
 data class PointListResponse(

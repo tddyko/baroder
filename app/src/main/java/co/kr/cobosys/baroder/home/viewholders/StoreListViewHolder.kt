@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import co.kr.cobosys.baroder.app.databinding.ItemHomeStoreBinding
 import co.kr.cobosys.baroder.extension.load
-import co.kr.cobosys.baroder.model.StoreListUI
+import co.kr.cobosys.baroder.models.StoreListUI
 
 class StoreListViewHolder(private val itemBinding: ItemHomeStoreBinding) :
     RecyclerView.ViewHolder(itemBinding.root) {

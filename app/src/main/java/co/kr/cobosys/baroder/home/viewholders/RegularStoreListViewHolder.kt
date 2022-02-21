@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import co.kr.cobosys.baroder.app.databinding.ItemHomeRegularStoreBinding
 import co.kr.cobosys.baroder.extension.load
-import co.kr.cobosys.baroder.model.RegularStoreListUI
+import co.kr.cobosys.baroder.models.RegularStoreListUI
 
 class RegularStoreListViewHolder(private val itemBinding: ItemHomeRegularStoreBinding) :
     RecyclerView.ViewHolder(itemBinding.root) {

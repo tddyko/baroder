@@ -7,7 +7,7 @@ import co.kr.cobosys.baroder.app.databinding.ItemHomeRecentlyVisitedStoreBinding
 import co.kr.cobosys.baroder.base.adapter.BASE_DIFF_CALLBACK
 import co.kr.cobosys.baroder.base.adapter.Code
 import co.kr.cobosys.baroder.home.viewholders.RecentlyVisitedStoreListViewHolder
-import co.kr.cobosys.baroder.model.StoreListUI
+import co.kr.cobosys.baroder.models.StoreListUI
 
 
 class RecentlyVisitedStoreListAdapter(private val recentlyVisitedStoreListUI: List<StoreListUI>) :

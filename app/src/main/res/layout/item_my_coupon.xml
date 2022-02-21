@@ -30,35 +30,58 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 tools:text="집어가 마산역점" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/coupon_coupon_name"
                 style="@style/title_sub_text"
-                android:textColor="@color/primary_color_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                app:layout_constraintTop_toBottomOf="@id/coupon_store_name"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/primary_color_text"
                 app:layout_constraintEnd_toStartOf="@+id/coupon_coupon_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/coupon_store_name"
                 tools:text="3,000원 할인쿠폰" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/coupon_period_of_use"
+                android:id="@+id/coupon_start_date"
                 style="@style/main_text"
-                android:textColor="@color/secondary_text_color"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
                 android:layout_marginTop="3.5dp"
+                android:maxLines="1"
+                android:textColor="@color/secondary_text_color"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coupon_coupon_name"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:text="2021.11.18~" />
+                tools:text="2021.11.18" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/coupon_tilde"
+                style="@style/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.5dp"
+                android:maxLines="1"
+                android:text="@string/tilde"
+                android:textColor="@color/secondary_text_color"
+                app:layout_constraintStart_toEndOf="@id/coupon_start_date"
+                app:layout_constraintTop_toBottomOf="@+id/coupon_coupon_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/coupon_expired_date"
+                style="@style/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.5dp"
+                android:maxLines="1"
+                android:textColor="@color/secondary_text_color"
+                app:layout_constraintStart_toEndOf="@id/coupon_tilde"
+                app:layout_constraintTop_toBottomOf="@+id/coupon_coupon_name"
+                tools:text="2021.11.18" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/coupon_coupon_img"

@@ -1,8 +1,8 @@
 package co.kr.cobosys.data.mappers.store
 
 import co.kr.cobosys.data.api.StoreDetailResponse
-import co.kr.cobosys.domain.base.map.Mapper
-import co.kr.cobosys.domain.model.StoreDetail
+import co.kr.cobosys.domain.base.mappers.Mapper
+import co.kr.cobosys.domain.models.StoreDetail
 
 class StoreDetailMapper: Mapper<StoreDetailResponse, StoreDetail> {
     override fun mapLeftToRight(obj: StoreDetailResponse): StoreDetail = with(obj){

@@ -78,19 +78,19 @@ interface Request: ApiService {
     )
 
     @GET("tku/v1/member/point")
-    suspend fun checkPointList(): PointListResponse
+    suspend fun checkPointList(): PointResponse
 
     @GET("v1/home/rmd")
     suspend fun checkHomeStoreList(
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreListResponse
+    ): StoreResponse
 
     @GET("tku/v1/home/recent")
     suspend fun checkHomeRecentStoreList(
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreListResponse
+    ): StoreResponse
 
     @GET("tku/v1/home")
     suspend fun checkHomeList(
@@ -103,7 +103,7 @@ interface Request: ApiService {
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double,
         @Query("options") options: Int
-    ): StoreListResponse
+    ): StoreResponse
 
     @GET("v1/store")
     suspend fun checkStoreDtail(
@@ -123,10 +123,10 @@ interface Request: ApiService {
     ): SharedMessageResponse
 
     @GET("tku/v1/store/patron")
-    suspend fun recentStoreRegister(
+    suspend fun recentlyVisitedStoreReq(
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreListResponse
+    ): StoreResponse
 
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @PUT("tku/v1/store/patron/status")
@@ -138,7 +138,7 @@ interface Request: ApiService {
     suspend fun checkFavoriteStore(
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreListResponse
+    ): StoreResponse
 
     @GET("v1/coupon/policy")
     suspend fun checkCouponPolicy(): CouponPolicyResponse

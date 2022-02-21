@@ -6,7 +6,7 @@ import androidx.paging.PagingDataAdapter
 import co.kr.cobosys.baroder.app.databinding.ItemHomeStoreBinding
 import co.kr.cobosys.baroder.base.adapter.BASE_DIFF_CALLBACK
 import co.kr.cobosys.baroder.base.adapter.Code
-import co.kr.cobosys.baroder.model.StoreListUI
+import co.kr.cobosys.baroder.models.StoreListUI
 import co.kr.cobosys.baroder.home.viewholders.StoreListViewHolder
 
 class StoreListAdapter(private val storeListUI: List<StoreListUI>) :

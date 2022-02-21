@@ -10,7 +10,7 @@ import co.kr.cobosys.baroder.base.adapter.BASE_DIFF_CALLBACK
 import co.kr.cobosys.baroder.base.adapter.Code
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.visible
-import co.kr.cobosys.baroder.model.RegularStoreListUI
+import co.kr.cobosys.baroder.models.RegularStoreListUI
 import co.kr.cobosys.baroder.home.viewholders.RegularStoreListViewHolder
 
 
