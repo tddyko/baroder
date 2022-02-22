@@ -13,11 +13,11 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class DataSourceModule {
+class DataSourceModule {
 
     @Singleton
-    @Binds
-    abstract fun accessTokenDataSource(
-        accessTokenDataSource: AccessTokenDataSourceImpl
-    ): AccessTokenDataSource
+    @Provides
+    fun accessTokenDataSource(accessTokenDataSource: AccessTokenDataSourceImpl): AccessTokenDataSource {
+        return accessTokenDataSource
+    }
 }

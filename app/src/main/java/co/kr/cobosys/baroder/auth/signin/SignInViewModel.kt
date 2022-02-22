@@ -18,5 +18,4 @@ class SignInViewModel @Inject constructor(
     suspend fun getAccessToken(id: String, pwd: String) {
         getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd))
     }
-
 }
