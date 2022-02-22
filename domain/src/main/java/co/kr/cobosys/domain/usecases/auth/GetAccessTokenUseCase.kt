@@ -8,6 +8,7 @@ import javax.inject.Inject
 class GetAccessTokenUseCase @Inject constructor(
     private val accessToken: AccessTokenRepo
 ) : GeneralParamsUseCase <AccessToken,  GetAccessTokenParams> {
+
     override suspend fun invoke(params: GetAccessTokenParams): AccessToken =
         accessToken.getAccessToken(params.id, params.pwd)
 }

@@ -26,13 +26,15 @@ class AppModule {
     @Provides
     @Singleton
     fun resources(application: Application): Resources = application.resources
+
     @Provides
     @Singleton
     fun gson(): Gson = GsonBuilder().create()
 
     @Provides
     @Singleton
-    fun okHttpClient(baroderHttpClient: BaroderHttpClient): OkHttpClient = baroderHttpClient.okHttpClient
+    fun okHttpClient(baroderHttpClient: BaroderHttpClient): OkHttpClient =
+        baroderHttpClient.okHttpClient
 
     @Provides
     @Singleton
