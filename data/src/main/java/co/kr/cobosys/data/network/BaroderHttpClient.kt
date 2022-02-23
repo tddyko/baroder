@@ -2,9 +2,14 @@ package co.kr.cobosys.data.network
 
 import android.content.Context
 import co.kr.cobosys.baroder.data.BuildConfig.DEBUG
+import co.kr.cobosys.data.api.AccessTokenResponse
+import co.kr.cobosys.data.api.Request
+import co.kr.cobosys.data.datasources.auth.AccessTokenDataSourceImpl
+import co.kr.cobosys.domain.usecases.auth.GetAccessTokenUseCase
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import dagger.hilt.android.qualifiers.ApplicationContext
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
@@ -23,6 +28,7 @@ class BaroderHttpClient @Inject constructor(
         .maxContentLength(250000L)
         .redactHeaders(emptySet())
         .build()
+
 
     val okHttpClient = OkHttpClient()
         .newBuilder()

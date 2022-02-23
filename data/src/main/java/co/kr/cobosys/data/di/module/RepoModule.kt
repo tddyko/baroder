@@ -14,7 +14,5 @@ class RepoModule {
 
     @Singleton
     @Provides
-    fun accessTokenRepo(accessTokenRepo: AccessTokenRepoImpl): AccessTokenRepo {
-        return accessTokenRepo
-    }
+    fun accessTokenRepo(accessTokenRepo: AccessTokenRepoImpl): AccessTokenRepo = accessTokenRepo
 }

@@ -10,6 +10,7 @@ import androidx.activity.addCallback
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentBottomNavBinding
 import co.kr.cobosys.baroder.base.utils.Edge
+import co.kr.cobosys.baroder.base.utils.Utils.showToast
 import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.coupon.CouponFragment
 import co.kr.cobosys.baroder.extension.viewInflateBinding
@@ -70,7 +71,8 @@ class BottomNavFragment : Fragment() {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
 //                    }
                 changeChildFragment(HomeFragment(), itemId)
-                Toast.makeText(context, "홈 버튼", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, "홈 버튼", Toast.LENGTH_SHORT).show()
+//                showToast(requireContext(), "눌렸다고 제발 나와라 텍스트야").show()
                 true
             }
             R.id.store_fragment -> {

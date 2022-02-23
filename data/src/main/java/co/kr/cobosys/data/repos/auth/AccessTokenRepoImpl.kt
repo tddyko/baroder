@@ -8,8 +8,7 @@ import javax.inject.Inject
 
 class AccessTokenRepoImpl @Inject constructor(
     private val accessDataSource: AccessTokenDataSource
-): AccessTokenRepo {
-    override suspend fun getAccessToken(id: String, pwd: String): AccessToken {
-        return AccessTokenMapper().mapLeftToRight(accessDataSource.login(id = id, pwd = pwd))
-    }
+) : AccessTokenRepo {
+    override suspend fun getAccessToken(id: String, pwd: String): AccessToken =
+        AccessTokenMapper().mapLeftToRight(accessDataSource.login(id = id, pwd = pwd))
 }

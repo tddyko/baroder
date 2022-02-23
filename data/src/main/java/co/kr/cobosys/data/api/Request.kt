@@ -24,6 +24,7 @@ interface Request: ApiService {
 
     @PUT("tku/v1/member/mod")
     suspend fun updateMemberInfo(
+        @Header("Authorization") token: String,
         @Field("hp_no") phoneNum: String,
         @Field("gender_mf") gender: String,
         @Field("birth_day") birthDay: String
@@ -37,14 +38,18 @@ interface Request: ApiService {
 
     @DELETE("tku/v1/member/quit")
     suspend fun signOutMember(
+        @Header("Authorization") token: String,
         @Field("reason") reason: String
     ): SharedMessageResponse
 
     @GET("tku/v1/member")
-    suspend fun memberDetailInfo(): MemberInfoResponse
+    suspend fun memberDetailInfo(
+        @Header("Authorization") token: String
+    ): MemberInfoResponse
 
     @PUT("tku/v1/member/pwd/mod")
     suspend fun changeMemberPwd(
+        @Header("Authorization") token: String,
         @Field("current_password") curPassword: String,
         @Field("new_passoword") newPassword: String
     )
@@ -78,10 +83,13 @@ interface Request: ApiService {
     )
 
     @GET("tku/v1/member/point")
-    suspend fun checkPointList(): PointResponse
+    suspend fun checkPointList(
+        @Header("Authorization") token: String
+    ): PointResponse
 
     @GET("v1/home/rmd")
     suspend fun checkHomeStoreList(
+        @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
     ): StoreResponse
@@ -94,12 +102,14 @@ interface Request: ApiService {
 
     @GET("tku/v1/home")
     suspend fun checkHomeList(
+        @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
     ): HomeResponse
 
     @GET("v1/store/list")
     suspend fun checkStoreList(
+        @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double,
         @Query("options") options: Int
@@ -107,6 +117,7 @@ interface Request: ApiService {
 
     @GET("v1/store")
     suspend fun checkStoreDtail(
+        @Header("Authorization") token: String,
         @Query("store_cd") code: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
@@ -114,16 +125,19 @@ interface Request: ApiService {
 
     @POST("tku/v1/store/booked/status")
     suspend fun favoriteStoreRegister(
+        @Header("Authorization") token: String,
         @Field("store_cd") code: String
     ): SharedMessageResponse
 
     @DELETE("tku/v1/store/booked/cancel")
     suspend fun favoriteStoreDelete(
+        @Header("Authorization") token: String,
         @Field("store_cd") code: String,
     ): SharedMessageResponse
 
     @GET("tku/v1/store/patron")
     suspend fun recentlyVisitedStoreReq(
+        @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
     ): StoreResponse
@@ -131,11 +145,13 @@ interface Request: ApiService {
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @PUT("tku/v1/store/patron/status")
     suspend fun changeRecentStore(
+        @Header("Authorization") token: String,
         @Field("store_cd") code: Map<String, String>
     ): SharedMessageResponse
 
     @GET("tku/v1/store/booked")
     suspend fun checkFavoriteStore(
+        @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
     ): StoreResponse
@@ -145,6 +161,7 @@ interface Request: ApiService {
 
     @PUT("tku/v1/coupon/buy")
     suspend fun buyCoupon(
+        @Header("Authorization") token: String,
         @Field("store_cd") code: String,
         @Field("coupon_cm_pl_no") couponNum: Int,
         @Field("remain_mile") remainPoint: Int,
@@ -154,12 +171,14 @@ interface Request: ApiService {
 
     @GET("tku/v1/coupon/list")
     suspend fun checkCouponList(
+        @Header("Authorization") token: String,
         @Query("usable_yn") usableStatus: String,
         @Query("store_cd") code: String
     ): CouponResponse
 
     @GET("tku/v1/coupon/buy/store/list")
     suspend fun canBuyCouponStoreList(
+        @Header("Authorization") token: String,
         @Query("coupon_amt") couponPrice: String
     ): CanBuyCouponStoreResponse
 }

@@ -15,5 +15,4 @@ class ApiModule {
     @Singleton
     fun reqApi(retrofit: Retrofit): Request =
         retrofit.create(Request::class.java)
-
 }

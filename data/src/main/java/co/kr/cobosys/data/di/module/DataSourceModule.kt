@@ -2,8 +2,6 @@ package co.kr.cobosys.data.di.module
 
 import co.kr.cobosys.data.datasources.auth.AccessTokenDataSource
 import co.kr.cobosys.data.datasources.auth.AccessTokenDataSourceImpl
-import co.kr.cobosys.data.repos.auth.AccessTokenRepoImpl
-import co.kr.cobosys.domain.repos.auth.AccessTokenRepo
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -17,7 +15,6 @@ class DataSourceModule {
 
     @Singleton
     @Provides
-    fun accessTokenDataSource(accessTokenDataSource: AccessTokenDataSourceImpl): AccessTokenDataSource {
-        return accessTokenDataSource
-    }
+    fun accessTokenDataSource(accessTokenDataSource: AccessTokenDataSourceImpl): AccessTokenDataSource =
+        accessTokenDataSource
 }

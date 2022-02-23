@@ -366,6 +366,11 @@
         <item name="cardElevation">0dp</item>
     </style>
 
+    <style name="toast_card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/black_70</item>
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
     <style name="home_card_expand" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">
             @style/Widget.MaterialComponents.CardView.RadiusTop20
