@@ -19,6 +19,8 @@
     <string name="recently_visited_store_selected">단골매장 선택</string>
     <string name="recently_visited_store_change">단골매장 순서변경</string>
     <string name="onboarding_start">시작하기</string>
+    <string name="onboarding_skip">SKIP</string>
+    <string name="onboarding_next">다음</string>
     <string name="visitor_information_text">로그인 후 출입 QR을 사용할 수 있습니다.</string>
     <string name="qr_login_text">로그인 하기</string>
     <string name="not_coupon">아직 사용 가능한 쿠폰이 없어요\n해당 매장의 포인트를 쿠폰으로 바꿔보세요!</string>

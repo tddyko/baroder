@@ -473,6 +473,12 @@
         <item name="android:letterSpacing">-0.04</item>
     </style>
 
+    <style name="DialogThemeOnBoarding" parent="Theme.Baroder">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
 
     <!--애니메이션-->
     <style name="TopSheet_DialogAnimation">
@@ -560,4 +566,8 @@
         <item name="android:windowExitAnimation">@anim/animate_slide_left_exit</item>
     </style>
 
+    <style name="DialogAnimationSlideLeftOutRight">
+        <item name="android:windowEnterAnimation">@anim/animate_slide_left_enter</item>
+        <item name="android:windowExitAnimation">@anim/animate_slide_out_right</item>
+    </style>
 </resources>
