@@ -28,11 +28,17 @@ data class MemberInfoResponseData(
     @SerializedName ("qr_code") val memberQrCode: String
 )
 
-data class SharedMessageResponse(
+data class SharedMessageResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: SharedMessageResponseData
+)
+
+data class SharedMessageResponseData(
     @SerializedName ("contents") val contents: String
 )
 
-data class UserIDDuplicationCheckResponse(
+data class UserIDDuplicationCheckResponseData(
     @SerializedName ("is_duplicate") val isDuplication: Boolean
 )
 
