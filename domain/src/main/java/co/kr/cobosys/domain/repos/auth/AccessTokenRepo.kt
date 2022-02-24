@@ -1,8 +1,9 @@
 package co.kr.cobosys.domain.repos.auth
 
-import co.kr.cobosys.domain.models.AccessToken
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.AccessTokenModel
 
 interface AccessTokenRepo {
-    suspend fun getAccessToken(id: String, pwd: String): AccessToken
+
+    suspend fun getAccessToken(id: String, pwd: String): AccessTokenModel
+
 }

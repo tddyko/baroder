@@ -2,11 +2,24 @@ package co.kr.cobosys.data.api
 
 import com.google.gson.annotations.SerializedName
 
-data class AccessTokenResponse(
-    @SerializedName("access_token")val accessToken: String
+data class AccessTokenResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: AccessTokenResponseData
+
 )
 
-data class MemberInfoResponse(
+data class AccessTokenResponseData(
+    @SerializedName("access_token") val accessToken: String
+)
+
+data class MemberInfoResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<MemberInfoResponseData>
+)
+
+data class MemberInfoResponseData(
     @SerializedName ("member_id") val memberId: String,
     @SerializedName ("member_nm") val memberName: String,
     @SerializedName ("birth_day") val memberBirthDay: String,

@@ -12,5 +12,5 @@ import dagger.hilt.android.components.ViewModelComponent
 class UseCaseModule {
 
     @Provides
-    fun accessTokenUseCase(useCase: AccessTokenRepo): GetAccessTokenUseCase = GetAccessTokenUseCase(useCase)
+    fun accessTokenRepoUseCase(accessTokenRepo: AccessTokenRepo): GetAccessTokenUseCase = GetAccessTokenUseCase(accessTokenRepo)
 }

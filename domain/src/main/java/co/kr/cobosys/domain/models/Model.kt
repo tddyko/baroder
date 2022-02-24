@@ -1,10 +1,22 @@
 package co.kr.cobosys.domain.models
 
-data class AccessToken(
+data class AccessTokenModel(
+    val code: String,
+    val message: String,
+    val data: AccessTokenData
+)
+
+data class AccessTokenData(
     val accessToken: String
 )
 
-data class MemberInfo(
+data class MemberInfoModel(
+    val code: String,
+    val message: String,
+    val data: List<MemberInfoData>
+)
+
+data class MemberInfoData(
     val memberId: String,
     val memberName: String,
     val memberBirthDay: String,

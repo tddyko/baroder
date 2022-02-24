@@ -1,10 +1,8 @@
 package co.kr.cobosys.data.api
 
-import co.kr.cobosys.data.network.ApiService
 import retrofit2.http.*
 
-interface Request: ApiService {
-
+interface Request {
     @POST("v1/member/reg")
     suspend fun signUpMember(
         @Field("member_id") id: String,
@@ -30,22 +28,23 @@ interface Request: ApiService {
         @Field("birth_day") birthDay: String
     )
 
-    @GET("v1/login")
+    @FormUrlEncoded
+    @POST("v1/login")
     suspend fun logIn(
-        @Query("member_id") id: String,
-        @Query("member_pwd") pwd: String
-    ): AccessTokenResponse
+        @Field("member_id") id: String,
+        @Field("member_pwd") pwd: String
+    ): AccessTokenResponseModel
 
     @DELETE("tku/v1/member/quit")
     suspend fun signOutMember(
         @Header("Authorization") token: String,
-        @Field("reason") reason: String
+        @Path("reason") reason: String
     ): SharedMessageResponse
 
     @GET("tku/v1/member")
     suspend fun memberDetailInfo(
         @Header("Authorization") token: String
-    ): MemberInfoResponse
+    ): MemberInfoResponseModel
 
     @PUT("tku/v1/member/pwd/mod")
     suspend fun changeMemberPwd(
@@ -132,7 +131,7 @@ interface Request: ApiService {
     @DELETE("tku/v1/store/booked/cancel")
     suspend fun favoriteStoreDelete(
         @Header("Authorization") token: String,
-        @Field("store_cd") code: String,
+        @Path("store_cd") code: String,
     ): SharedMessageResponse
 
     @GET("tku/v1/store/patron")

@@ -181,11 +181,11 @@ object Depends {
 
     object Environments {
         // 개발서버
-        const val debugUrl = "http://apidevapp.baroder.co.kr/"
+        const val debugUrl = "https://apidevapp.baroder.co.kr/"
         /*🙄🙄🙄🙄🙄🙄　개발서버도 특별히 건들일 없으니 건드리지 말것. 🙄🙄🙄🙄🙄🙄*/
         // 상용서버
         /*☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️ 건들지 말것 ☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️☠️*/
-        const val releaseUrl = "http://apiapp.baroder.co.kr/"
+        const val releaseUrl = "https://apiapp.baroder.co.kr/"
         /*☠️☠️☠️☠️☠️☠️☠️☠️ 상용서버 이므로 절대 건들지 말것. ☠️☠️☠️☠️☠️☠️☠️☠️*/
     }
 

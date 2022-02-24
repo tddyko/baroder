@@ -7,12 +7,25 @@ import kotlinx.parcelize.Parcelize
 
 /* 로그인 및 회원관련 */
 @Parcelize
-data class AccessTokenUI(
+data class AccessTokenModelUI(
+    val code: String,
+    val message: String,
+    val data: AccessTokenDataUI
+): Parcelable
+
+@Parcelize
+data class AccessTokenDataUI(
     val accessToken: String
 ) : Parcelable
 
+@Parcelize class MemberInfoModelUI (
+    val code: String,
+    val message: String,
+    val data: List<MemberInfoDataUI>
+): Parcelable
+
 @Parcelize
-data class MemberInfoUI(
+data class MemberInfoDataUI(
     val memberId: String,
     val memberName: String,
     val memberBirthDay: String,
