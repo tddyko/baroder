@@ -9,9 +9,10 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/onboarding_viewpager"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_indicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -21,42 +22,47 @@
         android:id="@+id/onboarding_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:dotsColor="@color/main_green"
         app:dotsSize="6dp"
         app:dotsSpacing="6dp"
-        android:layout_marginTop="40dp"
         app:dotsStrokeColor="@color/stroke"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_complete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/onboarding_viewpager" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/onboarding_complete"
         style="@style/onboarding_complete_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:minHeight="0dp"
         android:minWidth="0dp"
-        android:paddingVertical="15dp"
+        android:minHeight="0dp"
         android:paddingHorizontal="130dp"
-        android:layout_marginTop="35dp"
+        android:paddingVertical="15dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/onboarding_start"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/onboarding_indicator"
-        android:text="@string/onboarding_start" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/skip_btn"
         style="@style/item_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:clickable="true"
         android:focusable="true"
-        android:textColor="@color/disabled_text"
-        app:layout_constraintTop_toBottomOf="@id/onboarding_indicator"
-        app:layout_constraintStart_toStartOf="parent"
         android:gravity="start"
+        android:maxLines="1"
+        android:text="@string/onboarding_skip"
+        android:textColor="@color/disabled_text"
+        app:layout_constraintBottom_toBottomOf="@+id/onboarding_complete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onboarding_complete"
         tools:text="SKIP" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -64,14 +70,15 @@
         style="@style/item_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:clickable="true"
         android:focusable="true"
-        android:textColor="@color/main_green"
-        app:layout_constraintTop_toTopOf="@id/skip_btn"
-        app:layout_constraintBottom_toBottomOf="@id/skip_btn"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="end"
+        android:maxLines="1"
+        android:text="@string/onboarding_next"
+        android:textColor="@color/main_green"
+        app:layout_constraintBottom_toBottomOf="@+id/onboarding_complete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onboarding_complete"
         tools:text="다음" />
 
 
