@@ -1,28 +1,35 @@
 package co.kr.cobosys.baroder.models.mappers.store
 
-import co.kr.cobosys.baroder.models.StoreDetailUI
+import co.kr.cobosys.baroder.models.StoreDetailDataUI
+import co.kr.cobosys.baroder.models.StoreDetailModelUI
 import co.kr.cobosys.domain.base.mappers.Mapper
-import co.kr.cobosys.domain.models.StoreDetail
+import co.kr.cobosys.domain.models.StoreDetailModel
 
-class StoreDetailMapper: Mapper<StoreDetail, StoreDetailUI> {
-    override fun mapLeftToRight(obj: StoreDetail): StoreDetailUI = with(obj){
-        StoreDetailUI(
+class StoreDetailMapper: Mapper<StoreDetailModel, StoreDetailModelUI> {
+    override fun mapLeftToRight(obj: StoreDetailModel): StoreDetailModelUI = with(obj){
+        StoreDetailModelUI(
             code = code,
-            storeName = storeName,
-            address = address,
-            addressDetail = addressDetail,
-            storeInfo = storeInfo,
-            businessHour = businessHour,
-            storeLatitude = storeLatitude,
-            storeLongitude = storeLongitude,
-            couponCount = couponCount,
-            favoriteStatus = favoriteStatus,
-            regular = regular,
-            distance = distance,
-            telNumber = telNumber,
-            imgUrl = imgUrl,
-            menuList = menuList.map { menu ->
-                MenuListMapper().mapLeftToRight(menu)
+            message = message,
+            data = data.map { data ->
+                StoreDetailDataUI(
+                    data.code,
+                    data.storeName,
+                    data.address,
+                    data.addressDetail,
+                    data.storeInfo,
+                    data.businessHour,
+                    data.storeLatitude,
+                    data.storeLongitude,
+                    data.couponCount,
+                    data.favoriteStatus,
+                    data.regular,
+                    data.distance,
+                    data.telNumber,
+                    data.imgUrl,
+                    data.menuList.map { menu ->
+                        MenuListMapper().mapLeftToRight(menu.copy())
+                    }
+                )
             }
         )
     }

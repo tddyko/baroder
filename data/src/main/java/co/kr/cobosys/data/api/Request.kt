@@ -61,12 +61,12 @@ interface Request {
     @FormUrlEncoded
     @POST("v1/member/id")
     suspend fun findMemberId(
-        @Field("hp_no") PhoneNum: String
+        @Field("hp_no") phoneNum: String
     ): FoundMemberIdResponseModel
 
     @POST("v1/member/certify")
     suspend fun requestCertifyCode(
-        @Field("hp_no") PhoneNum: String,
+        @Field("hp_no") phoneNum: String,
         @Field("duplication") duplication: String
     ): CertifyCodeResponseModel
 

@@ -1,8 +1,8 @@
 package co.kr.cobosys.domain.repos.coupon
 
-import co.kr.cobosys.domain.models.CouponPolicy
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.CouponPolicyModel
+
 
 interface CouponPolicyRepo {
-    fun getCouponPolicy(): Flow<CouponPolicy>
+    fun getCouponPolicy(): CouponPolicyModel
 }

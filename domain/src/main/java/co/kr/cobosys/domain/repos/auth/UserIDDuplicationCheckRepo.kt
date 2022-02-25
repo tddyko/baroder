@@ -1,8 +1,7 @@
 package co.kr.cobosys.domain.repos.auth
 
-import co.kr.cobosys.domain.models.UserIDDuplicationCheck
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.UserIDDuplicationCheckModel
 
 interface UserIDDuplicationCheckRepo {
-    fun getUserIDDuplicationCheck(): Flow<UserIDDuplicationCheck>
+    fun getUserIDDuplicationCheck(): UserIDDuplicationCheckModel
 }

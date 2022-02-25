@@ -1,8 +1,7 @@
 package co.kr.cobosys.domain.repos.auth
 
-import co.kr.cobosys.domain.models.FoundMemberId
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.FoundMemberIdModel
 
 interface FoundMemberIdRepo {
-    fun getFoundMemberId(): Flow<FoundMemberId>
+    fun getFoundMemberId(): FoundMemberIdModel
 }

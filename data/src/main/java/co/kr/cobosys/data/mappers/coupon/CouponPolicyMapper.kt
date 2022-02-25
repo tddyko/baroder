@@ -1,15 +1,18 @@
 package co.kr.cobosys.data.mappers.coupon
 
-import co.kr.cobosys.data.api.CouponPolicyResponse
+import co.kr.cobosys.data.api.CouponPolicyResponseModel
 import co.kr.cobosys.domain.base.mappers.Mapper
-import co.kr.cobosys.domain.models.CouponPolicy
+import co.kr.cobosys.domain.models.CouponPolicyData
+import co.kr.cobosys.domain.models.CouponPolicyModel
 
-class CouponPolicyMapper: Mapper<CouponPolicyResponse, CouponPolicy> {
-    override fun mapLeftToRight(obj: CouponPolicyResponse): CouponPolicy = with(obj) {
-        CouponPolicy(
-            couponPolicyList = couponPolicyList.map { couponPolicy ->
-                CouponPolicyListMapper().mapLeftToRight(couponPolicy)
-            }
+class CouponPolicyMapper: Mapper<CouponPolicyResponseModel, CouponPolicyModel> {
+    override fun mapLeftToRight(obj: CouponPolicyResponseModel): CouponPolicyModel = with(obj) {
+        CouponPolicyModel(
+            code = code,
+            message = message,
+            data = CouponPolicyData(data.couponPolicyList.map { list ->
+                CouponPolicyListMapper().mapLeftToRight(list.copy())
+            })
         )
     }
 }

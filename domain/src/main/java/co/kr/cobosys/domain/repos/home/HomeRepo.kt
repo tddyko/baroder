@@ -1,8 +1,7 @@
 package co.kr.cobosys.domain.repos.home
 
-import co.kr.cobosys.domain.models.Home
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.HomeModel
 
 interface HomeRepo {
-    fun getHome(): Flow<Home>
+    fun getHome(): HomeModel
 }

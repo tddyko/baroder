@@ -1,14 +1,23 @@
 package co.kr.cobosys.domain.usecases.auth
 
+import android.os.Parcelable
+import co.kr.cobosys.domain.base.usecases.GeneralParamsUseCase
 import co.kr.cobosys.domain.base.usecases.GeneralUseCase
-import co.kr.cobosys.domain.models.CertifyCode
+import co.kr.cobosys.domain.models.CertifyCodeModel
 import co.kr.cobosys.domain.repos.auth.CertifyCodeRepo
 import kotlinx.coroutines.flow.Flow
+import kotlinx.parcelize.Parcelize
 import javax.inject.Inject
 
 class GetCertifyCodeUseCase @Inject constructor(
     private val certifyCode: CertifyCodeRepo
-) : GeneralUseCase<Flow<CertifyCode>> {
-    override suspend fun invoke(): Flow<CertifyCode> =
-        certifyCode.getCertifyCode()
+) : GeneralParamsUseCase<CertifyCodeModel, GetCertifyCodeParams> {
+    override suspend fun invoke(params: GetCertifyCodeParams): CertifyCodeModel =
+        certifyCode.getCertifyCode(phoneNum = params.phoneNum, duplication = params.duplication)
 }
+
+@Parcelize
+data class GetCertifyCodeParams(
+    val phoneNum: String,
+    val duplication: String
+): Parcelable

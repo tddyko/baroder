@@ -1,15 +1,15 @@
 package co.kr.cobosys.domain.usecases.store
 
-import co.kr.cobosys.domain.base.usecases.GeneralPagingUseCase
-import co.kr.cobosys.domain.models.StoreDetail
+import co.kr.cobosys.domain.base.usecases.GeneralParamsUseCase
+import co.kr.cobosys.domain.models.StoreDetailModel
 import co.kr.cobosys.domain.repos.store.StoreDetailRepo
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetStoreDetailUseCase @Inject constructor(
     private val storeDetail: StoreDetailRepo
-) : GeneralPagingUseCase<Flow<StoreDetail>, GetStoreDetailParams> {
-    override fun invoke(params: GetStoreDetailParams): Flow<StoreDetail> =
+) : GeneralParamsUseCase<StoreDetailModel, GetStoreDetailParams> {
+
+    override suspend fun invoke(params: GetStoreDetailParams): StoreDetailModel =
         storeDetail.getStoreDetail(params.ids)
 }
 

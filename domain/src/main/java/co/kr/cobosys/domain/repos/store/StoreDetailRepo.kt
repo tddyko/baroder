@@ -1,8 +1,8 @@
 package co.kr.cobosys.domain.repos.store
 
-import co.kr.cobosys.domain.models.StoreDetail
-import kotlinx.coroutines.flow.Flow
+import co.kr.cobosys.domain.models.StoreDetailModel
+
 
 interface StoreDetailRepo {
-    fun getStoreDetail(ids: String): Flow<StoreDetail>
+    fun getStoreDetail(ids: String): StoreDetailModel
 }

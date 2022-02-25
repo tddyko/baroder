@@ -34,7 +34,7 @@ data class MemberInfoData(
 data class SharedMessageModel(
     val code: String,
     val message: String,
-    val data: List<SharedMessageData>
+    val data: SharedMessageData
 )
 
 data class SharedMessageData(
