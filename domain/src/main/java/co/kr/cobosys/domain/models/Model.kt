@@ -16,6 +16,12 @@ data class MemberInfoModel(
     val data: List<MemberInfoData>
 )
 
+data class MemberInfoDataModel(
+    val code: String,
+    val message: String,
+    val data: List<MemberInfoData>
+)
+
 data class MemberInfoData(
     val memberId: String,
     val memberName: String,
@@ -25,40 +31,88 @@ data class MemberInfoData(
     val memberQrCode: String
 )
 
-data class SharedMessage(
+data class SharedMessageModel(
+    val code: String,
+    val message: String,
+    val data: List<SharedMessageData>
+)
+
+data class SharedMessageData(
     val contents: String
 )
 
-data class UserIDDuplicationCheck(
+data class UserIDDuplicationCheckModel(
+    val code: String,
+    val message: String,
+    val data: UserIDDuplicationCheckData
+)
+
+data class UserIDDuplicationCheckData(
     val isDuplication: Boolean
 )
 
-data class CertifyCode(
+data class CertifyCodeModel(
+    val code: String,
+    val message: String,
+    val data: CertifyCodeData
+)
+
+data class CertifyCodeData(
     val certifyCode: String
 )
 
-data class FoundMemberId(
+data class FoundMemberIdModel(
+    val code: String,
+    val message: String,
+    val data: List<FoundMemberIdData>
+)
+
+data class FoundMemberIdData(
     val memberId: String,
     val regDate: String
 )
 
-data class FoundMemberPwd(
+data class FoundMemberPwdModel(
+    val code: String,
+    val message: String,
+    val data: FoundMemberPwdData
+)
+
+data class FoundMemberPwdData(
     val memberUUID: String
 )
 
-data class Terms(
+data class TermsModel(
+    val code: String,
+    val message: String,
+    val data: List<TermsData>
+)
+
+data class TermsData(
     val useTerms: String,
     val overYouth: String,
     val personalInfo: String,
     val locationInfo: String
 )
 
-data class Home(
+data class HomeModel(
+    val code: String,
+    val message: String,
+    val data: List<HomeData>
+)
+
+data class HomeData(
     val regularStoreList: List<RegularStoreList>,
     val recentlyVisitedStoreList: List<StoreList>
 )
 
-data class Store(
+data class StoreModel(
+    val code: String,
+    val message: String,
+    val data: StoreData
+)
+
+data class StoreData(
     val storeList: List<StoreList>
 )
 
@@ -72,7 +126,13 @@ data class StoreList(
     val imgUrl: List<String>?
 )
 
-data class StoreDetail(
+data class StoreDetailModel(
+    val code: String,
+    val message: String,
+    val data: List<StoreDetailData>
+)
+
+data class StoreDetailData(
     val code: String,
     val storeName: String,
     val address: String,
@@ -112,7 +172,13 @@ data class RegularStoreList(
     val bestProduct: List<ProductList>
 )
 
-data class Point(
+data class PointModel(
+    val code: String,
+    val message: String,
+    val data: PointData
+)
+
+data class PointData(
     val pointList: List<PointList>
 )
 
@@ -147,7 +213,13 @@ data class Add(
     val pointAssignAt: String
 )
 
-data class CouponPolicy(
+data class CouponPolicyModel(
+    val code: String,
+    val message: String,
+    val data: CouponPolicyData
+)
+
+data class CouponPolicyData(
     val couponPolicyList: List<CouponPolicyList>
 )
 
@@ -156,7 +228,13 @@ data class CouponPolicyList(
     val couponPrice: String
 )
 
-data class Coupon(
+data class CouponModel(
+    val code: String,
+    val message: String,
+    val data: List<CouponData>
+)
+
+data class CouponData(
     val count: Int,
     val couponList: List<CouponList>
 )
@@ -173,7 +251,13 @@ data class CouponList(
     val expiredStatus: String
 )
 
-data class CanBuyCouponStore(
+data class CanBuyCouponStoreModel(
+    val code: String,
+    val message: String,
+    val data: CanBuyCouponStoreData
+)
+
+data class CanBuyCouponStoreData(
     val canBuyCouponStoreList: List<CanBuyCouponStoreList>
 )
 

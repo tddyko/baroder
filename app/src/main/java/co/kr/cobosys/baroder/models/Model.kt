@@ -34,34 +34,70 @@ data class MemberInfoDataUI(
     val memberQrCode: String
 ) : Parcelable
 
+@Parcelize class SharedMessageModelUI (
+    val code: String,
+    val message: String,
+    val data: SharedMessageDataUI
+): Parcelable
+
 @Parcelize
-data class SharedMessageUI(
+data class SharedMessageDataUI(
     val contents: String
 ) : Parcelable
 
+@Parcelize class UserIDDuplicationCheckModelUI (
+    val code: String,
+    val message: String,
+    val data: UserIDDuplicationCheckDataUI
+): Parcelable
+
 @Parcelize
-data class UserIDDuplicationCheckUI(
+data class UserIDDuplicationCheckDataUI(
     val isDuplication: Boolean
 ) : Parcelable
 
+@Parcelize class CertifyCodeModelUI (
+    val code: String,
+    val message: String,
+    val data: CertifyCodeDataUI
+): Parcelable
+
 @Parcelize
-data class CertifyCodeUI(
+data class CertifyCodeDataUI(
     val certifyCode: String
 ) : Parcelable
 
+@Parcelize class FoundMemberIdModelUI (
+    val code: String,
+    val message: String,
+    val data: List<FoundMemberIdDataUI>
+): Parcelable
+
 @Parcelize
-data class FoundMemberIdUI(
+data class FoundMemberIdDataUI(
     val memberId: String,
     val regDate: String
 ) : Parcelable
+
+@Parcelize class FoundMemberPwdModelUI (
+    val code: String,
+    val message: String,
+    val data: FoundMemberPwdUI
+): Parcelable
 
 @Parcelize
 data class FoundMemberPwdUI(
     val memberUUID: String
 ) : Parcelable
 
+@Parcelize class TermsModelUI (
+    val code: String,
+    val message: String,
+    val data: List<TermsDataUI>
+): Parcelable
+
 @Parcelize
-data class TermsUI(
+data class TermsDataUI(
     val useTerms: String,
     val overYouth: String,
     val personalInfo: String,
@@ -69,15 +105,26 @@ data class TermsUI(
 ) : Parcelable
 
 /* 홈화면 및 상점 */
+@Parcelize class HomeModelUI (
+    val code: String,
+    val message: String,
+    val data: List<HomeDataUI>
+): Parcelable
 
 @Parcelize
-data class HomeUI(
+data class HomeDataUI(
     val regularStoreList: List<RegularStoreListUI>,
     val recentlyVisitedStoreList: List<StoreListUI>
 ) : Parcelable
 
+@Parcelize class StoreModelUI (
+    val code: String,
+    val message: String,
+    val data: StoreDataUI
+): Parcelable
+
 @Parcelize
-data class StoreUI(
+data class StoreDataUI(
     val storeList: List<StoreListUI>
 ) : Parcelable
 
@@ -92,8 +139,14 @@ data class StoreListUI(
     val imgUrl: List<String>?
 ) : Code, Parcelable
 
+@Parcelize class StoreDetailModelUI (
+    val code: String,
+    val message: String,
+    val data: List<StoreDetailDataUI>
+): Parcelable
+
 @Parcelize
-data class StoreDetailUI(
+data class StoreDetailDataUI(
     override val code: String,
     val storeName: String,
     val address: String,
@@ -138,8 +191,14 @@ data class RegularStoreListUI(
 
 /* 포인트 */
 
+@Parcelize class PointModelUI (
+    val code: String,
+    val message: String,
+    val data: PointDataUI
+): Parcelable
+
 @Parcelize
-data class PointUI(
+data class PointDataUI(
     val pointList: List<PointListUI>
 ) : Parcelable
 
@@ -180,9 +239,14 @@ data class AddUI(
 ) : Parcelable
 
 /* 쿠폰 */
+@Parcelize class CouponPolicyModelUI (
+    val code: String,
+    val message: String,
+    val data: CouponPolicyDataUI
+): Parcelable
 
 @Parcelize
-data class CouponPolicyUI(
+data class CouponPolicyDataUI(
     val couponPolicyList: List<CouponPolicyListUI>
 ) : Parcelable
 
@@ -192,8 +256,14 @@ data class CouponPolicyListUI(
     val couponPrice: String
 ) : Parcelable
 
+@Parcelize class CouponModelUI (
+    val code: String,
+    val message: String,
+    val data: List<CouponDataUI>
+): Parcelable
+
 @Parcelize
-data class CouponUI(
+data class CouponDataUI(
     val count: Int,
     val couponList: List<CouponListUI>
 ) : Parcelable
@@ -211,8 +281,14 @@ data class CouponListUI(
     val expiredStatus: String
 ) : Parcelable
 
+@Parcelize class CanBuyCouponStoreModelUI (
+    val code: String,
+    val message: String,
+    val data: CanBuyCouponStoreDataUI
+): Parcelable
+
 @Parcelize
-data class CanBuyCouponStoreUI(
+data class CanBuyCouponStoreDataUI(
     val canBuyCouponStoreList: List<CanBuyCouponStoreListUi>
 ) : Parcelable
 

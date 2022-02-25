@@ -15,10 +15,10 @@ interface Request {
         @Field("over_youth_yn") older: String,
         @Field("personal_info_yn") personal: String,
         @Field("location_info_yn") location: String
-    ): SharedMessageResponse
+    ): SharedMessageResponseModel
 
     @GET("v1/home/clause")
-    suspend fun checkTerms(): TermsResponse
+    suspend fun checkTerms(): TermsResponseModel
 
     @PUT("tku/v1/member/mod")
     suspend fun updateMemberInfo(
@@ -39,7 +39,7 @@ interface Request {
     suspend fun signOutMember(
         @Header("Authorization") token: String,
         @Path("reason") reason: String
-    ): SharedMessageResponse
+    ): SharedMessageResponseModel
 
     @GET("tku/v1/member")
     suspend fun memberDetailInfo(
@@ -56,24 +56,26 @@ interface Request {
     @GET("v1/member/duplication")
     suspend fun checkUserIdDuplication(
         @Query("member_id") memberId: String
-    ): UserIDDuplicationCheckResponse
+    ): UserIDDuplicationCheckResponseModel
 
+    @FormUrlEncoded
     @POST("v1/member/id")
     suspend fun findMemberId(
         @Field("hp_no") PhoneNum: String
-    ): FoundMemberIdResponse
+    ): FoundMemberIdResponseModel
 
     @POST("v1/member/certify")
     suspend fun requestCertifyCode(
         @Field("hp_no") PhoneNum: String,
         @Field("duplication") duplication: String
-    ): CertifyCodeResponse
+    ): CertifyCodeResponseModel
 
+    @FormUrlEncoded
     @POST("v1/member/find/pwd")
     suspend fun findMemberPwd(
         @Field("member_id") id: String,
         @Field("hp_no") phoneNum: String
-    ): FoundMemberPwdResponse
+    ): FoundMemberPwdResponseModel
 
     @PUT("v1/member/new/pwd")
     suspend fun changePassword(
@@ -84,27 +86,27 @@ interface Request {
     @GET("tku/v1/member/point")
     suspend fun checkPointList(
         @Header("Authorization") token: String
-    ): PointResponse
+    ): PointResponseModel
 
     @GET("v1/home/rmd")
     suspend fun checkHomeStoreList(
         @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreResponse
+    ): StoreResponseModel
 
     @GET("tku/v1/home/recent")
     suspend fun checkHomeRecentStoreList(
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreResponse
+    ): StoreResponseModel
 
     @GET("tku/v1/home")
     suspend fun checkHomeList(
         @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): HomeResponse
+    ): HomeResponseModel
 
     @GET("v1/store/list")
     suspend fun checkStoreList(
@@ -112,7 +114,7 @@ interface Request {
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double,
         @Query("options") options: Int
-    ): StoreResponse
+    ): StoreResponseModel
 
     @GET("v1/store")
     suspend fun checkStoreDtail(
@@ -120,43 +122,44 @@ interface Request {
         @Query("store_cd") code: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreDetailResponse
+    ): StoreDetailResponseModel
 
+    @FormUrlEncoded
     @POST("tku/v1/store/booked/status")
     suspend fun favoriteStoreRegister(
         @Header("Authorization") token: String,
         @Field("store_cd") code: String
-    ): SharedMessageResponse
+    ): SharedMessageResponseModel
 
     @DELETE("tku/v1/store/booked/cancel")
     suspend fun favoriteStoreDelete(
         @Header("Authorization") token: String,
         @Path("store_cd") code: String,
-    ): SharedMessageResponse
+    ): SharedMessageResponseModel
 
     @GET("tku/v1/store/patron")
     suspend fun recentlyVisitedStoreReq(
         @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreResponse
+    ): StoreResponseModel
 
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @PUT("tku/v1/store/patron/status")
     suspend fun changeRecentStore(
         @Header("Authorization") token: String,
         @Field("store_cd") code: Map<String, String>
-    ): SharedMessageResponse
+    ): SharedMessageResponseModel
 
     @GET("tku/v1/store/booked")
     suspend fun checkFavoriteStore(
         @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double
-    ): StoreResponse
+    ): StoreResponseModel
 
     @GET("v1/coupon/policy")
-    suspend fun checkCouponPolicy(): CouponPolicyResponse
+    suspend fun checkCouponPolicy(): CouponPolicyResponseModel
 
     @PUT("tku/v1/coupon/buy")
     suspend fun buyCoupon(
@@ -173,11 +176,11 @@ interface Request {
         @Header("Authorization") token: String,
         @Query("usable_yn") usableStatus: String,
         @Query("store_cd") code: String
-    ): CouponResponse
+    ): CouponResponseModel
 
     @GET("tku/v1/coupon/buy/store/list")
     suspend fun canBuyCouponStoreList(
         @Header("Authorization") token: String,
         @Query("coupon_amt") couponPrice: String
-    ): CanBuyCouponStoreResponse
+    ): CanBuyCouponStoreResponseModel
 }

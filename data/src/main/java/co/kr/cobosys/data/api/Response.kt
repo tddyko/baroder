@@ -38,24 +38,54 @@ data class SharedMessageResponseData(
     @SerializedName ("contents") val contents: String
 )
 
+data class UserIDDuplicationCheckResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: UserIDDuplicationCheckResponseData
+)
+
 data class UserIDDuplicationCheckResponseData(
     @SerializedName ("is_duplicate") val isDuplication: Boolean
 )
 
-data class CertifyCodeResponse(
+data class CertifyCodeResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: CertifyCodeResponseData
+)
+
+data class CertifyCodeResponseData(
     @SerializedName ("certify_no") val certifyCode: String
 )
 
-data class FoundMemberIdResponse(
+data class FoundMemberIdResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<FoundMemberIdResponseData>
+)
+
+data class FoundMemberIdResponseData(
     @SerializedName("member_id") val memberId: String,
     @SerializedName("reg_date") val regDate: String
 )
 
-data class FoundMemberPwdResponse(
+data class FoundMemberPwdResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data:FoundMemberPwdResponseData
+)
+
+data class FoundMemberPwdResponseData(
     @SerializedName ("member_uuid") val memberUUID: String
 )
 
-data class TermsResponse(
+data class TermsResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<TermsResponseData>
+)
+
+data class TermsResponseData(
     @SerializedName ("use_clause") val useTerms: String,
     @SerializedName ("over_youth") val overYouth: String,
     @SerializedName ("personal_info") val personalInfo: String,
@@ -63,12 +93,24 @@ data class TermsResponse(
 )
 
 // 회원
-data class HomeResponse(
+data class HomeResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<HomeResponseData>
+)
+
+data class HomeResponseData(
     @SerializedName ("patron_home") val regularStoreList: List<RegularStoreListResponse>,
     @SerializedName ("recent_home") val recentlyVisitedStoreList: List<StoreListResponse>
 )
 
-data class StoreResponse(
+data class StoreResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: StoreResponseData
+)
+
+data class StoreResponseData(
     @SerializedName ("store_list") val storeList: List<StoreListResponse>
 )
 
@@ -82,7 +124,13 @@ data class StoreListResponse(
     @SerializedName("imgUrl") val imgUrl: List<String>
 )
 
-data class StoreDetailResponse(
+data class StoreDetailResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<StoreDetailResponseData>
+)
+
+data class StoreDetailResponseData(
     @SerializedName("store_cd") val code: String,
     @SerializedName("store_nm") val storeName: String,
     @SerializedName("address") val address: String,
@@ -99,7 +147,6 @@ data class StoreDetailResponse(
     @SerializedName("images(List)") val imgUrl: List<String>?,
     @SerializedName("menu_list") val menuList: List<MenuListResponse>
 )
-
 
 data class MenuListResponse(
     @SerializedName ("menu") val menu: String,
@@ -123,7 +170,13 @@ data class RegularStoreListResponse(
     @SerializedName("product_list") val bestProduct: List<ProductListResponse>
 )
 
-data class PointResponse(
+data class PointResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: PointResponseData
+)
+
+data class PointResponseData(
     @SerializedName ("store_point") val pointList: List<PointListResponse>
 )
 
@@ -158,7 +211,13 @@ data class AddResponse(
     @SerializedName ("mile_assign_at") val pointAmt: String
 )
 
-data class CouponPolicyResponse(
+data class CouponPolicyResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: CouponPolicyResponseData
+)
+
+data class CouponPolicyResponseData(
     @SerializedName ("coupon_list") val couponPolicyList: List<CouponPolicyListResponse>
 )
 
@@ -167,7 +226,13 @@ data class CouponPolicyListResponse(
     @SerializedName ("coupon_amt") val couponPrice: String
 )
 
-data class CouponResponse(
+data class CouponResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: List<CouponResponseData>
+)
+
+data class CouponResponseData(
     @SerializedName ("coupon_cnt") val count: Int,
     @SerializedName ("coupon_list") val couponList: List<CouponListResponse>
 )
@@ -184,7 +249,13 @@ data class CouponListResponse(
     @SerializedName ("expired_yn") val expiredStatus: String
 )
 
-data class CanBuyCouponStoreResponse(
+data class CanBuyCouponStoreResponseModel(
+    @SerializedName("code") val code: String,
+    @SerializedName("message") val message: String,
+    @SerializedName("data") val data: CanBuyCouponStoreResponseData
+)
+
+data class CanBuyCouponStoreResponseData(
     @SerializedName ("coupon_list") val canBuyCouponStoreList: List<CanBuyCouponStoreListResponse>
 )
 
