@@ -8,7 +8,7 @@ import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentMyPageBinding
 import co.kr.cobosys.baroder.extension.viewBinding
-import co.kr.cobosys.baroder.main.BoardingDialog
+import co.kr.cobosys.baroder.main.OnBoardingDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,7 +24,7 @@ class MyPageFragmnet: Fragment(R.layout.fragment_my_page) {
         }
 
         binding.myPageLearnMoreAre.setOnClickListener {
-            BoardingDialog.show(childFragmentManager)
+            OnBoardingDialog.show(childFragmentManager)
         }
     }
 }
