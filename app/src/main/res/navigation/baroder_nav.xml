@@ -80,7 +80,12 @@
                 app:exitAnim="@anim/animate_slide_left_exit"
                 app:popEnterAnim="@anim/animate_slide_in_left"
                 app:popExitAnim="@anim/animate_slide_out_right"
-                />
+                >
+                <argument
+                    android:name="appBarHide"
+                    app:argType="integer"
+                    android:defaultValue="1"/>
+            </action>
 
         </fragment>
 
@@ -88,6 +93,11 @@
             android:id="@+id/mypage_coupon"
             android:name="co.kr.cobosys.baroder.coupon.CouponFragment"
             tools:layout="@layout/fragment_coupon">
+
+            <argument
+                android:name="appBarHide"
+                app:argType="integer"
+                android:defaultValue="0" />
 
         </fragment>
 
