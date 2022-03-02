@@ -67,6 +67,7 @@ dependencies {
     //network
     implementation(Depends.Libraries.retrofit)
     implementation(Depends.Libraries.logging_interceptor)
+    implementation(Depends.Libraries.coroutine_adapter)
     //localDB
     implementation(Depends.Libraries.dataStore_preferences)
     implementation(Depends.Libraries.room)

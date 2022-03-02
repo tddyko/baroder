@@ -1,10 +1,10 @@
 package co.kr.cobosys.baroder.home
 
-import co.kr.cobosys.baroder.base.viewmodels.BaseViewModel
+import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(): BaseViewModel() {
+class HomeViewModel @Inject constructor(): ViewModel() {
 
 }

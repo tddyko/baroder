@@ -66,10 +66,10 @@ interface Request {
     ): FoundMemberIdResponseModel
 
     @POST("v1/member/certify")
-    suspend fun requestCertifyCode(
+    fun requestCertifyCode(
         @Field("hp_no") phoneNum: String,
         @Field("duplication") duplication: String
-    ): CertifyCodeResponseModel
+    ): Flow<CertifyCodeResponseModel>
 
     @FormUrlEncoded
     @POST("v1/member/find/pwd")

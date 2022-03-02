@@ -6,12 +6,12 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 interface CertifyCodeDataSource {
-    suspend fun certifyCode(phoneNum: String, duplication: String): CertifyCodeResponseModel
+    fun certifyCode(phoneNum: String, duplication: String): Flow<CertifyCodeResponseModel>
 }
 
 class CertifyCodeDataSourceImpl @Inject constructor(
     private val reqApi: Request
 ): CertifyCodeDataSource {
 
-    override suspend fun certifyCode(phoneNum: String, duplication: String): CertifyCodeResponseModel = reqApi.requestCertifyCode(phoneNum, duplication)
+    override fun certifyCode(phoneNum: String, duplication: String): Flow<CertifyCodeResponseModel> = reqApi.requestCertifyCode(phoneNum, duplication)
 }

@@ -11,8 +11,8 @@ import javax.inject.Inject
 
 class GetCertifyCodeUseCase @Inject constructor(
     private val certifyCode: CertifyCodeRepo
-) : GeneralParamsUseCase<CertifyCodeModel, GetCertifyCodeParams> {
-    override suspend fun invoke(params: GetCertifyCodeParams): CertifyCodeModel =
+) : GeneralParamsUseCase<Flow<CertifyCodeModel>, GetCertifyCodeParams> {
+    override suspend fun invoke(params: GetCertifyCodeParams): Flow<CertifyCodeModel> =
         certifyCode.getCertifyCode(phoneNum = params.phoneNum, duplication = params.duplication)
 }
 

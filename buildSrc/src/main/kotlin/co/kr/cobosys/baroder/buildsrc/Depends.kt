@@ -22,6 +22,7 @@ object Depends {
         const val okhttpLoggingVersion = "5.0.0-alpha.2"
         const val chuckerVersion = "3.5.2"
         const val gsonVersion = "2.9.0"
+        const val coroutineAdapterVersion = "0.9.2"
         // 제트팩 세팅
         const val lifecycleVersion = "2.4.0"
         const val coordinatorLayoutVersion = "1.1.0"
@@ -148,6 +149,7 @@ object Depends {
         const val logging_interceptor =
             "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpLoggingVersion}"
         const val converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.gsonVersion}"
+        const val coroutine_adapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${Versions.coroutineAdapterVersion}"
         // 테스트 세팅
         const val junit = "junit:junit:${Versions.junitVersion}"
         const val test_runner = "androidx.test:runner:${Versions.supportTestVersion}"

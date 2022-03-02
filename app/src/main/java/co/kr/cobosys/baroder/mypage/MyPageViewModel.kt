@@ -1,10 +1,10 @@
 package co.kr.cobosys.baroder.mypage
 
-import co.kr.cobosys.baroder.base.viewmodels.BaseViewModel
+import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MyPageViewModel @Inject constructor(): BaseViewModel() {
+class MyPageViewModel @Inject constructor(): ViewModel() {
 
 }
