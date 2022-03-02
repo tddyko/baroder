@@ -10,5 +10,5 @@ class CertifyCodeRepoImpl @Inject constructor(
     private val certifyCode: CertifyCodeDataSource
 ) : CertifyCodeRepo {
     override suspend fun getCertifyCode(phoneNum: String, duplication: String): CertifyCodeModel =
-        CertifyCodeMapper().mapLeftToRight(certifyCode.certifyCode(phoneNum = phoneNum, duplication = duplication))
+
 }
