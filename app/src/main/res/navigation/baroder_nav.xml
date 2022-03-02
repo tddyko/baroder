@@ -44,9 +44,6 @@
             app:popUpTo="@id/root_fragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_bottom_navigation_fragment_to_sign_in_fragment"
-            app:destination="@id/sign_in_fragment" />
-        <action
             android:id="@+id/action_bottom_navigation_fragment_to_mypage_navigation"
             app:destination="@id/mypage_navigation"
             app:enterAnim="@anim/animate_slide_left_enter"
@@ -56,20 +53,13 @@
             />
     </fragment>
 
-    <fragment
-        android:id="@+id/sign_in_fragment"
-        android:name="co.kr.cobosys.baroder.auth.signin.SignInFragment"
-        tools:layout="@layout/fragment_sign_in">
-
-    </fragment>
-
     <navigation
         android:id="@+id/mypage_navigation"
         app:startDestination="@id/mypage_fragment">
 
         <fragment
             android:id="@+id/mypage_fragment"
-            android:name="co.kr.cobosys.baroder.mypage.MyPageFragmnet"
+            android:name="co.kr.cobosys.baroder.mypage.MyPageFragment"
             tools:layout="@layout/fragment_my_page"
             android:label="MY">
 
@@ -92,7 +82,8 @@
         <fragment
             android:id="@+id/mypage_coupon"
             android:name="co.kr.cobosys.baroder.coupon.CouponFragment"
-            tools:layout="@layout/fragment_coupon">
+            tools:layout="@layout/fragment_coupon"
+            android:label="">
 
             <argument
                 android:name="appBarHide"

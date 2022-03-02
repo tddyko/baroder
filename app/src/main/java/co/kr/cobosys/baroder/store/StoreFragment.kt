@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentStoreBinding
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
+import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,5 +21,6 @@ class StoreFragment : Fragment(R.layout.fragment_store) {
         binding.storeAppBar.sharedAppBarMenu.setOnClickListener {
             findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
+        binding.storeAppBar.homeQr.gone()
     }
 }

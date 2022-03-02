@@ -79,7 +79,6 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.root_fragment,
                 R.id.bottom_navigation_fragment,
-                R.id.sign_in_fragment,
                 -> {
                     binding.rootActivityToolbar.gone()
                 }
@@ -93,6 +92,9 @@ class MainActivity : AppCompatActivity() {
 
                 }
                 else -> {
+                    binding.rootActivityToolbar.setTitleTextColor(getColor(R.color.primary_color_text))
+                    binding.rootActivityToolbar.setNavigationIconTint(getColor(R.color.secondary_text_color))
+                    binding.rootActivityToolbar.setBackgroundColor(getColor(R.color.white))
                     binding.rootActivityToolbar.visible()
                 }
             }

@@ -7,6 +7,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentHomeBinding
+import co.kr.cobosys.baroder.base.utils.Edge
+import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.extension.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,8 +25,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.homeAppBar.sharedAppBarMenu.setOnClickListener {
-            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToSignInFragment())
+            findNavController().navigate(BottomNavFragmentDirections.actionBottomNavigationFragmentToMypageNavigation())
         }
-
     }
 }

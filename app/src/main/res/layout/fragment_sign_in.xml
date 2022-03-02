@@ -4,16 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/sign_in_cancel_btn"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_in_cancel_btn_area"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="14dp"
-        android:src="@drawable/ic_cancel_icon"
+        android:paddingVertical="15dp"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/sign_in_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:src="@drawable/ic_cancel_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sign_in_baroder_logo"
@@ -23,17 +37,17 @@
         android:src="@drawable/ic_baroder_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in_cancel_btn"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_cancel_btn_area"
         app:layout_constraintWidth_max="95dp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/sign_in_info_text"
         style="@style/sub_text_14sp"
-        android:maxLines="2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center|center_vertical"
+        android:maxLines="2"
         android:text="@string/sign_info_text"
         android:textColor="@color/secondary_text_color"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +85,8 @@
             android:letterSpacing="-0.04"
             android:padding="15dp"
             android:singleLine="true"
-            android:textSize="15sp"
             android:text="cobo1"
+            android:textSize="15sp"
             app:layout_alignSelf="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -83,13 +97,13 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxBackgroundColor="@color/btn_grey"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/btn_grey"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:endIconMode="clear_text"
@@ -108,8 +122,8 @@
             android:maxLength="15"
             android:padding="15dp"
             android:singleLine="true"
-            android:textSize="15sp"
             android:text="a123456!"
+            android:textSize="15sp"
             app:layout_alignSelf="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -119,12 +133,12 @@
         style="@style/sign_in_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/button_enable"
-        android:paddingHorizontal="136dp"
-        android:paddingVertical="15dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/button_enable"
         android:enabled="true"
+        android:paddingHorizontal="136dp"
+        android:paddingVertical="15dp"
         android:text="@string/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +154,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_in_btn">
+
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/sign_in_find_id"
             style="@style/sub_text_14sp"

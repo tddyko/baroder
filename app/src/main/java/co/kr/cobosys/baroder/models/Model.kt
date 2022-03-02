@@ -2,6 +2,7 @@ package co.kr.cobosys.baroder.models
 
 import android.os.Parcelable
 import co.kr.cobosys.baroder.base.adapter.Code
+import co.kr.cobosys.domain.models.AccessTokenData
 import co.kr.cobosys.domain.models.StoreList
 import kotlinx.parcelize.Parcelize
 

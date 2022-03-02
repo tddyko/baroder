@@ -1,5 +1,6 @@
 package co.kr.cobosys.data.api
 
+import kotlinx.coroutines.flow.Flow
 import retrofit2.http.*
 
 interface Request {
@@ -30,10 +31,10 @@ interface Request {
 
     @FormUrlEncoded
     @POST("v1/login")
-    suspend fun logIn(
+    fun logIn(
         @Field("member_id") id: String,
         @Field("member_pwd") pwd: String
-    ): AccessTokenResponseModel
+    ): Flow<AccessTokenResponseModel>
 
     @DELETE("tku/v1/member/quit")
     suspend fun signOutMember(

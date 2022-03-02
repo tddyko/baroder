@@ -10,52 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentOnboardingBinding
+import co.kr.cobosys.baroder.extension.gone
+import co.kr.cobosys.baroder.extension.invisible
 import co.kr.cobosys.baroder.extension.viewBinding
+import co.kr.cobosys.baroder.extension.visible
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
 import dagger.hilt.android.AndroidEntryPoint
 
-//class OnBoardingFragment: Fragment() {
-//    private val binding by viewInflateBinding(FragmentOnboardingBinding::inflate)
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater,
-//        container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//        binding.onboardingViewpager.adapter = OnBoardingPagerAdapter()
-//        binding.onboardingIndicator.setViewPager2(binding.onboardingViewpager)
-//        binding.nextBtn.setOnClickListener {
-//            binding.onboardingViewpager.currentItem = binding.onboardingViewpager.currentItem + 1
-//        }
-//        binding.onboardingViewpager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
-//            override fun onPageScrolled(
-//                position: Int,
-//                positionOffset: Float,
-//                positionOffsetPixels: Int
-//            ) {
-//                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-//                binding.nextBtn.isEnabled = 2 != position
-//            }
-//
-//            override fun onPageSelected(position: Int) {
-//                super.onPageSelected(position)
-//            }
-//
-//            override fun onPageScrollStateChanged(state: Int) {
-//                super.onPageScrollStateChanged(state)
-//            }
-//        })
-//
-//        return binding.root
-//    }
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//
-//        super.onViewCreated(view, savedInstanceState)
-//    }
-//}
-
-class OnBoardingItem(itemView: View) : RecyclerView.ViewHolder(itemView) {
-}
+class OnBoardingItem(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 class OnBoardingPagerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -72,58 +34,58 @@ class OnBoardingPagerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                 LayoutInflater.from(context).inflate(R.layout.item_onboarding_third, parent, false)
             )
         }
+
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return position
-    }
+    override fun getItemViewType(position: Int): Int = position
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-    }
+    override fun getItemCount(): Int = 3
 
-    override fun getItemCount(): Int {
-        return 3
-    }
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {}
+
 }
 
 @AndroidEntryPoint
 class OnBoardingDialog : DialogFragment(R.layout.fragment_onboarding) {
-    val binding by viewBinding(FragmentOnboardingBinding::bind)
+
+    private val binding by viewBinding(FragmentOnboardingBinding::bind)
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val viewpager = binding.onboardingViewpager
-        val indicator = binding.onboardingIndicator
-        val nextBtn = binding.nextBtn
-        val skipBtn = binding.skipBtn
-        val completeBtn = binding.onboardingComplete
 
-        viewpager.adapter = OnBoardingPagerAdapter()
-        indicator.setViewPager2(viewpager)
-        nextBtn.setOnClickListener {
-            viewpager.currentItem = viewpager.currentItem + 1
+        binding.onboardingViewpager.adapter = OnBoardingPagerAdapter()
+
+        binding.onboardingIndicator.setViewPager2(binding.onboardingViewpager)
+        binding.nextBtn.setOnClickListener {
+            binding.onboardingViewpager.currentItem = binding.onboardingViewpager.currentItem + 1
         }
-        skipBtn.setOnClickListener {
+        binding.skipBtn.setOnClickListener {
             dismiss()
         }
-        completeBtn.setOnClickListener {
+        binding.onboardingComplete.setOnClickListener {
             dismiss()
         }
-        viewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+
+        binding.onboardingBackBtn.setOnClickListener {
+            dismiss()
+        }
+
+        binding.onboardingViewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-                nextBtn.isEnabled = 2 != position
+                binding.nextBtn.isEnabled = 2 != position
                 if (2 == position) {
-                    completeBtn.visibility = View.VISIBLE
-                    nextBtn.visibility = View.INVISIBLE
-                    skipBtn.visibility = View.INVISIBLE
+                    binding.onboardingComplete.visible()
+                    binding.nextBtn.invisible()
+                    binding.skipBtn.invisible()
                 } else {
-                    completeBtn.visibility = View.INVISIBLE
-                    nextBtn.visibility = View.VISIBLE
-                    skipBtn.visibility = View.VISIBLE
+                    binding.onboardingComplete.invisible()
+                    binding.nextBtn.visible()
+                    binding.skipBtn.visible()
                 }
             }
         })
