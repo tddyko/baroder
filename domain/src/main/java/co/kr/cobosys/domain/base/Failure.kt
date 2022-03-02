@@ -1,13 +1,9 @@
 package co.kr.cobosys.domain.base
 
-sealed class Failure(var msg: String?, var retryAction: () -> Unit) : Throwable() {
+sealed class Failure<out T> {
 
-    class Api(msg: String? = null) : Failure(msg, {})
-
-    class Timeout(msg: String? = null) : Failure(msg, {})
-
-    class NoInternet(msg: String? = null) : Failure(msg, {})
-
-    class Unknown(msg: String? = null) : Failure(msg, {})
-
+    class Waiting<out T>: Failure<T>()
+    class Loading<out T>: Failure<T>()
+    class Success<out T>: Failure<Nothing>()
+    class Error<out T>: Failure<Nothing>()
 }

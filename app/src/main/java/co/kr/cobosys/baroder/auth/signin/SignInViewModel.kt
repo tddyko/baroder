@@ -1,7 +1,7 @@
 package co.kr.cobosys.baroder.auth.signin
 
 import androidx.lifecycle.viewModelScope
-import co.kr.cobosys.baroder.base.viewmodels.BaseViewModel
+import androidx.lifecycle.ViewModel
 import co.kr.cobosys.baroder.models.AccessTokenModelUI
 import co.kr.cobosys.baroder.models.mappers.auth.AccessTokenMapper
 import co.kr.cobosys.domain.usecases.auth.GetAccessTokenParams
@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignInViewModel @Inject constructor(
     private val getAccessTokenUseCase: GetAccessTokenUseCase
-) : BaseViewModel() {
+) : ViewModel() {
     private val _accessToken = MutableStateFlow("")
 
     val accessToken = _accessToken.asStateFlow()

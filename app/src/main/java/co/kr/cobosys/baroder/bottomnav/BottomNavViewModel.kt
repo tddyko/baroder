@@ -1,6 +1,6 @@
 package co.kr.cobosys.baroder.bottomnav
 
-import co.kr.cobosys.baroder.base.viewmodels.BaseViewModel
+import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -13,7 +13,7 @@ enum class BottomType {
 }
 
 @HiltViewModel
-class BottomNavViewModel @Inject constructor(): BaseViewModel(){
+class BottomNavViewModel @Inject constructor(): ViewModel(){
 
 
 

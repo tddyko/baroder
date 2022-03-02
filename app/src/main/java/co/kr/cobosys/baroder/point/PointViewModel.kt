@@ -1,9 +1,9 @@
 package co.kr.cobosys.baroder.point
 
-import co.kr.cobosys.baroder.base.viewmodels.BaseViewModel
+import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class PointViewModel @Inject constructor(): BaseViewModel() {
+class PointViewModel @Inject constructor(): ViewModel() {
 }
