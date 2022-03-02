@@ -23,6 +23,8 @@ class SignInViewModel @Inject constructor(
         MutableStateFlow(Failure.Waiting())
     val loginResult = _loginResult.asStateFlow()
 
+    private val _accessToken = MutableStateFlow("")
+
 //    private suspend fun doLogin(id: String, pwd: String): Flow<AccessTokenModelUI> =
 //        getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd)).map { it.toAccessTokenModelUI() }
 
@@ -37,8 +39,9 @@ class SignInViewModel @Inject constructor(
                     } else {
                         _loginResult.value = Failure.Error(data.code, data.message)
                     }
+                    _accessToken.value = data.data.accessToken
                 }
-            Timber.e("액세스토큰값좀 봅시다 -> ${_loginResult.value}")
+            Timber.e("액세스토큰값좀 봅시다 -> ${_accessToken.value}")
         }
     }
 }

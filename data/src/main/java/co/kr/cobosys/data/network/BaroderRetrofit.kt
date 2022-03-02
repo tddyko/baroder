@@ -1,6 +1,7 @@
 package co.kr.cobosys.data.network
 
 import co.kr.cobosys.baroder.data.BuildConfig
+import co.kr.cobosys.data.network.adapter.FlowCallAdapterFactory
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -16,6 +17,7 @@ class BaroderRetrofit @Inject constructor(
     val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create(gson))
+        .addCallAdapterFactory(FlowCallAdapterFactory())
         .client(okHttpClient)
         .build()
 }

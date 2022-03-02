@@ -41,12 +41,8 @@ class SignInFragment: DialogFragment(R.layout.fragment_sign_in) {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dlg =  super.onCreateDialog(savedInstanceState)
         dlg.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dlg.window?.setWindowAnimations(R.style.DialogAnimationSlideUp)
         return dlg
-    }
-
-    override fun onStart() {
-        super.onStart()
-        dialog?.window?.setWindowAnimations(R.style.DialogAnimationSlideUp)
     }
 
 //    companion object {
