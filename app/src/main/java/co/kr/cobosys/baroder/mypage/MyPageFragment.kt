@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentMyPageBinding
 import co.kr.cobosys.baroder.auth.signin.SignInFragment
+import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.baroder.extension.visible
 import co.kr.cobosys.baroder.main.OnBoardingDialog
@@ -27,7 +28,14 @@ class MyPageFragment: Fragment(R.layout.fragment_my_page) {
         }
 
         binding.mypageBaroderLearnMoreImg.setOnClickListener {
-            OnBoardingDialog.show(childFragmentManager)
+            //OnBoardingDialog.show(childFragmentManager)
+            MessageDialog.show(
+                childFragmentManager,
+                "알림",
+                "바로더 알아보기를 누르셨습니다."
+            ) { ret: Int ->
+                MessageDialog.alert(childFragmentManager, "선택한건 !", "당신의 선택은: $ret") { }
+            }
         }
         binding.myPageLoginPls.visible()
         binding.myPageLoginPls.setOnClickListener{
