@@ -1,6 +1,5 @@
 package co.kr.cobosys.domain.usecases.coupon
 
-import co.kr.cobosys.domain.base.usecases.GeneralPagingUseCase
 import co.kr.cobosys.domain.base.usecases.GeneralParamsUseCase
 import co.kr.cobosys.domain.models.CouponModel
 import co.kr.cobosys.domain.repos.coupon.CouponRepo
@@ -9,8 +8,8 @@ import javax.inject.Inject
 
 class GetCouponUseCase @Inject constructor(
     private val coupon: CouponRepo
-) : GeneralParamsUseCase<CouponModel, GetCouponParams> {
-    override suspend fun invoke(params: GetCouponParams): CouponModel =
+) : GeneralParamsUseCase<Flow<CouponModel>, GetCouponParams> {
+    override suspend fun invoke(params: GetCouponParams): Flow<CouponModel> =
         coupon.getCoupon(params.ids)
 }
 

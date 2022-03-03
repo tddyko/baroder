@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetHomeUseCase @Inject constructor(
     private val storeRepository: HomeRepo
-) : GeneralUseCase<HomeModel> {
-    override suspend fun invoke(): HomeModel =
+) : GeneralUseCase<Flow<HomeModel>> {
+    override suspend fun invoke(): Flow<HomeModel> =
         storeRepository.getHome()
 }

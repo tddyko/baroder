@@ -121,7 +121,7 @@ data class StoreListResponse(
     @SerializedName("booked_status") val favorite: Boolean,
     @SerializedName("patron_yn") val regular: String,
     @SerializedName("distance") val distance: Double,
-    @SerializedName("imgUrl") val imgUrl: List<String>
+    @SerializedName("imgUrl") val imgUrl: List<String>?
 )
 
 data class StoreDetailResponseModel(
@@ -166,7 +166,7 @@ data class RegularStoreListResponse(
     @SerializedName("goal_mile") val maxPoint: Int,
     @SerializedName("less_mile") val minPoint: Int,
     @SerializedName("coupon_cnt") val coupon: Int,
-    @SerializedName("file_path") val bestProductImgUrl: List<String>,
+    @SerializedName("file_path") val bestProductImgUrl: List<String>?,
     @SerializedName("product_list") val bestProduct: List<ProductListResponse>
 )
 

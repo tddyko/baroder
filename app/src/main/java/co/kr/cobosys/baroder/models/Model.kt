@@ -2,8 +2,6 @@ package co.kr.cobosys.baroder.models
 
 import android.os.Parcelable
 import co.kr.cobosys.baroder.base.adapter.Code
-import co.kr.cobosys.domain.models.AccessTokenData
-import co.kr.cobosys.domain.models.StoreList
 import kotlinx.parcelize.Parcelize
 
 /* 로그인 및 회원관련 */
@@ -290,11 +288,11 @@ data class CouponListUI(
 
 @Parcelize
 data class CanBuyCouponStoreDataUI(
-    val canBuyCouponStoreList: List<CanBuyCouponStoreListUi>
+    val canBuyCouponStoreList: List<CanBuyCouponStoreListUI>
 ) : Parcelable
 
 @Parcelize
-data class CanBuyCouponStoreListUi(
+data class CanBuyCouponStoreListUI(
     override val code: String,
     val storeName: String,
     val remainPoint: String

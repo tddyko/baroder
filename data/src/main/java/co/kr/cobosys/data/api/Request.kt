@@ -43,9 +43,9 @@ interface Request {
     ): SharedMessageResponseModel
 
     @GET("tku/v1/member")
-    suspend fun memberDetailInfo(
+    fun memberDetailInfo(
         @Header("Authorization") token: String
-    ): MemberInfoResponseModel
+    ): Flow<MemberInfoResponseModel>
 
     @PUT("tku/v1/member/pwd/mod")
     suspend fun changeMemberPwd(
