@@ -17,11 +17,9 @@ import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.domain.base.Failure
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
-import java.lang.Exception
-import java.net.NoRouteToHostException
 
 @AndroidEntryPoint
-class SignInFragment: DialogFragment(R.layout.fragment_sign_in) {
+class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
 
     private val binding by viewBinding(FragmentSignInBinding::bind)
     private val signInViewModel: SignInViewModel by viewModels()
@@ -43,34 +41,49 @@ class SignInFragment: DialogFragment(R.layout.fragment_sign_in) {
     private fun observe() {
         lifecycleScope.launchWhenStarted {
             signInViewModel.loginResult.collect { state ->
-                when(state) {
+                when (state) {
                     is Failure.Success -> {
                         dismiss()
                     }
-                    is Failure.Error -> {
-                        try {
-                            MessageDialog.alert(childFragmentManager, state.message, state.message, "확인", callback = {
+                    is Failure.ServerError -> {
+                        MessageDialog.alert(
+                            childFragmentManager,
+                            state.message,
+                            state.message,
+                            "확인",
+                            callback = {
                                 Utils.showToast(requireContext(), state.message).show()
                             })
-                        } catch (e: Exception) {
-                            when(e) {
-                                is NoRouteToHostException,
-                            }
-                        }
                     }
-                    else -> { }
+                    is Failure.Error -> {
+                        MessageDialog.alert(
+                            childFragmentManager,
+                            "인터넷 에러!",
+                            "인터넷 연결을 확인해주세요",
+                            "확인",
+                            callback = {}
+                        )
+                    }
+                    else -> {
+                        MessageDialog.alert(
+                            childFragmentManager,
+                            "에러!",
+                            "알 수 없는 에러입니다.",
+                            "확인",
+                            callback = {}
+                        )
+                    }
                 }
             }
         }
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dlg =  super.onCreateDialog(savedInstanceState)
+        val dlg = super.onCreateDialog(savedInstanceState)
         dlg.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dlg.window?.setWindowAnimations(R.style.DialogAnimationSlideUp)
         return dlg
     }
-
 //    companion object {
 //        fun show(fragmentMgr: FragmentManager) {
 //            val dlg = SignInFragment()
@@ -78,5 +91,4 @@ class SignInFragment: DialogFragment(R.layout.fragment_sign_in) {
 //            dlg.show(fragmentMgr, "onBoarding")
 //        }
 //    }
-
 }
