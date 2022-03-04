@@ -1,5 +1,6 @@
 package co.kr.cobosys.baroder.main
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -91,17 +92,21 @@ class OnBoardingDialog : DialogFragment(R.layout.fragment_onboarding) {
         })
     }
 
-    override fun onStart() {
-        super.onStart()
-        dialog?.window?.setWindowAnimations(R.style.DialogAnimationSlideLeftOutRight)
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog =  super.onCreateDialog(savedInstanceState)
+        dialog.window?.setWindowAnimations(R.style.DialogAnimationSlideLeftOutRight)
+        return dialog
     }
-
-    companion object {
-        fun show(fragmentMgr: FragmentManager) {
-            val dlg = OnBoardingDialog()
-
-            dlg.setStyle(STYLE_NO_TITLE, R.style.DialogThemeOnBoarding)
-            dlg.show(fragmentMgr, "onBoarding")
-        }
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        dialog?.window?.setWindowAnimations(R.style.DialogAnimationSlideLeftOutRight)
+//    }
+//    companion object {
+//        fun show(fragmentMgr: FragmentManager) {
+//            val dlg = OnBoardingDialog()
+//
+//            dlg.setStyle(STYLE_NO_TITLE, R.style.DialogThemeOnBoarding)
+//            dlg.show(fragmentMgr, "onBoarding")
+//        }
+//    }
 }

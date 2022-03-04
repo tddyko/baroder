@@ -26,6 +26,7 @@ class SignInViewModel @Inject constructor(
         MutableStateFlow(Failure.Waiting())
     private val _memberInfo: MutableStateFlow<Failure<MemberInfoDataUI>> =
         MutableStateFlow(Failure.Waiting())
+
     val loginResult = _loginResult.asStateFlow()
     val memberInfo = _memberInfo.asStateFlow()
 
@@ -33,7 +34,7 @@ class SignInViewModel @Inject constructor(
 //    private suspend fun doLogin(id: String, pwd: String): Flow<AccessTokenModelUI> =
 //        getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd)).map { it.toAccessTokenModelUI() }
 
-    fun login(id: String, pwd: String) {
+    fun signIn(id: String, pwd: String) {
         viewModelScope.launch {
             getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd)).map {
                 it.toAccessTokenModelUI()
@@ -41,21 +42,12 @@ class SignInViewModel @Inject constructor(
                 _loginResult.value = Failure.Loading()
             }.collect { data ->
                 if (data.code == "0000") {
-                    _loginResult.value = Failure.Success(data.data.accessToken)
+                    _loginResult.value = Failure.Success(data)
                 } else {
                     _loginResult.value = Failure.Error(data.code, data.message)
                 }
                 val accessToken = "Bearer ${data.data.accessToken}"
                 Timber.e("액세스토큰값좀 봅시다 -> $accessToken")
-                getMemberInfoUseCase(PutAccessToken(accessToken)).map {
-                    it.toMemberInfoModelUI()
-                }.onStart {
-                    _memberInfo.value = Failure.Loading()
-                }.collect { member ->
-                    if(member.code == "0000") {
-                        _memberInfo.value = Failure.Success(member.data)
-                    }
-                }
             }
         }
     }

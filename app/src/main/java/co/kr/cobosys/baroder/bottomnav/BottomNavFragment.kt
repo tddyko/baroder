@@ -64,8 +64,8 @@ class BottomNavFragment : Fragment() {
 //        }
 //    }
 
-    private fun onNavSelected(itemId: Int): Boolean {
-        return when (itemId) {
+    private fun onNavSelected(itemId: Int): Boolean =
+        when (itemId) {
             R.id.home_fragment -> {
 //                    if (childFragmentManager.fragments[0] !is HomeFragment) {
 //                        replaceChildFragment(createNewInstanceOf(itemId))
@@ -108,7 +108,6 @@ class BottomNavFragment : Fragment() {
                 true
             }
             else -> false
-        }
     }
 
 //    private fun replaceChildFragment(childFragment: Fragment) {

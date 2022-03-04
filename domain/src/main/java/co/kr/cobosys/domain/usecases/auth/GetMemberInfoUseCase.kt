@@ -9,10 +9,11 @@ import kotlinx.parcelize.Parcelize
 import javax.inject.Inject
 
 class GetMemberInfoUseCase @Inject constructor(
-    private val storeRepository: MemberInfoRepo
+    private val memberInfo: MemberInfoRepo
 ) : GeneralParamsUseCase<Flow<MemberInfoModel>, PutAccessToken> {
+
     override suspend fun invoke(params: PutAccessToken): Flow<MemberInfoModel> =
-        storeRepository.getMemberInfo(token = params.token)
+        memberInfo.getMemberInfo(token = params.token)
 }
 
 @Parcelize

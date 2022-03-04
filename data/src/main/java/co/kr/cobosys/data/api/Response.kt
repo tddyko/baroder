@@ -16,7 +16,7 @@ data class AccessTokenResponseData(
 data class MemberInfoResponseModel(
     @SerializedName("code") val code: String,
     @SerializedName("message") val message: String,
-    @SerializedName("data") val data: List<MemberInfoResponseData>
+    @SerializedName("data") val data: MemberInfoResponseData
 )
 
 data class MemberInfoResponseData(

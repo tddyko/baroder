@@ -20,7 +20,7 @@ data class AccessTokenDataUI(
 @Parcelize class MemberInfoModelUI (
     val code: String,
     val message: String,
-    val data: List<MemberInfoDataUI>
+    val data: MemberInfoDataUI
 ): Parcelable
 
 @Parcelize

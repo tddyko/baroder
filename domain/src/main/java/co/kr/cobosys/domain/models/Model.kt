@@ -13,13 +13,7 @@ data class AccessTokenData(
 data class MemberInfoModel(
     val code: String,
     val message: String,
-    val data: List<MemberInfoData>
-)
-
-data class MemberInfoDataModel(
-    val code: String,
-    val message: String,
-    val data: List<MemberInfoData>
+    val data: MemberInfoData
 )
 
 data class MemberInfoData(

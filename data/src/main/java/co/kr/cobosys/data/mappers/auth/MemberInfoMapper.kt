@@ -6,27 +6,23 @@ import co.kr.cobosys.domain.models.MemberInfoData
 import co.kr.cobosys.domain.models.MemberInfoModel
 
 fun MemberInfoResponseModel.toMemberInfoModel(): MemberInfoModel = MemberInfoModel(
-    code, message, data = data.map { data ->
-        MemberInfoData(
-            data.memberId,
-            data.memberName,
-            data.memberBirthDay,
-            data.memberGender,
-            data.memberPhoneNum,
-            data.memberQrCode
-        )
-    }
+    code, message, data = MemberInfoData(
+        data.memberId,
+        data.memberName,
+        data.memberBirthDay,
+        data.memberGender,
+        data.memberPhoneNum,
+        data.memberQrCode
+    )
 )
 
 fun MemberInfoModel.toMemberInfoResponseModel(): MemberInfoResponseModel = MemberInfoResponseModel(
-    code, message, data = data.map { data ->
-        MemberInfoResponseData(
-            data.memberId,
-            data.memberName,
-            data.memberBirthDay,
-            data.memberGender,
-            data.memberPhoneNum,
-            data.memberQrCode
-        )
-    }
+    code, message, data = MemberInfoResponseData(
+        data.memberId,
+        data.memberName,
+        data.memberBirthDay,
+        data.memberGender,
+        data.memberPhoneNum,
+        data.memberQrCode
+    )
 )

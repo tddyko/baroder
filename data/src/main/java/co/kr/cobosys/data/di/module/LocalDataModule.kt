@@ -3,7 +3,6 @@ package co.kr.cobosys.data.di.module
 import android.content.Context
 import androidx.room.Room
 import co.kr.cobosys.data.room.db.dao.AccessTokenDao
-import co.kr.cobosys.data.room.db.dao.UserDao
 import co.kr.cobosys.data.room.db.db.BaroderRoomDatabase
 import dagger.Module
 import dagger.Provides
@@ -26,10 +25,5 @@ class LocalDataModule {
     @Provides
     fun accessTokenDao(accessToken: BaroderRoomDatabase): AccessTokenDao =
         accessToken.accessTokenDao()
-
-    @Singleton
-    @Provides
-    fun userDao(user: BaroderRoomDatabase): UserDao =
-        user.userDao()
 
 }
