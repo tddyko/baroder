@@ -50,5 +50,10 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
             signInDialog.setStyle(STYLE_NO_TITLE, R.style.DialogThemeOnBoarding)
             signInDialog.show(childFragmentManager, "myPage")
         }
+
+        binding.mypageTermsOfUseArea.setOnClickListener {
+
+        }
+
     }
 }

@@ -115,13 +115,21 @@ data class StoreResponseData(
 )
 
 data class StoreListResponse(
+    @SerializedName ("store") val store: StoreListItemResponse,
+    @SerializedName ("images") val images: List<StoreListItemImageResponse>
+)
+
+data class StoreListItemResponse(
     @SerializedName("store_cd") val code: String,
     @SerializedName("store_nm") val name: String,
     @SerializedName("address") val address: String,
     @SerializedName("booked_status") val favorite: Boolean,
     @SerializedName("patron_yn") val regular: String,
     @SerializedName("distance") val distance: Double,
-    @SerializedName("imgUrl") val imgUrl: List<String>?
+)
+
+data class StoreListItemImageResponse(
+    @SerializedName("file_path") val imgUrl: String
 )
 
 data class StoreDetailResponseModel(

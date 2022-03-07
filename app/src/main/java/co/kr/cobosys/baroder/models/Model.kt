@@ -145,7 +145,16 @@ data class StoreListUI(
     val regular: String,
     val distance: Double,
     val imgUrl: List<String>?
-) : Code, Parcelable
+) : Code, Parcelable {
+    val storeName: String
+        get() = name
+    val storeAddress: String
+        get() = address
+    val storeDistance: String
+        get() = "나와의 거리 $distance km"
+    val srcImage: String
+        get() = if ((null == imgUrl) || (imgUrl[0].isEmpty())) { "" } else { imgUrl[0] }
+}
 
 @Parcelize
 data class StoreDetailModelUI (

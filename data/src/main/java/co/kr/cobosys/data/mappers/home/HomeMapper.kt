@@ -26,13 +26,13 @@ fun HomeResponseModel.toHomeModel(): HomeModel = HomeModel(
             },
             data.recentlyVisitedStoreList.map { recent ->
                 StoreList(
-                    recent.code,
-                    recent.name,
-                    recent.address,
-                    recent.favorite,
-                    recent.regular,
-                    recent.distance,
-                    recent.imgUrl
+                    recent.store.code,
+                    recent.store.name,
+                    recent.store.address,
+                    recent.store.favorite,
+                    recent.store.regular,
+                    recent.store.distance,
+                    recent.images.map { i -> i.imgUrl }
                 )
             }
         )
@@ -62,13 +62,15 @@ fun HomeModel.toHomeResponseModel(): HomeResponseModel = HomeResponseModel(
             },
             data.recentlyVisitedStoreList.map { recent ->
                 StoreListResponse(
-                    recent.code,
-                    recent.name,
-                    recent.address,
-                    recent.favorite,
-                    recent.regular,
-                    recent.distance,
-                    recent.imgUrl
+                    StoreListItemResponse(
+                            recent.code,
+                            recent.name,
+                            recent.address,
+                            recent.favorite,
+                            recent.regular,
+                            recent.distance
+                    ),
+                    (if (null != recent.imgUrl) { recent.imgUrl!!.map { i -> StoreListItemImageResponse(i) } } else { emptyList() }) as List<StoreListItemImageResponse>
                 )
             }
         )

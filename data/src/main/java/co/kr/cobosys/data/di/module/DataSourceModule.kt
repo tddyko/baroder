@@ -1,10 +1,17 @@
 package co.kr.cobosys.data.di.module
 
 import co.kr.cobosys.data.datasources.auth.*
+import co.kr.cobosys.data.datasources.coupon.CheckCouponListDataSource
+import co.kr.cobosys.data.datasources.coupon.CheckCouponListDataSourceImpl
+import co.kr.cobosys.data.datasources.coupon.CouponPolicyDataSource
+import co.kr.cobosys.data.datasources.coupon.CouponPolicyDataSourceImpl
+import co.kr.cobosys.data.datasources.store.StoreListDataSource
+import co.kr.cobosys.data.datasources.store.StoreListDataSourceImpl
 import co.kr.cobosys.data.datasources.local.accesstoken.LocalAccessTokenDataSource
 import co.kr.cobosys.data.datasources.local.accesstoken.LocalAccessTokenDataSourceImpl
 import co.kr.cobosys.data.datasources.local.member.LocalMemberDataSource
 import co.kr.cobosys.data.datasources.local.member.LocalMemberDataSourceImpl
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,5 +46,20 @@ class DataSourceModule {
     @Provides
     fun localMemberDataSource(localMemberDataSource: LocalMemberDataSourceImpl): LocalMemberDataSource =
         localMemberDataSource
+        
+    @Singleton
+    @Provides
+    fun couponPolicyDataSource(couponPolicyDataSource: CouponPolicyDataSourceImpl) : CouponPolicyDataSource =
+        couponPolicyDataSource
+
+    @Singleton
+    @Provides
+    fun checkCouponDataSource(checkCouponDataSource: CheckCouponListDataSourceImpl) : CheckCouponListDataSource =
+        checkCouponDataSource
+
+    @Singleton
+    @Provides
+    fun getStoreListDataSource(storeListDataSource: StoreListDataSourceImpl) : StoreListDataSource =
+        storeListDataSource
 
 }

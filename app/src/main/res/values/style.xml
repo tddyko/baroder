@@ -491,6 +491,13 @@
         <item name="android:windowBackground">@android:drawable/screen_background_dark_transparent</item>
     </style>
 
+    <style name="DialogThemeQrCodeDialog" parent="Theme.Baroder">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">@android:drawable/screen_background_dark_transparent</item>
+    </style>
+
     <!--애니메이션-->
     <style name="TopSheet_DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_out_from_top</item>
@@ -561,6 +568,12 @@
         <item name="android:windowEnterAnimation">@anim/animate_slide_up_enter</item>
         <item name="android:windowExitAnimation">@anim/animate_slide_up_exit</item>
     </style>
+
+    <style name="DialogAnimationSlideUpDown">
+        <item name="android:windowEnterAnimation">@anim/animate_slide_up_enter</item>
+        <item name="android:windowExitAnimation">@anim/animate_slide_down_exit</item>
+    </style>
+
 
     <style name="DialogAnimationSlideDown">
         <item name="android:windowEnterAnimation">@anim/animate_slide_down_enter</item>

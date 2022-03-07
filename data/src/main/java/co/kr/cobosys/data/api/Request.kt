@@ -110,12 +110,12 @@ interface Request {
     ): HomeResponseModel
 
     @GET("v1/store/list")
-    suspend fun checkStoreList(
+    fun checkStoreList(
         @Header("Authorization") token: String,
         @Query("app_latitude") latitude: Double,
         @Query("app_longitude") longitude: Double,
         @Query("options") options: Int
-    ): StoreResponseModel
+    ): Flow<StoreResponseModel>
 
     @GET("v1/store")
     suspend fun checkStoreDtail(
@@ -160,7 +160,7 @@ interface Request {
     ): StoreResponseModel
 
     @GET("v1/coupon/policy")
-    suspend fun checkCouponPolicy(): CouponPolicyResponseModel
+    fun checkCouponPolicy(): Flow<CouponPolicyResponseModel>
 
     @PUT("tku/v1/coupon/buy")
     suspend fun buyCoupon(
@@ -173,11 +173,11 @@ interface Request {
     )
 
     @GET("tku/v1/coupon/list")
-    suspend fun checkCouponList(
+    fun checkCouponList(
         @Header("Authorization") token: String,
         @Query("usable_yn") usableStatus: String,
         @Query("store_cd") code: String
-    ): CouponResponseModel
+    ): Flow<CouponResponseModel>
 
     @GET("tku/v1/coupon/buy/store/list")
     suspend fun canBuyCouponStoreList(

@@ -4,8 +4,14 @@ import co.kr.cobosys.domain.repos.auth.AccessTokenRepo
 import co.kr.cobosys.domain.repos.auth.MemberInfoRepo
 import co.kr.cobosys.domain.repos.local.accesstoken.LocalAccessTokenRepo
 import co.kr.cobosys.domain.repos.local.member.LocalMemberRepo
+import co.kr.cobosys.domain.repos.coupon.CheckCouponRepo
+import co.kr.cobosys.domain.repos.coupon.CouponPolicyRepo
+import co.kr.cobosys.domain.repos.store.StoreRepo
 import co.kr.cobosys.domain.usecases.auth.GetAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.auth.GetMemberInfoUseCase
+import co.kr.cobosys.domain.usecases.coupon.GetCheckCouponUseCase
+import co.kr.cobosys.domain.usecases.coupon.GetCouponPolicyUseCase
+import co.kr.cobosys.domain.usecases.store.GetStoreListUseCase
 import co.kr.cobosys.domain.usecases.local.accesstoken.DelLocalAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.local.accesstoken.GetLocalAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenUseCase
@@ -44,4 +50,13 @@ class UseCaseModule {
 
     @Provides
     fun delLocalMemberUseCase(localMemberRepo: LocalMemberRepo): DelLocalMemberUseCase = DelLocalMemberUseCase(localMemberRepo)
+
+    @Provides
+    fun couponPolicyUseCase(couponPolicy: CouponPolicyRepo): GetCouponPolicyUseCase = GetCouponPolicyUseCase(couponPolicy)
+
+    @Provides
+    fun checkCouponUseCase(checkCoupon: CheckCouponRepo) : GetCheckCouponUseCase = GetCheckCouponUseCase(checkCoupon)
+
+    @Provides
+    fun getStoreListUserCase(getStoreList: StoreRepo) : GetStoreListUseCase = GetStoreListUseCase(getStoreList)
 }
