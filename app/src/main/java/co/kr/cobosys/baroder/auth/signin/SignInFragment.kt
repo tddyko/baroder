@@ -42,6 +42,7 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
         lifecycleScope.launchWhenStarted {
             signInViewModel.loginResult.collect { state ->
                 when (state) {
+                    is Failure.Waiting, is Failure.Loading -> { }
                     is Failure.Success -> {
                         dismiss()
                     }

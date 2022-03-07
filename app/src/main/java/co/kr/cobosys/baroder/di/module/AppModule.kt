@@ -33,8 +33,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun okHttpClient(baroderHttpClient: BaroderHttpClient): OkHttpClient =
-        baroderHttpClient.okHttpClient
+    fun okHttpClient(baroderHttpClient: BaroderHttpClient): OkHttpClient = baroderHttpClient.okHttpClient
 
     @Provides
     @Singleton

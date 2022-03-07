@@ -10,7 +10,6 @@ import androidx.activity.addCallback
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentBottomNavBinding
 import co.kr.cobosys.baroder.base.utils.Edge
-import co.kr.cobosys.baroder.base.utils.Utils.showToast
 import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.coupon.CouponFragment
 import co.kr.cobosys.baroder.extension.viewInflateBinding

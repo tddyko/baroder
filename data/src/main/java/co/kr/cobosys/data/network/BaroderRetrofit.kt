@@ -16,8 +16,8 @@ class BaroderRetrofit @Inject constructor(
 ) {
     val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(FlowCallAdapterFactory())
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .client(okHttpClient)
         .build()
 }

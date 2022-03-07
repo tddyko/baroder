@@ -7,21 +7,22 @@ import kotlinx.parcelize.Parcelize
 /* 로그인 및 회원관련 */
 @Parcelize
 data class AccessTokenModelUI(
-    val code: String,
+    override val code: String,
     val message: String,
     val data: AccessTokenDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class AccessTokenDataUI(
     val accessToken: String
 ) : Parcelable
 
-@Parcelize class MemberInfoModelUI (
-    val code: String,
+@Parcelize
+data class MemberInfoModelUI (
+    override val code: String,
     val message: String,
     val data: MemberInfoDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class MemberInfoDataUI(
@@ -33,44 +34,48 @@ data class MemberInfoDataUI(
     val memberQrCode: String
 ) : Parcelable
 
-@Parcelize class SharedMessageModelUI (
-    val code: String,
+@Parcelize
+data class SharedMessageModelUI (
+    override val code: String,
     val message: String,
     val data: SharedMessageDataUI
-): Parcelable
+): Code,Parcelable
 
 @Parcelize
 data class SharedMessageDataUI(
     val contents: String
 ) : Parcelable
 
-@Parcelize class UserIDDuplicationCheckModelUI (
-    val code: String,
+@Parcelize
+data class UserIDDuplicationCheckModelUI (
+    override val code: String,
     val message: String,
     val data: UserIDDuplicationCheckDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class UserIDDuplicationCheckDataUI(
     val isDuplication: Boolean
 ) : Parcelable
 
-@Parcelize class CertifyCodeModelUI (
-    val code: String,
+@Parcelize
+data class CertifyCodeModelUI (
+    override val code: String,
     val message: String,
     val data: CertifyCodeDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class CertifyCodeDataUI(
     val certifyCode: String
 ) : Parcelable
 
-@Parcelize class FoundMemberIdModelUI (
-    val code: String,
+@Parcelize
+data class FoundMemberIdModelUI (
+    override val code: String,
     val message: String,
     val data: List<FoundMemberIdDataUI>
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class FoundMemberIdDataUI(
@@ -78,22 +83,24 @@ data class FoundMemberIdDataUI(
     val regDate: String
 ) : Parcelable
 
-@Parcelize class FoundMemberPwdModelUI (
-    val code: String,
+@Parcelize
+data class FoundMemberPwdModelUI (
+    override val code: String,
     val message: String,
     val data: FoundMemberPwdUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class FoundMemberPwdUI(
     val memberUUID: String
 ) : Parcelable
 
-@Parcelize class TermsModelUI (
-    val code: String,
+@Parcelize
+data class TermsModelUI (
+    override val code: String,
     val message: String,
     val data: List<TermsDataUI>
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class TermsDataUI(
@@ -104,11 +111,12 @@ data class TermsDataUI(
 ) : Parcelable
 
 /* 홈화면 및 상점 */
-@Parcelize class HomeModelUI (
-    val code: String,
+@Parcelize
+data class HomeModelUI (
+    override val code: String,
     val message: String,
     val data: List<HomeDataUI>
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class HomeDataUI(
@@ -116,11 +124,12 @@ data class HomeDataUI(
     val recentlyVisitedStoreList: List<StoreListUI>
 ) : Parcelable
 
-@Parcelize class StoreModelUI (
-    val code: String,
+@Parcelize
+data class StoreModelUI (
+    override val code: String,
     val message: String,
     val data: StoreDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class StoreDataUI(
@@ -138,11 +147,12 @@ data class StoreListUI(
     val imgUrl: List<String>?
 ) : Code, Parcelable
 
-@Parcelize class StoreDetailModelUI (
-    val code: String,
+@Parcelize
+data class StoreDetailModelUI (
+    override val code: String,
     val message: String,
     val data: List<StoreDetailDataUI>
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class StoreDetailDataUI(
@@ -190,11 +200,12 @@ data class RegularStoreListUI(
 
 /* 포인트 */
 
-@Parcelize class PointModelUI (
-    val code: String,
+@Parcelize
+data class PointModelUI (
+    override val code: String,
     val message: String,
     val data: PointDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class PointDataUI(
@@ -238,11 +249,12 @@ data class AddUI(
 ) : Parcelable
 
 /* 쿠폰 */
-@Parcelize class CouponPolicyModelUI (
-    val code: String,
+@Parcelize
+data class CouponPolicyModelUI (
+    override val code: String,
     val message: String,
     val data: CouponPolicyDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class CouponPolicyDataUI(
@@ -255,11 +267,12 @@ data class CouponPolicyListUI(
     val couponPrice: String
 ) : Parcelable
 
-@Parcelize class CouponModelUI (
-    val code: String,
+@Parcelize
+data class CouponModelUI (
+    override val code: String,
     val message: String,
     val data: List<CouponDataUI>
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class CouponDataUI(
@@ -280,11 +293,12 @@ data class CouponListUI(
     val expiredStatus: String
 ) : Parcelable
 
-@Parcelize class CanBuyCouponStoreModelUI (
-    val code: String,
+@Parcelize
+data class CanBuyCouponStoreModelUI (
+    override val code: String,
     val message: String,
     val data: CanBuyCouponStoreDataUI
-): Parcelable
+): Code, Parcelable
 
 @Parcelize
 data class CanBuyCouponStoreDataUI(
@@ -297,3 +311,14 @@ data class CanBuyCouponStoreListUI(
     val storeName: String,
     val remainPoint: String
 ) : Code, Parcelable
+
+@Parcelize
+data class LocalAccessTokenUI(
+    val accessToken: String
+): Parcelable
+
+@Parcelize
+data class LocalMemberUI(
+    val id: String,
+    val pwd: String
+): Parcelable

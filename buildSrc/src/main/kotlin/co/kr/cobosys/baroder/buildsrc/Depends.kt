@@ -37,7 +37,7 @@ object Depends {
         const val fragmentExtVersion = "1.3.3"
         const val recyclerviewVersion = "1.2.1"
         const val viewpagerVersion = "1.0.0"
-        const val roomVersion = "2.3.0"
+        const val roomVersion = "2.4.2"
         const val cryptoVersion = "1.0.0"
         const val workManagerVersion = "2.7.1"
         const val splashScreenVersion = "1.0.0-beta01"
@@ -135,7 +135,9 @@ object Depends {
         const val splash =
             "androidx.core:core-splashscreen:${Versions.splashScreenVersion}"
         const val room =
-            "androidx.room:room-runtime:${Versions.roomVersion}"
+            "androidx.room:room-ktx:${Versions.roomVersion}"
+        const val room_compiler =
+            "androidx.room:room-compiler:${Versions.roomVersion}"
         const val work_manager =
             "androidx.work:work-runtime-ktx:${Versions.workManagerVersion}"
         const val crypto =

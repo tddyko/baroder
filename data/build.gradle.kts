@@ -71,6 +71,7 @@ dependencies {
     //localDB
     implementation(Depends.Libraries.dataStore_preferences)
     implementation(Depends.Libraries.room)
+    kapt(Depends.Libraries.room_compiler)
     //other
     implementation(Depends.Libraries.timber)
     implementation(Depends.Libraries.material)

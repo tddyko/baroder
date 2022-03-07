@@ -260,3 +260,12 @@ data class CanBuyCouponStoreList(
     val storeName: String,
     val remainPoint: String
 )
+
+data class LocalAccessToken(
+    val accessToken: String
+)
+
+data class LocalMember(
+    val id: String,
+    val pwd: String
+)
