@@ -1,5 +1,7 @@
 package co.kr.cobosys.domain.models
 
+import java.util.*
+
 data class AccessTokenModel(
     val code: String,
     val message: String,
@@ -262,10 +264,12 @@ data class CanBuyCouponStoreList(
 )
 
 data class LocalAccessToken(
+    val uuid: UUID,
     val accessToken: String
 )
 
 data class LocalMember(
+    val uuid: UUID,
     val id: String,
     val pwd: String
 )

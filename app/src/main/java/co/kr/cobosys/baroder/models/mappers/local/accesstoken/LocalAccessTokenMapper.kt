@@ -4,9 +4,9 @@ import co.kr.cobosys.baroder.models.LocalAccessTokenUI
 import co.kr.cobosys.domain.models.LocalAccessToken
 
 fun LocalAccessTokenUI.toLocalAccessToken(): LocalAccessToken = LocalAccessToken(
-    accessToken
+    uuid, accessToken
 )
 
 fun LocalAccessToken.toLocalAccessTokenUI(): LocalAccessTokenUI = LocalAccessTokenUI(
-    accessToken
+    uuid, accessToken
 )

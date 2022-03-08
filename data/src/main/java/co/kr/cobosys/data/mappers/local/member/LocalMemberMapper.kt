@@ -4,9 +4,9 @@ import co.kr.cobosys.data.room.db.dto.RoomMember
 import co.kr.cobosys.domain.models.LocalMember
 
 fun LocalMember.toRoomMember(): RoomMember = RoomMember(
-    id, pwd
+    uuid, id, pwd
 )
 
 fun RoomMember.toLocalMember(): LocalMember = LocalMember(
-    id, pwd
+    uuid, id, pwd
 )

@@ -1,22 +1,70 @@
 package co.kr.cobosys.baroder.mypage
 
 import androidx.lifecycle.ViewModel
-import co.kr.cobosys.baroder.models.AccessTokenModelUI
+import androidx.lifecycle.viewModelScope
+import co.kr.cobosys.baroder.models.MemberInfoModelUI
+import co.kr.cobosys.baroder.models.mappers.auth.toMemberInfoModelUI
+import co.kr.cobosys.baroder.models.mappers.local.accesstoken.toLocalAccessTokenUI
 import co.kr.cobosys.domain.base.Failure
 import co.kr.cobosys.domain.usecases.auth.GetMemberInfoUseCase
+import co.kr.cobosys.domain.usecases.auth.PutAccessToken
+import co.kr.cobosys.domain.usecases.local.accesstoken.GetLocalAccessTokenUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
 class MyPageViewModel @Inject constructor(
-    getMemberInfoUseCase: GetMemberInfoUseCase
-): ViewModel() {
-    private val _memberInfo: MutableStateFlow<Failure<AccessTokenModelUI>> =
+    private val getMemberInfoUseCase: GetMemberInfoUseCase,
+    private val getLocalAccessTokenUseCase: GetLocalAccessTokenUseCase
+) : ViewModel() {
+    private val _memberInfo: MutableStateFlow<Failure<MemberInfoModelUI>> =
         MutableStateFlow(Failure.Waiting())
 
     val memberInfo = _memberInfo.asStateFlow()
 
+    init {
+        getMemberInfo()
+    }
 
+    private fun getMemberInfo() {
+        viewModelScope.launch {
+//            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
+//                .catch { _memberInfo.value = Failure.Error(it.message) }
+//                .collect { token ->
+//                    if (token.accessToken != "") {
+//                        getMemberInfoUseCase(PutAccessToken(token.accessToken))
+//                            .map { it.toMemberInfoModelUI() }
+//                            .onStart { _memberInfo.value = Failure.Loading() }
+//                            .catch { _memberInfo.value = Failure.Error(it.message) }
+//                            .collect {
+//                                if (it.code == "0000") {
+//                                    _memberInfo.value = Failure.Success(it)
+//                                } else {
+//                                    _memberInfo.value = Failure.ServerError(it.code, it.message)
+//                                }
+//                            }
+//                    }
+//                }
+            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
+                .onStart { _memberInfo.value = Failure.Waiting()}
+                .catch { _memberInfo.value = Failure.Error(it.message) }
+                .collect {
+                    if(it.accessToken != "") {
+                        getMemberInfoUseCase(PutAccessToken(it.accessToken)).map { member -> member.toMemberInfoModelUI() }
+                            .onStart { _memberInfo.value = Failure.Loading() }
+                            .catch { e -> _memberInfo.value = Failure.Error(e.message) }
+                            .collect { mem ->
+                                if(mem.code == "0000") {
+                                    _memberInfo.value = Failure.Success(mem)
+                                } else {
+                                    _memberInfo.value = Failure.ServerError(mem.code, mem.message)
+                                }
+                            }
+                    }
+                }
+        }
+    }
 }

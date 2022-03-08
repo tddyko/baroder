@@ -4,9 +4,9 @@ import co.kr.cobosys.data.room.db.dto.RoomAccessToken
 import co.kr.cobosys.domain.models.LocalAccessToken
 
 fun LocalAccessToken.toRoomAccessToken(): RoomAccessToken = RoomAccessToken(
-    accessToken
+    uuid, accessToken
 )
 
 fun RoomAccessToken.toLocalAccessToken(): LocalAccessToken = LocalAccessToken(
-    accessToken
+    uuid, accessToken
 )

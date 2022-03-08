@@ -4,9 +4,9 @@ import co.kr.cobosys.baroder.models.LocalMemberUI
 import co.kr.cobosys.domain.models.LocalMember
 
 fun LocalMemberUI.toLocalMember(): LocalMember = LocalMember(
-    id, pwd
+    uuid, id, pwd
 )
 
 fun LocalMember.toLocalMemberUI(): LocalMemberUI = LocalMemberUI(
-    id, pwd
+    uuid, id, pwd
 )

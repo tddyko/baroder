@@ -3,6 +3,7 @@ package co.kr.cobosys.baroder.models
 import android.os.Parcelable
 import co.kr.cobosys.baroder.base.adapter.Code
 import kotlinx.parcelize.Parcelize
+import java.util.*
 
 /* 로그인 및 회원관련 */
 @Parcelize
@@ -323,11 +324,13 @@ data class CanBuyCouponStoreListUI(
 
 @Parcelize
 data class LocalAccessTokenUI(
+    val uuid: UUID,
     val accessToken: String
 ): Parcelable
 
 @Parcelize
 data class LocalMemberUI(
+    val uuid: UUID,
     val id: String,
     val pwd: String
 ): Parcelable
