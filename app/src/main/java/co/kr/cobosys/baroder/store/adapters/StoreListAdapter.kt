@@ -29,32 +29,3 @@ class StoreListAdapter(private val storeListUI: List<StoreListUI>) :
         holder.bind(storeListUI[position])
     }
 }
-
-
-
-
-/*
-class CouponPolicyListAdapter(private val couponPolicyListUI: List<CouponPolicyListUI>) :
-    ListAdapter<Code, CouponPolicyListViewHolder>(
-        BASE_DIFF_CALLBACK
-    ) {
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): CouponPolicyListViewHolder {
-        return CouponPolicyListViewHolder(
-            ItemShopCouponBinding.inflate(
-                LayoutInflater.from(parent.context), parent, false
-            )
-        )
-    }
-
-    override fun getItemCount(): Int {
-        return couponPolicyListUI.size
-    }
-
-    override fun onBindViewHolder(holder: CouponPolicyListViewHolder, position: Int) {
-        holder.bind(couponPolicyListUI[position])
-    }
-}
- */

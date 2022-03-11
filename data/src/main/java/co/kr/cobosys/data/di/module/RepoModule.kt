@@ -6,6 +6,7 @@ import co.kr.cobosys.data.repos.local.accesstoken.LocalAccessTokenRepoImpl
 import co.kr.cobosys.data.repos.local.member.LocalMemberRepoImpl
 import co.kr.cobosys.data.repos.coupon.CheckCouponRepoImpl
 import co.kr.cobosys.data.repos.coupon.CouponPolicyRepoImpl
+import co.kr.cobosys.data.repos.point.PointRepoImpl
 import co.kr.cobosys.data.repos.store.StoreRepoImpl
 import co.kr.cobosys.domain.repos.auth.AccessTokenRepo
 import co.kr.cobosys.domain.repos.auth.MemberInfoRepo
@@ -13,6 +14,7 @@ import co.kr.cobosys.domain.repos.local.accesstoken.LocalAccessTokenRepo
 import co.kr.cobosys.domain.repos.local.member.LocalMemberRepo
 import co.kr.cobosys.domain.repos.coupon.CheckCouponRepo
 import co.kr.cobosys.domain.repos.coupon.CouponPolicyRepo
+import co.kr.cobosys.domain.repos.point.PointRepo
 import co.kr.cobosys.domain.repos.store.StoreRepo
 import dagger.Module
 import dagger.Provides
@@ -59,4 +61,7 @@ class RepoModule {
     fun getStoreListRepo(storeListRepo: StoreRepoImpl) : StoreRepo =
         storeListRepo
 
+    @Singleton
+    @Provides
+    fun getPointListRepo(pointListRepo: PointRepoImpl) : PointRepo = pointListRepo
 }

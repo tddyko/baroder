@@ -4,5 +4,5 @@ import co.kr.cobosys.domain.models.PointModel
 import kotlinx.coroutines.flow.Flow
 
 interface PointRepo {
-    fun getPoint(ids: String): Flow<PointModel>
+    fun getPoint(token: String): Flow<PointModel>
 }

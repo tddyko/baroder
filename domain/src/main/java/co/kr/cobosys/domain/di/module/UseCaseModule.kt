@@ -6,6 +6,7 @@ import co.kr.cobosys.domain.repos.local.accesstoken.LocalAccessTokenRepo
 import co.kr.cobosys.domain.repos.local.member.LocalMemberRepo
 import co.kr.cobosys.domain.repos.coupon.CheckCouponRepo
 import co.kr.cobosys.domain.repos.coupon.CouponPolicyRepo
+import co.kr.cobosys.domain.repos.point.PointRepo
 import co.kr.cobosys.domain.repos.store.StoreRepo
 import co.kr.cobosys.domain.usecases.auth.GetAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.auth.GetMemberInfoUseCase
@@ -18,6 +19,7 @@ import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenUse
 import co.kr.cobosys.domain.usecases.local.member.DelLocalMemberUseCase
 import co.kr.cobosys.domain.usecases.local.member.GetLocalMemberUseCase
 import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberUseCase
+import co.kr.cobosys.domain.usecases.point.GetPointUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -59,4 +61,7 @@ class UseCaseModule {
 
     @Provides
     fun getStoreListUserCase(getStoreList: StoreRepo) : GetStoreListUseCase = GetStoreListUseCase(getStoreList)
+
+    @Provides
+    fun getPointUseCase(pointRepo: PointRepo) : GetPointUseCase = GetPointUseCase(pointRepo)
 }

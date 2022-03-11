@@ -9,33 +9,63 @@ fun PointModelUI.toPointModel(): PointModel = PointModel(
             list.code,
             list.storeName,
             list.point,
-            list.pointHistory.map { history ->
-                PointHistory(
-                    history.total.map { total ->
-                        Total(
-                            total.pointCategory,
-                            total.pointAmt,
-                            total.pointAssignAt
-                        )
-                    },
-                    history.use.map { use ->
-                        Use(
-                            use.pointCategory,
-                            use.pointAmt,
-                            use.pointAssignAt
-                        )
-                    },
-                    history.add.map { add ->
-                        Add(
-                            add.pointCategory,
-                            add.pointAmt,
-                            add.pointAssignAt
-                        )
-                    }
-                )
-            }
+            PointHistory(
+                list.pointHistory.total.map { total ->
+                    Total(
+                        total.pointCategory,
+                        total.pointAmt,
+                        total.pointAssignAt
+                    )
+                },
+                list.pointHistory.use.map { use ->
+                    Use(
+                        use.pointCategory,
+                        use.pointAmt,
+                        use.pointAssignAt
+                    )
+                },
+                list.pointHistory.add.map { add ->
+                    Add(
+                        add.pointCategory,
+                        add.pointAmt,
+                        add.pointAssignAt
+                    )
+                }
+            )
         )
-    })
+    }
+
+//    code, message, data = PointData(data.pointList.map { list ->
+//        PointList(
+//            list.code,
+//            list.storeName,
+//            list.point,
+//            PointHistory(
+//                list.pointHistory.total.map { total ->
+//                    Total(
+//                        total.pointCategory,
+//                        total.pointAmt,
+//                        total.pointAssignAt
+//                    )
+//                },
+//                list.pointHistory.use.map { use ->
+//                    Use(
+//                        use.pointCategory,
+//                        use.pointAmt,
+//                        use.pointAssignAt
+//                    )
+//                },
+//                list.pointHistory.add.map { add ->
+//                    Add(
+//                        add.pointCategory,
+//                        add.pointAmt,
+//                        add.pointAssignAt
+//                    )
+//                }
+//            )
+//        )
+//    }
+    )
 )
 
 fun PointModel.toPointModelUI(): PointModelUI = PointModelUI(
@@ -44,31 +74,31 @@ fun PointModel.toPointModelUI(): PointModelUI = PointModelUI(
             list.code,
             list.storeName,
             list.point,
-            list.pointHistory.map { history ->
-                PointHistoryUI(
-                    history.total.map { total ->
-                        TotalUI(
-                            total.pointCategory,
-                            total.pointAmt,
-                            total.pointAssignAt
-                        )
-                    },
-                    history.use.map { use ->
-                        UseUI(
-                            use.pointCategory,
-                            use.pointAmt,
-                            use.pointAssignAt
-                        )
-                    },
-                    history.add.map { add ->
-                        AddUI(
-                            add.pointCategory,
-                            add.pointAmt,
-                            add.pointAssignAt
-                        )
-                    }
-                )
-            }
+
+            PointHistoryUI(
+                list.pointHistory.total.map { total ->
+                    TotalUI(
+                        total.pointCategory,
+                        total.pointAmt,
+                        total.pointAssignAt
+                    )
+                },
+                list.pointHistory.use.map { use ->
+                    UseUI(
+                        use.pointCategory,
+                        use.pointAmt,
+                        use.pointAssignAt
+                    )
+                },
+                list.pointHistory.add.map { add ->
+                    AddUI(
+                        add.pointCategory,
+                        add.pointAmt,
+                        add.pointAssignAt
+                    )
+                }
+            )
+
         )
     })
 )

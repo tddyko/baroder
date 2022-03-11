@@ -16,13 +16,21 @@ import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.domain.base.Failure
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+
+interface SignInFragmentListener {
+    fun onSingInResult(accessToken: String)
+}
 
 @AndroidEntryPoint
 class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
 
     private val binding by viewBinding(FragmentSignInBinding::bind)
     private val signInViewModel: SignInViewModel by viewModels()
+    var listener: SignInFragmentListener? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,6 +52,7 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
                 when (state) {
                     is Failure.Waiting, is Failure.Loading -> { }
                     is Failure.Success -> {
+                        listener?.onSingInResult(SignInViewModel.localToken)
                         dismiss()
                     }
                     is Failure.ServerError -> {

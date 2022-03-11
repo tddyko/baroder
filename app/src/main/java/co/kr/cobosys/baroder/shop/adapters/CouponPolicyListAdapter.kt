@@ -8,8 +8,12 @@ import co.kr.cobosys.baroder.base.adapter.BASE_DIFF_CALLBACK
 import co.kr.cobosys.baroder.base.adapter.Code
 import co.kr.cobosys.baroder.models.CouponPolicyListUI
 import co.kr.cobosys.baroder.shop.viewholders.CouponPolicyListViewHolder
+import co.kr.cobosys.baroder.shop.viewholders.CouponPolicyListViewHolderListener
 
-class CouponPolicyListAdapter(private val couponPolicyListUI: List<CouponPolicyListUI>) :
+class CouponPolicyListAdapter(
+    private val couponPolicyListUI: List<CouponPolicyListUI>,
+    private val listener: CouponPolicyListViewHolderListener
+) :
     ListAdapter<Code, CouponPolicyListViewHolder>(
         BASE_DIFF_CALLBACK
     ) {
@@ -20,7 +24,8 @@ class CouponPolicyListAdapter(private val couponPolicyListUI: List<CouponPolicyL
         return CouponPolicyListViewHolder(
             ItemShopCouponBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
-            )
+            ),
+            listener
         )
     }
 

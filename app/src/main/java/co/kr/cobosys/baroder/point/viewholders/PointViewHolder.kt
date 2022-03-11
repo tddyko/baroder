@@ -1,10 +1,44 @@
-package co.kr.cobosys.baroder.shop.viewholders
+package co.kr.cobosys.baroder.point.viewholders
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
-import co.kr.cobosys.baroder.app.R
-import co.kr.cobosys.baroder.app.databinding.ItemShopCouponBinding
-import co.kr.cobosys.baroder.models.CouponPolicyListUI
+import co.kr.cobosys.baroder.app.databinding.ItemPointCardBinding
+import co.kr.cobosys.baroder.models.PointListUI
+
+interface PointViewHolderListener {
+    fun onClickPoint(idx: Int, cmd: Int)
+}
+
+class PointViewHolder(
+    private val itemBinding: ItemPointCardBinding,
+    private val listener: PointViewHolderListener
+) : RecyclerView.ViewHolder(itemBinding.root) {
+    @SuppressLint("SetTextI18n")
+    fun bind(itemUI: PointListUI) = with(itemView) {
+        itemBinding.pointListUI = itemUI
+        itemBinding.executePendingBindings()
+
+        itemBinding.pointDetailsBtn.setOnClickListener {
+            val position = absoluteAdapterPosition
+
+            if (position == RecyclerView.NO_POSITION)
+                return@setOnClickListener
+
+            listener.onClickPoint(position, 0)
+        }
+
+        itemBinding.pointCouponConvertBtn.setOnClickListener {
+            val position = absoluteAdapterPosition
+
+            if (position == RecyclerView.NO_POSITION)
+                return@setOnClickListener
+
+            listener.onClickPoint(position, 1)
+        }
+    }
+}
+
+/*
 
 interface CouponPolicyListViewHolderListener {
     fun onClickCouponPolicy(idx: Int)
@@ -39,3 +73,4 @@ class CouponPolicyListViewHolder(
 
     }
 }
+ */

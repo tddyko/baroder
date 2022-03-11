@@ -9,18 +9,22 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentShopBinding
+import co.kr.cobosys.baroder.auth.signin.SignInViewModel
 import co.kr.cobosys.baroder.base.utils.Utils
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
+import co.kr.cobosys.baroder.models.CouponPolicyListUI
 import co.kr.cobosys.baroder.shop.adapters.CouponPolicyListAdapter
+import co.kr.cobosys.baroder.shop.viewholders.CouponPolicyListViewHolderListener
 import co.kr.cobosys.domain.base.Failure
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
+import timber.log.Timber
 
 @AndroidEntryPoint
-class ShopFragment : Fragment(R.layout.fragment_shop) {
+class ShopFragment : Fragment(R.layout.fragment_shop), CouponPolicyListViewHolderListener {
 
     private val binding by viewBinding(FragmentShopBinding::bind)
     private val shopViewModel: ShopViewModel by viewModels()
@@ -38,13 +42,18 @@ class ShopFragment : Fragment(R.layout.fragment_shop) {
         shopViewModel.getList()
     }
 
+    private fun attachCouponPolicyList(list: List<CouponPolicyListUI>) {
+        binding.shopRecyclerView.adapter =
+            CouponPolicyListAdapter(list, this)
+
+    }
+
     private fun observe() {
         lifecycleScope.launchWhenStarted {
             shopViewModel.couponPolicyResult.collect { state ->
                 when (state) {
                     is Failure.Success -> {
-                        binding.shopRecyclerView.adapter =
-                            CouponPolicyListAdapter(state.data.data.couponPolicyList)
+                        attachCouponPolicyList(state.data.data.couponPolicyList)
                     }
                     is Failure.Error -> {
                         try {
@@ -66,5 +75,9 @@ class ShopFragment : Fragment(R.layout.fragment_shop) {
                 }
             }
         }
+    }
+
+    override fun onClickCouponPolicy(idx: Int) {
+        Timber.e("¼±ÅÃµÈ -> $idx")
     }
 }

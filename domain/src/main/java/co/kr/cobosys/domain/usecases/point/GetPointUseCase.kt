@@ -10,8 +10,8 @@ class GetPointUseCase @Inject constructor(
     private val point: PointRepo
 ) : GeneralPagingUseCase<Flow<PointModel>, GetPointListParams> {
     override fun invoke(params: GetPointListParams): Flow<PointModel> =
-        point.getPoint(params.ids)
+        point.getPoint(params.token)
 }
 
 @JvmInline
-value class GetPointListParams(val ids: String)
+value class GetPointListParams(val token: String)

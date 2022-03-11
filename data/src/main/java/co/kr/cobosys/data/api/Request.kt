@@ -85,9 +85,9 @@ interface Request {
     )
 
     @GET("tku/v1/member/point")
-    suspend fun checkPointList(
+    fun checkPointList(
         @Header("Authorization") token: String
-    ): PointResponseModel
+    ): Flow<PointResponseModel>
 
     @GET("v1/home/rmd")
     suspend fun checkHomeStoreList(

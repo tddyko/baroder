@@ -185,14 +185,14 @@ data class PointResponseModel(
 )
 
 data class PointResponseData(
-    @SerializedName ("store_point") val pointList: List<PointListResponse>
+    @SerializedName ("point_list") val pointList: List<PointListResponse>
 )
 
 data class PointListResponse(
     @SerializedName ("store_cd")  val code: String,
     @SerializedName ("store_nm") val storeName: String,
     @SerializedName ("remain_mile") val point: String,
-    @SerializedName ("point_history") val pointHistory: List<PointHistoryResponse>
+    @SerializedName ("point_history") val pointHistory: PointHistoryResponse
 )
 
 data class PointHistoryResponse(

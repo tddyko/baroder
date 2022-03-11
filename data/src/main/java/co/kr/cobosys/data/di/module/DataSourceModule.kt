@@ -11,6 +11,8 @@ import co.kr.cobosys.data.datasources.local.accesstoken.LocalAccessTokenDataSour
 import co.kr.cobosys.data.datasources.local.accesstoken.LocalAccessTokenDataSourceImpl
 import co.kr.cobosys.data.datasources.local.member.LocalMemberDataSource
 import co.kr.cobosys.data.datasources.local.member.LocalMemberDataSourceImpl
+import co.kr.cobosys.data.datasources.point.GetPointDataSource
+import co.kr.cobosys.data.datasources.point.GetPointDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -62,4 +64,8 @@ class DataSourceModule {
     fun getStoreListDataSource(storeListDataSource: StoreListDataSourceImpl) : StoreListDataSource =
         storeListDataSource
 
+    @Singleton
+    @Provides
+    fun getPointListDataSource(pointListDataSource: GetPointDataSourceImpl) : GetPointDataSource =
+        pointListDataSource
 }

@@ -227,8 +227,11 @@ data class PointListUI(
     override val code: String,
     val storeName: String,
     val point: String,
-    val pointHistory: List<PointHistoryUI>
-) : Code, Parcelable
+    val pointHistory: PointHistoryUI
+) : Code, Parcelable {
+    val getPointStr: String
+        get() = "$point P"
+}
 
 @Parcelize
 data class PointHistoryUI(

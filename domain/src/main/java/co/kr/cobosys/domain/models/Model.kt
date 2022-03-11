@@ -182,7 +182,7 @@ data class PointList(
     val code: String,
     val storeName: String,
     val point: String,
-    val pointHistory: List<PointHistory>
+    val pointHistory: PointHistory
 )
 
 data class PointHistory(
