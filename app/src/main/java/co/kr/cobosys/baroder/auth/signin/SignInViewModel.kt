@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import co.kr.cobosys.baroder.models.AccessTokenModelUI
 import co.kr.cobosys.baroder.models.mappers.auth.toAccessTokenModelUI
 import co.kr.cobosys.baroder.models.mappers.local.accesstoken.toLocalAccessTokenUI
+import co.kr.cobosys.baroder.models.mappers.local.member.toLocalMemberUI
 import co.kr.cobosys.domain.base.Failure
 import co.kr.cobosys.domain.models.LocalAccessToken
 import co.kr.cobosys.domain.models.LocalMember
@@ -14,6 +15,7 @@ import co.kr.cobosys.domain.usecases.local.accesstoken.DelLocalAccessTokenUseCas
 import co.kr.cobosys.domain.usecases.local.accesstoken.GetLocalAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenParams
 import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenUseCase
+import co.kr.cobosys.domain.usecases.local.member.GetLocalMemberUseCase
 import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberParams
 import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,6 +30,7 @@ class SignInViewModel @Inject constructor(
     private val insertLocalAccessTokenUseCase: InsertLocalAccessTokenUseCase,
     private val getLocalAccessTokenUseCase: GetLocalAccessTokenUseCase,
     private val deleteLocalAccessTokenUseCase: DelLocalAccessTokenUseCase,
+    private val getLocalMemberUseCase: GetLocalMemberUseCase,
     private val insertLocalMemberUseCase: InsertLocalMemberUseCase
 ) : ViewModel() {
     private val _loginResult: MutableStateFlow<Failure<AccessTokenModelUI>> =
@@ -35,27 +38,25 @@ class SignInViewModel @Inject constructor(
 
     val loginResult = _loginResult.asStateFlow()
 
-
-//    private suspend fun doLogin(id: String, pwd: String): Flow<AccessTokenModelUI> =
-//        getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd)).map { it.toAccessTokenModelUI() }
-
     fun signIn(id: String, pwd: String) {
         viewModelScope.launch {
             val uuid: UUID = UUID.randomUUID()
             insertLocalMemberUseCase(InsertLocalMemberParams(LocalMember(uuid, id, pwd)))
             getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd))
                 .map { it.toAccessTokenModelUI() }
-                .onStart { _loginResult.value = Failure.Loading() }
                 .catch { e -> _loginResult.value = Failure.Error(e.message) }
                 .collect { data ->
+                    val tokenUUID: UUID = UUID.randomUUID()
+                    val token = "Bearer ${data.data.accessToken}"
+
                     if (data.code == "0000") {
+                        insertLocalAccessTokenUseCase(InsertLocalAccessTokenParams(LocalAccessToken(tokenUUID, token)))
                         getLocalAccessTokenUseCase()
                             .map { it.toLocalAccessTokenUI() }
                             .collect {
-                                val token = "Bearer ${data.data.accessToken}"
-                                if(it.accessToken != token) {
+                                localToken = it.accessToken
+                                if(localToken != token) {
                                     deleteLocalAccessTokenUseCase()
-                                    val tokenUUID: UUID = UUID.randomUUID()
                                     insertLocalAccessTokenUseCase(InsertLocalAccessTokenParams(
                                         LocalAccessToken(tokenUUID, token)
                                     ))
@@ -67,5 +68,9 @@ class SignInViewModel @Inject constructor(
                     }
                 }
         }
+    }
+
+    companion object {
+        var localToken = ""
     }
 }

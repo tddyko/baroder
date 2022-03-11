@@ -3,7 +3,6 @@ package co.kr.cobosys.baroder.mypage
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment.STYLE_NO_TITLE
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -12,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentMyPageBinding
 import co.kr.cobosys.baroder.auth.signin.SignInFragment
-import co.kr.cobosys.baroder.base.utils.Utils
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
@@ -51,6 +49,8 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
                 when(it) {
                     is Failure.Waiting, is Failure.Loading -> { }
                     is Failure.Success -> {
+                        val dlg = SignInFragment()
+                        dlg.dismiss()
                         if(it.data.data.memberId != "") {
                             binding.myPageLoginPls.gone()
                             binding.myPageMyName.visible()
@@ -59,7 +59,6 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
                             binding.mypageMyId.text = "@ ${it.data.data.memberId}"
                         } else {
                             binding.myPageLoginPls.visible()
-                            getLogin()
                         }
                     }
                     is Failure.Error -> {

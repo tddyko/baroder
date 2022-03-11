@@ -2,6 +2,7 @@ package co.kr.cobosys.baroder.mypage
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import co.kr.cobosys.baroder.auth.signin.SignInViewModel
 import co.kr.cobosys.baroder.models.MemberInfoModelUI
 import co.kr.cobosys.baroder.models.mappers.auth.toMemberInfoModelUI
 import co.kr.cobosys.baroder.models.mappers.local.accesstoken.toLocalAccessTokenUI
@@ -25,9 +26,7 @@ class MyPageViewModel @Inject constructor(
 
     val memberInfo = _memberInfo.asStateFlow()
 
-    init {
-        getMemberInfo()
-    }
+    init { getMemberInfo() }
 
     private fun getMemberInfo() {
         viewModelScope.launch {
