@@ -21,7 +21,10 @@ import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
 import java.util.*
+import java.util.concurrent.TimeoutException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -44,12 +47,18 @@ class SignInViewModel @Inject constructor(
             insertLocalMemberUseCase(InsertLocalMemberParams(LocalMember(uuid, id, pwd)))
             getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd))
                 .map { it.toAccessTokenModelUI() }
-                .catch { e -> _loginResult.value = Failure.Error(e.message) }
+                .catch {
+                    when(it.cause) {
+                        is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+                            _loginResult.value = Failure.Error(it.message)
+                        }
+                    }
+                }
                 .collect { data ->
-                    val tokenUUID: UUID = UUID.randomUUID()
-                    val token = "Bearer ${data.data.accessToken}"
-
                     if (data.code == "0000") {
+                        val tokenUUID: UUID = UUID.randomUUID()
+                        val token = "Bearer ${data.data.accessToken}"
+
                         insertLocalAccessTokenUseCase(InsertLocalAccessTokenParams(LocalAccessToken(tokenUUID, token)))
                         getLocalAccessTokenUseCase()
                             .map { it.toLocalAccessTokenUI() }

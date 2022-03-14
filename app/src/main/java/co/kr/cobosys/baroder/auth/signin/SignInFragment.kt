@@ -1,6 +1,7 @@
 package co.kr.cobosys.baroder.auth.signin
 
 import android.app.Dialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.view.Window
@@ -16,13 +17,14 @@ import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.domain.base.Failure
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 
 interface SignInFragmentListener {
     fun onSingInResult(accessToken: String)
+}
+
+interface DismissListener {
+    fun getMyPageInfo()
 }
 
 @AndroidEntryPoint
@@ -31,18 +33,15 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
     private val binding by viewBinding(FragmentSignInBinding::bind)
     private val signInViewModel: SignInViewModel by viewModels()
     var listener: SignInFragmentListener? = null
+    var dismissListener: DismissListener? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         edgeToEdge { binding.signInCancelBtnArea.fit { Edge.TopArc } }
         binding.signInCancelBtn.setOnClickListener { dismiss() }
-        observe()
 
-        binding.signInBtn.setOnClickListener {
-            val id = binding.signInIdField.text.toString()
-            val pwd = binding.signInPwdField.text.toString()
-            signInViewModel.signIn(id, pwd)
-        }
+        observe()
+        getSignIn()
 
     }
 
@@ -53,17 +52,10 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
                     is Failure.Waiting, is Failure.Loading -> { }
                     is Failure.Success -> {
                         listener?.onSingInResult(SignInViewModel.localToken)
-                        dismiss()
+                        dismissListener?.getMyPageInfo()
                     }
                     is Failure.ServerError -> {
-                        MessageDialog.alert(
-                            childFragmentManager,
-                            state.message,
-                            state.message,
-                            "확인",
-                            callback = {
-                                Utils.showToast(requireContext(), state.message).show()
-                            })
+                        Utils.showToast(requireContext(), state.message).show()
                     }
                     is Failure.Error -> {
                         MessageDialog.alert(
@@ -73,6 +65,7 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
                             "확인",
                             callback = {}
                         )
+
                     }
                     else -> {
                         MessageDialog.alert(
@@ -85,6 +78,14 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
                     }
                 }
             }
+        }
+    }
+
+    private fun getSignIn() {
+        binding.signInBtn.setOnClickListener {
+            val id = binding.signInIdField.text.toString()
+            val pwd = binding.signInPwdField.text.toString()
+            signInViewModel.signIn(id, pwd)
         }
     }
 

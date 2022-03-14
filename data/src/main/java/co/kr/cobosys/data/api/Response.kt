@@ -10,7 +10,7 @@ data class AccessTokenResponseModel(
 )
 
 data class AccessTokenResponseData(
-    @SerializedName("access_token") val accessToken: String
+    @SerializedName("access_token") val accessToken: String?
 )
 
 data class MemberInfoResponseModel(

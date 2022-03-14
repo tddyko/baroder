@@ -7,9 +7,11 @@ import androidx.fragment.app.DialogFragment.STYLE_NO_TITLE
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentMyPageBinding
+import co.kr.cobosys.baroder.auth.signin.DismissListener
 import co.kr.cobosys.baroder.auth.signin.SignInFragment
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
@@ -19,9 +21,12 @@ import co.kr.cobosys.baroder.main.OnBoardingDialog
 import co.kr.cobosys.domain.base.Failure
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import okhttp3.internal.notify
+import okhttp3.internal.notifyAll
 
 @AndroidEntryPoint
-class MyPageFragment : Fragment(R.layout.fragment_my_page) {
+class MyPageFragment: Fragment(R.layout.fragment_my_page) {
 
     private val binding by viewBinding(FragmentMyPageBinding::bind)
     private val mypageViewModel: MyPageViewModel by viewModels()
@@ -32,26 +37,23 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
             findNavController().navigate(MyPageFragmentDirections.actionMypageFragmentToMypageCoupon())
         }
         observe()
-        getLogin()
+        onClickSignInButton()
         selectOnBoarding()
 
         binding.myPageLoginPls.visible()
         binding.mypageTermsOfUseArea.setOnClickListener {
 
         }
-
     }
 
     @SuppressLint("SetTextI18n")
     private fun observe() {
-        lifecycleScope.launchWhenStarted {
+        lifecycleScope.launch {
             mypageViewModel.memberInfo.collect {
-                when(it) {
-                    is Failure.Waiting, is Failure.Loading -> { }
+                when (it) {
+                    is Failure.Waiting, is Failure.Loading -> {}
                     is Failure.Success -> {
-                        val dlg = SignInFragment()
-                        dlg.dismiss()
-                        if(it.data.data.memberId != "") {
+                        if (it.data.data.memberId != "") {
                             binding.myPageLoginPls.gone()
                             binding.myPageMyName.visible()
                             binding.myPageMyName.text = it.data.data.memberName
@@ -84,11 +86,18 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
         }
     }
 
-    private fun getLogin(){
+    private fun onClickSignInButton() {
         binding.myPageLoginPls.setOnClickListener {
             val signInDialog = SignInFragment()
             signInDialog.setStyle(STYLE_NO_TITLE, R.style.DialogThemeOnBoarding)
             signInDialog.show(childFragmentManager, "myPage")
+            childFragmentManager.executePendingTransactions()
+            signInDialog.dismissListener = object: DismissListener{
+                override fun getMyPageInfo() {
+                    observe()
+                    signInDialog.dismiss()
+                }
+            }
         }
     }
 
@@ -104,7 +113,6 @@ class MyPageFragment : Fragment(R.layout.fragment_my_page) {
 //                    MessageDialog.YES -> Utils.showToast(requireContext(), "확인 버튼을 누르셨소").show()
 //                }
 //            })
-
         }
     }
 }

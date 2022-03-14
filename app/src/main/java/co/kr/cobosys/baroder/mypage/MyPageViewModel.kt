@@ -14,6 +14,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.lang.NullPointerException
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
+import java.util.concurrent.TimeoutException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,7 +30,9 @@ class MyPageViewModel @Inject constructor(
 
     val memberInfo = _memberInfo.asStateFlow()
 
-    init { getMemberInfo() }
+    init {
+        getMemberInfo()
+    }
 
     private fun getMemberInfo() {
         viewModelScope.launch {
@@ -47,21 +53,39 @@ class MyPageViewModel @Inject constructor(
 //                            }
 //                    }
 //                }
-            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
-                .onStart { _memberInfo.value = Failure.Waiting()}
-                .catch { _memberInfo.value = Failure.Error(it.message) }
-                .collect {
-                    if(it.accessToken != "") {
-                        getMemberInfoUseCase(PutAccessToken(it.accessToken)).map { member -> member.toMemberInfoModelUI() }
-                            .onStart { _memberInfo.value = Failure.Loading() }
-                            .catch { e -> _memberInfo.value = Failure.Error(e.message) }
-                            .collect { mem ->
-                                if(mem.code == "0000") {
-                                    _memberInfo.value = Failure.Success(mem)
-                                } else {
-                                    _memberInfo.value = Failure.ServerError(mem.code, mem.message)
-                                }
-                            }
+//            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
+//                .onStart { _memberInfo.value = Failure.Waiting() }
+//                .catch {
+//                    when (it.cause) {
+//                        is NullPointerException -> Timber.e(it.message)
+//                        is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+//                            _memberInfo.value = Failure.Error(it.message)
+//                        }
+//                    }
+//                }
+//                .collect {
+//                    if (it.accessToken != "") {
+//                        getMemberInfoUseCase(PutAccessToken(it.accessToken)).map { member -> member.toMemberInfoModelUI() }
+//                            .onStart { _memberInfo.value = Failure.Loading() }
+//                            .catch { e -> _memberInfo.value = Failure.Error(e.message) }
+//                            .collect { mem ->
+//                                if (mem.code == "0000") {
+//                                    _memberInfo.value = Failure.Success(mem)
+//                                } else {
+//                                    _memberInfo.value = Failure.ServerError(mem.code, mem.message)
+//                                }
+//                            }
+//                    }
+//                }
+            if(SignInViewModel.localToken.isNotEmpty())
+            getMemberInfoUseCase(PutAccessToken(SignInViewModel.localToken)).map { member -> member.toMemberInfoModelUI() }
+                .onStart { _memberInfo.value = Failure.Loading() }
+                .catch { e -> _memberInfo.value = Failure.Error(e.message) }
+                .collect { mem ->
+                    if(mem.code == "0000") {
+                        _memberInfo.value = Failure.Success(mem)
+                    } else {
+                        _memberInfo.value = Failure.ServerError(mem.code, mem.message)
                     }
                 }
         }

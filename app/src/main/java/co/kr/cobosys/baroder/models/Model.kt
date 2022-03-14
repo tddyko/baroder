@@ -15,7 +15,7 @@ data class AccessTokenModelUI(
 
 @Parcelize
 data class AccessTokenDataUI(
-    val accessToken: String
+    val accessToken: String?
 ) : Parcelable
 
 @Parcelize

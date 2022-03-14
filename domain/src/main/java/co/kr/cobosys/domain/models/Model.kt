@@ -9,7 +9,7 @@ data class AccessTokenModel(
 )
 
 data class AccessTokenData(
-    val accessToken: String
+    val accessToken: String?
 )
 
 data class MemberInfoModel(
