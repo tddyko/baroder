@@ -36,6 +36,7 @@ class MyPageFragment: Fragment(R.layout.fragment_my_page) {
         binding.mypageMyCouponArea.setOnClickListener {
             findNavController().navigate(MyPageFragmentDirections.actionMypageFragmentToMypageCoupon())
         }
+
         observe()
         onClickSignInButton()
         selectOnBoarding()
@@ -94,7 +95,7 @@ class MyPageFragment: Fragment(R.layout.fragment_my_page) {
             childFragmentManager.executePendingTransactions()
             signInDialog.dismissListener = object: DismissListener{
                 override fun getMyPageInfo() {
-                    observe()
+                    mypageViewModel.getMemberInfo()
                     signInDialog.dismiss()
                 }
             }

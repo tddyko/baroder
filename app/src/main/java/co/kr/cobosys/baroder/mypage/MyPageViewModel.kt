@@ -5,11 +5,9 @@ import androidx.lifecycle.viewModelScope
 import co.kr.cobosys.baroder.auth.signin.SignInViewModel
 import co.kr.cobosys.baroder.models.MemberInfoModelUI
 import co.kr.cobosys.baroder.models.mappers.auth.toMemberInfoModelUI
-import co.kr.cobosys.baroder.models.mappers.local.accesstoken.toLocalAccessTokenUI
 import co.kr.cobosys.domain.base.Failure
 import co.kr.cobosys.domain.usecases.auth.GetMemberInfoUseCase
 import co.kr.cobosys.domain.usecases.auth.PutAccessToken
-import co.kr.cobosys.domain.usecases.local.accesstoken.GetLocalAccessTokenUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -23,18 +21,15 @@ import javax.inject.Inject
 @HiltViewModel
 class MyPageViewModel @Inject constructor(
     private val getMemberInfoUseCase: GetMemberInfoUseCase,
-    private val getLocalAccessTokenUseCase: GetLocalAccessTokenUseCase
 ) : ViewModel() {
     private val _memberInfo: MutableStateFlow<Failure<MemberInfoModelUI>> =
         MutableStateFlow(Failure.Waiting())
 
     val memberInfo = _memberInfo.asStateFlow()
 
-    init {
-        getMemberInfo()
-    }
+    init { getMemberInfo() }
 
-    private fun getMemberInfo() {
+    fun getMemberInfo() {
         viewModelScope.launch {
 //            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
 //                .catch { _memberInfo.value = Failure.Error(it.message) }
@@ -77,17 +72,24 @@ class MyPageViewModel @Inject constructor(
 //                            }
 //                    }
 //                }
-            if(SignInViewModel.localToken.isNotEmpty())
-            getMemberInfoUseCase(PutAccessToken(SignInViewModel.localToken)).map { member -> member.toMemberInfoModelUI() }
-                .onStart { _memberInfo.value = Failure.Loading() }
-                .catch { e -> _memberInfo.value = Failure.Error(e.message) }
-                .collect { mem ->
-                    if(mem.code == "0000") {
-                        _memberInfo.value = Failure.Success(mem)
-                    } else {
-                        _memberInfo.value = Failure.ServerError(mem.code, mem.message)
+            if (SignInViewModel.localToken.isNotEmpty())
+                getMemberInfoUseCase(PutAccessToken(SignInViewModel.localToken)).map { member -> member.toMemberInfoModelUI() }
+                    .onStart { _memberInfo.value = Failure.Loading() }
+                    .catch {
+                        when (it.cause) {
+                            is NullPointerException -> Timber.e(it.message)
+                            is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+                                _memberInfo.value = Failure.Error(it.message)
+                            }
+                        }
                     }
-                }
+                    .collect { mem ->
+                        if (mem.code == "0000") {
+                            _memberInfo.value = Failure.Success(mem)
+                        } else {
+                            _memberInfo.value = Failure.ServerError(mem.code, mem.message)
+                        }
+                    }
         }
     }
 }
