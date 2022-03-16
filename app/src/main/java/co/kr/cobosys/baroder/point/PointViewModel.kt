@@ -14,6 +14,9 @@ import co.kr.cobosys.domain.usecases.point.GetPointUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
+import java.util.concurrent.TimeoutException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -31,13 +34,19 @@ class PointViewModel @Inject constructor(
                 it.toPointModelUI()
             }.onStart {
                 _getPointListResult.value = Failure.Loading()
+            }.catch {
+                when(it.fillInStackTrace()) {
+                    is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+                        _getPointListResult.value = Failure.Error(it.fillInStackTrace())
+                    }
+                    else -> _getPointListResult.value = Failure.Error(it.fillInStackTrace())
+                }
             }.collect { data ->
                 if (data.code == "0000") {
                     _getPointListResult.value = Failure.Success(data)
                 } else {
                     _getPointListResult.value = Failure.ServerError(data.code, data.message)
                 }
-                //Timber.e("Coupon Policy List -> ${data.data}")
             }
         }
     }

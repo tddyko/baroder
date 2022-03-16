@@ -117,7 +117,6 @@ class BottomNavFragment : Fragment() {
 
     private fun changeChildFragment(fragment: Fragment, id: Int) {
         val findFragment = childFragmentManager.findFragmentByTag(id.toString())
-        Timber.e("값좀 보여다오~ ${childFragmentManager.fragments}, $id")
         childFragmentManager.fragments.forEach { fm ->
             childFragmentManager.beginTransaction().hide(fm).commit()
         }

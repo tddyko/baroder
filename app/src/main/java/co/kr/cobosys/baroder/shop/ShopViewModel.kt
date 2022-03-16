@@ -13,6 +13,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
+import java.util.concurrent.TimeoutException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -30,6 +33,12 @@ class ShopViewModel @Inject constructor(
                 it.toCouponPolicyModelUI()
             }.onStart {
                 _couponPolicyResult.value = Failure.Loading()
+            }.catch {
+                when (it.fillInStackTrace()) {
+                    is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+                        _couponPolicyResult.value = Failure.Error(it.fillInStackTrace())
+                    }
+                }
             }.collect { data ->
                 if (data.code == "0000") {
                     _couponPolicyResult.value = Failure.Success(data)

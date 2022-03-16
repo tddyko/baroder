@@ -31,47 +31,6 @@ class MyPageViewModel @Inject constructor(
 
     fun getMemberInfo() {
         viewModelScope.launch {
-//            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
-//                .catch { _memberInfo.value = Failure.Error(it.message) }
-//                .collect { token ->
-//                    if (token.accessToken != "") {
-//                        getMemberInfoUseCase(PutAccessToken(token.accessToken))
-//                            .map { it.toMemberInfoModelUI() }
-//                            .onStart { _memberInfo.value = Failure.Loading() }
-//                            .catch { _memberInfo.value = Failure.Error(it.message) }
-//                            .collect {
-//                                if (it.code == "0000") {
-//                                    _memberInfo.value = Failure.Success(it)
-//                                } else {
-//                                    _memberInfo.value = Failure.ServerError(it.code, it.message)
-//                                }
-//                            }
-//                    }
-//                }
-//            getLocalAccessTokenUseCase().map { it.toLocalAccessTokenUI() }
-//                .onStart { _memberInfo.value = Failure.Waiting() }
-//                .catch {
-//                    when (it.cause) {
-//                        is NullPointerException -> Timber.e(it.message)
-//                        is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
-//                            _memberInfo.value = Failure.Error(it.message)
-//                        }
-//                    }
-//                }
-//                .collect {
-//                    if (it.accessToken != "") {
-//                        getMemberInfoUseCase(PutAccessToken(it.accessToken)).map { member -> member.toMemberInfoModelUI() }
-//                            .onStart { _memberInfo.value = Failure.Loading() }
-//                            .catch { e -> _memberInfo.value = Failure.Error(e.message) }
-//                            .collect { mem ->
-//                                if (mem.code == "0000") {
-//                                    _memberInfo.value = Failure.Success(mem)
-//                                } else {
-//                                    _memberInfo.value = Failure.ServerError(mem.code, mem.message)
-//                                }
-//                            }
-//                    }
-//                }
             if (SignInViewModel.localToken.isNotEmpty())
                 getMemberInfoUseCase(PutAccessToken(SignInViewModel.localToken)).map { member -> member.toMemberInfoModelUI() }
                     .onStart { _memberInfo.value = Failure.Loading() }
@@ -79,7 +38,7 @@ class MyPageViewModel @Inject constructor(
                         when (it.cause) {
                             is NullPointerException -> Timber.e(it.message)
                             is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
-                                _memberInfo.value = Failure.Error(it.message)
+                                _memberInfo.value = Failure.Error(it.fillInStackTrace())
                             }
                         }
                     }

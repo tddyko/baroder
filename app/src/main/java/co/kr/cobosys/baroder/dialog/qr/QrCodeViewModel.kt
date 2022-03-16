@@ -34,7 +34,7 @@ class QrCodeViewModel @Inject constructor(
             }.onStart {
                 _memberInfo.value = Failure.Loading()
             }.catch {  e ->
-                _memberInfo.value = Failure.Error(e.message)
+                _memberInfo.value = Failure.Error(e.fillInStackTrace())
             }.collect { data ->
                 if (data.code == "0000") {
                     _memberInfo.value = Failure.Success(data)

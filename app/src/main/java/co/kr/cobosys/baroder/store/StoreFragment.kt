@@ -5,20 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentStoreBinding
-import co.kr.cobosys.baroder.auth.signin.SignInViewModel
-import co.kr.cobosys.baroder.base.utils.Utils
-import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
-import co.kr.cobosys.baroder.shop.ShopViewModel
-import co.kr.cobosys.baroder.shop.adapters.CouponPolicyListAdapter
 import co.kr.cobosys.baroder.store.adapters.StoreListAdapter
 import co.kr.cobosys.domain.base.Failure
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import java.lang.Exception
@@ -47,21 +42,15 @@ class StoreFragment : Fragment(R.layout.fragment_store) {
                         //binding.shopRecyclerView.adapter = CouponPolicyListAdapter(state.data.data.couponPolicyList)
                     }
                     is Failure.Error -> {
-                        try {
                             MessageDialog.alert(
                                 childFragmentManager,
-                                state.message ?: "",
-                                state.message ?: "",
-                                "È®ÀÎ",
+                                state.message.toString(),
+                                state.message.toString(),
+                                "È®ï¿½ï¿½",
                                 callback = {
-                                    Utils.showToast(requireContext(), state.message ?: "").show()
+                                    Snackbar.make(binding.root, state.message.toString(), Snackbar.LENGTH_SHORT).show()
                                 })
-                        } catch (e: Exception) {
-//                            when(e) {
-//                                is NoRouteToHostException,
-//                            }
                         }
-                    }
                     else -> {}
                 }
             }

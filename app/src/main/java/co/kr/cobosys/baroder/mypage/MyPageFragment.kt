@@ -94,7 +94,7 @@ class MyPageFragment: Fragment(R.layout.fragment_my_page) {
             signInDialog.show(childFragmentManager, "myPage")
             childFragmentManager.executePendingTransactions()
             signInDialog.dismissListener = object: DismissListener{
-                override fun getMyPageInfo() {
+                override fun getInfo() {
                     mypageViewModel.getMemberInfo()
                     signInDialog.dismiss()
                 }

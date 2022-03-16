@@ -423,40 +423,42 @@
         <!--FilledBox일 경우 밑줄 색상, OutlinedBox일 경우 테두리 색상-->
         <item name="boxStrokeColor">@color/box_stroke_color</item>
         <!--Counter-->
-        <item name="counterTextAppearance">@style/CounterTextAppearance</item>
+        <item name="counterTextAppearance">@style/counter_text_appearance</item>
         <!--Helper-->
-        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+        <item name="helperTextTextAppearance">@style/helper_text_appearance</item>
         <!--Error-->
         <item name="colorError">@color/warning_coral</item>
         <item name="errorIconDrawable">@android:color/transparent</item>
-        <item name="errorTextAppearance">@style/ErrorTextAppearance</item>
+        <item name="errorTextAppearance">@style/error_text_appearance</item>
     </style>
 
     <style name="asterisk_top_padding">
         <item name="contentPaddingTop">10dp</item>
     </style>
 
-    <style name="ErrorTextAppearance">
+    <style name="error_text_appearance">
         <item name="android:textStyle">normal</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textSize">13sp</item>
         <item name="autoSizeMaxTextSize">13sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="fontFamily">@font/noto_sans</item>
         <item name="android:letterSpacing">-0.04</item>
     </style>
 
-    <style name="HelperTextAppearance">
+    <style name="helper_text_appearance">
         <item name="android:textStyle">normal</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textSize">13sp</item>
         <item name="autoSizeMaxTextSize">13sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="fontFamily">@font/noto_sans</item>
         <item name="android:letterSpacing">-0.04</item>
     </style>
 
-    <style name="CounterTextAppearance">
+    <style name="counter_text_appearance">
         <item name="android:textStyle">normal</item>
         <item name="android:includeFontPadding">false</item>
         <item name="textFillColor">@color/main_green</item>
@@ -464,6 +466,7 @@
         <item name="autoSizeMaxTextSize">13sp</item>
         <item name="autoSizeMinTextSize">1sp</item>
         <item name="autoSizeTextType">uniform</item>
+        <item name="fontFamily">@font/noto_sans</item>
         <item name="android:letterSpacing">-0.04</item>
     </style>
 

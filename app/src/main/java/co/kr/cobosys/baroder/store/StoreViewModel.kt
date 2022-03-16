@@ -10,6 +10,9 @@ import co.kr.cobosys.domain.usecases.store.GetStoreListUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
+import java.util.concurrent.TimeoutException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -27,6 +30,12 @@ class StoreViewModel @Inject constructor(
                 it.toStoreModelUI()
             }.onStart {
                 _getStoreListResult.value = Failure.Loading()
+            }.catch {
+                when(it.fillInStackTrace()) {
+                    is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
+                        _getStoreListResult.value = Failure.Error(it.fillInStackTrace())
+                    }
+                }
             }.collect { data ->
                 if (data.code == "0000") {
                     _getStoreListResult.value = Failure.Success(data)

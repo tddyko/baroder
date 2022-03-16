@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import co.kr.cobosys.baroder.models.AccessTokenModelUI
 import co.kr.cobosys.baroder.models.mappers.auth.toAccessTokenModelUI
 import co.kr.cobosys.baroder.models.mappers.local.accesstoken.toLocalAccessTokenUI
-import co.kr.cobosys.baroder.models.mappers.local.member.toLocalMemberUI
 import co.kr.cobosys.domain.base.Failure
 import co.kr.cobosys.domain.models.LocalAccessToken
 import co.kr.cobosys.domain.models.LocalMember
@@ -15,7 +14,6 @@ import co.kr.cobosys.domain.usecases.local.accesstoken.DelLocalAccessTokenUseCas
 import co.kr.cobosys.domain.usecases.local.accesstoken.GetLocalAccessTokenUseCase
 import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenParams
 import co.kr.cobosys.domain.usecases.local.accesstoken.InsertLocalAccessTokenUseCase
-import co.kr.cobosys.domain.usecases.local.member.GetLocalMemberUseCase
 import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberParams
 import co.kr.cobosys.domain.usecases.local.member.InsertLocalMemberUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,13 +31,12 @@ class SignInViewModel @Inject constructor(
     private val insertLocalAccessTokenUseCase: InsertLocalAccessTokenUseCase,
     private val getLocalAccessTokenUseCase: GetLocalAccessTokenUseCase,
     private val deleteLocalAccessTokenUseCase: DelLocalAccessTokenUseCase,
-    private val getLocalMemberUseCase: GetLocalMemberUseCase,
     private val insertLocalMemberUseCase: InsertLocalMemberUseCase
 ) : ViewModel() {
-    private val _loginResult: MutableStateFlow<Failure<AccessTokenModelUI>> =
+    private val _signInResult: MutableStateFlow<Failure<AccessTokenModelUI>> =
         MutableStateFlow(Failure.Waiting())
 
-    val loginResult = _loginResult.asStateFlow()
+    val signInResult = _signInResult.asStateFlow()
 
     fun signIn(id: String, pwd: String) {
         viewModelScope.launch {
@@ -48,9 +45,9 @@ class SignInViewModel @Inject constructor(
             getAccessTokenUseCase(GetAccessTokenParams(id = id, pwd = pwd))
                 .map { it.toAccessTokenModelUI() }
                 .catch {
-                    when(it.cause) {
+                    when(it.fillInStackTrace()) {
                         is UnknownHostException, is SocketTimeoutException, is TimeoutException -> {
-                            _loginResult.value = Failure.Error(it.message)
+                            _signInResult.value = Failure.Error(it.fillInStackTrace())
                         }
                     }
                 }
@@ -70,10 +67,10 @@ class SignInViewModel @Inject constructor(
                                         LocalAccessToken(tokenUUID, token)
                                     ))
                                 }
-                                _loginResult.value = Failure.Success(data)
+                                _signInResult.value = Failure.Success(data)
                             }
                     } else {
-                        _loginResult.value = Failure.ServerError(data.code, data.message)
+                        _signInResult.value = Failure.ServerError(data.code, data.message)
                     }
                 }
         }

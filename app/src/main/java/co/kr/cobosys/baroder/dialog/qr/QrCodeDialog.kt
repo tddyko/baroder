@@ -1,24 +1,22 @@
 package co.kr.cobosys.baroder.dialog.qr
 
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentQrCodeBinding
 import co.kr.cobosys.baroder.auth.signin.SignInFragment
 import co.kr.cobosys.baroder.auth.signin.SignInFragmentListener
 import co.kr.cobosys.baroder.auth.signin.SignInViewModel
-import co.kr.cobosys.baroder.base.utils.Utils
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.domain.base.Failure
+import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.journeyapps.barcodescanner.BarcodeEncoder
@@ -115,7 +113,7 @@ class QrCodeDialog: DialogFragment(R.layout.fragment_qr_code) {
                     is Failure.Waiting, is Failure.Loading -> {}
                     is Failure.Success -> {
                         // dismiss()
-                        // state.data.data.memberQrCode ·Î QR ÀÌ¹ÌÁö¸¦ ¸¸µé¾î¾ß ÇÏ°í, 60ÃÊ Å¸ÀÓ ¾Æ¿ô ?
+                        // state.data.data.memberQrCode ï¿½ï¿½ QR ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½, 60ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½Æ¿ï¿½ ?
                         CoroutineScope(Dispatchers.Main).launch {
                             createQRcode(state.data.data.memberQrCode)
                         }
@@ -125,26 +123,26 @@ class QrCodeDialog: DialogFragment(R.layout.fragment_qr_code) {
                             childFragmentManager,
                             state.message,
                             state.message,
-                            "È®ÀÎ",
+                            "È®ï¿½ï¿½",
                             callback = {
-                                Utils.showToast(requireContext(), state.message).show()
+                                Snackbar.make(binding.root, state.message,Snackbar.LENGTH_SHORT).show()
                             })
                     }
                     is Failure.Error -> {
                         MessageDialog.alert(
                             childFragmentManager,
-                            "ÀÎÅÍ³Ý ¿¡·¯!",
-                            "ÀÎÅÍ³Ý ¿¬°áÀ» È®ÀÎÇØÁÖ¼¼¿ä. ${state.message}",
-                            "È®ÀÎ",
+                            "ï¿½ï¿½ï¿½Í³ï¿½ ï¿½ï¿½ï¿½ï¿½!",
+                            "ï¿½ï¿½ï¿½Í³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½. ${state.message}",
+                            "È®ï¿½ï¿½",
                             callback = {}
                         )
                     }
                     else -> {
                         MessageDialog.alert(
                             childFragmentManager,
-                            "¿¡·¯!",
-                            "¾Ë ¼ö ¾ø´Â ¿¡·¯ÀÔ´Ï´Ù.",
-                            "È®ÀÎ",
+                            "ï¿½ï¿½ï¿½ï¿½!",
+                            "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.",
+                            "È®ï¿½ï¿½",
                             callback = {}
                         )
                     }

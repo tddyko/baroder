@@ -1,21 +1,24 @@
 package co.kr.cobosys.baroder.auth.signin
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.view.Window
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentSignInBinding
 import co.kr.cobosys.baroder.base.utils.Edge
-import co.kr.cobosys.baroder.base.utils.Utils
 import co.kr.cobosys.baroder.base.utils.edgeToEdge
 import co.kr.cobosys.baroder.dialog.MessageDialog
+import co.kr.cobosys.baroder.extension.hideKeyboard
+import co.kr.cobosys.baroder.extension.validLoginButton
+import co.kr.cobosys.baroder.extension.validatePwd
 import co.kr.cobosys.baroder.extension.viewBinding
 import co.kr.cobosys.domain.base.Failure
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
@@ -24,7 +27,7 @@ interface SignInFragmentListener {
 }
 
 interface DismissListener {
-    fun getMyPageInfo()
+    fun getInfo()
 }
 
 @AndroidEntryPoint
@@ -42,20 +45,21 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
 
         observe()
         getSignIn()
+        validPwd()
 
     }
 
     private fun observe() {
         lifecycleScope.launchWhenStarted {
-            signInViewModel.loginResult.collect { state ->
+            signInViewModel.signInResult.collect { state ->
                 when (state) {
-                    is Failure.Waiting, is Failure.Loading -> { }
+                    is Failure.Waiting, is Failure.Loading -> {}
                     is Failure.Success -> {
                         listener?.onSingInResult(SignInViewModel.localToken)
-                        dismissListener?.getMyPageInfo()
+                        dismissListener?.getInfo()
                     }
                     is Failure.ServerError -> {
-                        Utils.showToast(requireContext(), state.message).show()
+                        Snackbar.make(binding.root, state.message, Snackbar.LENGTH_SHORT).show()
                     }
                     is Failure.Error -> {
                         MessageDialog.alert(
@@ -65,7 +69,6 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
                             "확인",
                             callback = {}
                         )
-
                     }
                     else -> {
                         MessageDialog.alert(
@@ -81,11 +84,30 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
         }
     }
 
+    private fun validPwd() {
+        val pwdArea = binding.signInPwd
+        val pwdField = binding.signInPwdField
+        pwdField.addTextChangedListener {
+            pwdArea.helperText = validatePwd(it.toString())
+        }
+    }
+
+
     private fun getSignIn() {
-        binding.signInBtn.setOnClickListener {
-            val id = binding.signInIdField.text.toString()
-            val pwd = binding.signInPwdField.text.toString()
-            signInViewModel.signIn(id, pwd)
+        val idField = binding.signInIdField
+        val pwdField = binding.signInPwdField
+        val loginButton = binding.signInBtn
+
+        idField.addTextChangedListener {
+            loginButton.isEnabled = validLoginButton(idField.text.toString(), pwdField.text.toString())
+        }
+        pwdField.addTextChangedListener {
+            loginButton.isEnabled = validLoginButton(idField.text.toString(), pwdField.text.toString())
+        }
+
+        loginButton.setOnClickListener {
+            binding.root.hideKeyboard()
+            signInViewModel.signIn(idField.text.toString(), pwdField.text.toString())
         }
     }
 
@@ -95,11 +117,5 @@ class SignInFragment : DialogFragment(R.layout.fragment_sign_in) {
         dlg.window?.setWindowAnimations(R.style.DialogAnimationSlideUp)
         return dlg
     }
-//    companion object {
-//        fun show(fragmentMgr: FragmentManager) {
-//            val dlg = SignInFragment()
-//            dlg.setStyle(STYLE_NO_TITLE, R.style.DialogThemeOnBoarding)
-//            dlg.show(fragmentMgr, "onBoarding")
-//        }
-//    }
+
 }

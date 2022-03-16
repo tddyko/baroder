@@ -46,6 +46,7 @@
         <action
             android:id="@+id/action_bottom_navigation_fragment_to_mypage_navigation"
             app:destination="@id/mypage_navigation"
+            app:popUpToInclusive="true"
             app:enterAnim="@anim/animate_slide_left_enter"
             app:exitAnim="@anim/animate_slide_left_exit"
             app:popEnterAnim="@anim/animate_slide_in_left"

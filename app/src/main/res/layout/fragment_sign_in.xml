@@ -108,6 +108,8 @@
         app:boxStrokeWidthFocused="0dp"
         app:endIconMode="clear_text"
         app:hintEnabled="false"
+        app:helperTextTextAppearance="@style/helper_text_appearance"
+        app:helperTextTextColor="@color/warning_coral"
         app:layout_constraintTop_toBottomOf="@id/sign_in_id">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -136,7 +138,6 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/button_enable"
-        android:enabled="true"
         android:paddingHorizontal="136dp"
         android:paddingVertical="15dp"
         android:text="@string/sign_in"

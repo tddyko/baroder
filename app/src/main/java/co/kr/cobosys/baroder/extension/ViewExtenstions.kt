@@ -9,6 +9,7 @@ import android.graphics.Paint
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.appcompat.content.res.AppCompatResources
@@ -35,6 +36,27 @@ fun View.visible() {
 
 fun View.invisible() {
     visibility = View.INVISIBLE
+}
+
+fun View.hideKeyboard() {
+    val inputMethodManager = context!!.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+    inputMethodManager?.hideSoftInputFromWindow(this.windowToken, 0)
+}
+
+fun validatePwd(pwd: String): String? {
+    return if(pwd.isEmpty()) {
+        null
+    } else if(!pwd.matches("^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#\$%^&*()_+=-]).{8,15}".toRegex())) {
+        "비밀번호는 영문, 숫자, 특수문자 포함 8~15자입니다."
+    } else {
+        null
+    }
+}
+
+fun validLoginButton(id: String, pwd: String): Boolean {
+    return if(id.isEmpty() || pwd.isEmpty()) {
+        false
+    } else !(pwd.length < 8 || pwd.length > 15)
 }
 
 @SuppressLint("CheckResult")

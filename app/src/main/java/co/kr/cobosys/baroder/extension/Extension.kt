@@ -14,9 +14,6 @@ import androidx.viewbinding.ViewBinding
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
-fun <T> LifecycleOwner.observe(liveData: LiveData<T>, action: (t: T) -> Unit) {
-    liveData.observe(this, Observer { it?.let { t -> action(t) } })
-}
 
 class FragmentViewBindingDelegate<T : ViewBinding>(
     val fragment: Fragment,

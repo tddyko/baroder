@@ -9,8 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.kr.cobosys.baroder.app.R
 import co.kr.cobosys.baroder.app.databinding.FragmentShopBinding
-import co.kr.cobosys.baroder.auth.signin.SignInViewModel
-import co.kr.cobosys.baroder.base.utils.Utils
 import co.kr.cobosys.baroder.bottomnav.BottomNavFragmentDirections
 import co.kr.cobosys.baroder.dialog.MessageDialog
 import co.kr.cobosys.baroder.extension.gone
@@ -19,6 +17,7 @@ import co.kr.cobosys.baroder.models.CouponPolicyListUI
 import co.kr.cobosys.baroder.shop.adapters.CouponPolicyListAdapter
 import co.kr.cobosys.baroder.shop.viewholders.CouponPolicyListViewHolderListener
 import co.kr.cobosys.domain.base.Failure
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import timber.log.Timber
@@ -56,20 +55,18 @@ class ShopFragment : Fragment(R.layout.fragment_shop), CouponPolicyListViewHolde
                         attachCouponPolicyList(state.data.data.couponPolicyList)
                     }
                     is Failure.Error -> {
-                        try {
-                            MessageDialog.alert(
-                                childFragmentManager,
-                                state.message ?: "",
-                                state.message ?: "",
-                                "È®ÀÎ",
-                                callback = {
-                                    Utils.showToast(requireContext(), state.message ?: "").show()
-                                })
-                        } catch (e: Exception) {
-//                            when(e) {
-//                                is NoRouteToHostException,
-//                            }
-                        }
+                        MessageDialog.alert(
+                            childFragmentManager,
+                            state.message.toString(),
+                            state.message.toString(),
+                            "È®ï¿½ï¿½",
+                            callback = {
+                                Snackbar.make(
+                                    binding.root,
+                                    state.message.toString(),
+                                    Snackbar.LENGTH_SHORT
+                                ).show()
+                            })
                     }
                     else -> {}
                 }
@@ -78,6 +75,6 @@ class ShopFragment : Fragment(R.layout.fragment_shop), CouponPolicyListViewHolde
     }
 
     override fun onClickCouponPolicy(idx: Int) {
-        Timber.e("¼±ÅÃµÈ -> $idx")
+        Timber.e("ï¿½ï¿½ï¿½Ãµï¿½ -> $idx")
     }
 }
